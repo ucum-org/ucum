@@ -1359,6 +1359,7 @@ concentrations specific units are prefered, e.g.,
 &ldquo;<code>ug/kg</code>&rdquo; for ppb is also valid.
       </caption>
 <u:unit id="000010" Code="10*" CODE="10*" isMetric="no"><name>the number ten for arbitrary powers</name><printSymbol>10<sup>n</sup></printSymbol><property>number</property><value Unit="1" UNIT="1" value="10">10</value></u:unit>
+<u:unit id="000011" Code="10^" CODE="10^" isMetric="no"><name>the number ten for arbitrary powers</name><printSymbol>10<sup>n</sup></printSymbol><property>number</property><value Unit="1" UNIT="1" value="10">10</value></u:unit>
 <u:unit id="000030" Code="[pi]" CODE="[PI]" isMetric="no"><name>the number pi</name><printSymbol>&pi;</printSymbol><property>number</property><value Unit="1" UNIT="1" value="3.1415926535897932384626433832795028841971693993751058209749445923">&pi;</value></u:unit>
 <u:unit id="000020" Code="%" CODE="%" isMetric="no"><name>percent</name><printSymbol>%</printSymbol><property>fraction</property><value Unit="10*-2" UNIT="10*-2" value="1">1</value></u:unit>
 <u:unit id="600770" Code="[ppth]" CODE="[PPTH]" isMetric="no"><name>parts per thousand</name><printSymbol>ppth</printSymbol><property>fraction</property><value Unit="10*-3" UNIT="10*-3" value="1">1</value></u:unit>
@@ -1366,6 +1367,19 @@ concentrations specific units are prefered, e.g.,
 <u:unit id="600750" Code="[ppb]" CODE="[PPB]" isMetric="no"><name>parts per billion</name><printSymbol>ppb</printSymbol><property>fraction</property><value Unit="10*-9" UNIT="10*-9" value="1">1</value></u:unit>
 <u:unit id="600780" Code="[pptr]" CODE="[PPTR]" isMetric="no"><name>parts per trillion</name><printSymbol>pptr</printSymbol><property>fraction</property><value Unit="10*-12" UNIT="10*-12" value="1">1</value></u:unit>
     </u:units>
+
+    <comment>
+      <p>
+The notation &ldquo;<code>10*</code>&rdquo; for powers of ten
+originated in the HL7 &ldquo;ISO+&ldquo; extension of ISO&nbsp;2955.
+In HL7 the character carat (&lquo;<code>^</code>&rquo;) was thought as
+reserved. Since most people would expect to see
+&ldquo;<code>10^3</code>&rdquo; for the &ldquo;third power of
+ten&rdquo; and might in fact confuse &ldquo;<code>10*3</code>&rdquo;
+to mean &ldquo;ten times 3&rdquo;, the symbol using the carat was
+later added to &TUCUM;.
+      </p>
+    </comment>
 
     <p id="para-si" name="SI units">
 <verse>
@@ -1471,7 +1485,7 @@ out of scope of &TUCUM;.
 <u:unit id="200020" Code="'" CODE="'" isMetric="no"><name>minute</name><printSymbol>'</printSymbol><property>plane angle</property><value Unit="deg/60" UNIT="DEG/60" value="1">1</value></u:unit>
 <u:unit id="200030" Code="''" CODE="''" isMetric="no"><name>second</name><printSymbol>''</printSymbol><property>plane angle</property><value Unit="'/60" UNIT="'/60" value="1">1</value></u:unit>
 <u:unit id="200050" Code="l" CODE="L" isMetric="yes"><name>liter</name><printSymbol>l</printSymbol><property>volume</property><value Unit="dm3" UNIT="DM3" value="1">1</value></u:unit>
-<u:unit id="200060" Code="L"  isMetric="yes"><name>liter</name><printSymbol>L</printSymbol><property>volume</property><value Unit="l"  value="1">1</value></u:unit>
+<u:unit id="200060" Code="L" isMetric="yes"><name>liter</name><printSymbol>L</printSymbol><property>volume</property><value Unit="l"  value="1">1</value></u:unit>
 <u:unit id="200070" Code="ar" CODE="AR" isMetric="yes"><name>are</name><printSymbol>a</printSymbol><property>area</property><value Unit="m2" UNIT="M2" value="100">100</value></u:unit>
 <u:unit id="200090" Code="min" CODE="MIN" isMetric="no"><name>minute</name><printSymbol>min</printSymbol><property>time</property><value Unit="s" UNIT="S" value="60">60</value></u:unit>
 <u:unit id="200100" Code="h" CODE="HR" isMetric="no"><name>hour</name><printSymbol>h</printSymbol><property>time</property><value Unit="min" UNIT="MIN" value="60">60</value></u:unit>
