@@ -2798,6 +2798,7 @@ standarized by other bodies and are out of scope of &TUCUM;.
 <u:unit id="600390" Code="Ao" CODE="AO" isMetric="no"><name>&Aring;ngstr&ouml;m</name><printSymbol>&Aring;</printSymbol><property>length</property><value Unit="nm" UNIT="NM" value="0.1">0.1</value></u:unit>
 <u:unit id="600400" Code="b" CODE="BRN" isMetric="no"><name>barn</name><printSymbol>b</printSymbol><property>action area</property><value Unit="fm2" UNIT="FM2" value="100">100</value></u:unit>
 <u:unit id="600412" Code="att" CODE="ATT" isMetric="no"><name>technical atmosphere</name><printSymbol>at</printSymbol><property>pressure</property><value Unit="kgf/cm2" UNIT="KGF/CM2" value="1">1</value></u:unit>
+<u:unit id="600411" Code="mho" CODE="MHO" isMetric="yes"><name>mho</name><printSymbol>mho</printSymbol><property>electric conductance</property><value Unit="S" UNIT="S" value="1">1</value></u:unit>
 <u:unit id="600413" Code="[psi]" CODE="[PSI]" isMetric="no"><name>pound per sqare inch</name><printSymbol>psi</printSymbol><property>pressure</property><value Unit="[lbf_av]/[in_i]2" UNIT="[LBF_AV]/[IN_I]2" value="1">1</value></u:unit>
 <u:unit id="600010" Code="circ" CODE="CIRC" isMetric="no"><name>circle</name><printSymbol>circ</printSymbol><property>plane angle</property><value Unit="[pi].rad" UNIT="[PI].RAD" value="2">2</value></u:unit>
 <u:unit id="600020" Code="sph" CODE="SPH" isMetric="no"><name>spere</name><printSymbol>sph</printSymbol><property>solid angle</property><value Unit="[pi].sr" UNIT="[PI].SR" value="4">4</value></u:unit>
