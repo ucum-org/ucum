@@ -48,7 +48,8 @@
 <header>
   <title>The Unified Code for Units of Measure</title>
   <version>1.5</version>
-  <date>October 2002</date>
+  <revision>$Revision$</version>
+  <date>$Date$</date>
   <authlist>
     <author>
       <name>Gunther Schadow</name>
@@ -63,7 +64,7 @@
       <email href="cmcdonald@regenstrief.org"/>
     </author>
   </authlist>
-  <copyright>1998, 1999, 2000, 2001, 2002, Regenstrief Institute for
+  <copyright>1998-2003, Regenstrief Institute for
   Health Care. All rigthts reserved.</copyright>
 </header>
 
@@ -1741,18 +1742,21 @@ units where divided into smaller or multiplied to larger units in the
 same way.
       </p>
       <p>
-For example, there was the foot (de. &ldquo;Fu&sharps;&rdquo;  fr. &ldquo;pied&rdquo; 
-nl. &ldquo;voet&rdquo;  that was divided into 12 inches (de. &ldquo;Zoll&rdquo; 
-fr. &ldquo;pouce&rdquo; . An inch was divided into 12 lines (de. &ldquo;Linie&rdquo; 
-fr. &ldquo;ligne&rdquo; . Two feet was one ell (de. &ldquo;Elle&rdquo;  da. &ldquo;Alen&rdquo; 
-sv. &ldquo;Aln&rdquo; . The ell was, however, not very popular in England, as
-opposed to the rest of Europe. Conversely, the yard is hard to find
-elsewhere, aside from the Argentinian &ldquo;vara.&rdquo;  But it is perhaps no
-accident that the meter ended up as the 40 &mult; 10<sup>-6</sup> of an
-earth's meridian, which is approximately one yard (43.7 &mult;
-10<sup>-6</sup>). The rod (de. &ldquo;Rute&rdquo;  fr. &ldquo;perche&rdquo;  nl. &ldquo;roede&rdquo; 
-sv. &ldquo;st&aring;ng&rdquo;  was very popular all over Europe and so was the fathom
-(de. &ldquo;Klafter&rdquo; .
+For example, there was the foot (de. &ldquo;Fu&sharps;&rdquo;
+fr. &ldquo;pied&rdquo; nl. &ldquo;voet&rdquo;) that was divided into
+12 inches (de. &ldquo;Zoll&rdquo; fr. &ldquo;pouce&rdquo;). An inch
+was divided into 12 lines (de. &ldquo;Linie&rdquo;
+fr. &ldquo;ligne&rdquo; ). Two feet was one ell
+(de. &ldquo;Elle&rdquo; da. &ldquo;Alen&rdquo;
+sv. &ldquo;Aln&rdquo;). The ell was, however, not very popular in
+England, as opposed to the rest of Europe. Conversely, the yard is
+hard to find elsewhere, aside from the Argentinian &ldquo;vara.&rdquo;
+But it is perhaps no accident that the meter ended up as the 40 &mult;
+10<sup>-6</sup> of an earth's meridian, which is approximately one
+yard (43.7 &mult; 10<sup>-6</sup>). The rod (de. &ldquo;Rute&rdquo;
+fr. &ldquo;perche&rdquo; nl. &ldquo;roede&rdquo;
+sv. &ldquo;st&aring;ng&rdquo;) was very popular all over Europe and so
+was the fathom (de. &ldquo;Klafter&rdquo;).
       </p>
       <p>
 The square rod (de. &ldquo;Quadratrute&rdquo;  fr. &ldquo;perche-carr&eacute;e&rdquo; 
@@ -1762,23 +1766,23 @@ the legnedary land to sow in one morning (or day) is also widespread
 although the exact amount in square rod varies considerably from
 region ro region. Interestingly, even the special purpose measures
 such as the &ldquo;hand&rdquo; for measuring horses have international equivalents
-(de. &ldquo;faust&rdquo; .
+(de. &ldquo;faust&rdquo;).
       </p>
       <p>
-One can indeed say that there was once a <emph>syst&egrave;me international
-d'unit&eacute;s coutumi&egrave;res</emph> but the magnitudes of the units were not
-standardized internationally. Of course, Great Britain had the most
-impact in standardizing the customary system, because of its colonies,
-including its most important colony, America. However, after the
-customary units were established in the U.S. a major reform took place
-through the British Weights and Measures Act of 1824. For instance,
-Queen Anne's wine Gallon of 231 cubic inches, still used in the U.S.,
-was discarded then, and the older bushel was standardized differently
-in Great Britain.  Other deviations between the English and
-U.S. measures are due to various alignments with the metric
-system. Thus, in the U.S., the yard was standardized as
-3600/3937&nbsp;m and the inch was
-2.540005&nbsp;cm while in England the inch was still 2.539998&nbsp;cm. 
+One can indeed say that there was once a &ldquo;<emph>syst&egrave;me
+international d'unit&eacute;s coutumi&egrave;res</emph>&ldquo; but the
+magnitudes of the units were not standardized internationally. Of
+course, Great Britain had the most impact in standardizing the
+customary system, because of its colonies, including its most
+important colony, America. However, after the customary units were
+established in the U.S. a major reform took place through the British
+Weights and Measures Act of 1824. For instance, Queen Anne's wine
+Gallon of 231 cubic inches, still used in the U.S., was discarded
+then, and the older bushel was standardized differently in Great
+Britain.  Other deviations between the English and U.S. measures are
+due to various alignments with the metric system. Thus, in the U.S.,
+the yard was standardized as 3600/3937&nbsp;m and the inch was
+2.540005&nbsp;cm while in England the inch was still 2.539998&nbsp;cm.
       </p>
       <p>
 In 1959 major parts of the U.S. and British system of customary units
@@ -1806,10 +1810,10 @@ system defined as multiples and subdivisions of one reference unit.
       <p>
 We use the subscript notation to disambiguate units with same names in
 the different systems. Subscript notation means, for instance that if
-the print symbol for foot is &ldquo;&nbsp;ft&rdquo; we use subscripts
-to distinguish the international foot &ldquo;&nbsp;ft_i&rdquo; the
-U.S. survey foot &ldquo;&nbsp;ft_{us}&rdquo; and the British Imperial
-foot &ldquo;&nbsp;ft_{br}&rdquo; We do not actually list print symbols
+the print symbol for foot is &ldquo;ft&rdquo; we use subscripts
+to distinguish the international foot &ldquo;ft_i&rdquo; the
+U.S. survey foot &ldquo;ft_{us}&rdquo; and the British Imperial
+foot &ldquo;ft_{br}&rdquo; We do not actually list print symbols
 for customary units, because there seems to be no standard for it, and
 because defining print symbols is out of scope of &TUCUM;. However, we
 presume that subscripts be used to disambiguate whatever print symbols
@@ -2197,7 +2201,7 @@ measuring precious metals. The World Monetary Fund valued all
 currencies against the troy ounce of gold at least until the 1960s
 (advice appreciated). The troy ounce is still used in worldwide trade
 with gold, even in countries that otherwise use metric units
-(de. &ldquo;feinunze&rdquo; . The troy system retains the original Roman
+(de. &ldquo;feinunze&rdquo;). The troy system retains the original Roman
 subdivision of the pound in 12 ounces. The Roman <emph>uncia</emph> was &ldquo;one
 twelfth&rdquo; of a <emph>libra</emph> (hence the symbol &ldquo;lb&rdquo; for the pound),
 just as the inch (also originating from la. &ldquo;libra&rdquo;  is one twelfth
@@ -2249,7 +2253,7 @@ avoirdupois dram, the ounce is still 10% greater than the avoirdupois
 ounce while the pound is 20% less than the avoirdupois pound. The
 apothecaries' system, just as the troy system, keeps the original
 Roman subdivision of an ounce (la. &ldquo;uncia&rdquo;  to be 1/12 pound
-(la. &ldquo;libra&rdquo; . Hence is the apothecaries' pound about 22% smaller
+(la. &ldquo;libra&rdquo;). Hence is the apothecaries' pound about 22% smaller
 than the avoirdupois pound, while its subdivisions are greater than
 the respective avoirdupois subdivisions (ounce 10%, dram 119%). This
 difference in the weight systems is the most important reason why
