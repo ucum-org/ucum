@@ -48,7 +48,7 @@
 <header>
   <title>The Unified Code for Units of Measure</title>
   <version>1.5</version>
-  <revision>$Revision$</version>
+  <revision>$Revision$</revision>
   <date>$Date$</date>
   <authlist>
     <author>
@@ -620,7 +620,7 @@ raises the whole term within the parentheses to the power.
 </verse>
      </p>
 <exhibit>
-<table border="0">
+<table class="plain" border="0">
   <tr valign="top"><td><sym name="sign"/></td><td>::=</td>
     <td><lit value="+"/> | <lit value="-"/></td></tr>
   <tr valign="top"><td><sym name="digit"/></td><td>::=</td>
@@ -747,7 +747,7 @@ Celsius have no multiplication operation, so that the prefix value
 could be multiplied with the unit. Instead the prefix at non-ratio
 units scales the measurement value. One dekameter is 10 times of a
 meter, but there is no meaning to 10 times of 1&nbsp;&deg;C in the
-same way as 30&nbsp;&deg;C} are not 3 times as much as
+same way as 30&nbsp;&deg;C are not 3 times as much as
 10&nbsp;&deg;C. See <pref from="para-special"/> on how &TUCUM; finds a way to
 accomodate this different use of prefixes at units such as the degree
 Celsius, bel or neper.
@@ -1542,7 +1542,7 @@ run.  The usual subdivisions of the day in 24 hours of 60 minutes and
 60 seconds originated in Babylonia. The earth's rotation was too
 inexact to measure time, which is why the 11th CGPM (1954) defined the
 second based on a standarized historical tropical year (see below)
-which was later (13th CGPM 1967--1968) replaced by frequency
+which was later (13th CGPM 1967-1968) replaced by frequency
 measurement. Thus the second came to be the base unit of time and the
 day is now 864000&nbsp;s exactly with the <emph>Universal Coordinated
 Time</emph> (UTC) adding leap seconds every now and then.
@@ -1810,18 +1810,18 @@ system defined as multiples and subdivisions of one reference unit.
       <p>
 We use the subscript notation to disambiguate units with same names in
 the different systems. Subscript notation means, for instance that if
-the print symbol for foot is &ldquo;ft&rdquo; we use subscripts
-to distinguish the international foot &ldquo;ft_i&rdquo; the
-U.S. survey foot &ldquo;ft_{us}&rdquo; and the British Imperial
-foot &ldquo;ft_{br}&rdquo; We do not actually list print symbols
-for customary units, because there seems to be no standard for it, and
-because defining print symbols is out of scope of &TUCUM;. However, we
-presume that subscripts be used to disambiguate whatever print symbols
-are being used. According to <pref from="para-underscore"/>, &TUCUM;
-uses the underscore to denote those subscripts, and also encloses the
-entire unit atom into square brackets. Hence, the symbols for the
-U.S. survey foot and the British Imperial foot are defined as
-&ldquo;<code>[ft_i]</code>,&rdquo;
+the print symbol for foot is &ldquo;ft&rdquo; we use subscripts to
+distinguish the international foot &ldquo;ft<sub>i</sub>&rdquo; the
+U.S. survey foot &ldquo;ft<sub>us</sub>&rdquo; and the British
+Imperial foot &ldquo;ft<sub>br</sub>&rdquo; We do not actually list
+print symbols for customary units, because there seems to be no
+standard for it, and because defining print symbols is out of scope of
+&TUCUM;. However, we presume that subscripts be used to disambiguate
+whatever print symbols are being used. According to <pref
+from="para-underscore"/>, &TUCUM; uses the underscore to denote those
+subscripts, and also encloses the entire unit atom into square
+brackets. Hence, the symbols for the U.S. survey foot and the British
+Imperial foot are defined as &ldquo;<code>[ft_i]</code>,&rdquo;
 &ldquo;<code>[ft_us]</code>,&rdquo; and
 &ldquo;<code>[ft_br]</code>&rdquo; respectively.
       </p>
@@ -1954,7 +1954,7 @@ The meaning of the columns is declared in <pref ref="para-custint"/>.
 [Barry N. Taylor, <emph>Guide to the Use of the International Stsyem of
 Units (SI)</emph> [NIST Special Publication 811], National Institute for
 Standards and Technology (NIST), 1995. Available from: URL:
-<code>http://physics.nist.gov/Document/sp811.pdf</code>]}
+<code>http://physics.nist.gov/Document/sp811.pdf</code>]
 </smallref>
     </p>
 
@@ -2290,7 +2290,7 @@ The meaning of the columns is declared in <pref ref="para-custint"/>.
     <comment>
       <p>
 There are three systems of typesetter's lengths in use today:
-Fran&ccedilla;cois-Ambroise Didot (1730--1804), a publisher in Paris,
+Fran&ccedilla;cois-Ambroise Didot (1730-1804), a publisher in Paris,
 invented this system based on the traditional subdivisions of the
 customary units: 1 line was 1/12 inch and 1/6 line was one
 point. Henceforth the size of letters were measured in point. However,
@@ -2657,7 +2657,7 @@ The unit &ldquo;U&rdquo; of enzymatic activity was defined in 1964 by
 the <emph>International Union of Biochemistry</emph> as the catalytic
 activity that catalyzes the transformation of 1&nbsp;&mu;mol of of the
 substrate per minute. This unit is defined so that normal biological
-enzyme activities are in the range of 1&nbsp;U--100&nbsp;U. This unit
+enzyme activities are in the range of 1&nbsp;U-100&nbsp;U. This unit
 could not be adopted by the CGPM because it violates the style rules
 of the SI, i.e. &ldquo;unit&rdquo; is a very indistinctive word,
 &ldquo;U&rdquo; is a capital letter, and the definition is not
@@ -2904,7 +2904,8 @@ in &TUCUM;.
 </verse>
 
 <verse>
-<table ref="junk"/> gives some example for those non-units but is not normative.
+<tabref ref="junk"/> gives some example for those non-units but is not
+normative.
 </verse>
     </p>
     <u:units id="junk"> 
@@ -2924,7 +2925,7 @@ in &TUCUM;.
     <p>
 &TUCUM; is designed and maintained so that severe name conflicts do
 not occur. However, avoiding all conflicts is possible only at the
-cost of defining very unusual symbols for those units. As the <table
+cost of defining very unusual symbols for those units. As the <tabref
 ref="conflicts"/> shows, all current conflicts are of type IVa between
 metric and nonmetric units. This means that there is only a conflict
 if the metric predicate is violated so that non-metric units are used
@@ -2932,7 +2933,7 @@ with a prefix.
 
 <smallref> [Schadow G, McDonald CJ et al: Units of Measure in
 Clinical Information Systems. <emph>JAMIA</emph> 6(2); Mar/Apr
-1999. p.&nbsp;151--162.]}
+1999. p.&nbsp;151-162.]
 </smallref>
     </p>
 
