@@ -1,3 +1,11 @@
+<!-- COPYRIGHT 1998-2004, REGENSTRIEF INSTITUTE, INC. ALL RIGHTS RESERVED.
+
+  Use and redistribution of this data is permitted without charge
+  as long as you make no changes to it. DO NOT CHANGE THIS FILE if 
+  you want to  redistribute it. Please contact Gunther Schadow at 
+  the Regenstrief Institute, Indianapolis, IN 46260 for any issues
+  that make you think you need to change this file.
+-->
 <!DOCTYPE spec [
   <!ENTITY alpha  "&#x3b1;">
   <!ENTITY beta   "&#x3b2;">
@@ -2669,7 +2677,7 @@ to convert between numbers per LPF and per HPF and vice versa.
       <p>
 The unit &ldquo;U&rdquo; of enzymatic activity was defined in 1964 by
 the <emph>International Union of Biochemistry</emph> as the catalytic
-activity that catalyzes the transformation of 1&nbsp;&mu;mol of of the
+activity that catalyzes the transformation of 1&nbsp;&mu;mol of the
 substrate per minute. This unit is defined so that normal biological
 enzyme activities are in the range of 1&nbsp;U-100&nbsp;U. This unit
 could not be adopted by the CGPM because it violates the style rules
@@ -2692,7 +2700,7 @@ specified by reference to the measurement procedure; the measurement
 procedure must identify the indicator reaction.&rdquo;  The general
 problem with catalytic activities is that these heavily depend not
 only on the substance but on many side-conditions, such as
-temperature, acidity of the solution, presence or absense of
+temperature, acidity of the solution, presence or absence of
 cofactors, inhibitors or activators, and the amount of substrate.
 Particularly a catalytic activity measured <emph>in vitro</emph> says
 little about the activity <emph>in vivo</emph>. Hence the use of katal
@@ -2703,7 +2711,7 @@ substances.
       <p>
 Because of the influence of the measurement method, results of
 biologic activity measurement cannot usually be converted. This is a
-particular problem with the many named arbitraty units that are still
+particular problem with the many named arbitrary units that are still
 used. &TUCUM; currently defines all arbitrary units as
 dimensionless. Advice on how these many enzyme units convert to
 standard catalytic activities is appreciated.
