@@ -1165,7 +1165,7 @@ Prefix symbols are those defined in <tabref ref="prefixes"/>.
 &ldquo;print,&rdquo; &ldquo;c/s,&rdquo; &ldquo;c/i,&rdquo; and
 &ldquo;value&rdquo; The name is the full (official) name of the
 unit. The official symbol used in print this is listed in the column
-&ldquo;print&rdquo; &ldquo;C/s,&rdquo; and &ldquo;c/i&rdquo; list the
+&ldquo;print&rdquo; &ldquo;c/s,&rdquo; and &ldquo;c/i&rdquo; list the
 symbol in the case sensitive and the case insensitive variants
 respectively. &ldquo;Value&rdquo; is the scalar value by which the
 unit atom is multiplied if combined with the prefix.
@@ -1237,7 +1237,7 @@ semantics.
 of quantity,&rdquo; &ldquo;print,&rdquo; &ldquo;c/s,&rdquo; and
 &ldquo;c/i.&rdquo; The name is the full (official) name of the
 unit. The official symbol used in print this is listed in the column
-&ldquo;print&rdquo; &ldquo;C/s,&rdquo; and &ldquo;c/i&rdquo; list the
+&ldquo;print&rdquo; &ldquo;c/s,&rdquo; and &ldquo;c/i&rdquo; list the
 symbol in the case sensitive and the case insensitive variants
 respectively.
 </verse>
@@ -1332,7 +1332,7 @@ Dimensionless unit atoms are defined in <tabref ref="dimless"/>.
 &ldquo;M,&rdquo; &ldquo;value,&rdquo; and &ldquo;definition.&rdquo;
 The name is the full (official) name of the unit. The symbol
 recommended for use in print this is listed in the column
-&ldquo;print.&rdquo; &ldquo;C/s,&rdquo; and &ldquo;c/i&rdquo; list the
+&ldquo;print.&rdquo; &ldquo;c/s,&rdquo; and &ldquo;c/i&rdquo; list the
 symbol in the case sensitive and the case insensitive variants
 respectively. 
 The column &ldquo;M&rdquo; specifies whether this is a
@@ -1401,7 +1401,7 @@ for those units are given in <tabref ref="si"/>.
 &ldquo;M,&rdquo; &ldquo;value,&rdquo; and &ldquo;definition.&rdquo;
 The name is the full (official) name of the unit. The symbol
 recommended for use in print this is listed in the column
-&ldquo;print.&rdquo; &ldquo;C/s,&rdquo; and &ldquo;c/i&rdquo; list the
+&ldquo;print.&rdquo; &ldquo;c/s,&rdquo; and &ldquo;c/i&rdquo; list the
 symbol in the case sensitive and the case insensitive variants
 respectively. 
 The column &ldquo;M&rdquo; specifies whether this is a
