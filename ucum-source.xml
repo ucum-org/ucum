@@ -294,11 +294,11 @@ the range of 33&ndash;126 (0x21&ndash;0x7E) excluding
 
 double quotes (&lquo;<code>"</code>&rquo;),
 parentheses (&lquo;<code>(</code>&rquo; and &lquo;<code>)</code>&rquo;),
-plus sign (&lquo;<code>+</code>&rquo;}'),
-minus sign (&lquo;<code>-</code>&rquo;}'),
-period (&lquo;<code>.</code>&rquo;}'),
-solidus (&lquo;<code>/</code>&rquo;}'),
-equal sign (&lquo;<code>=</code>&rquo;}'),
+plus sign (&lquo;<code>+</code>&rquo;'),
+minus sign (&lquo;<code>-</code>&rquo;'),
+period (&lquo;<code>.</code>&rquo;'),
+solidus (&lquo;<code>/</code>&rquo;'),
+equal sign (&lquo;<code>=</code>&rquo;'),
 square brackets (&lquo;<code>[</code>&rquo; 
     and &lquo;<code>]</code>&rquo;), and
 curly braces (&lquo;<code>{</code>&rquo; and &lquo;<code>}</code>&rquo;),
@@ -620,46 +620,41 @@ raises the whole term within the parentheses to the power.
      </p>
 <exhibit>
 <table border="0">
-  <tr><td><sym name="sign"/></td><td>::=</td>
+  <tr valign="top"><td><sym name="sign"/></td><td>::=</td>
     <td><lit value="+"/> | <lit value="-"/></td></tr>
-  <tr><td><sym name="digit"/></td><td>::=</td>
+  <tr valign="top"><td><sym name="digit"/></td><td>::=</td>
     <td><lit value="0"/> | <lit value="1"/> | <lit value="2"/> |
         <lit value="3"/> | <lit value="4"/> | <lit value="5"/> | 
         <lit value="6"/> | <lit value="7"/> | <lit value="8"/> | 
         <lit value="9"/></td></tr> 
-  <tr><td><sym name="digits"/></td><td>::=</td>
+  <tr valign="top"><td><sym name="digits"/></td><td>::=</td>
     <td>  <sym name="digit"/> <sym name="digits"/> 
         | <sym name="digit"/></td></tr>
-  <tr><td><sym name="factor"/></td><td>::=</td>
+  <tr valign="top"><td><sym name="factor"/></td><td>::=</td>
     <td><sym name="digits"/></td></tr>
-  <tr><td><sym name="exponent"/></td><td>::=</td>
+  <tr valign="top"><td><sym name="exponent"/></td><td>::=</td>
     <td>  <sym name="sign"/> <sym name="digits"/> 
         | <sym name="digits"/></td></tr>
-  <tr><td><sym name="prefix"/></td><td>::=</td>
-    <td><sym name="PREFIX-SYMBOL"/></td></tr>
-  <tr><td><sym name="proper-atomic-unit"/></td><td>::=</td>
-    <td>  <sym name="ATOM-SYMBOL"/><br/>
-        | <sym name="ATOM-SYMBOL"/> <sym name="annotation"/>
-	</td></tr>
-  <tr><td><sym name="atomic-unit"/></td><td>::=</td>
-    <td>  <sym name="proper-atomic-unit"/><br/>
-        | <sym name="annotation"/></td></tr>
-  <tr><td><sym name="annotation"/></td><td>::=</td>
-    <td><lit value="{"/> <sym name="ANNOTATION-STRING"/> 
-          <lit value="}"/></td></tr>
-  <tr><td><sym name="simple-unit"/></td><td>::=</td>
-    <td><sym name="prefix"/><sym name="proper-atomic-unit"/><br/>
-        | <sym name="atomic-unit"/><br/>
-	| <lit value="("/> <sym name="term"/> <lit value=")"/><br/>
-        | <sym name="factor"/></td></tr>
-  <tr><td><sym name="power"/></td><td>::=</td>
+  <tr valign="top"><td><sym name="simple-unit"/></td><td>::=</td>
+    <td><sym name="ATOM-SYMBOL"/><br/>
+        | <sym name="PREFIX-SYMBOL"/><sym name="ATOM-SYMBOL"/></td></tr>
+  <tr valign="top"><td><sym name="annotatable"/></td><td>::=</td>
     <td><sym name="simple-unit"/><sym name="exponent"/><br/>
         | <sym name="simple-unit"/></td></tr>
-  <tr><td><sym name="term"/></td><td>::=</td>
-    <td>  <lit value="/"/> <sym name="power"/><br/>
-        | <sym name="power"/> <lit value="."/> <sym name="term"/><br/>
-        | <sym name="power"/> <lit value="/"/> <sym name="term"/><br/>
-        | <sym name="power"/></td></tr>
+  <tr valign="top"><td><sym name="component"/></td><td>::=</td>
+    <td><sym name="annotatable"/><sym name="annotation"/><br/>
+        | <sym name="annotatable"/><br/>
+        | <sym name="annotation"/><br/>
+        | <sym name="factor"/><br/>
+	| <lit value="("/> <sym name="term"/> <lit value=")"/></td></tr>
+  <tr valign="top"><td><sym name="term"/></td><td>::=</td>
+    <td>  <lit value="/"/> <sym name="component"/><br/>
+        | <sym name="component"/> <lit value="."/> <sym name="term"/><br/>
+        | <sym name="component"/> <lit value="/"/> <sym name="term"/><br/>
+        | <sym name="component"/></td></tr>
+  <tr valign="top"><td><sym name="annotation"/></td><td>::=</td>
+    <td><lit value="{"/> <sym name="ANNOTATION-STRING"/> 
+          <lit value="}"/></td></tr>
   </table>
   <caption>
 The complete syntax in the Backus-Naur Form: The <emph>term</emph> of
@@ -677,6 +672,10 @@ braces, when such an annotation occurs without a leading symbol, the
 default unit 1 is assumed
   </caption>
 </exhibit>
+      <figure id="ucum-state-automaton">
+        <pixmap source="ucum-state-automaton.gif"/>
+        <caption>Pushdown-state automaton describing the syntax.</caption>
+      </figure>
     </div2>
     <div2>
       <head>The Predicate &ldquo;Metric&rdquo;</head>
