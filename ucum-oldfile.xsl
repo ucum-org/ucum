@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <xsl:transform version="1.1"
+    xmlns:u="http://aurora.regenstrief.org/UCUM"
     xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
 
 <xsl:output method="text" indent="yes" encoding="utf-8"/>
@@ -39,16 +40,16 @@
   <xsl:value-of select="$case"/>
   <xsl:text>
 </xsl:text>
-  <xsl:apply-templates select="//prefix"/>
+  <xsl:apply-templates select="//u:prefix"/>
   <xsl:text>dimensions </xsl:text>
-  <xsl:value-of select="count(//baseUnit)"/>
+  <xsl:value-of select="count(//u:base-unit)"/>
   <xsl:text>
 </xsl:text>
-  <xsl:apply-templates select="//baseUnit"/>
-  <xsl:apply-templates select="//derivedUnit"/>
+  <xsl:apply-templates select="//u:base-unit"/>
+  <xsl:apply-templates select="//u:unit"/>
 </xsl:template>
 
-<xsl:template match="prefix">
+<xsl:template match="u:prefix">
   <xsl:text>prefix </xsl:text>
   <xsl:choose>
     <xsl:when test="$case='insensitive'">
@@ -64,7 +65,7 @@
 </xsl:text>
 </xsl:template>
 
-<xsl:template match="baseUnit">
+<xsl:template match="u:base-unit">
   <xsl:text>base </xsl:text>
   <xsl:choose>
     <xsl:when test="$case='insensitive'">
@@ -78,7 +79,7 @@
 </xsl:text>
 </xsl:template>
 
-<xsl:template match="derivedUnit">
+<xsl:template match="u:unit">
   <xsl:choose>
     <xsl:when test="$case='insensitive'">
       <xsl:value-of select="@CODE"/>
