@@ -1,0 +1,2941 @@
+<!DOCTYPE spec [
+  <!ENTITY alpha  "&#x3b1;">
+  <!ENTITY beta   "&#x3b2;">
+  <!ENTITY mu     "&#x3bc;">
+  <!ENTITY pi     "&#x3c1;">
+  <!ENTITY epsilon "&#x3b5;">
+  <!ENTITY kappa  "&#x3ba;">
+  <!ENTITY rho    "&#x3c1;">
+  <!ENTITY tau    "&#x3c4;">
+  <!ENTITY iotatonos "&#x3af;">
+  <!ENTITY omikron "&#x3bf;">
+  <!ENTITY nu      "&#x3bd;">
+  <!ENTITY omega  "&#x3c9;">
+  <!ENTITY Omega  "&#x3a9;">
+  <!ENTITY egrave "&#xe8;">
+  <!ENTITY eacute "&#xe9;">
+  <!ENTITY ouml   "&#xf6;">
+  <!ENTITY Aring  "&#xc5;">
+  <!ENTITY aring  "&#xe5;">
+  <!ENTITY ccedilla "&#xa7;">
+  <!ENTITY deg    "&#xb0;">
+  <!ENTITY box    "&#x25a1;">
+  <!ENTITY middot "&#xb7;">
+  <!ENTITY mult   "&#xd7;"> 
+  <!ENTITY nbsp   "&#xa0;"> 
+  <!ENTITY ndash  "&#x2013;">
+  <!ENTITY mdash  "&#x2014;">
+  <!ENTITY ldquo  "&#x201C;">
+  <!ENTITY rdquo  "&#x201D;">
+  <!ENTITY lquo   "&#x2018;">
+  <!ENTITY rquo   "&#x2019;">
+  <!ENTITY langle "&#x2039;">
+  <!ENTITY rangle "&#x203A;">
+  <!ENTITY sharps "&#xdF;">
+  <!ENTITY sim    "&#x7e;">
+  <!ENTITY ssim   "&#x2248;">
+  <!ENTITY bullet "&#x2022;">
+  <!ENTITY element "&#x2208;">
+  <!ENTITY cap    "&#x2229;">
+  <!ENTITY cup    "&#x222A;">
+  <!ENTITY emptyset "{}"> <!-- &#x2205; -->
+
+  <!ENTITY UCUM  "<i>Unified Code for Units of Measure</i>"> 
+  <!ENTITY TUCUM  "<i>The Unified Code for Units of Measure</i>"> 
+]>
+<spec>
+<header>
+  <title>The Unified Code for Units of Measure</title>
+  <version>1.5</version>
+  <date>October 2002</date>
+  <authlist>
+    <author>
+      <name>Gunther Schadow</name>
+      <affiliation>Regenstrief Institute for Health Care and Indiana
+      University School of Medicine</affiliation>
+      <email href="gschadow@regenstrief.org"/>
+    </author>
+    <author>
+      <name>Clement J. McDonald</name>
+      <affiliation>Regenstrief Institute for Health Care and Indiana
+      University School of Medicine</affiliation>
+      <email href="cmcdonald@regenstrief.org"/>
+    </author>
+  </authlist>
+  <copyright>1998, 1999, 2000, 2001, 2002, Regenstrief Institute for
+  Health Care. All rigthts reserved.</copyright>
+</header>
+
+<body>
+  <div1 id="section-introduction">
+    <head>Introduction</head>
+    <p>
+&TUCUM; is a code system intended to include <emph>all</emph> units of
+measures being contemporarily used in international science,
+engineering, and business. The purpose is to facilitate unambiguous
+electronic communication of quantities together with their units. The
+focus is on electronic communication, as opposed to communication
+between humans. A typical application of &TUCUM; are electronic data
+interchange (EDI) protocols, but there is nothing that prevents it
+from being used in other types of machine communication.
+    </p>
+    <p>
+&TUCUM; is inspired by and heavily based on ISO&nbsp;2955-1983, ANSI
+X3.50-1986, and HL7's extensions called &ldquo;ISO+&rdquo;. The
+respective ISO and ANSI standards are both entitled
+&ldquo;Representation of [...]  units in systems with limited
+character sets&rdquo; where ISO&nbsp;2955 refers to SI and other units
+provided by ISO&nbsp;1000-1981, while ANSI X3.50 extends ISO&nbsp;2955 to
+include U.S. customary units. Because these standards carry the
+restriction of &ldquo;limited character sets&rdquo; in their names
+they seem to be of less value today, when graphical user interfaces and
+laser printers are in wide-spread use. For this reason, the european
+standard ENV&nbsp;12435 in its clause 7.3 declares ISO&nbsp;2955 obsolete.
+    </p>
+    <p>
+ENV&nbsp;12435 is dedicated exclusively to the communication of
+measurements between humans in display and print, and does not provide
+codes that can be used in communication between systems. It does not
+even provide a specification that would allow communication of units
+from one system to the screen or printer of another system. The issue
+about displaying units in the common style defined by the 9th
+<emph>Conf&eacute;rence G&eacute;n&eacute;rale des Poids et Mesures</emph>
+(CGPM) in 1947 is not just the character set. Although the
+<emph>Unicode</emph> standard and its predecessor ISO/IEC&nbsp;10646 is
+the richest character set ever, it is still not enough to specify the
+presentation of units, because there are important typographical
+details such as superscripts, subscripts, roman and
+italics.<footnote>
+         <p>
+Interestingly the authors of ENV&nbsp;12435 forgot to include
+superscripts in the minimum requirements as given by subclause 7.1.4
+for which they do not specify an alternative.
+         </p>
+       </footnote>
+    </p>
+    <p>
+The real value of the restriction on the character set and
+typographical details, however, is not to cope with legacy systems and
+less powerful technology, but to facilitate unambiguous communication
+and interpretation of the meaning of units from one computer system to
+another. In this respect, ISO&nbsp;2955 and ANSI X3.50 are not
+obsolete because there is no other standard that would fill in for
+inter-systems communication of units. However, ISO&nbsp;2599 and ANSI
+X3.50 currently have severe defects:
+    </p>
+    <list role="ordered">
+      <item>
+        <p>
+ISO&nbsp;2955 and ANSI&nbsp;X3.50 contain numerous name conflicts,
+both direct conflicts (e.g., &ldquo;<code>a</code>&rdquo; being used
+for both &ldquo;year&rdquo; and &ldquo;are&rdquo;) and conflicts
+that are generated through combination of unit symbols with prefixes
+(e.g., &ldquo;<code>cd</code>&rdquo; means candela and centi-day and
+&ldquo;<code>PEV</code>&rdquo; means peta-volt and pico-electronvolt.)
+        </p>
+      </item>
+      <item>
+        <p>
+Neither ISO&nbsp;2955 nor ANSI&nbsp;X3.50 cover all units that are
+currently used in practice. There are many more units in use than what
+is allowed by the <emph>Syst&egrave;me International
+d'Unit&eacute;s</emph> (SI) and accompanying standards. For example,
+the older CGM-units dyne and erg are still used in the science of
+physiology. Although ANSI&nbsp;X3.50 extends ISO&nbsp;2955 with some
+U.S. customary units, it is still not complete in this respect. For
+example it doesn't define the degree Fahrenheit.
+        </p>
+      </item>
+      <item>
+        <p>
+ANSI&nbsp;X3.50 is semantically ambiguous with respect to customary
+units, even if we do not consider the history and international
+aspects of customary units. Three systems of mass units are used in
+the U.S., avoirdupois used generally, apothecaries' used by
+pharmacists, and troy used in trade with Gold and other precious
+metals. ANSI&nbsp;X3.50 has no way to select any one of those
+specifically, which is bad in medicine, where both apothecaries' and
+avoirdupois weights are being used frequently.
+        </p>
+      </item>
+    </list>
+    <p>
+ISO&nbsp;2955 and all standards that do only look for the resolutions
+and recommendations of the CGPM and the <emph>Comit&eacute;
+International des Poids et Mesures</emph> (CIPM) as published by the
+<emph>Bureau International des Poids et Mesures</emph> (BIPM) and various
+ISO standards (ISO&nbsp;1000 and ISO&nbsp;31) fail to recognize that
+the needs in practice are often different from the ideal propositions
+of the CGPM. Although not allowed by the CGPM and related ISO
+standards, many other units are used in international sciences,
+healthcare, engineering, and business, both meaningfully and some
+units of questionable meaning. A coding system that is to be useful in
+practice must cover the requirements and habits of the
+practice&mdash;even some of the bad habits.
+    </p>
+    <p>
+None of the current standards attempt to specify a semantics of units
+that can be deployed in information systems with moderate
+requirements. Metrological standards such as those published by the
+BIPM are dedicated to maximal scientific correctness of reproducible
+definitions of units. These definitions make sense only to human
+specialists and can hardly be deployed to their full extent by any
+information system that is not dedicated to metrology. On the other
+hand, ISO&nbsp;2955 and ANSI&nbsp;X3.50 provide no semantics at all for the
+codes they define.
+    </p>
+    <p>
+&TUCUM; provides a single coding system for units that is complete,
+free of all ambiguities, and that assigns to each defined unit a
+concise semantics. In communication it is not only important that all
+communicating parties have the same repertoir of symbols, but also that
+all attach the same meaning to the symbols they exchange. The common
+meaning must be computationally verifiable. &TUCUM; assumes a
+semantics for units based on dimensional analysis.<footnote>
+        <p>
+A more extensive introduction into this semantics of units can be
+found in: Schadow G, McDonald CJ et al: Units of Measure in Clinical
+Information Systems; <it>JAMIA</it> 6(2); Mar/Apr 1999;
+p.&nbsp;151&ndash;162.
+        </p>
+      </footnote>
+    </p>
+    <p>
+<!-- FIXME this paragraph is a lump: we need Roadmap, scope, etc. -->
+In short, each unit is defined relative to a system of base units by a
+numeric factor and a vector of exponents by which the base units
+contribute to the unit to be defined. Although we can reflect all the
+meaning of units covered by dimensional analysis with this vector
+notation, the following tables do not show these vectors. One reason
+is that the vectors depend on the base system chosen and even on the
+ordering of the base units. The other reason is that these vectors are
+hard to understand to human readers while they can be easily derived
+computationally. Therefore we define new unit symbols using algebraic
+terms of other units. Those algebraic terms are also valid codes of
+&TUCUM;.
+    </p>
+  </div1>
+
+  <div1>
+    <head>Grammar of Units and Unit Terms</head>
+    <p name="preliminaries">
+<verse>
+&TUCUM; consists of a basic set of terminal symbols for units, called
+<emph>atomic unit symbols</emph> or <emph>unit atoms</emph>, and multiplier
+prefixes. It also consists of an expression syntax by which these
+symbols can be combined to yield valid units.
+</verse>
+
+<verse>
+The tables of terminal symbols are fixed as of every revision of
+&TUCUM;, additions, deletions or changes are <emph>not</emph> allowed.
+</verse>
+
+<verse>
+All expression that can be derived from these terminal symbols and the
+expression syntax are valid codes. Any expression of &TUCUM; has a
+precisely defined semantics.
+</verse>
+    </p>
+    <comment>
+      <p>
+The expression syntax of &TUCUM; generates an infinite number of codes
+with the consequence that it is impossible to compile a table of all
+valid units.
+       </p>
+       <p>
+That the tables of terminal symbols may not be extended does not mean
+that missing symbols will never be available in &TUCUM;. Suggestions
+for additions of new symbols are welcome and revisions of
+&TUCUM; will be released as soon as a change request has been approved.
+       </p>
+     </comment>
+     <p name="full and limited conformance">
+<verse> 
+The semantics of &TUCUM; implies equivalence classes such that
+different expressions may have the same meaning.
+</verse>
+
+<verse> 
+Programs that declare <emph>full conformance</emph> with &TUCUM; must
+compare unit expressions by their semantics, i.e. they must detect
+equivalence for different expressions with the same meaning.
+</verse>
+
+<verse>
+Programs with <emph>limited conformance</emph> may compare unit expressions
+literally and thus may not detect equivalence of unit expressions.
+</verse>
+    </p>
+
+    <comment>
+      <p>
+The option for &ldquo;limited conformace&rdquo; allows &TUCUM; to be adopted
+even by less powerful systems that can not or do not want to deal with
+the full semantics of units. Those systems typically have a table of
+fixed unit expression literals that may be related to other literals
+with fixed conversion factors. Although these systems will have
+difficulties to receive unit expressions from various sources, they
+will at least send out valid expressions of &TUCUM;, which is an
+important step towards a commonly used coding scheme for units.
+      </p>
+    </comment>
+
+  <div2>
+    <head>Character Set and Lexical Rules</head>
+    <p name="character set">
+<verse> All expressions of &TUCUM; shall be build from characters of
+the 7-bit US-ASCII character set exclusively.
+</verse>
+
+<verse> Terminal unit symbols can consist of all ASCII characters in
+the range of 33&ndash;126 (0x21&ndash;0x7E) excluding
+
+double quotes (&lquo;<code>"</code>&rquo;),
+parentheses (&lquo;<code>(</code>&rquo; and &lquo;<code>)</code>&rquo;),
+plus sign (&lquo;<code>+</code>&rquo;}'),
+minus sign (&lquo;<code>-</code>&rquo;}'),
+period (&lquo;<code>.</code>&rquo;}'),
+solidus (&lquo;<code>/</code>&rquo;}'),
+equal sign (&lquo;<code>=</code>&rquo;}'),
+square brackets (&lquo;<code>[</code>&rquo; 
+    and &lquo;<code>]</code>&rquo;), and
+curly braces (&lquo;<code>{</code>&rquo; and &lquo;<code>}</code>&rquo;),
+
+which have special meaning. 
+</verse>
+
+<verse> A terminal unit symbol can not consist of only digits
+(&lquo;<code>0</code>&rquo;&ndash;&lquo;<code>9</code>&rquo;) because
+those digit strings are interpreted as positive integer
+numbers. However, a symbol &ldquo;<code>10*</code>&rdquo; is allowed
+because it ends with a non-digit allowed to be part of a symbol.
+</verse>
+
+<verse> For every terminal symbol there is a case insensitive variant
+defined, to be used when there is a risk of upper and lower case to be
+confused. Although upper and lower case can be mixed in case
+insensitive symbols there is no meaning to the case. Case insensitive
+symbols are incompatible to the case senitive symbols.
+</verse>
+    </p>
+
+    <comment>
+      <p>
+The 7-bit US-ASCII character code is the greatest common denominator
+that can be expected to be available in any communication environment.
+Only very few units normally require symbols from the greek alphabet
+and thus the cost of requiring Unicode does not outweigh the benefit.
+As explained above, the real issue about writing unit terms naturally
+is not the character set but the ability to write subscripts and
+superscripts and distinguish roman letters from italics.
+      </p>
+      <p>
+Some computer systems or programming languages still have the
+requirement of case insensitivity and some humans who are not familiar
+with SI units tend to confuse upper and lower case or can not
+interpret the difference in upper and lower case correctly. For this
+reason the case insensitive symbols are defined. Although &TUCUM;
+does not encourage use of case insensitive symbols where not
+absolutely necessary, in some circumstances the case insensitive
+representation may be the greatest common denominator. Thus some
+systems that can handle case sensitivity may end up using case
+insensitive symbols in order to communicate with less powerful
+systems.
+      </p>
+      <p>
+ISO&nbsp;2955 and ANSI&nbsp;X3.50 call case sensitive symbols &ldquo;mixed
+case&rdquo; and case insensitive symbols &ldquo;single case&rdquo; and
+list two columns for &ldquo;single case&rdquo; symbols, one for upper
+case and one for lower case.  In &TUCUM; all units can be written in
+mixed upper and lower case, but in the case insensitive variant the
+mixing of case does not matter.
+      </p>
+    </comment>
+
+    <p name="prefixes">
+<verse>Metric units (cf. <pref ref="para-metric"/>) may be
+combinations of a unit symbol with a prefix symbol.
+</verse>
+
+<verse>The unit symbol to be combined with the prefix must not itself
+contain a prefix. Such a prefix-less unit symbol is called <emph>unit
+atom</emph>.
+</verse>
+
+<verse>Prefix and atom are connected immediately without any
+delimiter. Separation of an optional prefix from the atom occurs on
+the lexical level by finding a matching combination of an optional
+prefix and a unit atom.
+</verse>
+
+<verse> The prefix is the longest leading substring that matches a
+valid prefix where the remainder is a valid metric unit atom. If no
+such prefix can be matched, the unit atom is without prefix and may be
+both metric or non-metric.</verse>
+
+<smallref>[1&ndash;3: ISO&nbsp;1000, 3; ISO&nbsp;2955-1983, 3.7;
+ANSI&nbsp;X3.50-1986, 3.7 (Rule No. 6).]</smallref>
+    </p>
+
+    <p name="square brackets">
+<verse> Square brackets (&lquo;<code>[</code>&rquo; and 
+&lquo;<code>]</code>&rquo;) may be part of a
+unit atom at any place but only as matched pairs. Square brackets are
+lexical elements and not separate syntactical tokens. </verse>
+
+<verse> Within a matching pair of square brackets the full range of
+characters 33&ndash;126 can be used.<footnote>
+        <p>
+see the section about syle in <pref from="para-curly"/>, to find out
+how square brackets are actually used. Note, however, that the user
+has no choice about square bracket symbols, as these are fixed in the
+list of atomic unit symbols.
+        </p>
+      </footnote>
+</verse>
+
+<verse> Square brackets do <emph>not</emph> determine the boundary between
+prefix and unit atom, but they never span the boundary of unit atoms.
+</verse>
+
+<verse> 
+Square brackets must not be nested.
+</verse>
+    </p>
+    <comment>
+      <p>
+For example
+%
+&ldquo;<code>[abc+ef]</code>&rdquo;,
+&ldquo;<code>ab[c+ef]</code>&rdquo;,
+&ldquo;<code>[abc+]ef</code>&rdquo;, and
+&ldquo;<code>ab[c+ef]</code>&rdquo;
+%
+could all be valid symbols if defined in the tables. 
+In &ldquo;<code>ab[c+ef]</code>&rdquo; either
+&ldquo;<code>a</code>&rdquo; or &ldquo;<code>ab</code>&rdquo; 
+could be defined as a prefix, but not &ldquo;<code>ab[c</code>&rdquo;.
+      </p>
+      <p>
+Square brackets take on one task of round parentheses in HL7's
+&ldquo;ISO+&rdquo; code, where one use of parentheses is to augment
+unit symbols with suffixes, as in &ldquo;<code>mm(Hg)</code>&rdquo;.
+Another use is to enclose one full unit symbol into parentheses, as
+&ldquo;<code>(ka_u)</code>&rdquo; (for the King-Armstrong unit of
+catalytic amount of phosphatase).  Apparently, in a unit symbol such
+enclosed one is supposed not to expect a prefix. Thus, even if
+&ldquo;<code>a_u</code>&rdquo; would have been defined,
+&ldquo;<code>(ka_u)</code>&rdquo; should not be matched against
+kilo-<code>a_u</code>.
+      </p>
+      <p>
+Parentheses, however, were also used for the nesting of terms since
+HL7 version 2.3. At this point it became ambiguous whether parentheses
+are part of the unit symbol or whether they are syntactic tokens. For
+instance, &ldquo;<code>(ka_u)</code>&rdquo; could mean a nested
+&ldquo;<code>ka_u</code>&rdquo; (where &ldquo;<code>k</code>&rdquo;
+could possibly be a prefix), but also the proper symbol
+&ldquo;<code>(ka_u)</code>&rdquo; that happens to have parentheses as
+part of the symbol. &TUCUM; uses parentheses for the usual meaning of
+term nesting and uses square brackets where HL7's &ldquo;ISO+&rdquo;
+assumes parentheses to be part of the unit symbol.
+      </p>
+    </comment>
+    <p name="curly braces">
+
+<verse> The full range of characters 33&ndash;126 can be used within a
+pair of curly braces (&lquo;<code>{</code>&rquo; and
+&lquo;<code>}</code>&rquo;). The material enclosed in curly braces is
+called <emph>annotation</emph>.
+</verse>
+
+<verse> 
+Annotations do not contribute to the semantics of the unit but are
+meaningless by definition. Therefore, any fully conformant parser must
+discard all annotations. Parsers of limited conformace <emph>should</emph>
+not value annotations in comparison of units.
+</verse>
+
+<verse>
+Annotations do, however, signify the end of a unit symbol.
+</verse>
+
+<verse> An annotation without a leading symbol implies the default
+unit <unit>1</unit> (the unity).
+</verse>
+
+<verse> 
+Curly braces must not be nested.
+</verse>
+    </p>
+
+    <comment>
+      <p>
+Curly braces are here because people want annotations and deeply
+believe that they need annotations. Especially in chemistry and
+biomedical sciences, there are traditional habits to write annotations
+at units or instead of units, such as &ldquo;%vol.&rdquo;,
+&ldquo;RBC&rdquo;, &ldquo;CFU&rdquo;, &ldquo;kg(wet tis.)&rdquo;, or
+&ldquo;mL(total)&rdquo;. These habits are hard to overcome. Any
+attempt of a coding scheme to restrict this percieved expressiveness
+will ultimately result in the coding scheme not being adopted, or just
+&ldquo;half-way&rdquo; adopted (which is as bad as not adopted).
+      </p>
+      <p>
+Two alternative responses to this reality exist: either give in to the
+bad habits and blow up of the code with dimension- and meaningless
+unit atoms, or canalize this habit so that it does no harm. &TUCUM;
+canalizes this habit using curly braces. Nevertheless we do continuing
+efforts to upgrade doubtful units to genuine units of &TUCUM; by
+defining and linking them to the other units as good as
+possible. Thus, &ldquo;<code>g%</code>&rdquo; is a valid metric unit
+atom (so that &ldquo;<code>mg%</code>&rdquo; is a valid unit too.)
+A <emph>drops</emph>, although quite imprecise, is a valid unit of volume
+&ldquo;<code>[drp]</code>&rdquo;. Even HPF and LPF (the so called
+&ldquo;high-&rdquo; and &ldquo;low power field&rdquo; in the
+microscope) have been defined so that at least they relate to each
+other.
+      </p>
+    </comment>
+  </div2>
+  <div2>
+    <head>Syntax Rules</head>
+    <p name="algebraic unit terms">
+
+<verse> All units can be combined in an algebraic term using the
+operators for multiplication (period &lquo;<code>.</code>&lquo;) and
+division (solidus &lquo;<code>/</code>&rquo;). </verse>
+
+<verse> The multiplication operator is mandatory it must not be
+omitted or replaced by a space. The multiplication operator is a
+strict binary operator that may occur only <emph>between two</emph> unit
+terms. </verse>
+
+<verse> The division operator can be used as a binary and unary
+operator, i.e. a leading solidus will invert the unit that directly
+follows it. </verse>
+
+<verse> Terms are evaluated from left to right with the period and the
+solidus having the same operator precedence. Multiple division
+operators are allowed within one term. </verse>
+
+<smallref>[ISO&nbsp;1000, 4.5.2; ISO&nbsp;2955-1983, 3.3f; ANSI&nbsp;X3.50-1986, 3.3f
+(Rule No. 2f).]</smallref>
+    </p>
+    <comment>
+      <p>
+The use of the period instead of the asterisk
+(&lquo;<code>*</code>&rquo;) as a multiplication operator continues a
+tradition codified in ISO&nbsp;1000 and maintained in ISO&nbsp;2955. Because
+floating point numbers may not occur in unit terms the period is not
+ambiguous. A period in a unit term has no other meaning than to be the
+multiplication operator.
+      </p>
+      <p>
+Since Resolution 7 of the 9th CGPM in 1948 the myth of ambiguity being
+introduced by more than one solidus lives on and is quoted in all
+standards concerning the writing of SI units. However, when the strict
+left to right rule is followed there is no ambiguity, neither with one
+solidus nor with more than one solidus. However, in human practice we
+find the tendency to assign a lower precedence to the solidus which
+misleads people to write <v>a</v>/<v>b</v>&middot;<v>c</v> when they
+really mean <v>a</v>/(<v>b</v>&middot;<v>c</v>). When this is
+rewritten as <v>a</v>/<v>b</v>/<v>c</v> there is actually less
+ambiguity that in <v>a</v>/<v>b</v>&middot;<v>c</v>. So the real
+source of ambiguity is when a multiplication operator follows a
+solidus, not when there is more than one solidus in a term. Hence, we
+remove the restriction for only one solidus and introduce parentheses
+which may be used to remove any perceived ambiguity.
+      </p>
+    </comment>
+
+    <p name="integer numbers">
+
+<verse> A positive integer number may appear in place of a simple unit
+symbol. </verse>
+
+<verse> Only a pure string of decimal digits 
+(&lquo;<code>0</code>&rquo;&ndash;&lquo;<code>9</code>&rquo;)
+is interpreted as a number. If after one or more digits there is any
+non-digit character found that is valid for unit atoms, all the
+characters (including the digits) will be interpreted as a simple unit
+symbol.
+</verse>
+    </p>
+    <comment>
+      <p>
+For example, the string &ldquo;<code>123</code>&rdquo; is a positive
+integer number while &ldquo;<code>12a</code>&rdquo; is a symbol. 
+      </p>
+      <p>
+Note that the period is only used as a multiplication operator, thus
+&ldquo;<code>2.5</code>&rdquo; means 2 &mult; 5 and is not equal to 5/2.
+      </p>
+    </comment>
+
+    <p name="exponents">
+
+<verse> Simple units may be raised to a power. The exponent is an
+integer number and is written immediately behind the unit
+term. Negative exponents must be preceded by a minus sign
+(&lquo;<code>-</code>&rquo; positive exponents may be preceded by an
+optional plus sign (&lquo;<code>+</code>&rquo;). </verse>
+
+<verse> If the simple unit raised to a power is a combination of a
+prefix and a unit atom, both are raised to the power, e.g. &ldquo;1
+<code>cm3</code>&rdquo; equals &ldquo;10<sup>-6</sup>
+<code>m3</code>&rdquo; not &ldquo;10<sup>-2</sup>
+<code>m3</code>&rdquo;. 
+</verse>
+<smallref>[ISO&nbsp;2955-1983, 3.5f; ANSI&nbsp;X3.50-1986, 3.5f (Rule
+No. 4f).]</smallref>
+    </p>
+    <comment>
+      <p>
+ISO&nbsp;2955 and ANSI&nbsp;X3.50 actually do not allow a plus sign leading a
+positive exponent. However, if there can be any perceived ambiguities,
+an explicit leading plus sign may be of help sometimes. <emph>The
+Unified Code for Units of Measures</emph> therefore allows such plus signs
+at exponents. The plus sign on positive exponents can be used to
+delimit exponents from integer numbers used as simple units. Thus,
+<code>2+10</code> means 2<sup>10</sup> = 1024.
+      </p>
+    </comment>
+    <p name="nested terms">
+
+<verse> Unit terms with operators may be enclosed in parentheses
+(&lquo;<code>(</code>&rquo; and &lquo;<code>)</code>&rquo;) and used
+in place of simple units. Normal left-to-right evaluation can be
+overridden with parentheses. </verse>
+
+<verse> Parenthesized terms are <emph>not</emph> considered unit atoms
+and hence must not be preceded by a prefix. </verse>
+
+<verse> Since a unit term in parenthesis can be used in place of
+a simple unit, an exponent may follow on a closing parenthesis which
+raises the whole term within the parentheses to the power.
+</verse>
+     </p>
+<exhibit>
+<table border="0">
+  <tr><td><sym name="sign"/></td><td>::=</td>
+    <td><lit value="+"/> | <lit value="-"/></td></tr>
+  <tr><td><sym name="digit"/></td><td>::=</td>
+    <td><lit value="0"/> | <lit value="1"/> | <lit value="2"/> |
+        <lit value="3"/> | <lit value="4"/> | <lit value="5"/> | 
+        <lit value="6"/> | <lit value="7"/> | <lit value="8"/> | 
+        <lit value="9"/></td></tr> 
+  <tr><td><sym name="digits"/></td><td>::=</td>
+    <td>  <sym name="digit"/> <sym name="digits"/> 
+        | <sym name="digit"/></td></tr>
+  <tr><td><sym name="factor"/></td><td>::=</td>
+    <td><sym name="digits"/></td></tr>
+  <tr><td><sym name="exponent"/></td><td>::=</td>
+    <td>  <sym name="sign"/> <sym name="digits"/> 
+        | <sym name="digits"/></td></tr>
+  <tr><td><sym name="prefix"/></td><td>::=</td>
+    <td><sym name="PREFIX-SYMBOL"/></td></tr>
+  <tr><td><sym name="proper-atomic-unit"/></td><td>::=</td>
+    <td>  <sym name="ATOM-SYMBOL"/><br/>
+        | <sym name="ATOM-SYMBOL"/> <sym name="annotation"/>
+	</td></tr>
+  <tr><td><sym name="atomic-unit"/></td><td>::=</td>
+    <td>  <sym name="proper-atomic-unit"/><br/>
+        | <sym name="annotation"/></td></tr>
+  <tr><td><sym name="annotation"/></td><td>::=</td>
+    <td><lit value="{"/> <sym name="ANNOTATION-STRING"/> 
+          <lit value="}"/></td></tr>
+  <tr><td><sym name="simple-unit"/></td><td>::=</td>
+    <td><sym name="prefix"/><sym name="proper-atomic-unit"/><br/>
+        | <sym name="atomic-unit"/><br/>
+	| <lit value="("/> <sym name="term"/> <lit value=")"/><br/>
+        | <sym name="factor"/></td></tr>
+  <tr><td><sym name="power"/></td><td>::=</td>
+    <td><sym name="simple-unit"/><sym name="exponent"/><br/>
+        | <sym name="simple-unit"/></td></tr>
+  <tr><td><sym name="term"/></td><td>::=</td>
+    <td>  <lit value="/"/> <sym name="power"/><br/>
+        | <sym name="power"/> <lit value="."/> <sym name="term"/><br/>
+        | <sym name="power"/> <lit value="/"/> <sym name="term"/><br/>
+        | <sym name="power"/></td></tr>
+  </table>
+  <caption>
+The complete syntax in the Backus-Naur Form: The <emph>term</emph> of
+units takes care of multiplication and division. A <emph>power</emph>
+can be a simple unit with or without exponent (the default exponent is
+1). A simple unit is a symbol like &ldquo;<code>cm</code>&rdquo;
+&ldquo;<code>cd</code>&rdquo; that may have a prefix
+(&ldquo;<code>cm</code>&rdquo;) or not
+(&ldquo;<code>cd</code>&rdquo;). A whole unit term in parentheses
+can also be in place of a simple unit. A positive integer number may
+also be used as a simple unit. The terminal symbols for prefixes and
+unit atoms are entirely defined in their respective table. Unit atoms
+may be followed by any annotation inside a matching pair of curly
+braces, when such an annotation occurs without a leading symbol, the
+default unit 1 is assumed
+  </caption>
+</exhibit>
+    </div2>
+    <div2>
+      <head>The Predicate &ldquo;Metric&rdquo;</head>
+      <p id="para-metric" name="metric and non-metric unit atoms">
+
+<verse> Only metric unit atoms may be combined with a prefix.
+</verse>
+
+<verse> To be metric or not to be metric is a predicate assigned to
+each unit atom where it is defined.
+</verse>
+
+<verse> All base units are metric. No non-metric unit can be part of
+the basis.
+</verse>
+
+<verse> A unit must be a quantity on a ratio scale in order to be
+metric.
+</verse>
+   </p>
+   <comment>
+     <p>
+The metric predicate accounts for the fact that there are units that
+are prefixed and others that are not. This helps to disambiguize the
+parsing of simple units into prefix and atom.
+     </p>
+     <p>
+To determine whether a given unit atom is metric or not is not
+trivial. It is a cultural phenomenon, subject to change, just like
+language, the meaning of words and how words can be used. At one time
+we can clearly tell right or wrong useage of words, but these
+decisions may need to be revised with the passage of time.
+     </p>
+     <p>
+Generally, metric units are those defined &ldquo;in the spirit&rdquo; of the
+metric system, that emerged in France of the 18th century and was
+rapidly adopted by scientists. Metric units are in general based on
+reproducible natural phenomena and are usually not part of a system of
+compareable units with different magintudes, especially not if the
+ratios of these units are not powers of 10. Instead, metric units use
+multiplier prefixes that magnifies or diminishes the value of the unit
+by powers of ten. 
+     </p>
+     <p>
+Conversely, customary units are in the spirit of the middle age as
+most of them can be traced back into the a time around the 10th
+century, some are even older from the Roman and Babylonian
+empires. Most customary units are based on the average size of human
+anatomical or botanic structures (e.g., foot, grain) and come in
+series of comparable units with ratios 1/2, 1/4, 1/12, 1/16, and
+others. Thus all customary units are non-metric
+     </p>
+     <p>
+Not all units from ISO&nbsp;1000 are metric as degree, minute and second of
+plane angle are non-metric as well as minute, hour, day, month, and
+year. The second is a metric unit because it is a part of the SI
+basis, although it used to be part of a series of customary units
+(originating in the Babylonian era).
+     </p>
+     <p>
+Furthermore, for a unit to be metric it must be a quantity on a ratio
+scale where multiplication and division with scalars are defined.  The
+<emph>Comit&eacute; Consultatif d'Unit&eacute;s</emph> (CCU) decided
+in February 1995 that SI prefixes may be used with the degree
+Celsius. This statement has not been made explicitely before. This is
+an unfortunate decision because difference-scale units like the degree
+Celsius have no multiplication operation, so that the prefix value
+could be multiplied with the unit. Instead the prefix at non-ratio
+units scales the measurement value. One dekameter is 10 times of a
+meter, but there is no meaning to 10 times of 1&nbsp;&deg;C in the
+same way as 30&nbsp;&deg;C} are not 3 times as much as
+10&nbsp;&deg;C. See <pref from="para-special"/> on how &TUCUM; finds a way to
+accomodate this different use of prefixes at units such as the degree
+Celsius, bel or neper.
+     </p>
+   </comment>
+  </div2>
+  <div2>
+    <head>Style</head>
+    <comment>
+      <p>
+Except for the rule on curly braces (<pref ref="para-curly"/>), the
+rules on style govern the creation of the tables of unit atoms not
+their individual use. Users of &TUCUM; need not care about style rules
+(<pref from="para-underscore" to="para-apostrophe"/>) because users
+just use the symbols defined in the tables. Hence, style rules do not
+affect conformance to &TUCUM;. New submissions of unit atoms should,
+however, conform to the style rules.
+      </p>
+    </comment>
+    <p id="para-curly" name="curly braces">
+
+<verse> 
+Curly braces may be used to enclose annotations that are often written
+in place of units or behind units but that do not have a proper
+meaning of a unit and do not change the meaning of a unit. 
+</verse>
+
+<verse>
+Annotations have no semantic value.
+</verse>
+    </p>
+    <comment>
+      <p>
+For example one can write &ldquo;<code>%{vol}</code>&rdquo;,
+&ldquo;<code>kg{total}</code>&rdquo;, or &ldquo;<code>{RBC}</code>&rdquo;
+(for &ldquo;red blood cells&rdquo;) as pseudo-units. However, these
+annotations do not have any effect on the semantics, which is why
+these example expressions are equivalent to
+&ldquo;<code>%</code>&rdquo;, &ldquo;<code>kg</code>&rdquo;, and
+&ldquo;<code>1</code>&rdquo; respectively.
+      </p>
+    </comment>
+    <p id="para-underscore" name="underscore">
+<verse> When in print a unit would have a subscript, an underscore
+(&lquo;<code>_</code>&rquo;) is used to separate the subscript from
+the stem of the unit symbol. </verse>
+
+<verse>
+The subscript is part of the unit atom.
+</verse>
+
+<verse> subscripts are used to disambiguize the two units with the
+same name but different meanings.</verse>
+    </p>
+    <comment>
+      <p>
+For example when distinguishing the International Table calorie from
+the thermochemical calorie, we would use 1&nbsp;cal<sub>IT</sub> or
+1&nbsp;cal<sub>th</sub> in print. &TUCUM; defines the symbols
+&ldquo;<code> cal_IT</code>&rdquo; and
+&ldquo;<code>cal_th</code>&rdquo; with the underscore signifying that
+&ldquo;IT&rdquo; and &ldquo;th&rdquo; are subscripts. Other examples
+are the distinctions between the Julian and Gregorian calendar year
+from the tropical year or the british imperial gallon from the U.S.
+gallon (see <pref ref="28"/> and <pref ref="31"/>).
+      </p>
+    </comment>
+    <p name="square brackets">
+
+<verse> Square brackets enclose suffixes of unit symbols that change
+the meaning of a unit stem.
+</verse>
+
+<verse> All customary units shall be enclosed completely by square
+brackets.
+</verse>
+
+<verse>
+Other unit atoms shall be enclosed in square brackets if they are very
+rare, if they will conflict with other units, or if they are normally
+not used as a unit symbol but do have a proper meaning as a unit in
+&TUCUM;.
+</verse>
+
+<verse>
+Square brackets are part of the unit atom.
+</verse>
+    </p>
+    <comment>
+      <p>
+For example 1&nbsp;m&nbsp;H<sub>2</sub>O is written as
+&ldquo;<code>m[H2O]</code>&rdquo; in &TUCUM; because the suffix
+H<sub>2</sub>O changes the meaning of the unit atom for meter (length)
+to a unit of pressure.
+      </p>
+      <p>
+Customary units are defined in &TUCUM; in order to accomodate
+practical needs. However metric units are still prefered and the
+customary symbols should not interfere with metric symbols in any
+way. Thus, customary units are &ldquo;stigmatized&rdquo; by enclosing
+them into square brackets.
+      </p>
+      <p>
+If unit symbols for the purpose of display and print are derived from
+&TUCUM; units, the square brackets can be removed. However, display
+units are out of scope of &TUCUM;.
+      </p>
+    </comment>
+    <p id="para-apostrophe" name="apostrophe">
+<verse>
+The apostrophe (&lquo;<code>'</code>&rquo;) is used to separate words
+or abbreviated words in a multi-word unit symbol.
+</verse>
+
+<verse>
+Since units are mathematically defined symbols and not abbreviations
+of words, multi-word unit symbols should be defined only to reflect
+existing habits, not in order to create new ones.
+</verse>
+
+<verse>
+Multi-word units should always be enclosed in square brackets.
+</verse>
+    </p>
+    <comment>
+      <p>
+For example, such legacy units called &ldquo;Bodansky unit&rdquo; or
+&ldquo;Todd unit&rdquo; have the unit symbols
+&ldquo;<code>[bdsk'U]</code>&rdquo;, and
+&ldquo;<code>[todd'U]</code>&rdquo; respectively.
+      </p>
+    </comment>
+  </div2>
+  </div1>
+  <div1>
+    <head>Semantics</head>
+    <p name="preliminaries">
+
+<verse> The semantics of &TUCUM; is defined by the algebraic
+operations of multiplication, division and exponentiation between
+units, by the equivalence relations of equality and commensurability
+of units, and by the multiplication of a unit with a scalar.
+</verse>
+
+<verse> Every expression in &TUCUM; is mapped to one and only one
+semantic element. But every semantic element may have more than one
+valid representant in &TUCUM;.
+</verse>
+
+<verse> 
+The set of expressions in &TUCUM; is infinite.
+</verse>
+    </p>
+    <p name="equality and commensurability">
+<verse> The set of expressions in &TUCUM; has two binary, symmetric,
+reflexive, and transitive relations (equivalence relations)
+&ldquo;equals&rdquo; = and &ldquo;is commensurable with&rdquo;
+&sim;. All expressions that are equal are also commensurable but not
+all commensurable expressions are equal.</verse>
+    </p>
+    <p name="algebra of units">
+<verse> The equivalence classes generated by the equality relation =
+are called <emph>units</emph>.
+</verse>
+
+<verse> The set of units <v>U</v> has a binay multiplication operator
+&middot; that is associative and commutative and has the neutral
+element <un>1</un> (so called <emph>the unity</emph>). For each unit
+<un>u</un> &element; <v>U</v> there is an inverse unit
+<un>u</un><sup>-1</sup> such that <un>u</un> &middot;
+<un>u</un><sup>-1</sup> = <un>1</un>. Thus, (<v>U</v>, &middot;) is
+an Abelian group.
+</verse>
+
+<verse> The division operation <un>u</un> / <un>v</un> is defined as
+<un>u</un> &middot; <un>v</un><sup>-1</sup>. </verse>
+
+<verse> The exponentiation operation with integer exponents <v>n</v>
+is defined as <un>u</un><sup>n</sup> = <prod from="1"
+to="n"><un>u</un></prod>. 
+</verse>
+
+<verse>
+The product <un>u</un>' = <v>r</v> <un>u</un> of a real number scalar
+<!-- <v>r</v> &element; \Re --> with the unit <un>u</un> is also a
+unit, where <un>u</un>' &sim; <un>u</un>.
+</verse>
+    </p>
+    <p id="para-dimension" name="dimension and magnitude">
+<verse> The equivalence classes generated by the commensurability
+relation &sim; are called <emph>dimensions</emph>.  The set <v>D</v>
+of dimensions is infinite in principle, but only a finite subset of
+dimensions are used in practice. Thus, implementations of &TUCUM; need
+not be able to represent the inifinite set of dimensions.
+</verse>
+
+<verse>
+Two commmensurable units that are not equal differ only by their
+magnitude.
+</verse>
+
+<verse> The quotient <un>u</un> / <un>v</un> of any two commensurable
+units <un>u</un> &sim; <un>v</un> is of the same dimension as the
+unity (<un>u</un> / <un>v</un> &sim; <un>1</un>). This quotient is
+also equal to the unity multiplied with a scalar <v>r</v> <!--
+&element; \Re -->: <un>u</un> / <un>v</un> = <v>r</v> <un>1</un>,
+where <v>r</v> is called the <emph>relative magnitude</emph> of
+<un>u</un> regarding <un>v</un>.</verse>
+    </p>
+    <p name="base units">
+
+<verse>
+Any system of units is constructed from a finite set <sys>B</sys> of
+mutually independent base units <sys>B</sys> = {
+<un>b</un><sub>1</sub>, <un>b</un><sub>2</sub>, ...,
+<un>b</un><sub><v>n</v></sub> }, on which any other unit <un>u</un>
+&element; <v>U</v> is defined as <un>u</un> = <v>r</v><sub>1</sub>
+<un>b</un><sub>1</sub><sup><v>u</v><sub>1</sub></sup> &middot;
+<v>r</v><sub>2</sub>
+<un>b</un><sub>2</sub><sup><v>u</v><sub>2</sub></sup> &middot;
+... &middot; <v>r</v><sub><v>n</v></sub>
+<un>b</un><sub><v>n</v></sub><sup><v>u</v><sub><v>n</v></sub></sup>,
+where <v>r</v> = <v>r</v><sub>1</sub> &middot; <v>r</v><sub>2</sub>
+&middot;&middot; &middot; <v>r</v><sub><v>n</v></sub> is called the
+<emph>magnitude</emph> of the unit <un>u</un> regarding <sys>B</sys>.
+</verse>
+
+<verse>
+With respect to a basis <sys>B</sys> every unit can thus be
+represented as a pair (<v>r</v>, <vec>u</vec>) of magnitude <v>r</v>
+<!-- &element; \Re --> and dimension <vec>u</vec> =
+(<v>u</v><sub>1</sub>, <v>u</v><sub>2</sub>, ...,
+<v>u</v><sub><v>n</v></sub>).
+</verse>
+
+<verse>
+Two sets of base units are equivalent if there is an isomorphism
+between the sets of units that they generate.
+</verse>
+    </p>
+    <comment>
+      <p>
+<pref ref="para-dimension" verse="1"/> allows to limit the set of
+supported dimensions. Most practically used units contain exponents of
+-4 to +4, some may contain -5, such as hemodynamic resistance measured
+traditionally in 1&nbsp;dyn&middot;s/cm<sup>5</sup>. Thus if memory is
+limited, 4 bit per component of the dimension vector could be
+sufficient.
+      </p>
+    </comment>
+    <div2>
+      <head>Special Units on non-ratio Scales</head>
+      <p id="para-special" name="special units">
+<verse>
+Those symbols that are used as units that imply a measurement on a
+scale other than a ratio scale (e.g., interval scale, logarithmic
+scale) are defined differently. These do not represent proper units as
+elements of the group (<v>U</v>,&middot;). Therefore those special
+semantic entities are called <emph>special units</emph>, as oposed to
+<emph>proper units</emph>. The set of special units is denoted
+<v>S</v>, where <v>S</v> &cap; <v>U</v> = &emptyset;.
+</verse>
+
+<verse>
+A special unit <un>s</un> &element; <v>S</v> is defined as
+the triple (<un>u</un>, <v>f</v><sub><un>s</un></sub>,
+<v>f</v><sub><un>s</un></sub><sup>-1</sup>) where <un>u</un>
+&element; <v>U</v> is the &ldquo;corresponding&rdquo; proper unit of
+<un>s</un> and where <v>f</v><sub><un>s</un></sub> and
+<v>f</v><sub><un>s</un></sub><sup>-1</sup> are mutually inverse
+real functions converting the measurement value to and from the
+special unit.
+</verse>
+
+<verse>
+Although not elements of <v>U</v>, special units are said to be
+&ldquo;of the same dimension&rdquo; or &ldquo;commensurable
+with&rdquo; their corresponding proper unit <un>u</un> and the class
+of units commensurable with <un>u</un>. This can be expressed by means
+of a binary, symmetric, transitive and reflexive relation &ssim;
+on <v>U</v> &cup; <v>S</v>.
+</verse>
+      </p>
+      <comment>
+        <p>
+The functions <v>f</v><sub><un>s</un></sub> and
+<v>f</v><sub><un>s</un></sub><sup>-1</sup> are applied as follows: let
+<v>r</v><sub><un>s</un></sub> be the numeric measurement value
+expressed in the special unit <un>s</un> and let <v>m</v> be the
+corresponding dimensioned quantity, i.e., the measurement with proper
+unit <un>u</un>. Now, <v>r</v><sub><un>s</un></sub> =
+<v>f</v><sub><un>s</un></sub>(<v>m</v>/<un>u</un>) converts the proper
+measurement to the special unit and <v>m</v> =
+<v>f</v><sub><un>s</un></sub><sup>-1</sup>(<v>r</v><sub><un>s</un></sub>)
+&mult; <un>u</un> does the inverse.
+        </p>
+      </comment>
+
+      <p name="operations on special units">
+<verse>
+In theory, special units cannot take part in any algebraic operations,
+neither involving other units, nor themselves (exponentiation) nor
+involving scalars.
+</verse>
+
+<verse>
+Special units are therefore non-metric units.
+</verse>
+
+<verse>
+However, due to the requirement of the SI that does allow prefixes on
+the degree Celsius, special units may be <emph>scaled</emph> trough a prefix
+or an arbitrary numeric factor.
+</verse>
+
+<verse> The scale factor <v>&alpha;</v> <!-- &element; \Re --> is an
+additional component of the special unit, which in turn is defined by
+a quadruple <un>s</un> = (<un>u</un>, <v>f</v><sub><un>s</un></sub>,
+<v>f</v><sub><un>s</un></sub><sup>-1</sup>, <v>&alpha;</v>). When the
+functions <v>f</v><sub><un>s</un></sub> and
+<v>f</v><sub><un>s</un></sub><sup>-1</sup> are applied to a measurement value
+<v>x</v> to convert to and from the special unit the scale factor is
+applied as follows: <v>x</v>' = <v>f</v><sub><un>s</un></sub>(<v>x</v>) /
+<v>&alpha;</v> converts from <v>x</v> expressed in the corresponding
+proper unit to <v>x</v>' in terms of the special unit and <v>x</v> =
+<v>f</v><sub><un>s</un></sub><sup>-1</sup>(<v>&alpha;</v> <v>x</v>') does
+the reverse.
+</verse>
+
+<verse>
+Multiplication of a special unit <un>s</un> = (<un>u</un>,
+<v>f</v><sub><un>s</un></sub>,
+<v>f</v><sub><un>s</un></sub><sup>-1</sup>, <v>&alpha;</v>) with a
+scalar <v>&beta;</v> <!-- &element; &Re; --> is defined as
+<v>&beta;</v> <un>s</un> = (<un>u</un>, <v>f</v><sub><un>s</un></sub>,
+<v>f</v><sub><un>s</un></sub><sup>-1</sup>, <v>&beta;</v>
+<v>&alpha;</v>). Multiplication of a special unit <un>s</un> with a
+dimensionless unit <v>r</v> <un>1</un> is defined as <v>r</v>
+<un>s</un>.
+</verse>
+      </p>
+      <comment>
+        <p>
+Since prefixes have a scalar value that multiplies the unit atom, a
+unit must at least have a defined multiplication operation with a
+scalar in order to be a candidate for the metric predicate. All proper
+units are candidates for the metric property, special units are no
+such candidates.
+        </p>
+        <p>
+The <emph>Comit&eacute; Consultatif d'Unit&eacute;s</emph> (CCU)
+decided in February 1995 that any SI prefix may be used with degree
+Celsius. This statement has not been made explicitely before. This is
+an unfortunate decision because difference-scale units like the degree
+Celsius have no multiplication operation, so that the prefix value
+could be multiplied with the unit. Instead the prefix at non-ratio
+units scales the measurement value. One wonders why the CGPM keeps the
+celsius temperature in the SI as it is superflous and in a unique way
+incoherent with the SI.
+        </p>
+        <p>
+The scale factor <v>&alpha;</v> is applied with the functions
+<v>f</v><sub><un>s</un></sub> and <v>f</v><sub><un>s</un></sub><sup>-1</sup>
+as follows: let <v>r</v><sub><un>s</un></sub> be the numeric measurement
+value expressed in the special unit <un>s</un> and let <v>m</v> be the
+corresponding dimensioned quantity, i.e., the measurement with proper
+unit <un>u</un>. Now, <v>r</v><sub><un>s</un></sub> =
+<v>f</v><sub><un>s</un></sub>(<v>m</v>/<un>u</un>) / <v>&alpha;</v>
+converts the proper measurement to the special unit and <v>m</v> =
+<v>f</v><sub><un>s</un></sub><sup>-1</sup>(<v>&alpha;</v>
+<v>r</v><sub><un>s</un></sub>) &mult; <un>u</un> does the reverse.
+        </p>
+      </comment>
+      
+      <p name="definition of special units">
+<verse>
+Special units are marked in the definition tables for unit atoms by a
+bullet (&lquo;&bullet;&rquo;) in the column titled &ldquo;value&rdquo;
+and a special expression in the column titled
+&ldquo;definition&rdquo;. The BNF for the special expression is <sym
+name="special-unit"/> ::= <sym name="function-symbol"/> <lit
+value="("/> <sym name="floating-point-number"/> <lit value=" "/> <sym
+name="term"/> <lit value=")"/> The function symbols are defined as
+needed.
+</verse>
+
+<verse>
+Special expressions are <emph>not</emph> valid expressions in &TUCUM;,
+they are <emph>only</emph> used for defining special units.
+</verse>
+      </p>
+    </div2>
+  </div1>
+
+  <div1>
+    <head>Tables of Terminal Symbols</head>
+
+  <div2>
+    <head>Prefixes</head>
+    <p name="prefixes">
+
+<verse>
+Prefix symbols are those defined in <tabref ref="prefixes"/>.
+</verse>
+
+<verse> There are five columns titled &ldquo;name,&rdquo;
+&ldquo;print,&rdquo; &ldquo;c/s,&rdquo; &ldquo;c/i,&rdquo; and
+&ldquo;value&rdquo; The name is the full (official) name of the
+unit. The official symbol used in print this is listed in the column
+&ldquo;print&rdquo; &ldquo;C/s,&rdquo; and &ldquo;c/i&rdquo; list the
+symbol in the case sensitive and the case insensitive variants
+respectively. &ldquo;Value&rdquo; is the scalar value by which the
+unit atom is multiplied if combined with the prefix.
+</verse>
+
+<verse>
+Only the columns titled &ldquo;c/s,&rdquo; &ldquo;c/i,&rdquo; and
+&ldquo;value,&rdquo; are normative. Full name and print symbol are
+defined by the CGPM and are out of scope of &TUCUM;.
+</verse>
+    </p>
+    <comment>
+      <p>
+The case insensitive prefix symbols are slightly different from those
+defined by ISO&nbsp;2955 and ANSI&nbsp;X3.50, where &ldquo;giga-,&rdquo;
+&ldquo;tera-,&rdquo; and &ldquo;peta-&rdquo; have been
+&ldquo;<code>G</code>,&rdquo; &ldquo;<code>T</code>,&rdquo; and
+&ldquo;<code>PE</code>.&rdquo; &TUCUM; has a larger set of unit atoms
+and needs to prevent more name conflicts. Tera and giga have a second
+letter to be safe in the future. The change of
+&ldquo;<code>PE</code>&rdquo; to &ldquo;<code>PT</code>&rdquo; would
+be the way to go for ISO&nbsp;2955 which currently has a name conflict
+(among others) with peta-volt and pico-electronvolt.
+      </p>
+      <p>
+The new prefixes &ldquo;yotta-,&rdquo; &ldquo;zetta-,&rdquo;
+&ldquo;yocto-,&rdquo; and &ldquo;zepto-&rdquo; that were adopted by
+the 19th CGPM (1990) have a second letter `A' and `O' resp. to avoid
+current and future conflicts and to disambiguize among themselves. The
+other submultiples &ldquo;micro-&rdquo; to &ldquo;atto-&rdquo; are
+represented by a single letter to keep with the tradition.
+      </p>
+    </comment>
+    <ucumPrefixes id="prefixes">
+      <caption>The prefix symbols</caption>
+<prefix Code="Y" CODE="YA"><name>yotta</name><printSymbol>Y</printSymbol><value value="1e4">1 &mult; 10<sup>4</sup></value></prefix>
+<prefix Code="Z" CODE="ZA"><name>zetta</name><printSymbol>Z</printSymbol><value value="1e1">1 &mult; 10<sup>1</sup></value></prefix>
+<prefix Code="E" CODE="EX"><name>exa</name><printSymbol>E</printSymbol><value value="1e8">1 &mult; 10<sup>8</sup></value></prefix>
+<prefix Code="P" CODE="PT"><name>peta</name><printSymbol>P</printSymbol><value value="1e5">1 &mult; 10<sup>5</sup></value></prefix>
+<prefix Code="T" CODE="TR"><name>tera</name><printSymbol>T</printSymbol><value value="1e2">1 &mult; 10<sup>2</sup></value></prefix>
+<prefix Code="G" CODE="GA"><name>giga</name><printSymbol>G</printSymbol><value value="1e9">1 &mult; 10<sup>9</sup></value></prefix>
+<prefix Code="M" CODE="MA"><name>mega</name><printSymbol>M</printSymbol><value value="1e6">1 &mult; 10<sup>6</sup></value></prefix>
+<prefix Code="k" CODE="K"><name>kilo</name><printSymbol>k</printSymbol><value value="1e3">1 &mult; 10<sup>3</sup></value></prefix>
+<prefix Code="h" CODE="H"><name>hecto</name><printSymbol>h</printSymbol><value value="1e2">1 &mult; 10<sup>2</sup></value></prefix>
+<prefix Code="da" CODE="DA"><name>deka</name><printSymbol>da</printSymbol><value value="1e1">1 &mult; 10<sup>1</sup></value></prefix>
+<prefix Code="d" CODE="D"><name>deci</name><printSymbol>d</printSymbol><value value="1e1">1 &mult; 10<sup>1</sup></value></prefix>
+<prefix Code="c" CODE="C"><name>centi</name><printSymbol>c</printSymbol><value value="1e2">1 &mult; 10<sup>2</sup></value></prefix>
+<prefix Code="m" CODE="M"><name>milli</name><printSymbol>m</printSymbol><value value="1e3">1 &mult; 10<sup>3</sup></value></prefix>
+<prefix Code="u" CODE="U"><name>micro</name><printSymbol>&mu;</printSymbol><value value="1e6">1 &mult; 10<sup>6</sup></value></prefix>
+<prefix Code="n" CODE="N"><name>nano</name><printSymbol>n</printSymbol><value value="1e9">1 &mult; 10<sup>9</sup></value></prefix>
+<prefix Code="p" CODE="P"><name>pico</name><printSymbol>p</printSymbol><value value="1e2">1 &mult; 10<sup>2</sup></value></prefix>
+<prefix Code="f" CODE="F"><name>femto</name><printSymbol>f</printSymbol><value value="1e5">1 &mult; 10<sup>5</sup></value></prefix>
+<prefix Code="a" CODE="A"><name>atto</name><printSymbol>a</printSymbol><value value="1e8">1 &mult; 10<sup>8</sup></value></prefix>
+<prefix Code="z" CODE="ZO"><name>zepto</name><printSymbol>z</printSymbol><value value="1e1">1 &mult; 10<sup>1</sup></value></prefix>
+<prefix Code="y" CODE="YO"><name>yocto</name><printSymbol>y</printSymbol><value value="1e4">1 &mult; 10<sup>4</sup></value></prefix>
+    </ucumPrefixes>
+  </div2>
+  <div2>
+    <head>Base Units</head>
+    <p name="base units"> 
+
+<verse> The base units shown in <tabref ref="baseunits"/> are used to
+define all the unit atoms of &TUCUM; according to its grammar and
+semantics.
+</verse>
+
+<verse> There are five columns titled &ldquo;name,&rdquo; &ldquo;kind
+of quantity,&rdquo; &ldquo;print,&rdquo; &ldquo;c/s,&rdquo; and
+&ldquo;c/i.&rdquo; The name is the full (official) name of the
+unit. The official symbol used in print this is listed in the column
+&ldquo;print&rdquo; &ldquo;C/s,&rdquo; and &ldquo;c/i&rdquo; list the
+symbol in the case sensitive and the case insensitive variants
+respectively.
+</verse>
+
+<verse>
+Only the columns titled &ldquo;c/s,&rdquo; and &ldquo;c/i,&rdquo; are
+normative. Full name and print symbol are defined by other bodies and
+are out of scope of &TUCUM;.
+</verse>
+
+<verse> The selection of base units and the particular order are not
+normative. Any other basis <sys>B</sys>' that generates an
+isomorphic group of units is conformant with &TUCUM;.
+</verse>
+
+<verse>
+If the other base <sys>B</sys>' generates a different system of units
+<v>U</v>' it conforms to &TUCUM; only if there is an homomorphism that maps
+<v>U</v>' onto <v>U</v>.
+</verse>
+
+<verse>
+Base units must be metric units only. Special units can not be base
+units.
+</verse>
+    </p>
+    <comment>
+      <p>
+As can be seen the base system used to define &TUCUM; is different
+from the system used by the <emph>Syst&egrave;me International
+d'Unit&eacute;s</emph> (SI) The SI base unit kilogram has been
+replaced by gram and the mole has been replaced by the radian that is
+defined dimensionless in the SI. Because of the latter change &TUCUM;
+is not isomorphic with the SI.
+      </p>
+      <p>
+The replacement of the kilogram is trivial. In order to bring syntax
+and semantics in line we can not have a unit with prefix in the
+base. We need a valid unit of mass before we can combine it with the
+prefix &ldquo;kilo-&rdquo; This change does not have any effect on the
+semantics whatsoever.  The base unit kilogram is one of the oddities
+of the SI: if the gram would have been chosen as a base units the CGPM
+could have saved the rather annoying exception of the prefixing rules
+with the kilogram. At times where we have to multiply the wavelength
+of excited krypton-86 atoms by 1650763.73 to yield one meter, it seems
+trivial to divide the prototype of the kilogram by thousand to yield a
+base unit gram.
+      </p>
+      <p>
+The rationale for removing the mole from the base is that the mole is
+essentially a count of particles expressed in a unit of very high
+magnitude (Avogadro's number). There is no fundamental difference
+between the count of particles and the count other things.
+      </p>
+      <p>
+The radian has been adopted as the base unit of plane angle
+<v>&alpha;</v> to facilitate the distinction from the solid angle
+<v>&Omega;</v> by the relation <v>&Omega;</v> =
+<v>&alpha;</v><sup>2</sup> and to distinguish rotational frequency
+<v>f</v> from angular velocity <v>&omega;</v> = 2 <v>&pi;</v> &middot;
+rad &middot; <v>f</v>.
+      </p>
+    </comment>
+   
+    <ucumBase id="baseunits">
+      <caption> The base units upon which the semantics of all the unit
+atoms in &TUCUM; are defined. The selection of the base and the order
+of the units in the base are not normative. Any other base is
+acceptable as long as there is an isomorphism between the group of
+units generated by the other base system and this one. All base units
+are metric.</caption>
+<baseUnit Code="m" CODE="M"><name>meter</name><printSymbol>m</printSymbol><property>length</property></baseUnit>
+<baseUnit Code="g" CODE="G"><name>gram</name><printSymbol>g</printSymbol><property>mass</property></baseUnit>
+<baseUnit Code="s" CODE="S"><name>second</name><printSymbol>s</printSymbol><property>time</property></baseUnit>
+<baseUnit Code="rad" CODE="RAD"><name>radian</name><printSymbol>rad</printSymbol><property>plane angle</property></baseUnit>
+<baseUnit Code="K" CODE="K"><name>Kelvin</name><printSymbol>K</printSymbol><property>temperature</property></baseUnit>
+<baseUnit Code="C" CODE="C"><name>Coulomb</name><printSymbol>C</printSymbol><property>electric charge</property></baseUnit>
+<baseUnit Code="cd" CODE="CD"><name>candela</name><printSymbol>cd</printSymbol><property>luminous intensity</property></baseUnit>
+    </ucumBase>
+  </div2>
+  
+  <div2>
+    <head>Derived Unit Atoms</head>
+
+    <p name="dimensionless units"> 
+<verse>
+Dimensionless unit atoms are defined in <tabref ref="dimless"/>.
+</verse>
+
+<verse> There are seven columns titled &ldquo;name,&rdquo;
+&ldquo;print,&rdquo; &ldquo;c/s,&rdquo; &ldquo;c/i,&rdquo;
+&ldquo;M,&rdquo; &ldquo;value,&rdquo; and &ldquo;definition.&rdquo;
+The name is the full (official) name of the unit. The symbol
+recommended for use in print this is listed in the column
+&ldquo;print.&rdquo; &ldquo;C/s,&rdquo; and &ldquo;c/i&rdquo; list the
+symbol in the case sensitive and the case insensitive variants
+respectively. 
+The column &ldquo;M&rdquo; specifies whether this is a
+metric unit. 
+The definition is a valid case sensitive expression of
+&TUCUM; that defines the unit atom.
+</verse>
+
+<verse>
+Only the columns titled &ldquo;c/s,&rdquo; &ldquo;c/i,&rdquo;
+&ldquo;M,&rdquo; &ldquo;value,&rdquo; and &ldquo;definition&rdquo; are
+normative. Full name and print symbol are out of scope of &TUCUM;.
+</verse>
+
+<verse>
+The units named &ldquo;parts per <v>N</v>&rdquo; are provided to be used
+where absolutely nessecary but are not endorsed. Especially
+&ldquo;ppb&rdquo; and &ldquo;pptr&rdquo; are deprecated since
+&ldquo;billion&rdquo; and &ldquo;trillion&rdquo; are ambiguous names
+internationally. The explicit powers of ten should be given instead.
+</verse>
+    </p>
+
+    <ucumUnits id="dimless" omit="property">
+      <caption>Dimensionless units. The units ppb and ppt are deprecated
+because the names &ldquo;billion&rdquo; and &ldquo;trillion&rdquo; are
+ambiguous.  The expression &ldquo;<code>10*-9</code>&rdquo; or
+&ldquo;<code>10*-12</code>&rdquo; should be used instead. When the
+units percent or &ldquo;parts per <v>N</v>&rdquo; are used for
+concentrations specific units are prefered, e.g.,
+&ldquo;<code>ug/l</code>&rdquo; for mass concentration. The expression
+&ldquo;<code>ug/kg</code>&rdquo; for ppb is also valid.
+      </caption>
+<derivedUnit id="000010" Code="10*" CODE="10*" isMetric="no"><name>ten, for arbitrary powers</name><printSymbol>10<sup>n</sup></printSymbol><property>number</property><value Unit="1" UNIT="1" value="10">10</value></derivedUnit>
+<derivedUnit id="000030" Code="[pi]" CODE="[PI]" isMetric="no"><name>the number pi</name><printSymbol>&pi;</printSymbol><property>number</property><value Unit="1" UNIT="1" value="3.1415926535897932384626433832795028841971693993751058209749445923">&pi;</value></derivedUnit>
+<derivedUnit id="000020" Code="%" CODE="%" isMetric="no"><name>percent</name><printSymbol>%</printSymbol><property>fraction</property><value Unit="10*-2" UNIT="10*-2" value="1">1</value></derivedUnit>
+<derivedUnit id="600770" Code="[ppth]" CODE="[PPTH]" isMetric="no"><name>parts per thousand</name><printSymbol>ppth</printSymbol><property>fraction</property><value Unit="10*-3" UNIT="10*-3" value="1">1</value></derivedUnit>
+<derivedUnit id="600760" Code="[ppm]" CODE="[PPM]" isMetric="no"><name>parts per million</name><printSymbol>ppm</printSymbol><property>fraction</property><value Unit="10*-6" UNIT="10*-6" value="1">1</value></derivedUnit>
+<derivedUnit id="600750" Code="[ppb]" CODE="[PPB]" isMetric="no"><name>parts per billion</name><printSymbol>ppb</printSymbol><property>fraction</property><value Unit="10*-9" UNIT="10*-9" value="1">1</value></derivedUnit>
+<derivedUnit id="600780" Code="[pptr]" CODE="[PPTR]" isMetric="no"><name>parts per trillion</name><printSymbol>pptr</printSymbol><property>fraction</property><value Unit="10*-12" UNIT="10*-12" value="1">1</value></derivedUnit>
+    </ucumUnits>
+
+    <p id="para-si" name="SI units">
+<verse>
+SI units are defined by the international <emph>Conf&eacute;rence
+G&eacute;n&eacute;rale des Poids et Mesures</emph> (CGPM).  &TUCUM; definitions
+for those units are given in <tabref ref="si"/>.
+</verse>
+
+<verse> There are seven columns titled &ldquo;name,&rdquo;
+&ldquo;print,&rdquo; &ldquo;c/s,&rdquo; &ldquo;c/i,&rdquo;
+&ldquo;M,&rdquo; &ldquo;value,&rdquo; and &ldquo;definition.&rdquo;
+The name is the full (official) name of the unit. The symbol
+recommended for use in print this is listed in the column
+&ldquo;print.&rdquo; &ldquo;C/s,&rdquo; and &ldquo;c/i&rdquo; list the
+symbol in the case sensitive and the case insensitive variants
+respectively. 
+The column &ldquo;M&rdquo; specifies whether this is a
+metric unit. 
+The definition
+is a valid case sensitive expression of &TUCUM; that defines the unit
+atom.
+</verse>
+
+<verse>
+Only the columns titled &ldquo;c/s,&rdquo; &ldquo;c/i,&rdquo;
+&ldquo;M,&rdquo; &ldquo;value,&rdquo; and &ldquo;definition&rdquo; are
+normative. Full name and print symbol are defined by the CGPM and are
+out of scope of &TUCUM;.
+</verse>
+
+<verse>
+The function pair denoted &ldquo;<code>cel(1 K)</code>&rdquo; is
+defined as <v>f</v><sub>C</sub>(<v>x</v>) = <v>x</v> - 273.15 to
+convert from kelvin to degree Celsius, and
+<v>f</v><sub>C</sub><sup>-1</sup>(<v>x</v>) = <v>x</v> + 273.15 to
+convert from degree Celsius back to kelvin.
+</verse>
+    </p>
+    <comment>
+      <p>
+The case insensitive symbol for pascal is
+&ldquo;<code>PAL</code>&rdquo; which conforms to ISO&nbsp;2955 and prevents
+the name conflict between pascal and pico-amp&egrave;re.
+      </p>
+      <p>
+Without reference to history, it is difficult to explain that the
+degree Celsius is part of the SI, because the degree Celsius is in a
+unique way incoherent with the SI, and is even superflous since the
+base unit kelvin measures the same kind of quantity.
+      </p>
+    </comment>
+
+    <ucumUnits id="si">
+      <caption>SI units</caption>
+<derivedUnit id="600190" Code="mol" CODE="MOL" isMetric="yes"><name>mole</name><printSymbol>mol</printSymbol><property>amount of substance</property><value Unit="10*23" UNIT="10*23" value="6.0221367">6.0221367</value></derivedUnit>
+<derivedUnit id="100010" Code="sr" CODE="SR" isMetric="yes"><name>streadian</name><printSymbol>sr</printSymbol><property>solid angle</property><value Unit="rad2" UNIT="RAD2" value="1">1</value></derivedUnit>
+<derivedUnit id="100020" Code="Hz" CODE="HZ" isMetric="yes"><name>Herz</name><printSymbol>Hz</printSymbol><property>frequency</property><value Unit="s-1" UNIT="S-1" value="1">1</value></derivedUnit>
+<derivedUnit id="100030" Code="N" CODE="N" isMetric="yes"><name>Newton</name><printSymbol>N</printSymbol><property>force</property><value Unit="kg.m/s2" UNIT="KG.M/S2" value="1">1</value></derivedUnit>
+<derivedUnit id="100040" Code="Pa" CODE="PAL" isMetric="yes"><name>Pascal</name><printSymbol>Pa</printSymbol><property>pressure</property><value Unit="N/m2" UNIT="N/M2" value="1">1</value></derivedUnit>
+<derivedUnit id="100050" Code="J" CODE="J" isMetric="yes"><name>Joule</name><printSymbol>J</printSymbol><property>energy</property><value Unit="N.m" UNIT="N.M" value="1">1</value></derivedUnit>
+<derivedUnit id="100060" Code="W" CODE="W" isMetric="yes"><name>Watt</name><printSymbol>W</printSymbol><property>power</property><value Unit="J/s" UNIT="J/S" value="1">1</value></derivedUnit>
+<derivedUnit id="100070" Code="A" CODE="A" isMetric="yes"><name>Amp&egrave;re</name><printSymbol>A</printSymbol><property>electric current</property><value Unit="C/s" UNIT="C/S" value="1">1</value></derivedUnit>
+<derivedUnit id="100080" Code="V" CODE="V" isMetric="yes"><name>Volt</name><printSymbol>V</printSymbol><property>electric potential</property><value Unit="J/C" UNIT="J/C" value="1">1</value></derivedUnit>
+<derivedUnit id="100090" Code="F" CODE="F" isMetric="yes"><name>Farad</name><printSymbol>F</printSymbol><property>electric capacitance</property><value Unit="C/V" UNIT="C/V" value="1">1</value></derivedUnit>
+<derivedUnit id="100100" Code="Ohm" CODE="OHM" isMetric="yes"><name>Ohm</name><printSymbol>&Omega;</printSymbol><property>electric resistance</property><value Unit="V/A" UNIT="V/A" value="1">1</value></derivedUnit>
+<derivedUnit id="100110" Code="S" CODE="SIE" isMetric="yes"><name>Siemens</name><printSymbol>S</printSymbol><property>electric conductance</property><value Unit="Ohm-1" UNIT="OHM-1" value="1">1</value></derivedUnit>
+<derivedUnit id="100120" Code="Wb" CODE="WB" isMetric="yes"><name>Weber</name><printSymbol>Wb</printSymbol><property>magentic flux</property><value Unit="V.s" UNIT="V.S" value="1">1</value></derivedUnit>
+<derivedUnit id="100130" Code="Cel" CODE="CEL" isMetric="yes"><name>degree Celsius</name><printSymbol>&deg;C</printSymbol><property>temperature</property><value Unit="cel(1 K)" UNIT="CEL(1 K)" ><function/></value></derivedUnit>
+<derivedUnit id="100140" Code="T" CODE="T" isMetric="yes"><name>Tesla</name><printSymbol>T</printSymbol><property>magnetic flux density</property><value Unit="Wb/m2" UNIT="WB/M2" value="1">1</value></derivedUnit>
+<derivedUnit id="100150" Code="H" CODE="H" isMetric="yes"><name>Henry</name><printSymbol>H</printSymbol><property>inductance</property><value Unit="Wb/A" UNIT="WB/A" value="1">1</value></derivedUnit>
+<derivedUnit id="100160" Code="lm" CODE="LM" isMetric="yes"><name>lumen</name><printSymbol>lm</printSymbol><property>luminous flux</property><value Unit="cd.sr" UNIT="CD.SR" value="1">1</value></derivedUnit>
+<derivedUnit id="100170" Code="lx" CODE="LX" isMetric="yes"><name>lux</name><printSymbol>lx</printSymbol><property>illuminance</property><value Unit="lm/m2" UNIT="LM/M2" value="1">1</value></derivedUnit>
+<derivedUnit id="100180" Code="Bq" CODE="BQ" isMetric="yes"><name>Becquerel</name><printSymbol>Bq</printSymbol><property>radioactivity</property><value Unit="s-1" UNIT="S-1" value="1">1</value></derivedUnit>
+<derivedUnit id="100190" Code="Gy" CODE="GY" isMetric="yes"><name>Gray</name><printSymbol>Gy</printSymbol><property>energy dose</property><value Unit="J/kg" UNIT="J/KG" value="1">1</value></derivedUnit>
+<derivedUnit id="100200" Code="Sv" CODE="SV" isMetric="yes"><name>Sievert</name><printSymbol>Sv</printSymbol><property>dose equivalent</property><value Unit="J/kg" UNIT="J/KG" value="1">1</value></derivedUnit>
+    </ucumUnits>
+
+    <p name="other units from ISO&nbsp;1000, ISO&nbsp;2955 and ANSI&nbsp;X3.50">
+
+<verse>
+Those unit atoms listed by ISO&nbsp;2955 under the heading &ldquo;other
+units from ISO&nbsp;1000&rdquo; and some units from ANSI&nbsp;X3.50 are defined
+in <tabref ref="iso1000"/>.
+</verse>
+
+<verse>
+The meaning of the columns is declared in <pref ref="para-si" verse="2"/>.
+</verse>
+
+<verse>
+Only the columns titled &ldquo;c/s,&rdquo; &ldquo;c/i,&rdquo;
+&ldquo;M,&rdquo; &ldquo;value,&rdquo; and &ldquo;definition&rdquo; are
+normative. Full name and print symbol are defined by ISO&nbsp;1000 and are
+out of scope of &TUCUM;.
+</verse>
+    </p>
+
+
+    <ucumUnits id="iso1000">
+      <caption>Other units from ISO&nbsp;1000, ISO&nbsp;2955, and some from ANSI&nbsp;X3.50.</caption>
+<derivedUnit id="200040" Code="gon" CODE="GON" isMetric="no"><name>gon (grade)</name><printSymbol>&box;<sup>g</sup></printSymbol><property>plane angle</property><value Unit="deg" UNIT="DEG" value="0.9">0.9</value></derivedUnit>
+<derivedUnit id="200010" Code="deg" CODE="DEG" isMetric="no"><name>degree</name><printSymbol>&deg;</printSymbol><property>plane angle</property><value Unit="[pi].rad/360" UNIT="[PI].RAD/360" value="2">2</value></derivedUnit>
+<derivedUnit id="200020" Code="'" CODE="'" isMetric="no"><name>minute</name><printSymbol>'</printSymbol><property>plane angle</property><value Unit="deg/60" UNIT="DEG/60" value="1">1</value></derivedUnit>
+<derivedUnit id="200030" Code="''" CODE="''" isMetric="no"><name>second</name><printSymbol>''</printSymbol><property>plane angle</property><value Unit="'/60" UNIT="'/60" value="1">1</value></derivedUnit>
+<derivedUnit id="200050" Code="l" CODE="L" isMetric="yes"><name>liter</name><printSymbol>l</printSymbol><property>volume</property><value Unit="dm3" UNIT="DM3" value="1">1</value></derivedUnit>
+<derivedUnit id="200060" Code="L"  isMetric="yes"><name>liter (alternate)</name><printSymbol>L</printSymbol><property>volume</property><value Unit="l"  value="1">1</value></derivedUnit>
+<derivedUnit id="200070" Code="ar" CODE="AR" isMetric="yes"><name>are</name><printSymbol>a</printSymbol><property>area</property><value Unit="m2" UNIT="M2" value="100">100</value></derivedUnit>
+<derivedUnit id="200090" Code="min" CODE="MIN" isMetric="no"><name>minute</name><printSymbol>min</printSymbol><property>time</property><value Unit="s" UNIT="S" value="60">60</value></derivedUnit>
+<derivedUnit id="200100" Code="h" CODE="HR" isMetric="no"><name>hour</name><printSymbol>h</printSymbol><property>time</property><value Unit="min" UNIT="MIN" value="60">60</value></derivedUnit>
+<derivedUnit id="200110" Code="d" CODE="D" isMetric="no"><name>day</name><printSymbol>d</printSymbol><property>time</property><value Unit="h" UNIT="HR" value="24">24</value></derivedUnit>
+<derivedUnit id="200120" Code="a_t" CODE="ANN_T" isMetric="no"><name>year (tropical)</name><printSymbol>a<sub>t</sub></printSymbol><property>time</property><value Unit="d" UNIT="D" value="365.24219">365.24219</value></derivedUnit>
+<derivedUnit id="200130" Code="a_j" CODE="ANN_J" isMetric="no"><name>year (mean Julian)</name><printSymbol>a<sub>j</sub></printSymbol><property>time</property><value Unit="d" UNIT="D" value="365.25">365.25</value></derivedUnit>
+<derivedUnit id="200131" Code="a_g" CODE="ANN_G" isMetric="no"><name>year (mean Gregorian)</name><printSymbol>a<sub>g</sub></printSymbol><property>time</property><value Unit="d" UNIT="D" value="365.2425">365.2425</value></derivedUnit>
+<derivedUnit id="200140" Code="a" CODE="ANN" isMetric="no"><name>year</name><printSymbol>a</printSymbol><property>time</property><value Unit="a_j" UNIT="ANN_J" value="1">1</value></derivedUnit>
+<derivedUnit id="200150" Code="wk" CODE="WK" isMetric="no"><name>week</name><printSymbol>wk</printSymbol><property>time</property><value Unit="d" UNIT="D" value="7">7</value></derivedUnit>
+<derivedUnit id="200160" Code="mo_s" CODE="MO_S" isMetric="no"><name>month (synodal)</name><printSymbol>mo<sub>s</sub></printSymbol><property>time</property><value Unit="d" UNIT="D" value="29.53059">29.53059</value></derivedUnit>
+<derivedUnit id="200161" Code="mo_j" CODE="MO_J" isMetric="no"><name>month (Julian)</name><printSymbol>mo<sub>j</sub></printSymbol><property>time</property><value Unit="a_j/12" UNIT="ANN_J/12" value="1">1</value></derivedUnit>
+<derivedUnit id="200161" Code="mo_g" CODE="MO_G" isMetric="no"><name>month (Gregorian)</name><printSymbol>mo<sub>g</sub></printSymbol><property>time</property><value Unit="a_g/12" UNIT="ANN_G/12" value="1">1</value></derivedUnit>
+<derivedUnit id="200162" Code="mo" CODE="MO" isMetric="no"><name>month</name><printSymbol>mo</printSymbol><property>time</property><value Unit="mo_j" UNIT="MO_J" value="1">1</value></derivedUnit>
+<derivedUnit id="200170" Code="t" CODE="TNE" isMetric="yes"><name>tonne</name><printSymbol>t</printSymbol><property>mass</property><value Unit="kg" UNIT="KG" value="1e3">1 &mult; 10<sup>3</sup></value></derivedUnit>
+<derivedUnit id="200180" Code="bar" CODE="BAR" isMetric="yes"><name>bar</name><printSymbol>bar</printSymbol><property>pressure</property><value Unit="Pa" UNIT="PAL" value="1e5">1 &mult; 10<sup>5</sup></value></derivedUnit>
+<derivedUnit id="200210" Code="u" CODE="AMU" isMetric="yes"><name>unified atomic mass unit</name><printSymbol>u</printSymbol><property>mass</property><value Unit="g" UNIT="G" value="1.6605402e4">1.6605402 &mult; 10<sup>4</sup></value></derivedUnit>
+<derivedUnit id="200200" Code="eV" CODE="EV" isMetric="yes"><name>electronvolt</name><printSymbol>eV</printSymbol><property>energy</property><value Unit="[e].V" UNIT="[E].V" value="1">1</value></derivedUnit>
+<derivedUnit id="200220" Code="AU" CODE="ASU" isMetric="no"><name>astronomic unit</name><printSymbol>AU</printSymbol><property>length</property><value Unit="Mm" UNIT="MAM" value="149597.870">149597.870</value></derivedUnit>
+<derivedUnit id="200230" Code="pc" CODE="PRS" isMetric="yes"><name>parsec</name><printSymbol>pc</printSymbol><property>length</property><value Unit="m" UNIT="M" value="3.085678e6">3.085678 &mult; 10<sup>6</sup></value></derivedUnit>
+    </ucumUnits>
+    <comment>
+      <p>
+In the case sensitive variant the liter is defined both with an upper
+case `<code>L</code>' and a lower case `<code>l</code>'. NIST [63 FR 40338] declares
+the upper case `L' as the prefered symbol for the U.S., while in many
+other countries the lower case `l' is used. In fact the lower case `l'
+was in effect since 1879. A hundred years later in 1979 the 16th CGPM
+decided to adopt the upper case `L' as a second symbol for the liter.
+In the case insensitive variant there is only one symbol defined since
+there is no difference between upper case `L' and lower case `l'.
+      </p>
+      <p>
+The unit &ldquo;are&rdquo; competes with year for the symbol
+&ldquo;a&rdquo; not only in ISO&nbsp;2955, and ANSI&nbsp;X3.50, but also in
+ISO&nbsp;1000 as stating the official CGPM approved symbols. This is why
+the symbol for are is &ldquo;<code>ar</code>&rdquo; in
+&TUCUM;. ISO&nbsp;2955 explicitely adds the unit atom
+&ldquo;<code>ha</code>&rdquo; for hectare, while &ldquo;hectare&rdquo;
+is just the correct spelling of the compositum of &ldquo;hecto&rdquo;
+and &ldquo;are&rdquo; and thus would not require a separate unit
+atom. Nevertheless, ISO&nbsp;2955 in its case insensitive variant assigns
+&ldquo;<code>ARE</code>&rdquo; to the are and
+&ldquo;<code>har</code>&rdquo; to the hectare. This is obviously an
+anomality which &TUCUM; will not follow. As a metric unit,
+&ldquo;<code>ar</code>&rdquo; can be prefixed with
+&ldquo;<code>h</code>&rdquo; to yield &ldquo;<code>har</code>&rdquo;
+      </p>
+      <p>
+ANSI&nbsp;X3.50 had two different series of symbols for the units of time,
+the ones from ISO&nbsp;2955 as adopted by &TUCUM; and the symbols
+&ldquo;<code>yr</code>&rdquo; &ldquo;<code>mo</code>&rdquo;
+&ldquo;<code>wk</code>&rdquo; &ldquo;<code>hr</code>&rdquo; and
+&ldquo;<code>sec</code>&rdquo; while &ldquo;<code>d</code>&rdquo; and
+&ldquo;<code>min</code>&rdquo; were defined twice. &TUCUM; does not
+define these synonyms of ISO&nbsp;2955 symbols, but does adopt those units
+from ANSI&nbsp;X3.50 that are not part of ISO&nbsp;2955, namely
+&ldquo;<code>mo</code>&rdquo; and &ldquo;<code>wk</code>&rdquo; Month
+and week are useful units mainly in business or clinical medicine.
+      </p>
+      <p>
+The semantics of the units of time is difficult to capture.  The
+difficulties start with the day: There is the sidereal and the solar
+day that depend on the earth's rotation. The earth's rotation is
+variable during one day and is continually slowing down in the long
+run.  The usual subdivisions of the day in 24 hours of 60 minutes and
+60 seconds originated in Babylonia. The earth's rotation was too
+inexact to measure time, which is why the 11th CGPM (1954) defined the
+second based on a standarized historical tropical year (see below)
+which was later (13th CGPM 1967--1968) replaced by frequency
+measurement. Thus the second came to be the base unit of time and the
+day is now 864000&nbsp;s exactly with the <emph>Universal Coordinated
+Time</emph> (UTC) adding leap seconds every now and then.
+      </p>
+      <p>
+For the year we have to distinguish the &ldquo;tropical&rdquo; (solar,
+sidereal) year from the calendar year. And both are difficult. The
+tropical year is the year defined by time the earth travels around the
+sun. This is difficult to measure and varies over time.  Around 1900
+it was 365.242196&nbsp;d, currently it is 365.242190&nbsp;d and around
+2100 it will be 365.242184&nbsp;d.  In addition these durations are
+averages. The actual length of each year may vary by several minutes
+due to the gravitational influence of other planets. Thus there is
+quite a high uncertainty already in the fourth decimal digit.
+      </p>
+      <p>
+The calendar year is also difficult because there is the Julian
+calendar (Sosigenes of Alexandria and Julius Caesar, 45 BC) with a
+slightly too long year of 365.25&nbsp;d that causes the calendar to be
+one day ahead of the tropical year in 128 years. The Gregorian
+calendar (Christopher Clavius 1537-1612 and Pope Gregory XIII
+1545-1563) leaves out three leap years in 400 years (let <v>n</v> be the
+year number, the leap year is dropped if <v>n</v> mod 100 = 0 but not <v>n</v>
+mod 400 = 0.) The Gregorian mean year is thus 365.2425&nbsp;d.
+This leap year arithmetic seems to be too much even for astronomers,
+which is why the light year ends up being defined based on the Julian
+year [NIST Sp.&nbsp;Pub. 811, 1995 Edition]. For this reason &TUCUM;
+defines Tropical, Julian and Gregorian year by means of subscripts,
+but assigns the default year symbol to the Julian year.
+      </p>
+      <p>
+The week is 7 days, this is a biblic truth we can count on (it is
+actually quite plausible that the week of seven days originated in
+Babylonia and entered Jewish tradition during the Babylonian exile.)
+      </p>
+      <p>
+The difficultiy continues with the month. The lunar (so called
+&ldquo;synodal&rdquo; month is variable. Around 1900 it was
+29.5305886&nbsp;d currently it is 29.5305889&nbsp;d and in 2100 it
+will be 29.5305891&nbsp;d, which we fixate in the 5th decimal digit
+with a considerable uncertainty. The calendar month is difficult
+because of the uneven distribution of days in a month over the year,
+and because of the two different calendar years. But we will usually
+use the mean calendar month, which is the Julian calendar year divided
+by 12.
+      </p>
+      <p>
+As a conclusion, great care has to be taken when the &ldquo;customary
+units&rdquo; of time are used to measure time. The SI has fixated the
+second which should be used whenever accuracy is required. For
+business purposes the Julian calendar is sufficient especially since
+the notion of the Work-Day (vs. Holiday) is more important than the
+imprecision over 128 years. 
+
+[Sources: &ldquo;Calendar&rdquo; <emph>Britannica Online.</emph>
+<code>http://www.eb.com:180/cgi-bin/g?DocF=macro/5000/98/toc.html</code>.
+Claus Tondering, <emph>Frequently asked questions about
+calendars.</emph>
+Part&nbsp;1. 1998. <code>http://www.pip.dknet.dk/~c-t/calendar.faq1.txt</code>]
+      </p>
+    </comment>
+
+
+<p name="natural units"> 
+
+<verse>
+Fundamental constants of nature and units derived from these constants
+are defined in <tabref ref="const"/>.
+</verse>
+
+<verse>
+The meaning of the columns is declared in  <pref ref="para-si" verse="2"/>.
+</verse>
+
+<verse>
+Only the columns titled &ldquo;c/s,&rdquo; &ldquo;c/i,&rdquo;
+&ldquo;M,&rdquo; &ldquo;value,&rdquo; and &ldquo;definition&rdquo; are
+normative. Full name and print symbol are defined by ISO&nbsp;1000 and are
+out of scope of &TUCUM;.
+</verse>
+</p>
+
+    <ucumUnits id="const">
+      <caption>Natural units.</caption>
+<derivedUnit id="300010" Code="[c]" CODE="[C]" isMetric="yes"><name>velocity of light</name><printSymbol><i>c</i></printSymbol><property>velocity</property><value Unit="m/s" UNIT="M/S" value="299792458">299792458</value></derivedUnit>
+<derivedUnit id="300020" Code="[h]" CODE="[H]" isMetric="yes"><name>Planck constant</name><printSymbol><i>h</i></printSymbol><property>action</property><value Unit="J.s" UNIT="J.S" value="6.6260755e4">6.6260755 &mult; 10<sup>4</sup></value></derivedUnit>
+<derivedUnit id="300021" Code="[k]" CODE="[K]" isMetric="yes"><name>Boltzmann constant</name><printSymbol><i>k</i></printSymbol><property>(unclassified)</property><value Unit="J/K" UNIT="J/K" value="1.380658e3">1.380658 &mult; 10<sup>3</sup></value></derivedUnit>
+<derivedUnit id="300022" Code="[eps_0]" CODE="[eps_0]" isMetric="yes"><name>permittivity of vacuum</name><printSymbol><i>&epsilon;<sub><r>0</r></sub></i></printSymbol><property>electric permittivity</property><value Unit="F/m" UNIT="F/M" value="8.854187817e2">8.854187817 &mult; 10<sup>2</sup></value></derivedUnit>
+<derivedUnit id="300023" Code="[mu_0]" CODE="[mu_0]" isMetric="yes"><name>permeability of vacuum</name><printSymbol><i>&mu;<sub><r>0</r></sub></i></printSymbol><property>magnetic permeability</property><value Unit="4.[pi].10*-7.N/A2" UNIT="4.[PI].10*-7.N/A2" value="1">1</value></derivedUnit>
+<derivedUnit id="200190" Code="[e]" CODE="[E]" isMetric="yes"><name>elementary charge</name><printSymbol><i>e</i></printSymbol><property>electric charge</property><value Unit="C" UNIT="C" value="1.60217733e9">1.60217733 &mult; 10<sup>9</sup></value></derivedUnit>
+<derivedUnit id="300022" Code="[m_e]" CODE="[M_E]" isMetric="yes"><name>electron mass</name><printSymbol><i>m<sub><r>e</r></sub></i></printSymbol><property>mass</property><value Unit="g" UNIT="g" value="9.1093897e8">9.1093897 &mult; 10<sup>8</sup></value></derivedUnit>
+<derivedUnit id="300023" Code="[m_p]" CODE="[M_P]" isMetric="yes"><name>proton mass</name><printSymbol><i>m<sub><r>p</r></sub></i></printSymbol><property>mass</property><value Unit="g" UNIT="g" value="1.6726231e4">1.6726231 &mult; 10<sup>4</sup></value></derivedUnit>
+<derivedUnit id="300029" Code="[G]" CODE="[GC]" isMetric="yes"><name>Newtonian constant of gravitation</name><printSymbol><i>G</i></printSymbol><property>(unclassified)</property><value Unit="m3.kg-1.s-2" UNIT="M3.KG-1.S-2" value="6.67259e1">6.67259 &mult; 10<sup>1</sup></value></derivedUnit>
+<derivedUnit id="300030" Code="[g]" CODE="[G]" isMetric="yes"><name>acceleration of free fall (standard)</name><printSymbol><i>g<sub>n</sub></i></printSymbol><property>acceleration</property><value Unit="m/s2" UNIT="M/S" value="9.80665">9.80665</value></derivedUnit>
+<derivedUnit id="600410" Code="atm" CODE="ATM" isMetric="no"><name>atmosphere (standard)</name><printSymbol>atm</printSymbol><property>pressure</property><value Unit="Pa" UNIT="KPAL" value="101325">101325</value></derivedUnit>
+<derivedUnit id="300040" Code="[ly]" CODE="[LY]" isMetric="yes"><name>light-year</name><printSymbol>l.y.</printSymbol><property>length</property><value Unit="[c].a_j" UNIT="[C].ANN_J" value="1">1</value></derivedUnit>
+<derivedUnit id="600411" Code="gf" CODE="GF" isMetric="yes"><name>gram-force</name><printSymbol>gf</printSymbol><property>force</property><value Unit="g.[g]" UNIT="G.[G]" value="1">1</value></derivedUnit>
+<derivedUnit id="500820" Code="[lbf_av]" CODE="[LBF_AV]" isMetric="no"><name>pound force</name><printSymbol>lbf</printSymbol><property>force</property><value Unit="[lb_av].[g]" UNIT="[LB_AV].[G]" value="1">1</value></derivedUnit>
+    </ucumUnits>
+    <comment>
+      <p>
+This list is not complete. It does not list all constants but only
+those that are fundamental and from which many other constants can be
+derived. The source of this table is <emph>The NIST Reference on
+Constants, Units, and Uncertainty</emph> Version 2.1, 21 May 1998. NIST
+Physics
+Laboratory. <code>http://physics.nist.gov/cuu/Constants/index.html</code>
+      <p>
+      </p>
+In the base system of &TUCUM;, the general gas constant <v>R</v> is
+identical to the Boltzman constant <v>k</v>. In the SI both are related
+through <v>R</v> = <v>k</v> &mult; <v>N</v><sub>A</sub>, where
+<v>N</v><sub>A</sub> = 6.0221367 &mult; 10<sup>23</sup>&nbsp;/mol is
+the Avogadro constant. Because &TUCUM; defines the mole to be the
+dimensionless Avogadro number (number of particles in 1&nbsp;g of
+<sup>12</sup>C itself, there is no difference anymore if the Boltzman
+constant is given as <v>k</v> = 1.380658 &mult;
+10<sup>23</sup>&nbsp;J/K or <v>R</v> =
+8.314511&nbsp;J&nbsp;mol<sup>-1</sup>&nbsp;K<sup>-1</sup>.
+      </p>
+    </comment>
+
+    <p name="CGS units">
+<verse>
+The units of the older Centimeter-Gram-Second (CGS) system are defined
+in <tabref ref="cgs"/>.
+</verse>
+
+<verse>
+The meaning of the columns is declared in  <pref ref="para-si" verse="2"/>.
+</verse>
+
+<verse>
+Only the columns titled &ldquo;c/s,&rdquo; &ldquo;c/i,&rdquo;
+&ldquo;M,&rdquo; &ldquo;value,&rdquo; and &ldquo;definition&rdquo; are
+normative. Full name and print symbol are out of scope of &TUCUM;.
+</verse>
+    </p>
+
+    <ucumUnits id="cgs">
+      <caption>CGS units</caption>
+<derivedUnit id="400000" Code="Ky" CODE="KY" isMetric="yes"><name>Kayser</name><printSymbol>K</printSymbol><property>lineic number</property><value Unit="cm-1" UNIT="CM-1" value="1">1</value></derivedUnit>
+<derivedUnit id="400010" Code="Gal" CODE="GL" isMetric="yes"><name>Gal</name><printSymbol>Gal</printSymbol><property>acceleration</property><value Unit="cm/s2" UNIT="CM/S2" value="1">1</value></derivedUnit>
+<derivedUnit id="400020" Code="dyn" CODE="DYN" isMetric="yes"><name>dyne</name><printSymbol>dyn</printSymbol><property>force</property><value Unit="g.cm/s2" UNIT="G.CM/S2" value="1">1</value></derivedUnit>
+<derivedUnit id="400030" Code="erg" CODE="ERG" isMetric="yes"><name>erg</name><printSymbol>erg</printSymbol><property>energy</property><value Unit="dyn.cm" UNIT="DYN.CM" value="1">1</value></derivedUnit>
+<derivedUnit id="400040" Code="P" CODE="P" isMetric="yes"><name>Poise</name><printSymbol>P</printSymbol><property>dynamic viscosity</property><value Unit="dyn.s/cm2" UNIT="DYN.S/CM2" value="1">1</value></derivedUnit>
+<derivedUnit id="400150" Code="Bi" CODE="BI" isMetric="yes"><name>Biot</name><printSymbol>Bi</printSymbol><property>electric current</property><value Unit="A" UNIT="A" value="10">10</value></derivedUnit>
+<derivedUnit id="400050" Code="St" CODE="ST" isMetric="yes"><name>Stokes</name><printSymbol>St</printSymbol><property>kinematic viscosity</property><value Unit="cm2/s" UNIT="CM2/S" value="1">1</value></derivedUnit>
+<derivedUnit id="400060" Code="Mx" CODE="MX" isMetric="yes"><name>Maxwell</name><printSymbol>Mx</printSymbol><property>flux of magnetic induction</property><value Unit="Wb" UNIT="WB" value="1e8">1 &mult; 10<sup>8</sup></value></derivedUnit>
+<derivedUnit id="400070" Code="G" CODE="GS" isMetric="yes"><name>Gauss</name><printSymbol>Gs, G</printSymbol><property>magnetic flux density</property><value Unit="T" UNIT="T" value="1e4">1 &mult; 10<sup>4</sup></value></derivedUnit>
+<derivedUnit id="400080" Code="Oe" CODE="OE" isMetric="yes"><name>Oersted</name><printSymbol>Oe</printSymbol><property>magnetic field intensity</property><value Unit="/[pi].A/m" UNIT="/[PI].A/M" value="250">250</value></derivedUnit>
+<derivedUnit id="400090" Code="Gb" CODE="GB" isMetric="yes"><name>Gilbert</name><printSymbol>Gb</printSymbol><property>magnetic tension</property><value Unit="Oe.cm" UNIT="OE.CM" value="1">1</value></derivedUnit>
+<derivedUnit id="400100" Code="sb" CODE="SB" isMetric="yes"><name>stilb</name><printSymbol>sb</printSymbol><property>lum. intensity density</property><value Unit="cd/cm2" UNIT="CD/CM2" value="1">1</value></derivedUnit>
+<derivedUnit id="400110" Code="Lmb" CODE="LMB" isMetric="yes"><name>Lambert</name><printSymbol>L</printSymbol><property>brightness</property><value Unit="cd/cm2/[pi]" UNIT="CD/CM2/[PI]" value="1">1</value></derivedUnit>
+<derivedUnit id="400120" Code="ph" CODE="PHT" isMetric="yes"><name>phot</name><printSymbol>ph</printSymbol><property>illuminance</property><value Unit="lx" UNIT="LX" value="1e4">1 &mult; 10<sup>4</sup></value></derivedUnit>
+<derivedUnit id="400130" Code="Ci" CODE="CI" isMetric="yes"><name>Curie</name><printSymbol>Ci</printSymbol><property>radioactivity</property><value Unit="Bq" UNIT="BQ" value="3.7e0">3.7 &mult; 10<sup>0</sup></value></derivedUnit>
+<derivedUnit id="400140" Code="R" CODE="ROE" isMetric="yes"><name>Roentgen</name><printSymbol>R</printSymbol><property>ion dose</property><value Unit="C/kg" UNIT="C/KG" value="2.58e4">2.58 &mult; 10<sup>4</sup></value></derivedUnit>
+<derivedUnit id="400160" Code="RAD" CODE="[RAD]" isMetric="yes"><name>radiation absorbed dose</name><printSymbol>RAD</printSymbol><property>energy dose</property><value Unit="erg/g" UNIT="ERG/G" value="100">100</value></derivedUnit>
+<derivedUnit id="400170" Code="REM" CODE="[REM]" isMetric="yes"><name>radiation equivalent man</name><printSymbol>REM</printSymbol><property>dose equivalent</property><value Unit="RAD" UNIT="[RAD]" value="1">1</value></derivedUnit>
+    </ucumUnits>
+    <comment>
+      <p>
+Although the CGPM &ldquo;accepts&rdquo; only very few CGS units &ldquo;for use with
+the SI,&rdquo; CGS units are proper metric units. CGS units are still used
+in many physiological laboratories and in clinical diagnostics (e.g.,
+cardiology). In addition CGS units ackquired a special dignity as this
+was the system of units used by the great physicists of the early 20th
+century, Albert Einstein, Max Planck, and many others who worked on
+the scientific revolution that had quite a cultural impact.
+      </p>
+      <p>
+The CGS system defined electric and magnetic phenomena differently
+which is why the units named &ldquo;oersted&rdquo; and &ldquo;maxwell&rdquo; have no
+proper SI counterpart. This table was compiled from various sources
+and is not complete and not very systematic. We therefore welcome
+suggestions and advice as to how this table could be completed.
+      </p>
+    </comment>
+  </div2>
+  <div2>
+    <head>Customary Unit Atoms</head>
+
+    <comment>
+      <p>
+Customary units have once been used all over Europe. Units were taken
+from nature: anatomical structures (e.g., arm, foot, finger),
+botanical objects (e.g., grains of various sorts, rod), or processes
+of everyday life (e.g., amount of land one could plow in a morning,
+the length of 1000 steps, an hour of walking, etc.).
+      </p>
+      <p>
+Many of these units can be traced back in history to the Romans
+(mile), Greeks (carat) and even more ancient times. It is thus no
+wonder that this heritage was in some way ordered. Indeed, one finds
+the same names for units used in different countries and most of these
+units where divided into smaller or multiplied to larger units in the
+same way.
+      </p>
+      <p>
+For example, there was the foot (de. &ldquo;Fu&sharps;&rdquo;  fr. &ldquo;pied&rdquo; 
+nl. &ldquo;voet&rdquo;  that was divided into 12 inches (de. &ldquo;Zoll&rdquo; 
+fr. &ldquo;pouce&rdquo; . An inch was divided into 12 lines (de. &ldquo;Linie&rdquo; 
+fr. &ldquo;ligne&rdquo; . Two feet was one ell (de. &ldquo;Elle&rdquo;  da. &ldquo;Alen&rdquo; 
+sv. &ldquo;Aln&rdquo; . The ell was, however, not very popular in England, as
+opposed to the rest of Europe. Conversely, the yard is hard to find
+elsewhere, aside from the Argentinian &ldquo;vara.&rdquo;  But it is perhaps no
+accident that the meter ended up as the 40 &mult; 10<sup>-6</sup> of an
+earth's meridian, which is approximately one yard (43.7 &mult;
+10<sup>-6</sup>). The rod (de. &ldquo;Rute&rdquo;  fr. &ldquo;perche&rdquo;  nl. &ldquo;roede&rdquo; 
+sv. &ldquo;st&aring;ng&rdquo;  was very popular all over Europe and so was the fathom
+(de. &ldquo;Klafter&rdquo; .
+      </p>
+      <p>
+The square rod (de. &ldquo;Quadratrute&rdquo;  fr. &ldquo;perche-carr&eacute;e&rdquo; 
+nl. &ldquo;vierkante-roede&rdquo;  was mainly used to measure land. The acre as
+the legnedary land to sow in one morning (or day) is also widespread
+(de. &ldquo;Morgen, Tagwerk, Acker&rdquo;  fr. &ldquo;arpent&rdquo;  sv. &ldquo;tunnland&rdquo; ,
+although the exact amount in square rod varies considerably from
+region ro region. Interestingly, even the special purpose measures
+such as the &ldquo;hand&rdquo; for measuring horses have international equivalents
+(de. &ldquo;faust&rdquo; .
+      </p>
+      <p>
+One can indeed say that there was once a <emph>syst&egrave;me international
+d'unit&eacute;s coutumi&egrave;res</emph> but the magnitudes of the units were not
+standardized internationally. Of course, Great Britain had the most
+impact in standardizing the customary system, because of its colonies,
+including its most important colony, America. However, after the
+customary units were established in the U.S. a major reform took place
+through the British Weights and Measures Act of 1824. For instance,
+Queen Anne's wine Gallon of 231 cubic inches, still used in the U.S.,
+was discarded then, and the older bushel was standardized differently
+in Great Britain.  Other deviations between the English and
+U.S. measures are due to various alignments with the metric
+system. Thus, in the U.S., the yard was standardized as
+3600/3937&nbsp;m and the inch was
+2.540005&nbsp;cm while in England the inch was still 2.539998&nbsp;cm. 
+      </p>
+      <p>
+In 1959 major parts of the U.S. and British system of customary units
+were standardized internationally, again aligned to the metric system
+which is why the international yard is 0.9144&nbsp;m exactly and the
+nautical mile became 1852&nbsp;m exactly. However, traditional
+subdivisions and multiples have not been abolished in favor of the
+international standard. Furthermore the old U.S. standard for the yard
+is still legally used for land surveying.
+      </p>
+      <p>
+Conclusively, there are different systems of customary units that are
+in use today. These systems use the same names for units that have
+different equivalents in the metric system, because the customary
+systems are based on different reference quantities but multiples and
+subdivisions of the reference quantities are very similar, though with
+notable exceptions.
+      </p>
+      <p>
+In the following tables we tried to give the original definitions to
+the customary units. This means in general that the references to the
+metric system are as few as possible, with most of the units of one
+system defined as multiples and subdivisions of one reference unit.
+      </p>
+      <p>
+We use the subscript notation to disambiguate units with same names in
+the different systems. Subscript notation means, for instance that if
+the print symbol for foot is &ldquo;&nbsp;ft&rdquo; we use subscripts
+to distinguish the international foot &ldquo;&nbsp;ft_i&rdquo; the
+U.S. survey foot &ldquo;&nbsp;ft_{us}&rdquo; and the British Imperial
+foot &ldquo;&nbsp;ft_{br}&rdquo; We do not actually list print symbols
+for customary units, because there seems to be no standard for it, and
+because defining print symbols is out of scope of &TUCUM;. However, we
+presume that subscripts be used to disambiguate whatever print symbols
+are being used. According to <pref from="para-underscore"/>, &TUCUM;
+uses the underscore to denote those subscripts, and also encloses the
+entire unit atom into square brackets. Hence, the symbols for the
+U.S. survey foot and the British Imperial foot are defined as
+&ldquo;<code>[ft_i]</code>,&rdquo;
+&ldquo;<code>[ft_us]</code>,&rdquo; and
+&ldquo;<code>[ft_br]</code>&rdquo; respectively.
+      </p>
+      <p>
+Prospective users of &TUCUM; may be disappointed by the fact that
+there are many different symbols for foot and inch defined but all of
+them have a subscript and thus none of them are equal to the
+ANSI&nbsp;X3.50 symbols. We considered to define default symbols for
+customary units, where, e.g., the common units of length (foot, inch)
+would default to the international customary units, while mass units
+(pound, ounce) would default to the avoirdupois system. However,
+because the customary system is quite complex, and units by the same
+names can differ by more than 20%, defining defaults will probably
+cause even more confusion. There is no denial: a gallon is not just a
+gallon and a pound is not just a pound, this is the disadvantage of
+dealing with a unit system of medieval origin.
+      </p>
+    </comment>
+
+    <p id="para-custint" name="international customary units">
+<verse>
+The unified U.S. and British Imperial customary units, so called
+&ldquo;international&rdquo; customary units are defined in <tabref ref="intcust"/>.
+</verse>
+
+<verse>
+The meaning of the columns is declared in <pref ref="para-si"
+verse="2"/>.  With the exception that the column named
+&ldquo;print&rdquo; is not available.
+</verse>
+
+<verse>
+Only the columns titled &ldquo;c/s,&rdquo; &ldquo;c/i,&rdquo;
+&ldquo;M,&rdquo; &ldquo;value,&rdquo; and &ldquo;definition&rdquo; are
+normative. The full name is out of scope of &TUCUM;.
+</verse>
+
+<verse>
+The special symbols for &ldquo;square inch,&rdquo; &ldquo;cubic
+foot,&rdquo; etc. are deprecated. The preferred expressions use the
+exponents 2 and 3 respectively as shown in the column
+&ldquo;definition&rdquo;
+</verse>
+    </p>
+    <ucumUnits id="intcust" omit="printSymbol">
+      <caption>International customary units</caption>
+<derivedUnit id="500010" Code="[in_i]" CODE="[IN_I]" isMetric="no"><name>inch</name><printSymbol>in, ''</printSymbol><property>length</property><value Unit="cm" UNIT="CM" value="2.54">2.54</value></derivedUnit>
+<derivedUnit id="500030" Code="[ft_i]" CODE="[FT_I]" isMetric="no"><name>foot</name><printSymbol>ft, '</printSymbol><property>length</property><value Unit="[in_i]" UNIT="[IN_I]" value="12">12</value></derivedUnit>
+<derivedUnit id="500040" Code="[yd_i]" CODE="[YD_I]" isMetric="no"><name>yard</name><printSymbol>yd</printSymbol><property>length</property><value Unit="[ft_i]" UNIT="[FT_I]" value="3">3</value></derivedUnit>
+<derivedUnit id="500050" Code="[mi_i]" CODE="[MI_I]" isMetric="no"><name>statute mile</name><printSymbol>mi</printSymbol><property>length</property><value Unit="[ft_i]" UNIT="[FT_I]" value="5280">5280</value></derivedUnit>
+<derivedUnit id="500070" Code="[fth_i]" CODE="[FTH_I]" isMetric="no"><name>fathom</name><printSymbol>fth</printSymbol><property>depth of water</property><value Unit="[ft_i]" UNIT="[FT_I]" value="6">6</value></derivedUnit>
+<derivedUnit id="500080" Code="[nmi_i]" CODE="[NMI_I]" isMetric="no"><name>nautic mile</name><printSymbol>n.mi</printSymbol><property>length</property><value Unit="m" UNIT="M" value="1852">1852</value></derivedUnit>
+<derivedUnit id="500090" Code="[kn_i]" CODE="[KN_I]" isMetric="no"><name>knot</name><printSymbol>knot</printSymbol><property>velocity</property><value Unit="[nmi_i]/h" UNIT="[NMI_I]/H" value="1">1</value></derivedUnit>
+<derivedUnit id="500100" Code="[sin_i]" CODE="[SIN_I]" isMetric="no"><name>square inch</name><property>area</property><value Unit="[in_i]2" UNIT="[IN_I]2" value="1">1</value></derivedUnit>
+<derivedUnit id="500110" Code="[sft_i]" CODE="[SFT_I]" isMetric="no"><name>square foot</name><property>area</property><value Unit="[ft_i]2" UNIT="[FT_I]2" value="1">1</value></derivedUnit>
+<derivedUnit id="500120" Code="[syd_i]" CODE="[SYD_I]" isMetric="no"><name>square yard</name><property>area</property><value Unit="[yd_i]2" UNIT="[YD_I]2" value="1">1</value></derivedUnit>
+<derivedUnit id="500130" Code="[cin_i]" CODE="[CIN_I]" isMetric="no"><name>cubic inch</name><property>volume</property><value Unit="[in_i]3" UNIT="[IN_I]3" value="1">1</value></derivedUnit>
+<derivedUnit id="500140" Code="[cft_i]" CODE="[CFT_I]" isMetric="no"><name>cubic foot</name><property>volume</property><value Unit="[ft_i]3" UNIT="[FT_I]3" value="1">1</value></derivedUnit>
+<derivedUnit id="500150" Code="[cyd_i]" CODE="[CYD_I]" isMetric="no"><name>cubic yard</name><printSymbol>cu.yd</printSymbol><property>volume</property><value Unit="[yd_i]3" UNIT="[YD_I]3" value="1">1</value></derivedUnit>
+<derivedUnit id="500141" Code="[bf_i]" CODE="[BF_I]" isMetric="no"><name>board foot</name><property>volume</property><value Unit="[in_i]3" UNIT="[IN_I]3" value="144">144</value></derivedUnit>
+<derivedUnit id="500142" Code="[cr_i]" CODE="[CR_I]" isMetric="no"><name>cord</name><property>volume</property><value Unit="[ft_i]3" UNIT="[FT_I]3" value="128">128</value></derivedUnit>
+<derivedUnit id="500060" Code="[mil_i]" CODE="[MIL_I]" isMetric="no"><name>mil</name><printSymbol>mil</printSymbol><property>length</property><value Unit="[in_i]" UNIT="[IN_I]" value="1e3">1 &mult; 10<sup>3</sup></value></derivedUnit>
+<derivedUnit id="500160" Code="[cml_i]" CODE="[CML_I]" isMetric="no"><name>circular mil</name><printSymbol>circ.mil</printSymbol><property>area</property><value Unit="[pi]/4.[mil_i]2" UNIT="[PI]/4.[MIL_I]2" value="1">1</value></derivedUnit>
+<derivedUnit id="500020" Code="[hd_i]" CODE="[HD_I]" isMetric="no"><name>hand</name><printSymbol>hd</printSymbol><property>height of horses</property><value Unit="[in_i]" UNIT="[IN_I]" value="4">4</value></derivedUnit>
+    </ucumUnits>
+    <comment>
+      <p>
+In general the international customary units are effective in the
+U.S. and in Great Britain since 1959. We are unsure, however, about
+this in countries that formerly or at present belong to the
+Commonwealth. We therefore appreciate advice and reference to original
+sources on this transition. Conceivably other countries may have made
+exceptions in the transition to the international definitions of
+customary units, such as the U.S. where the old definitions have been
+retained for the purpose of land surveying.
+      </p>
+      <p>
+It is not quite clear exactly what units the international customary
+system comprises. According to the Encyclopedia Britannica
+[<emph>British Imperial System. Britannica Online</emph>], the rod was
+removed in Great Britain in 1963. Since the definition of the acre is
+based on the rod, we did not include rod and acre in the international
+customary system. In the U.S. the acre is still defined on the older
+U.S. customary system as of 1893.
+      </p>
+      <p>
+In general, we did not include special customary units of area and
+volume in <tabref ref="intcust"/>, since these are still used
+differently in the U.S. Special symbols such as suqare inch and cubic
+foot have been included according to ANSI&nbsp;X3.50. Generally the
+&ldquo;square-&rdquo; and &ldquo;cubic-&rdquo; prefixes are
+unnecessary in ISO&nbsp;2955 and ANSI&nbsp;X3.50 and are deprecated by
+&TUCUM;. We placed the board foot, cord and circular mil into the
+international table because these units are suggested by
+ANSI&nbsp;X3.50 but we were not sure in what sense they are still
+used.  We did, however, not include the square mile in the
+international table because in the U.S. measurements in square miles
+are most likely based on the survey mile that is part of the older
+system, see <pref ref="para-us-lengths"/>.
+      </p>
+      <p>
+The circular mil is exactly the area of a circle with a diameter of
+one mil. One mil, in turn, equals 1/1000 inch (``mil&rdquo; is the
+etymological equivalent of &ldquo;milli-inch&rdquo; ) The mil has been
+defined in <tabref ref="intcust"/> to support the exact definition of
+the circular mil.
+      </p>
+      <p>
+ANSI X3.50 does not define a symbol for the &ldquo;hand,&rdquo; but this unit is
+mentioned in the table given by the Encyclopedia Britannica. The hand
+is used in measuring the height of horses from foot to shoulder. It
+was probably not subject to the internationalization of customary
+units. Any advice as whether the hand is used based on an older
+British or U.S. definition is appreciated.
+      </p>
+    </comment>
+
+    <p id="para-us-lengths" name="U.S. survey lengths">
+<verse>
+The older U.S. units according to the definition of the inch in the
+U.S. Metric Law of 1866 and the definition of foot and yard that was
+valid from 1893 until 1959.
+</verse>
+
+<verse>
+The meaning of the columns is declared in <pref ref="para-custint"/>.
+</verse>
+
+<smallref>
+[Barry N. Taylor, <emph>Guide to the Use of the International Stsyem of
+Units (SI)</emph> [NIST Special Publication 811], National Institute for
+Standards and Technology (NIST), 1995. Available from: URL:
+<code>http://physics.nist.gov/Document/sp811.pdf</code>]}
+</smallref>
+    </p>
+
+    <ucumUnits id="us-lengths" omit="printSymbol">
+      <caption>Older U.S. &ldquo;survey&rdquo; lengths</caption>
+<derivedUnit id="500170" Code="[ft_us]" CODE="[FT_US]" isMetric="no"><name>foot</name><printSymbol>ft<sub>us</sub></printSymbol><property>length</property><value Unit="m/3937" UNIT="M/3937" value="1200">1200</value></derivedUnit>
+<derivedUnit id="500180" Code="[yd_us]" CODE="[YD_US]" isMetric="no"><name>yard</name><property>length</property><value Unit="[ft_us]" UNIT="[FT_US]" value="3">3</value></derivedUnit>
+<derivedUnit id="500190" Code="[in_us]" CODE="[IN_US]" isMetric="no"><name>inch</name><property>length</property><value Unit="[ft_us]/12" UNIT="[FT_US]/12" value="1">1</value></derivedUnit>
+<derivedUnit id="500200" Code="[rd_us]" CODE="[RD_US]" isMetric="no"><name>rod</name><property>length</property><value Unit="[ft_us]" UNIT="[FT_US]" value="16.5">16.5</value></derivedUnit>
+<derivedUnit id="500210" Code="[ch_us]" CODE="[CH_US]" isMetric="no"><name>chain (Gunter's or Surveyor's)</name><property>length</property><value Unit="[rd_us]" UNIT="[RD_US]" value="4">4</value></derivedUnit>
+<derivedUnit id="500220" Code="[lk_us]" CODE="[LK_US]" isMetric="no"><name>link (for Gunter's chain)</name><property>length</property><value Unit="[ch_us]/100" UNIT="[CH_US]/100" value="1">1</value></derivedUnit>
+<derivedUnit id="500230" Code="[rch_us]" CODE="[RCH_US]" isMetric="no"><name>chain (Ramden's or Engineer's)</name><property>length</property><value Unit="[ft_us]" UNIT="[FT_US]" value="100">100</value></derivedUnit>
+<derivedUnit id="500240" Code="[rlk_us]" CODE="[RLK_US]" isMetric="no"><name>link (for Ramden's chain)</name><property>length</property><value Unit="[rch_us]/100" UNIT="[RCH_US]/100" value="1">1</value></derivedUnit>
+<derivedUnit id="500250" Code="[fth_us]" CODE="[FTH_US]" isMetric="no"><name>fathom</name><property>length</property><value Unit="[ft_us]" UNIT="[FT_US]" value="6">6</value></derivedUnit>
+<derivedUnit id="500260" Code="[fur_us]" CODE="[FUR_US]" isMetric="no"><name>furlong</name><property>length</property><value Unit="[rd_us]" UNIT="[RD_US]" value="40">40</value></derivedUnit>
+<derivedUnit id="500270" Code="[mi_us]" CODE="[MI_US]" isMetric="no"><name>mile</name><property>length</property><value Unit="[fur_us]" UNIT="[FUR_US]" value="8">8</value></derivedUnit>
+<derivedUnit id="500280" Code="[acr_us]" CODE="[ACR_US]" isMetric="no"><name>acre</name><property>area</property><value Unit="[rd_us]2" UNIT="[RD_US]2" value="160">160</value></derivedUnit>
+<derivedUnit id="500290" Code="[srd_us]" CODE="[SRD_US]" isMetric="no"><name>square rod</name><property>area</property><value Unit="[rd_us]2" UNIT="[RD_US]2" value="1">1</value></derivedUnit>
+<derivedUnit id="500300" Code="[smi_us]" CODE="[SMI_US]" isMetric="no"><name>square mile</name><property>area</property><value Unit="[mi_us]2" UNIT="[MI_US]2" value="1">1</value></derivedUnit>
+<derivedUnit id="500320" Code="[sct]" CODE="[SCT]" isMetric="no"><name>section</name><property>area</property><value Unit="[mi_us]2" UNIT="[MI_US]2" value="1">1</value></derivedUnit>
+<derivedUnit id="500330" Code="[twp]" CODE="[TWP]" isMetric="no"><name>township</name><property>area</property><value Unit="[sct]" UNIT="[SCT]" value="36">36</value></derivedUnit>
+<derivedUnit id="500310" Code="[mil_us]" CODE="[MIL_US]" isMetric="no"><name>mil</name><property>length</property><value Unit="[in_us]" UNIT="[IN_US]" value="1e3">1 &mult; 10<sup>3</sup></value></derivedUnit>
+    </ucumUnits>
+    <comment>
+      <p>
+According to NIST, the acre as normally used in the U.S. is defined
+in terms of U.S. survey lengths, and not in terms of the
+international custormary system.  This older U.S. customary system of
+survey lengths is still used for geodesic measurements.
+      </p>
+    </comment>
+     
+    <p name="British Imperial lengths">
+<verse>
+<tabref ref="brit-length"/> defines symbols for the older British Imperial lengths as of
+the British Weights and Measures Act of 1824.
+</verse>
+
+<verse>
+The meaning of the columns is declared in  <pref ref="para-custint"/>.
+</verse>
+    </p>
+
+    <ucumUnits id="brit-length" omit="printSymbol">
+      <caption>British Imperial lengths</caption>
+<derivedUnit id="500340" Code="[in_br]" CODE="[IN_BR]" isMetric="no"><name>inch</name><property>length</property><value Unit="cm" UNIT="CM" value="2.539998">2.539998</value></derivedUnit>
+<derivedUnit id="500350" Code="[ft_br]" CODE="[FT_BR]" isMetric="no"><name>foot</name><property>length</property><value Unit="[in_br]" UNIT="[IN_BR]" value="12">12</value></derivedUnit>
+<derivedUnit id="500360" Code="[rd_br]" CODE="[RD_BR]" isMetric="no"><name>foot</name><property>length</property><value Unit="[ft_br]" UNIT="[FT_BR]" value="16.5">16.5</value></derivedUnit>
+<derivedUnit id="500370" Code="[ch_br]" CODE="[CH_BR]" isMetric="no"><name>chain (Gunter's chain)</name><property>length</property><value Unit="[rd_br]" UNIT="[RD_BR]" value="4">4</value></derivedUnit>
+<derivedUnit id="500380" Code="[lk_br]" CODE="[LK_BR]" isMetric="no"><name>link (for Gunter's chain)</name><property>length</property><value Unit="[ch_br]/100" UNIT="[CH_BR]/100" value="1">1</value></derivedUnit>
+<derivedUnit id="500390" Code="[fth_br]" CODE="[FTH_BR]" isMetric="no"><name>fathom</name><property>length</property><value Unit="[ft_br]" UNIT="[FT_BR]" value="6">6</value></derivedUnit>
+<derivedUnit id="500400" Code="[pc_br]" CODE="[PC_BR]" isMetric="no"><name>pace</name><property>length</property><value Unit="[ft_br]" UNIT="[FT_BR]" value="2.5">2.5</value></derivedUnit>
+<derivedUnit id="500410" Code="[yd_br]" CODE="[YD_BR]" isMetric="no"><name>yard</name><property>length</property><value Unit="[ft_br]" UNIT="[FT_BR]" value="3">3</value></derivedUnit>
+<derivedUnit id="500420" Code="[mi_br]" CODE="[MI_BR]" isMetric="no"><name>mile</name><property>length</property><value Unit="[ft_br]" UNIT="[FT_BR]" value="5280">5280</value></derivedUnit>
+<derivedUnit id="500430" Code="[nmi_br]" CODE="[NMI_BR]" isMetric="no"><name>nautic mile</name><property>length</property><value Unit="[ft_br]" UNIT="[FT_BR]" value="6080">6080</value></derivedUnit>
+<derivedUnit id="500440" Code="[kn_br]" CODE="[KN_BR]" isMetric="no"><name>knot</name><property>velocity</property><value Unit="[nmi_br]/h" UNIT="[NMI_BR]/H" value="1">1</value></derivedUnit>
+<derivedUnit id="500450" Code="[acr_br]" CODE="[ACR_BR]" isMetric="no"><name>acre</name><property>area</property><value Unit="[yd_br]2" UNIT="[YD_BR]2" value="4840">4840</value></derivedUnit>
+    </ucumUnits>
+    <comment>
+      <p>
+The older British Imperial system is predominantly of historical
+interest. However, it may be that some former members of the
+Commonwealth have retained this system after 1959, when the unified
+international definitions where established, and after 1963, when the
+British system was revised in England.
+      </p>
+      <p>     
+The chain was proposed by Edmund Gunter in England of the 17th
+century. It is possible that Gunter's chain and Ramden's chain are
+related to other European traditional units such as the English
+&ldquo;rope&rdquo; (measuring 20 feet) or the old German &ldquo;Landseil&rdquo; (measuring
+52 ells or 104 feet) named after ropes or chains that could be spanned
+in order to measure land. The difference in the definitions of those
+units is no surprise as there is nothing that restricts a chain or
+rope to a praticular length. However, these units are still similar in
+magnitude.
+      </p>
+    </comment>
+
+    <p name="U.S. volumes">
+<verse>
+The U.S. volumes, so called &ldquo;capacity&rdquo; measures, which
+are different for fluid goods (wine) and dry goods (grain), are
+defined in <tabref ref="us-volumes"/>.
+</verse>
+
+<verse>
+The meaning of the columns is declared in <pref ref="para-custint"/>.
+</verse>
+    </p>
+    <ucumUnits id="us-volumes" omit="printSymbol">
+      <caption>U.S. volumes including so called &ldquo;dry measures&rdquo;</caption>
+<derivedUnit id="500460" Code="[gal_us]" CODE="[GAL_US]" isMetric="no"><name>gallon (Queen Anne's wine gallon)</name><property>volume (fluid)</property><value Unit="[in_i]3" UNIT="[IN_I]3" value="231">231</value></derivedUnit>
+<derivedUnit id="500470" Code="[bbl_us]" CODE="[BBL_US]" isMetric="no"><name>barrel</name><property>volume (fluid)</property><value Unit="[gal_us]" UNIT="[GAL_US]" value="42">42</value></derivedUnit>
+<derivedUnit id="500480" Code="[qt_us]" CODE="[QT_US]" isMetric="no"><name>quart</name><property>volume (fluid)</property><value Unit="[gal_us]/4" UNIT="[GAL_US]/4" value="1">1</value></derivedUnit>
+<derivedUnit id="500490" Code="[pt_us]" CODE="[PT_US]" isMetric="no"><name>pint</name><property>volume (fluid)</property><value Unit="[qt_us]/2" UNIT="[QT_US]/2" value="1">1</value></derivedUnit>
+<derivedUnit id="500500" Code="[gil_us]" CODE="[GIL_US]" isMetric="no"><name>gill</name><property>volume (fluid)</property><value Unit="[pt_us]/4" UNIT="[PT_US]/4" value="1">1</value></derivedUnit>
+<derivedUnit id="500510" Code="[foz_us]" CODE="[FOZ_US]" isMetric="no"><name>fluid ounce</name><printSymbol>oz fl</printSymbol><property>volume (fluid)</property><value Unit="[gil_us]/4" UNIT="[GIL_US]/4" value="1">1</value></derivedUnit>
+<derivedUnit id="500520" Code="[fdr_us]" CODE="[FDR_US]" isMetric="no"><name>fluid dram</name><property>volume (fluid)</property><value Unit="[foz_us]/8" UNIT="[FOZ_US]/8" value="1">1</value></derivedUnit>
+<derivedUnit id="500530" Code="[min_us]" CODE="[MIN_US]" isMetric="no"><name>minim</name><property>volume (fluid)</property><value Unit="[fdr_us]/60" UNIT="[FDR_US]/60" value="1">1</value></derivedUnit>
+<derivedUnit id="500540" Code="[crd_us]" CODE="[CRD_US]" isMetric="no"><name>cord</name><property>volume (fluid)</property><value Unit="[ft_i]3" UNIT="[FT_I]3" value="128">128</value></derivedUnit>
+<derivedUnit id="500550" Code="[bu_us]" CODE="[BU_US]" isMetric="no"><name>bushel</name><property>volume (dry)</property><value Unit="[in_i]3" UNIT="[IN_I]3" value="2150.42">2150.42</value></derivedUnit>
+<derivedUnit id="500590" Code="[gal_wi]" CODE="[GAL_WI]" isMetric="no"><name>winchester gallon (historical)</name><property>volume (dry)</property><value Unit="[bu_us]/8" UNIT="[BU_US]/8" value="1">1</value></derivedUnit>
+<derivedUnit id="500560" Code="[pk_us]" CODE="[PK_US]" isMetric="no"><name>peck</name><property>volume (dry)</property><value Unit="[bu_us]/4" UNIT="[BU_US]/4" value="1">1</value></derivedUnit>
+<derivedUnit id="500570" Code="[dqt_us]" CODE="[DQT_US]" isMetric="no"><name>dry quart</name><property>volume (dry)</property><value Unit="[pk_us]/8" UNIT="[PK_US]/8" value="1">1</value></derivedUnit>
+<derivedUnit id="500580" Code="[dpt_us]" CODE="[DPT_US]" isMetric="no"><name>dry pint</name><property>volume (dry)</property><value Unit="[dqt_us]/2" UNIT="[DQT_US]/2" value="1">1</value></derivedUnit>
+<derivedUnit id="500690" Code="[tbs_us]" CODE="[TBS_US]" isMetric="no"><name>tablespoon</name><property>volume</property><value Unit="[foz_us]/2" UNIT="[FOZ_US]/2" value="1">1</value></derivedUnit>
+<derivedUnit id="500700" Code="[tsp_us]" CODE="[TSP_US]" isMetric="no"><name>teaspoon</name><property>volume</property><value Unit="[tbs_us]/3" UNIT="[TBS_US]/3" value="1">1</value></derivedUnit>
+<derivedUnit id="500710" Code="[cup_us]" CODE="[CUP_US]" isMetric="no"><name>cup</name><property>volume</property><value Unit="[tbs_us]" UNIT="[TBS_US]" value="16">16</value></derivedUnit>
+    </ucumUnits>
+
+    <comment>
+      <p>
+The U.S. fluid volumes have been defined based on Queen Anne's wine
+gallon which was in turn defined exactly as 231 cubic inch. Although
+we used international inch, we are not sure what inch definition is
+actually used for defining the exact size of a U.S. gallon. However,
+the differences between the various inches are minimal, even when
+raised to the 3rd power (i.e., the difference between the U.S. inch
+and the British Imperial inch remains in the sixth decimal digit.)
+      </p>
+      <p>
+Dry measures are based on the bushel (corn bushel), originally defined
+in 1701 as &ldquo;any round measure with a plain and even bottom, being
+18.5 inches wide throughout and 8 inches deep.&rdquo; This definition,
+being (18.5/2)<sup>2</sup> &pi; &mult; 8 = 2150.42017138221... cubic
+inch was later truncated to 2150.42 cubic inch exactly. At times the
+bushel was closely related with the Winchester gallon (corn gallon),
+which has been mentioned as an historical curiosity.
+      </p>
+      <p>
+ANSI&nbsp;X3.50 defines symbols for the units cup, tablespoon and teaspoon
+which are predominantly used in cooking recipies but also in practical
+medicine. Similar units can often be found in European cook books, but
+are usually translated into metric units outside the U.S. For
+practical medicine these are still very handy units to give
+instructions to patients.
+      </p>
+    </comment>
+
+
+    <p name="British Imperial volumes">
+
+<verse>
+British Imperial volumes according to the Weights and Measures Act of
+1824 are defined in <tabref ref="brit-volume"/>.
+</verse>
+
+<verse>
+The meaning of the columns is declared in  <pref ref="para-custint"/>.
+</verse>
+    </p>
+
+    <ucumUnits id="brit-volume" omit="printSymbol">
+      <caption>British Imperial volumes</caption>
+<derivedUnit id="500600" Code="[gal_br]" CODE="[GAL_BR]" isMetric="no"><name>gallon</name><property>volume</property><value Unit="l" UNIT="L" value="4.54609">4.54609</value></derivedUnit>
+<derivedUnit id="500610" Code="[pk_br]" CODE="[PK_BR]" isMetric="no"><name>bushel</name><property>volume</property><value Unit="[gal_br]" UNIT="[GAL_BR]" value="2">2</value></derivedUnit>
+<derivedUnit id="500620" Code="[bu_br]" CODE="[BU_BR]" isMetric="no"><name>peck</name><property>volume</property><value Unit="[pk_br]" UNIT="[PK_BR]" value="4">4</value></derivedUnit>
+<derivedUnit id="500630" Code="[qt_br]" CODE="[QT_BR]" isMetric="no"><name>quart</name><property>volume</property><value Unit="[gal_br]/4" UNIT="[GAL_BR]/4" value="1">1</value></derivedUnit>
+<derivedUnit id="500640" Code="[pt_br]" CODE="[PT_BR]" isMetric="no"><name>pint</name><property>volume</property><value Unit="[qt_br]/2" UNIT="[QT_BR]/2" value="1">1</value></derivedUnit>
+<derivedUnit id="500650" Code="[gil_br]" CODE="[GIL_BR]" isMetric="no"><name>gill</name><property>volume</property><value Unit="[pt_br]/4" UNIT="[PT_BR]/4" value="1">1</value></derivedUnit>
+<derivedUnit id="500660" Code="[foz_br]" CODE="[FOZ_BR]" isMetric="no"><name>fluid ounce</name><property>volume</property><value Unit="[gil_br]/5" UNIT="[GIL_BR]/5" value="1">1</value></derivedUnit>
+<derivedUnit id="500670" Code="[fdr_br]" CODE="[FDR_BR]" isMetric="no"><name>fluid dram</name><property>volume</property><value Unit="[foz_br]/8" UNIT="[FOZ_BR]/8" value="1">1</value></derivedUnit>
+<derivedUnit id="500680" Code="[min_br]" CODE="[MIN_BR]" isMetric="no"><name>minim</name><property>volume</property><value Unit="[fdr_br]/60" UNIT="[FDR_BR]/60" value="1">1</value></derivedUnit>
+    </ucumUnits>
+
+    <comment>
+      <p>
+The British Weights and Measures Act of 1824 removed the medieval
+distiction between wine and grain measures and defined one unified
+system of volumes based on a new Gallon that was defined similarly as
+the metric unit liter: &ldquo;10 imperial pounds weight of distilled
+water weighed in air against brass weights with the water and the air
+at a temperature of 62 degrees of Fahrenheit's thermometer and with
+the barometer at 30 inches.&rdquo;
+      </p>
+      <p>
+With the current definition of the gallon as 277.421 cubic inches
+(approximately) and a density of water of 0.99878&nbsp;kg/l according
+to NIST data, the inch must have been approximately 2.5371&nbsp;cm at
+that time. Because of this difficulty with the original definition of
+the British gallon we based the British Imperial volumes on the gallon
+for which there is an exact metric equivalence, according to NIST,
+which provides usually well researched data.
+      </p>
+      <p>
+Note that the subdivisions of the British Imperial system of volumes
+differs from the U.S. system of fluid volumes between gill and fluid
+ounce: in the British system 1&nbsp;oz&nbsp;fl equals 1/5&nbsp;gill where
+in the U.S. system 1&nbsp;oz&nbsp;fl equals 1/4&nbsp;gill. Thus, although
+the british system starts out with a 20% larger gallon, the British
+fluid ounce, fluid dram and minim are 4% smaller than the U.S. units
+with the same name.
+      </p>
+    </comment>
+
+    <p name="avoirdupois weights">
+<verse>
+The avoirdupois system of mass units is defined in <tabref ref="avoirdupois"/>.
+</verse>
+
+<verse>
+The meaning of the columns is declared in  <pref ref="para-custint"/>.
+</verse>
+    </p>
+    <comment>
+      <p>
+The avoirdupois system is used in the U.S. as well as in coutries that
+use the British Imperial system. Avoirdupois is the default system of
+mass units used for all goods that &ldquo;have weight&rdquo;
+(fr. <emph>avoir du poids</emph>). Interestingly all three systems of
+weight are based on the same grain of barley, standardized to
+64.79891&nbsp;mg exactly [NIST].
+      </p>
+    </comment>
+
+    <ucumUnits id="avoirdupois" omit="printSymbol">
+      <caption>Avoirdupois weights</caption>
+<derivedUnit id="500720" Code="[gr]" CODE="[GR]" isMetric="no"><name>grain</name><property>mass</property><value Unit="mg" UNIT="MG" value="64.79891">64.79891</value></derivedUnit>
+<derivedUnit id="500740" Code="[lb_av]" CODE="[LB_AV]" isMetric="no"><name>pound</name><printSymbol>lb</printSymbol><property>mass</property><value Unit="[gr]" UNIT="[GR]" value="7000">7000</value></derivedUnit>
+<derivedUnit id="500750" Code="[oz_av]" CODE="[OZ_AV]" isMetric="no"><name>ounce</name><printSymbol>oz</printSymbol><property>mass</property><value Unit="[lb_av]/16" UNIT="[LB_AV]/16" value="1">1</value></derivedUnit>
+<derivedUnit id="500760" Code="[dr_av]" CODE="[DR_AV]" isMetric="no"><name>dram</name><property>mass</property><value Unit="[oz_av]/16" UNIT="[OZ_AV]/16" value="1">1</value></derivedUnit>
+<derivedUnit id="500770" Code="[scwt_av]" CODE="[SCWT_AV]" isMetric="no"><name>short hundredweight (U.S.)</name><property>mass</property><value Unit="[lb_av]" UNIT="[LB_AV]" value="100">100</value></derivedUnit>
+<derivedUnit id="500780" Code="[lcwt_av]" CODE="[LCWT_AV]" isMetric="no"><name>long hunderdweight (British)</name><property>mass</property><value Unit="[lb_av]" UNIT="[LB_AV]" value="112">112</value></derivedUnit>
+<derivedUnit id="500790" Code="[ston_av]" CODE="[STON_AV]" isMetric="no"><name>short ton (U.S.)</name><property>mass</property><value Unit="[scwt_av]" UNIT="[SCWT_AV]" value="20">20</value></derivedUnit>
+<derivedUnit id="500800" Code="[lton_av]" CODE="[LTON_AV]" isMetric="no"><name>long ton (British)</name><property>mass</property><value Unit="[lcwt_av]" UNIT="[LCWT_AV]" value="20">20</value></derivedUnit>
+<derivedUnit id="500810" Code="[stone_av]" CODE="[STONE_AV]" isMetric="no"><name>stone (British)</name><property>mass</property><value Unit="[lb_av]" UNIT="[LB_AV]" value="14">14</value></derivedUnit>
+    </ucumUnits>
+
+    <p name="troy weights">
+<verse>
+The troy system of mass units is defined in <tabref ref="troy"/>.
+</verse>
+
+<verse>
+The meaning of the columns is declared in  <pref ref="para-custint"/>.
+</verse>
+    </p>
+    <comment>
+      <p>
+The troy system originates in Troyes, a City in the Champagne (France)
+that hosted a major European fair. The troy system was later used for
+measuring precious metals. The World Monetary Fund valued all
+currencies against the troy ounce of gold at least until the 1960s
+(advice appreciated). The troy ounce is still used in worldwide trade
+with gold, even in countries that otherwise use metric units
+(de. &ldquo;feinunze&rdquo; . The troy system retains the original Roman
+subdivision of the pound in 12 ounces. The Roman <emph>uncia</emph> was &ldquo;one
+twelfth&rdquo; of a <emph>libra</emph> (hence the symbol &ldquo;lb&rdquo; for the pound),
+just as the inch (also originating from la. &ldquo;libra&rdquo;  is one twelfth
+of a foot. The subdivision of 12 ounces/inches per pound/foot and 2
+foot per ell (la. &ldquo;cubit&rdquo;  apparently originated in the ancient
+Egypt and was carried on by the Greeks and Romans into the medieval
+Europe. However, there was always an ambiguity such that the
+subdivision of 1/12 could become 1/16 and vice versa, hence the
+avoirdupois ounce of 1/16 pound.
+      </p>
+      <p>
+Note also that the troy pound was abolished in England on January 6,
+1879 [Jacques J. Proot, <emph>Anglo-Saxon weights &amp; measures</emph>, URL:
+<code>http://members.aol.com/JackProot/met/spvolas.html</code>].
+      </p>
+    </comment>
+
+    <ucumUnits id="troy" omit="printSymbol">
+      <caption>Troy weights</caption>
+<derivedUnit id="500840" Code="[pwt_tr]" CODE="[PWT_TR]" isMetric="no"><name>pennyweight</name><property>mass</property><value Unit="[gr]" UNIT="[GR]" value="24">24</value></derivedUnit>
+<derivedUnit id="500850" Code="[oz_tr]" CODE="[OZ_TR]" isMetric="no"><name>ounce</name><property>mass</property><value Unit="[pwt_tr]" UNIT="[PWT_TR]" value="20">20</value></derivedUnit>
+<derivedUnit id="500860" Code="[lb_tr]" CODE="[LB_TR]" isMetric="no"><name>pound</name><property>mass</property><value Unit="[oz_tr]" UNIT="[OZ_TR]" value="12">12</value></derivedUnit>
+    </ucumUnits>
+
+    <p name="apothecaries' weights.">
+<verse>
+The apothecarie's system of mass units is defined in <tabref ref="apoth"/>.
+</verse>
+
+<verse>
+The meaning of the columns is declared in  <pref ref="para-custint"/>.
+</verse>
+    </p>
+    <ucumUnits id="apoth" omit="printSymbol">
+      <caption>Apothecaries' weights</caption>
+<derivedUnit id="500880" Code="[sc_ap]" CODE="[SC_AP]" isMetric="no"><name>scruple</name><property>mass</property><value Unit="[gr]" UNIT="[GR]" value="20">20</value></derivedUnit>
+<derivedUnit id="500890" Code="[dr_ap]" CODE="[DR_AP]" isMetric="no"><name>dram (drachm)</name><property>mass</property><value Unit="[sc_ap]" UNIT="[SC_AP]" value="3">3</value></derivedUnit>
+<derivedUnit id="500900" Code="[oz_ap]" CODE="[OZ_AP]" isMetric="no"><name>ounce</name><property>mass</property><value Unit="[dr_ap]" UNIT="[DR_AP]" value="8">8</value></derivedUnit>
+<derivedUnit id="500910" Code="[lb_ap]" CODE="[LB_AP]" isMetric="no"><name>pound</name><property>mass</property><value Unit="[oz_ap]" UNIT="[OZ_AP]" value="12">12</value></derivedUnit>
+    </ucumUnits>
+
+    <comment>
+      <p>
+Note that some U.S. pharmacies still use this system of apothecaries'
+weights when measuring the amount of drugs. This system is very
+different from the avoirdupois system though based on the same
+grain. The apothecaries' dram is more than twice as much as the
+avoirdupois dram, the ounce is still 10% greater than the avoirdupois
+ounce while the pound is 20% less than the avoirdupois pound. The
+apothecaries' system, just as the troy system, keeps the original
+Roman subdivision of an ounce (la. &ldquo;uncia&rdquo;  to be 1/12 pound
+(la. &ldquo;libra&rdquo; . Hence is the apothecaries' pound about 22% smaller
+than the avoirdupois pound, while its subdivisions are greater than
+the respective avoirdupois subdivisions (ounce 10%, dram 119%). This
+difference in the weight systems is the most important reason why
+ANSI&nbsp;X3.50 should not be applied in medicine, where both systems are
+being used and therefore misinterpreations are inevitable.
+      </p>
+    </comment>
+
+<p name="typesetter's lengths">
+
+<verse>
+The units of length as used in typesetting are defined in <tabref ref="typeset"/>.
+</verse>
+
+<verse>
+The meaning of the columns is declared in <pref ref="para-custint"/>.
+</verse>
+</p>
+
+    <ucumUnits id="typeset" omit="printSymbol">
+      <caption>Units used in typesetting</caption>
+<derivedUnit id="600280" Code="[lne]" CODE="[LNE]" isMetric="no"><name>line</name><property>length</property><value Unit="[in_i]/12" UNIT="[IN_I]/12" value="1">1</value></derivedUnit>
+<derivedUnit id="600290" Code="[pnt]" CODE="[PNT]" isMetric="no"><name>point</name><property>length</property><value Unit="[lne]/6" UNIT="[LNE]/6" value="1">1</value></derivedUnit>
+<derivedUnit id="600300" Code="[pca]" CODE="[PCA]" isMetric="no"><name>pica</name><property>length</property><value Unit="[pnt]" UNIT="[PNT]" value="12">12</value></derivedUnit>
+<derivedUnit id="600310" Code="[pnt_pr]" CODE="[PNT_PR]" isMetric="no"><name>Printer's point</name><property>length</property><value Unit="[in_i]" UNIT="[IN_I]" value="0.013837">0.013837</value></derivedUnit>
+<derivedUnit id="600320" Code="[pca_pr]" CODE="[PCA_PR]" isMetric="no"><name>Printer's pica</name><property>length</property><value Unit="[pnt_pr]" UNIT="[PNT_PR]" value="12">12</value></derivedUnit>
+<derivedUnit id="600330" Code="[pied]" CODE="[PIED]" isMetric="no"><name>pied (French foot)</name><property>length</property><value Unit="cm" UNIT="CM" value="32.48">32.48</value></derivedUnit>
+<derivedUnit id="600340" Code="[pouce]" CODE="[POUCE]" isMetric="no"><name>pouce (French inch)</name><property>length</property><value Unit="[pied]/12" UNIT="[PIED]/12" value="1">1</value></derivedUnit>
+<derivedUnit id="600350" Code="[ligne]" CODE="[LIGNE]" isMetric="no"><name>ligne (French line)</name><property>length</property><value Unit="[pouce]/12" UNIT="[POUCE]/12" value="1">1</value></derivedUnit>
+<derivedUnit id="600360" Code="[didot]" CODE="[DIDOT]" isMetric="no"><name>didot (Didot's point)</name><property>length</property><value Unit="[ligne]/6" UNIT="[LIGNE]/6" value="1">1</value></derivedUnit>
+<derivedUnit id="600370" Code="[cicero]" CODE="[CICERO]" isMetric="no"><name>cicero (Didot's pica)</name><property>length</property><value Unit="[didot]" UNIT="[DIDOT]" value="12">12</value></derivedUnit>
+    </ucumUnits>
+
+    <comment>
+      <p>
+There are three systems of typesetter's lengths in use today:
+Fran&ccedilla;cois-Ambroise Didot (1730--1804), a publisher in Paris,
+invented this system based on the traditional subdivisions of the
+customary units: 1 line was 1/12 inch and 1/6 line was one
+point. Henceforth the size of letters were measured in point. However,
+the Didot system is based on the <emph>pouce</emph>, i.e. the french
+inch, which, just as the English inch, is 1/12 <emph>pied</emph>
+(foot). But the French foot was about 6.5% greater than the British
+Imperial foot. In the Anglo-American realm the typesetter's point was
+based on the British Imperial inch, with the same
+subdivisions. However, in the type foundries' industry the original
+definition of a point drifted apart, and in the late 19th century
+U.S. type foundries reestablished a slightly (0.375%) greater standard
+point. This point made its way back to the British. However, recently,
+the computer typesetting industry readjusted the point to its original
+size of 1/72 inch. All three systems, however, are still being used
+today.
+      </p>
+    </comment>
+  </div2>
+  <div2>  
+    <head>Other Legacy Units</head>
+
+    <p id="para-heat" name="legacy units for heat and temperature">
+<verse>
+Older units of heat (energy) and temperature are defined in <tabref ref="heat"/>.
+</verse>
+
+<verse>
+The meaning of the columns is declared in  <pref ref="para-si" verse="2"/>.
+</verse>
+
+<verse>
+Only the columns titled &ldquo;c/s,&rdquo; &ldquo;c/i,&rdquo;
+&ldquo;M,&rdquo; &ldquo;value,&rdquo; and &ldquo;definition&rdquo; are
+normative. Full name and print symbol are either not standardized or
+standarized by other bodies and are out of scope of &TUCUM;.
+</verse>
+
+<verse>
+The function pair denoted &ldquo;<code>degf(5 K/9)</code>&rdquo; is
+defined as <v>f</v><sub>F</sub>(<v>x</v>) = 9/5 <v>x</v> - 459.67 to convert
+from kelvin to degree Fahrenheit, and
+<v>f</v><sub>F</sub><sup>-1</sup>(<v>x</v>) = 5/9 (<v>x</v> + 459.67) to
+convert from degree Fahrenheit back to kelvin.
+</verse>
+    </p>
+
+    <ucumUnits id="heat">
+      <caption>Other Units for Heat and Temperature</caption>
+<derivedUnit id="600030" Code="[degF]" CODE="[DEGF]" isMetric="no"><name>degree Fahrenheit</name><printSymbol>&deg;F</printSymbol><property>temperature</property><value Unit="degf(5 K/9)" UNIT="DEGF(5 K/9)" ><function/></value></derivedUnit>
+<derivedUnit id="610010" Code="cal_[15]" CODE="CAL_[15]" isMetric="yes"><name>calorie (15&nbsp;&deg;C)</name><printSymbol>cal<sub>15&deg;C</sub></printSymbol><property>energy</property><value Unit="J" UNIT="J" value="4.18580">4.18580</value></derivedUnit>
+<derivedUnit id="610020" Code="cal_[20]" CODE="CAL_[20]" isMetric="yes"><name>calorie (20&nbsp;&deg;C)</name><printSymbol>cal<sub>20&deg;C</sub></printSymbol><property>energy</property><value Unit="J" UNIT="J" value="4.18190">4.18190</value></derivedUnit>
+<derivedUnit id="610030" Code="cal_m" CODE="CAL_M" isMetric="yes"><name>calorie (mean)</name><printSymbol>cal<sub>m</sub></printSymbol><property>energy</property><value Unit="J" UNIT="J" value="4.19002">4.19002</value></derivedUnit>
+<derivedUnit id="610040" Code="cal_IT" CODE="CAL_IT" isMetric="yes"><name>calorie (intl. table)</name><printSymbol>cal<sub>IT</sub></printSymbol><property>energy</property><value Unit="J" UNIT="J" value="4.1868">4.1868</value></derivedUnit>
+<derivedUnit id="610050" Code="cal_th" CODE="CAL_TH" isMetric="yes"><name>calorie (thermochemical)</name><printSymbol>cal<sub>th</sub></printSymbol><property>energy</property><value Unit="J" UNIT="J" value="4.184">4.184</value></derivedUnit>
+<derivedUnit id="610060" Code="cal" CODE="CAL" isMetric="yes"><name>calorie (usual)</name><printSymbol>cal</printSymbol><property>energy</property><value Unit="cal_th" UNIT="CAL_TH" value="1">1</value></derivedUnit>
+<derivedUnit id="610070" Code="[Cal]" CODE="[CAL]" isMetric="no"><name>Calorie (nutrition)</name><printSymbol>Cal</printSymbol><property>energy</property><value Unit="kcal_th" UNIT="KCAL_TH" value="1">1</value></derivedUnit>
+<derivedUnit id="610080" Code="[Btu_39]" CODE="[BTU_39]" isMetric="no"><name>British thermal unit (39&nbsp;&deg;F)</name><printSymbol>Btu<sub>39&deg;F</sub></printSymbol><property>energy</property><value Unit="kJ" UNIT="kJ" value="1.05967">1.05967</value></derivedUnit>
+<derivedUnit id="610090" Code="[Btu_59]" CODE="[BTU_59]" isMetric="no"><name>Btu (59&nbsp;&deg;F)</name><printSymbol>Btu<sub>59&deg;F</sub></printSymbol><property>energy</property><value Unit="kJ" UNIT="kJ" value="1.05480">1.05480</value></derivedUnit>
+<derivedUnit id="610100" Code="[Btu_60]" CODE="[BTU_60]" isMetric="no"><name>Btu (60&nbsp;&deg;F)</name><printSymbol>Btu<sub>60&deg;F</sub></printSymbol><property>energy</property><value Unit="kJ" UNIT="kJ" value="1.05468">1.05468</value></derivedUnit>
+<derivedUnit id="610110" Code="[Btu_m]" CODE="[BTU_M]" isMetric="no"><name>Btu (mean)</name><printSymbol>Btu<sub>m</sub></printSymbol><property>energy</property><value Unit="kJ" UNIT="kJ" value="1.05587">1.05587</value></derivedUnit>
+<derivedUnit id="610120" Code="[Btu_IT]" CODE="[BTU_IT]" isMetric="no"><name>Btu (intl. table)</name><printSymbol>Btu<sub>IT</sub></printSymbol><property>energy</property><value Unit="kJ" UNIT="kJ" value="1.05505585262">1.05505585262</value></derivedUnit>
+<derivedUnit id="610130" Code="[Btu_th]" CODE="[BTU_TH]" isMetric="no"><name>Btu (thermochemical)</name><printSymbol>Btu<sub>th</sub></printSymbol><property>energy</property><value Unit="kJ" UNIT="kJ" value="1.054350">1.054350</value></derivedUnit>
+<derivedUnit id="610140" Code="[Btu]" CODE="[BTU]" isMetric="no"><name>Btu (usual)</name><printSymbol>btu</printSymbol><property>energy</property><value Unit="[Btu_th]" UNIT="[BTU_TH]" value="1">1</value></derivedUnit>
+<derivedUnit id="610145" Code="[HP]" CODE="[HP]" isMetric="no"><name>horsepower</name><property>power</property><value Unit="[ft_i].[lbf_av]/s" UNIT="[FT_I].[LBF_AV]/S" value="550">550</value></derivedUnit>
+    </ucumUnits>
+
+    <comment>
+      <p>
+The degree Fahrenheit was missing in ANSI&nbsp;X3.50. HL7's
+&ldquo;ISO+/ANS+&rdquo; code defined the degree Fahrenheit under the
+symbol &ldquo;<code>DEGF</code>&rdquo; which is reflected here. This
+is the reason why &TUCUM; does not define a new symbol
+&ldquo;<code>Fah</code>&rdquo; similar to &ldquo;Cel&rdquo; of
+ISO&nbsp;2955 for the degree Celsius.
+      </p>
+      <p>
+Defining precise semantics for legacy units for &ldquo;quantity of
+heat&rdquo; is difficult. The many variants of these units are
+frequently confused because there is not just a calorie and not just a
+british thermal unit. The different calories usually being used vary
+by 1% but the confusion can result in an error as high as 100000%!
+Thus, if exactness and non-ambiguity is important one should use the
+joule to report amounts of heat, just like for any other energy and
+work kind-of-quantities.
+      </p>
+      <p>
+The gram-calorie, sometimes called &ldquo;small calorie&rdquo; is
+defined as the amount of heat required to raise the temperature of 1
+gram of Water from 14.5&nbsp;&deg;C to 15.5&nbsp;&deg;C. According to
+<emph>Encyclopedia Britannica</emph>, this is the calorie most often used in
+engineering. There is also a less frequently used gram-calorie at
+19.5&nbsp;&deg;C to 20.5&nbsp;&deg;C and a mean calorie that is 1/100
+of the amount of heat required to raise the temperature from
+0&nbsp;&deg;C to 100&nbsp;&deg;C. The <emph>International Table</emph>
+calorie is defined by the <emph>International Conference on the
+Properties of Steam</emph> (1956) and is used in steam engineering. In
+chemistry a &ldquo;thermochemical&rdquo; calorie is used for reaction
+enthalpies.
+      </p>
+      <p>
+To complete the confusion, there is also a kilogram-calorie (``large
+calorie&rdquo; , that has a similar definition based on a kilogram
+instead of a gram of water. This kilocalorie has also been called
+&ldquo;calorie&rdquo; in the sloppy speech of everyday life about
+food. U.S. &ldquo;Nutrition Facts&rdquo; that label almost every
+American food say &ldquo;Calories: xxx&rdquo; The <emph>International
+Union of Nutritional Sciences</emph> recommends using either the joule
+or a kilocalorie based on the thermochemical calorie. Because of a
+perceived popular demand &TUCUM; defines the nutrition Calorie as
+&ldquo;<code>Cal</code>&rdquo; with the conventional captital first
+letter. For the case insensitive variant of &TUCUM;, the symbol is
+enclosed in square brackets (``<code>[CAL]</code>&rdquo; .
+      </p>
+      <p>
+Only the International Table calorie and the thermochemical calorie
+have exact definitions. To give some guidance in the confusing plenty
+of different calories, &TUCUM; defines a default symbol
+&ldquo;<code>cal</code>&rdquo; as an alias for the thermochemical
+calorie, because the calorie is mostly used today in medicine and
+biochemistry. On the other hand, we consider engineers smart enough to
+select the precise calorie they mean.
+      </p>
+      <p>
+Similar to the calories, various &ldquo;British Thermal Unit&rdquo;
+(Btu) are defined and the confusion continues. One Btu is defined as
+the amount of heat necessary to raise the temperature of one
+avoirdupois pound of water by one degree Fahrenheit beginning from
+various temperatures (39&nbsp;&deg;F, 59&nbsp;&deg;F, or
+60&nbsp;&deg;F). There is also the International Table Btu and the
+thermochemical Btu. Just as with the calorie we define a default
+symbol &ldquo;<code>Btu</code>&rdquo; as an alias for the
+thermochemical Btu.
+      </p>
+    </comment>
+
+    <p name="units used predominantly in clinical medicine">
+<verse>
+Units used mainly in clinical medicine are defined in <tabref ref="clinical"/>. 
+</verse>
+
+<verse>
+The meaning of the columns is declared in  <pref ref="para-custint"/>.
+</verse>
+
+<verse>
+The function pairs denoted &ldquo;<code>lg</code>&rdquo; and
+&ldquo;<code>lc</code>&rdquo; are defined as the decadic logarithm and
+the logarithm to basis 100 respectively, with their respective inverse
+functions.
+</verse>
+    </p>
+
+    <ucumUnits id="clinical">
+      <caption>Units Used Predominantly in Clinical Medicine</caption>
+<derivedUnit id="600430" Code="m[H2O]" CODE="M[H2O]" isMetric="yes"><name>meter of water column</name><printSymbol>m&nbsp;H<sub><r>2</r></sub>O</printSymbol><property>pressure</property><value Unit="kPa" UNIT="KPAL" value="9.80665">9.80665</value></derivedUnit>
+<derivedUnit id="600440" Code="m[Hg]" CODE="M[HG]" isMetric="yes"><name>meter of mercury column</name><printSymbol>m&nbsp;Hg</printSymbol><property>pressure</property><value Unit="kPa" UNIT="KPAL" value="133.3220">133.3220</value></derivedUnit>
+<derivedUnit id="600450" Code="[in_i'H2O]" CODE="[IN_I'H2O]" isMetric="no"><name>inch of water column</name><printSymbol>in&nbsp;H<sub><r>2</r></sub>O</printSymbol><property>pressure</property><value Unit="m[H2O].[in_i]/m" UNIT="M[H2O].[IN_I]/M" value="1">1</value></derivedUnit>
+<derivedUnit id="600460" Code="[in_i'Hg]" CODE="[IN_i'HG]" isMetric="no"><name>inch of mercury column</name><printSymbol>in&nbsp;Hg</printSymbol><property>pressure</property><value Unit="m[Hg].[in_i]/m" UNIT="M[HG].[IN_I]/M" value="1">1</value></derivedUnit>
+<derivedUnit id="600560" Code="[PRU]" CODE="[PRU]" isMetric="no"><name>peripheral vascular resistance unit</name><printSymbol>P.R.U.</printSymbol><property>fluid resistance</property><value Unit="mm[Hg].s/ml" UNIT="MM[HG].S/ML" value="1">1</value></derivedUnit>
+<derivedUnit id="600270" Code="[diop]" CODE="[DIOP]" isMetric="no"><name>diopter</name><printSymbol>dpt</printSymbol><property>refraction of a lens</property><value Unit="/m" UNIT="/M" value="1">1</value></derivedUnit>
+<derivedUnit id="500011" Code="[mesh_i]" CODE="[MESH_I]" isMetric="no"><name>mesh</name><property>lineic number</property><value Unit="/[in_i]" UNIT="/[IN_I]" value="1">1</value></derivedUnit>
+<derivedUnit id="600275" Code="[Ch]" CODE="[CH]" isMetric="no"><name>Charri&egrave;re (french)</name><printSymbol>Ch</printSymbol><property>gauge of catheters</property><value Unit="mm/[pi]" UNIT="MM/[PI]" value="1">1</value></derivedUnit>
+<derivedUnit id="600260" Code="[drp]" CODE="[DRP]" isMetric="no"><name>drop</name><printSymbol>drp</printSymbol><property>volume</property><value Unit="ml/12" UNIT="ML/12" value="1">1</value></derivedUnit>
+<derivedUnit id="600550" Code="[hnsf'U]" CODE="[HNSF'U]" isMetric="no"><name>Hounsfield unit</name><printSymbol>HF</printSymbol><property>x-ray attenuation</property><value Unit="1" UNIT="1" value="1">1</value></derivedUnit>
+<derivedUnit id="600555" Code="[MET]" CODE="[MET]" isMetric="no"><name>metabolic equivalent</name><printSymbol>MET</printSymbol><property>metabolic cost of physical activity</property><value Unit="mL/min/kg" UNIT="ML/MIN/KG" value="3.5">3.5</value></derivedUnit>
+<derivedUnit id="600556" Code="[hp_X]" CODE="[HP_X]" isMetric="no"><name>homeopathic potency &ndash; decimal-series</name><printSymbol reverse="yes">X</printSymbol><property>homeopathic potency</property><value Unit="lg(1 1)" UNIT="LG(1 1)"><function/></value></derivedUnit>
+<derivedUnit id="600557" Code="[hp_C]" CODE="[HP_C]" isMetric="no"><name>homeopathic potency &ndash; centesimal-series</name><printSymbol reverse="yes">C</printSymbol><property>homeopathic potency</property><value Unit="lc(1 1)" UNIT="LC(1 1)"><function/></value></derivedUnit>
+    </ucumUnits>
+
+    <comment>
+      <p>
+Clinical medicine all over the world still uses &nbsp;mm&nbsp;Hg to
+measure arterial blood pressure, and often the instruments used are
+real mercury columns. Likewise, the central venous blood pressure is
+often measured using simple water columns which is very practical for
+the routine. The units &nbsp;m&nbsp;H_2O and &nbsp;m&nbsp;Hg are metric units
+even though they are &ldquo;not accepted&rdquo; for use with the SI for quite a
+while. Although more and more hospitals in Europe switch to using the
+pascal to measure partial pressures in blood gas analysis, the older
+units will not vanish any time soon.
+      </p>
+      <p>
+In the U.S. the inch is sometimes used instead of the millimeter, and
+because the inch is non-metric the inch of mercury or water columns is
+non-metric as well.
+      </p>
+      <p>
+The peripheral vascular resistance unit is the vascular resistance on
+which a perfusion pressure of 1&nbsp;mm&nbsp;Hg causes a flow of
+1&nbsp;ml/s.
+      </p>
+      <p>
+The &ldquo;mesh&rdquo; occurs in the NIST Guide to the SI. It seems like it is
+the customary counterpart of the diopter.
+      </p>
+      <p>
+The unit &ldquo;charri&egrave;re&rdquo; originates from a French manufacturer of
+medical instruments by that name. One charri&egrave;re is the gauge of a
+catheter with a circumference of 1&nbsp;mm. In the U.S. the
+charri&egrave;re is simply called &ldquo;french&rdquo; 
+      </p>
+      <p>
+A drop is a variable amount of fluid and depends on the device and
+technique used to produce the drop and on the physical properties of
+the fluid. This is similar to units like cup, tablespoon, and teaspoon
+that depend on the spoon or cup and are not exact either. However, in
+clinical medicine medication is dispensed by drops and unlike a
+&ldquo;tablet&rdquo; a drop refers to a real physical kind of quantity, volume,
+though not very exact.
+      </p>
+      <p>
+The Hounsfield unit is a unit of X-ray attenuation used in evaluating
+CT scans. It is defined on an interval scale where air is -1000 HF,
+water is 0 HF and bone is +1000 HF. Any advice as to how this unit can
+be related to metric units of radiant intensity decremence is
+appreciated.
+      </p>
+    </comment>
+
+    <p name="chemical and biochemical units">
+<verse>
+Units used mainly in chemical and biochemical laboratories are defined
+in <tabref ref="chemical"/>.
+</verse>
+
+<verse>
+The meaning of the columns is declared in  <pref ref="para-heat"/>.
+</verse>
+
+<verse>
+The function pair denoted &ldquo;<code>ph(1 mol/l)</code>&rdquo; is
+defined as <v>f</v><sub>pH</sub>(<v>x</v>) = - lg <v>x</v> to
+convert from moles per liter to the pH value, and
+<v>f</v><sub>pH</sub><sup>-1</sup>(<v>x</v>) = 10<sup>-<v>x</v></sup>
+to convert from the pH value back to moles per liter.
+</verse>
+    </p>
+    <ucumUnits id="chemical">
+      <caption>Units used in Chemical and Biomedical Laboratories</caption>
+<derivedUnit id="600200" Code="eq" CODE="EQ" isMetric="yes"><name>equivalents</name><printSymbol>eq</printSymbol><property>amount of substance</property><value Unit="mol" UNIT="MOL" value="1">1</value></derivedUnit>
+<derivedUnit id="600240" Code="osm" CODE="OSM" isMetric="yes"><name>osmole (dissolved particles)</name><printSymbol>osm</printSymbol><property>amount of substance</property><value Unit="mol" UNIT="MOL" value="1">1</value></derivedUnit>
+<derivedUnit id="600210" Code="[pH]" CODE="[PH]" isMetric="no"><name>pH</name><printSymbol>pH</printSymbol><property>acidity</property><value Unit="pH(1 mol/l)" UNIT="PH(1 MOL/L)" ><function/></value></derivedUnit>
+<derivedUnit id="600250" Code="g%" CODE="G%" isMetric="yes"><name>gram percent</name><printSymbol>g%</printSymbol><property>mass fraction</property><value Unit="g/dl" UNIT="G/DL" value="1">1</value></derivedUnit>
+<derivedUnit id="600420" Code="[S]" CODE="[S]" isMetric="no"><name>Svedberg unit</name><printSymbol>S</printSymbol><property>sedimentation coefficient</property><value Unit="10*-13.s" UNIT="10*-13.S" value="1">1</value></derivedUnit>
+<derivedUnit id="600530" Code="[HPF]" CODE="[HPF]" isMetric="no"><name>high power field</name><printSymbol>HPF</printSymbol><property>view area in microscope</property><value Unit="1" UNIT="1" value="1">1</value></derivedUnit>
+<derivedUnit id="600540" Code="[LPF]" CODE="[LPF]" isMetric="no"><name>low power field</name><printSymbol>LPF</printSymbol><property>view area in microscope</property><value Unit="1" UNIT="1" value="100">100</value></derivedUnit>
+<derivedUnit id="600220" Code="kat" CODE="KAT" isMetric="yes"><name>katal</name><printSymbol>kat</printSymbol><property>catalytic activity</property><value Unit="mol/s" UNIT="MOL/S" value="1">1</value></derivedUnit>
+<derivedUnit id="600230" Code="U" CODE="U" isMetric="yes"><name>Unit</name><printSymbol>U</printSymbol><property>catalytic activity</property><value Unit="umol/min" UNIT="UMOL/MIN" value="1">1</value></derivedUnit>
+<derivedUnit id="600570" Code="[iU]" CODE="[IU]" isMetric="yes"><name>international unit</name><printSymbol>i.U.</printSymbol><property>arbitrary</property><value Unit="1" UNIT="1" value="1">1</value></derivedUnit>
+<derivedUnit id="600580" Code="[arb'U]" CODE="[ARB'U]" isMetric="no"><name>arbitary unit</name><printSymbol>arb. U</printSymbol><property>arbitrary</property><value Unit="1" UNIT="1" value="1">1</value></derivedUnit>
+<derivedUnit id="600590" Code="[USP'U]" CODE="[USP'U]" isMetric="no"><name>United States Pharmacopeia unit</name><printSymbol>U.S.P.</printSymbol><property>arbitrary</property><value Unit="1" UNIT="1" value="1">1</value></derivedUnit>
+<derivedUnit id="600600" Code="[GPL'U]" CODE="[GPL'U]" isMetric="no"><name></name><property><i>anticardiolipin IgG</i></property><value Unit="1" UNIT="1" value="1">1</value></derivedUnit>
+<derivedUnit id="600610" Code="[MPL'U]" CODE="[MPL'U]" isMetric="no"><name></name><property>anticardiolipin IgM</property><value Unit="1" UNIT="1" value="1">1</value></derivedUnit>
+<derivedUnit id="600620" Code="[APL'U]" CODE="[APL'U]" isMetric="no"><name></name><property>anticardiolipin IgA</property><value Unit="1" UNIT="1" value="1">1</value></derivedUnit>
+<derivedUnit id="600630" Code="[beth'U]" CODE="[BETH'U]" isMetric="no"><name>Bethesda unit</name><property>factor VIII inhibitor</property><value Unit="1" UNIT="1" value="1">1</value></derivedUnit>
+<derivedUnit id="600640" Code="[todd'U]" CODE="[TODD'U]" isMetric="no"><name>Todd unit</name><property>antistreptolysin O</property><value Unit="1" UNIT="1" value="1">1</value></derivedUnit>
+<derivedUnit id="600650" Code="[dye'U]" CODE="[DYE'U]" isMetric="no"><name>Dye unit</name><property>amylase</property><value Unit="1" UNIT="1" value="1">1</value></derivedUnit>
+<derivedUnit id="600660" Code="[smgy'U]" CODE="[SMGY'U]" isMetric="no"><name>Somogyi unit</name><property>amylase</property><value Unit="1" UNIT="1" value="1">1</value></derivedUnit>
+<derivedUnit id="600670" Code="[bdsk'U]" CODE="[BDSK'U]" isMetric="no"><name>Bodansky unit</name><property>phosphatase</property><value Unit="1" UNIT="1" value="1">1</value></derivedUnit>
+<derivedUnit id="600680" Code="[ka'U]" CODE="[KA'U]" isMetric="no"><name>King-Armstrong unit</name><property>phosphatase</property><value Unit="1" UNIT="1" value="1">1</value></derivedUnit>
+<derivedUnit id="600680" Code="[knk'U]" CODE="[KNK'U]" isMetric="no"><name>Kunkel unit</name><property>arbitrary</property><value Unit="1" UNIT="1" value="1">1</value></derivedUnit>
+<derivedUnit id="600690" Code="[mclg'U]" CODE="[MCLG'U]" isMetric="no"><name>Mac Lagan unit</name><property>arbitrary</property><value Unit="1" UNIT="1" value="1">1</value></derivedUnit>
+<derivedUnit id="600700" Code="[tb'U]" CODE="[TB'U]" isMetric="no"><name>tuberculin unit</name><property>tuberculin</property><value Unit="1" UNIT="1" value="1">1</value></derivedUnit>
+    </ucumUnits>
+
+    <comment>
+      <p>
+The amount of electrolytes (including acids and bases) is often
+reported as <emph>equivalents</emph> instead of amount of substance. This
+habit originates in the measuring technique of titration. &TUCUM;
+does not endorse using equivalents. We rather recommend to calculate
+the proper amount of substance after titration, so that
+1&nbsp;eq of Na<sup>+</sup> ions is 1&nbsp;mol, but
+1&nbsp;eq of Ca<sup>++</sup> ions is
+0.5&nbsp;mol. The problem with equivalents is that the measurement
+results are difficult to compare because their magnitude depends on
+the degree of ionization of the substance. That is to say, the meaning
+of equivalents depend not only on the substance, but also on the state
+that the substance is in. For example, in iron we have to distinguish
+Fe<sup>2+</sup> from Fe<sup>3+</sup>, so that noone can be sure how much 1&nbsp;eq
+of iron really is.
+      </p>
+      <p>
+Degrees of acidity are normally measured as &ldquo;the pH value&rdquo; that is
+the negative decadic logarithmus of the concentration of free protons
+(or hydronium ions) expressed in 1&nbsp;mol/l. Usually the pH value
+is considered a dimensionless quantity. With the semantics of special
+units (<pref from="para-special"/>). &TUCUM; can link the pH value tighter to the system
+of proper units. Thus &ldquo;<code>[pH]</code>&rdquo; is defined as a unit symbol with
+the corresponding unit 1&nbsp;mol/l. This allows conversions between
+pH and concentrations, and---because &TUCUM; identifies the mole with
+the Avogadro number---can be converted to an absolute number of
+protons: for example, pH 7.4 converts instantly to 0.04&nbsp;&mu;mol/l
+and approximately 23975 protons per picoliter.
+      </p>
+      <p>
+The unit osmol as the amount of dissolved particles is to be used with
+caution because it interferes with &ldquo;osmolar&rdquo; which is the amount of
+dissolved particles per liter.
+      </p>
+      <p>
+The gram-percent (g%) is a metric unit that has the same origin as
+%vol. Originally it was a dimensionless quanitiy expressing a ratio of
+two masses and thus equal to 1/100&nbsp;g/g. Because water is the most
+important solvent in biochemistry and 1&nbsp;g of a solution in water
+has a volume of approximately 1&nbsp;ml, the meaning of the unit
+1&nbsp;g% drifted towards 1/100&nbsp;g/ml and farther off to
+1&nbsp;g/dl. That way, the unit 1&nbsp;g% regained a proper dimension
+(mass concentration, <dim>M</dim>/<dim>L</dim><sup>3</sup>). Most
+often it is used as 1&nbsp;mg% = 1&nbsp;mg/dl but all other SI
+prefixes are possible.
+      </p>
+      <p>
+The Svedberg unit S is used to classify macromolecules (e.g.,
+ribosomes) in different phases of a centrifugate.
+      </p>
+      <p>
+The units &ldquo;high power field&rdquo; (HPF) and &ldquo;low power field&rdquo; (LPF) are
+used in microscopic analysis mostly of urine sediments. These units
+are used in semi-quantitative estimations of the abundance of things
+like crystals, bacteria or red and white blood cells. The number of
+the objects of interest is counted in one view field in the microscope
+with a 10 times (low) or 100 times (high) magnifying objective lens
+and then reported as the number per LPF or per HPF
+respectively. Obviously the number of objects seen depends on the way
+the slide is prepared: the amount of emulgate dropped, its initial
+dilution, and the way the drop is smeared. These preparations of the
+slides are usually carried out with great routine but little
+exactness, hence LPF and HPF can hardly relate to any exact and
+meaningful volume.
+      </p>
+      <p>
+The best we could do is to define LPF and HPF as areas of the viewed
+field. However, the area of the field varies with the kind of eyepiece
+used in the microscope. The so called &ldquo;field number&rdquo; of
+the eyepiece, i.e., the diameter of the view area is typically between
+18&nbsp;mm and 25&nbsp;mm which is divided by the magnification of the
+objective lense to yield the actual field diameter <v>d</v>. Because the
+area <v>A</v> = &pi;&nbsp;d<sup>2</sup>, the LPF can be anywhere
+between 2.5&nbsp;mm^2 and 5&nbsp;mm^2 and the HPF between
+0.025&nbsp;mm^2 and 0.05&nbsp;mm^2. Because of this inexactness, we
+define LPF and HPF as dimensionless quantities with magnitudes that
+reflect the ratio of the view areas, i.e. 100:1. This allows at least
+to convert between numbers per LPF and per HPF and vice versa.
+      </p>
+      <p>
+The unit &ldquo;U&rdquo; of enzymatic activity was defined in 1964 by
+the <emph>International Union of Biochemistry</emph> as the catalytic
+activity that catalyzes the transformation of 1&nbsp;&mu;mol of of the
+substrate per minute. This unit is defined so that normal biological
+enzyme activities are in the range of 1&nbsp;U--100&nbsp;U. This unit
+could not be adopted by the CGPM because it violates the style rules
+of the SI, i.e. &ldquo;unit&rdquo; is a very indistinctive word,
+&ldquo;U&rdquo; is a capital letter, and the definition is not
+coherent with the SI. The SI-coherent unit katal 1&nbsp;kat =
+1&nbsp;mol/s, however, is 7 orders of magnitudes greater than normal
+catalytic activities, which is why in practice the katal is not used
+very much. And still, the katal has not been adopted by the CGPM.
+      </p>
+      <p>
+The general problem with catalytic activities is that these depend not
+only on the substance but on many side-conditions, such as
+temperature, acidity of the solution, presence or absense of
+cofactors, inhibitors or activators, and the amount of substrate. Thus
+a catalytic activity measured <emph>in vitro</emph> says little about the
+activity <emph>in vivo</emph>.  Only when a standardized measurement protocol
+is used the values can be compared. Thus, the use of katal is not much
+more informative than any arbitrary unit. &TUCUM; currently defines
+all arbitrary units as dimensionless. Advice on how these many enzyme
+units convert to standard catalytic activities is appreciated.
+      </p>
+    </comment>
+
+    <p name="levels">
+<verse>
+Pseudo-units defined to express logarithms of ratios between two
+quantities of the same kind are defined in <tabref ref="levels"/>.
+</verse>
+
+<verse>
+The meaning of the columns is declared in  <pref ref="para-heat"/>.
+</verse>
+
+<verse>
+The function pairs denoted &ldquo;<code>ln</code>&rdquo;
+&ldquo;<code>lg</code>&rdquo; and &ldquo;<code>2lg</code>&rdquo; are
+defined as the natural logarithm, the decadic logarithm, and the
+decadic logarithm times two with their respective inverse functions.
+</verse>
+    </p>
+    <ucumUnits id="levels">
+      <caption>Levels</caption>
+<derivedUnit id="600100" Code="Np" CODE="NEP" isMetric="yes"><name>neper</name><printSymbol>Np</printSymbol><property>level</property><value Unit="ln(1 1)" UNIT="LN(1 1)" ><function/></value></derivedUnit>
+<derivedUnit id="600110" Code="B" CODE="B" isMetric="yes"><name>bel</name><printSymbol>B</printSymbol><property>level</property><value Unit="lg(1 1)" UNIT="LG(1 1)" ><function/></value></derivedUnit>
+<derivedUnit id="600130" Code="B[SPL]" CODE="B[SPL]" isMetric="yes"><name>bel sound pressure</name><printSymbol>B(SPL)</printSymbol><property>pressure level</property><value Unit="2lg(2 10*-5.Pa)" UNIT="2LG(2 10*-5.PAL)" ><function/></value></derivedUnit>
+<derivedUnit id="600140" Code="B[V]" CODE="B[V]" isMetric="yes"><name>bel volt</name><printSymbol>B(V)</printSymbol><property>electric potential level</property><value Unit="2lg(1 V)" UNIT="2LG(1 V)" ><function/></value></derivedUnit>
+<derivedUnit id="600150" Code="B[mV]" CODE="B[MV]" isMetric="yes"><name>bel milivolts</name><printSymbol>B(mV)</printSymbol><property>electric potential level</property><value Unit="2lg(1 mV)" UNIT="2LG(1 MV)" ><function/></value></derivedUnit>
+<derivedUnit id="600160" Code="B[uV]" CODE="B[UV]" isMetric="yes"><name>bel microvolts</name><printSymbol>B(&mu;V)</printSymbol><property>electric potential level</property><value Unit="2lg(1 uV)" UNIT="2LG(1 UV)" ><function/></value></derivedUnit>
+<derivedUnit id="600170" Code="B[W]" CODE="B[W]" isMetric="yes"><name>bel watts</name><printSymbol>B(W)</printSymbol><property>power level</property><value Unit="lg(1 W)" UNIT="LG(1 W)" ><function/></value></derivedUnit>
+<derivedUnit id="600180" Code="B[kW]" CODE="B[KW]" isMetric="yes"><name>bel kilowatts</name><printSymbol>B(kW)</printSymbol><property>power level</property><value Unit="lg(1 kW)" UNIT="LG(1 KW)" ><function/></value></derivedUnit>
+    </ucumUnits>
+
+    <comment>
+      <p>
+These units are &ldquo;pseudo-units&rdquo; because of their standardized
+definition as being logarithms of a ratio of two measurements with the
+same kind-of-quantity: first, the units cancel out, and second, the
+logarithm does not produce a new unit. These units were defined as
+&ldquo;metric&rdquo; because they are used as such, although a multiplication
+operation is not defined on these quantities. Multiplication of the
+measurement value with a scalar <v>r</v> is equivalent to raising the
+original ratio to the <v>r</v>-th power.
+      </p>
+      <p>
+According to NIST, the neper is used as the ratio level of field
+quantities and the bel is used for the level of power quantities. The
+factor 2 comes into play when field quantities (like electric
+potential) are expressed in decibel. The specialized bel-units B(V),
+B(mV), B(W), etc. are defined as the level of the measured quantity
+with reference quantities 1&nbsp;V, 1&nbsp;mV, and 1&nbsp;W
+respectively. [NIST Sp.&nbsp;Pub. 811, 1995 Edition]
+      </p>
+      <p>
+Given the sound pressure level expressed in dB(SPL) it is feasible to
+define dB(A) for the A scale of loudness. Similar units such as phon
+and sone could be defined as well if a good approximation for the
+respective characteristic functions are available. Any advice is
+welcome.
+      </p>
+    </comment>
+
+    <p name="miscellaneous units">
+<verse>
+Not otherwise classified units are defined in <tabref ref="misc"/>.
+</verse>
+
+<verse>
+The meaning of the columns is declared in  <pref ref="para-si" verse="2"/>.
+</verse>
+
+<verse>
+Only the columns titled &ldquo;c/s,&rdquo; &ldquo;c/i,&rdquo;
+&ldquo;M,&rdquo; &ldquo;value,&rdquo; and &ldquo;definition&rdquo; are
+normative. Full name and print symbol are either not standardized or
+standarized by other bodies and are out of scope of &TUCUM;.
+</verse>
+    </p>
+    <ucumUnits id="misc">
+      <caption>Miscellaneous Units</caption>
+<derivedUnit id="600380" Code="st" CODE="STR" isMetric="yes"><name>stere</name><printSymbol>st</printSymbol><property>volume</property><value Unit="m3" UNIT="M3" value="1">1</value></derivedUnit>
+<derivedUnit id="600390" Code="Ao" CODE="AO" isMetric="no"><name>&Aring;ngstr&ouml;m</name><printSymbol>&Aring;</printSymbol><property>length</property><value Unit="nm" UNIT="NM" value="0.1">0.1</value></derivedUnit>
+<derivedUnit id="600400" Code="b" CODE="BRN" isMetric="no"><name>barn</name><printSymbol>b</printSymbol><property>area (action)</property><value Unit="fm2" UNIT="FM2" value="100">100</value></derivedUnit>
+<derivedUnit id="600412" Code="att" CODE="ATT" isMetric="no"><name>atmosphere (technical)</name><printSymbol>at</printSymbol><property>pressure</property><value Unit="kgf/cm2" UNIT="KGF/CM2" value="1">1</value></derivedUnit>
+<derivedUnit id="600413" Code="[psi]" CODE="[PSI]" isMetric="no"><name>psi</name><printSymbol>psi</printSymbol><property>pressure</property><value Unit="[lbf_av]/[in_i]2" UNIT="[LBF_AV]/[IN_I]2" value="1">1</value></derivedUnit>
+<derivedUnit id="600010" Code="circ" CODE="CIRC" isMetric="no"><name>circle</name><printSymbol>circ</printSymbol><property>plane angle</property><value Unit="[pi].rad" UNIT="[PI].RAD" value="2">2</value></derivedUnit>
+<derivedUnit id="600020" Code="sph" CODE="SPH" isMetric="no"><name>spere</name><printSymbol>sph</printSymbol><property>solid angle</property><value Unit="[pi].sr" UNIT="[PI].SR" value="4">4</value></derivedUnit>
+<derivedUnit id="600520" Code="[car_m]" CODE="[CAR_M]" isMetric="no"><name>carat (metric)</name><printSymbol>ct<sub>m</sub></printSymbol><property>mass</property><value Unit="g" UNIT="G" value="0.2">0.2</value></derivedUnit>
+<derivedUnit id="600521" Code="[car_Au]" CODE="[CAR_AU]" isMetric="no"><name>carat (of gold alloys)</name><printSymbol>ct<sub><r>Au</r></sub></printSymbol><property>mass fraction</property><value Unit="/24" UNIT="/24" value="1">1</value></derivedUnit>
+    </ucumUnits>
+
+    <comment>
+      <p>
+Although called &ldquo;metric carat,&rdquo; the carat really is a
+customary unit, still used for precious gems. The word carat comes
+from greek
+&kappa;&epsilon;&rho;&alpha;&tau;&iotatonos;&kappa;&omikron;&nu; (small
+horn) that originally was the horn-shaped grain of a locust-tree
+species in the pea family, hence the carat grain is about three barley
+grain that the other English systems of weights are based on. The arab
+carat was 1/24 of an ounce, the Imperial carat (1877) was
+205.3&nbsp;mg or 3.168&nbsp;grain. In other European cities, the carat
+was 205.8&nbsp;mg (Hamburg, Lisboa) but there were great variations
+from 188.5&nbsp;mg (Bologna) to 213.5&nbsp;mg (Torino). Due to these
+variations no customary carat has gained importance today aside from
+the &ldquo;metric carat&rdquo; defined as 200&nbsp;mg exactly. 
+[<emph>All About Carats</emph> URL:
+<code>http://www.channel1.com/users/scales/carat-def.htm</code>]
+      </p>
+      <p>
+The &ldquo;Mark&rdquo; was a mass unit for precious metals (K&ouml;ln 234&nbsp;g,
+Paris 245&nbsp;g, Wien 277&nbsp;g). A mark of gold was subdivided into
+24 &ldquo;karat,&rdquo; a mark of silver into 16 &ldquo;lot.&rdquo;  This led to the other
+use of the unit &ldquo;carat&rdquo; to mean 1/24 in measuring the finesse of
+pure gold in an alloy. For example, an 8 carat gold alloy contains 8
+parts of gold on 16 parts of silver = 8/24 = 1/3, or 333 per
+mille. This carat is spelled &ldquo;karat&rdquo; in the U.S. while other
+countries do not use different spellings.
+      </p>
+    </comment>
+  </div2>
+
+  <div2>
+    <head>Prefixes and Units Used in Information Technology</head>
+    <p name="units used in information technology">
+<verse>
+Units used in information technology are defined in table 22.
+</verse>
+
+<verse>
+The meaning of the columns is declared in  <pref ref="para-heat"/>.
+</verse>
+
+<verse>
+The function pair denoted &ldquo;<code>ld</code>&rdquo; is defined as
+the dual logarithm with its respective inverse function
+<v>f</v><sup>-1</sup>(<v>x</v>) = 2<sup>x</sup>).
+</verse>
+    </p>
+
+    <comment>
+      <p>
+This table is not complete. There are other units such as shannon
+(Sh), erlang (E), or hartley (Hart), for which we had no quantitative
+definitions. Any advice is appreciated.
+      </p>
+      <p>
+The bit is defined twice. One definition with a subscript letter `s'
+is defined as the logarithmus dualis of the number of distinct
+signals. However this unit can not practically be used to express more
+than 1000 bits. Especially when the bit is used to express
+transmission rate or memory capacities, floating point registers would
+quickly overflow. Therefore we define a second symbol for bit, without
+the suffix, to be the dimensionless unit 1.
+      </p>
+      <p>
+The baud (Bd) is the number of distict signals transmitted per second,
+it is <emph>not</emph> the same as bits per second since one distinct signal
+usually carries more than one bit of information.
+      </p>
+    </comment>
+
+    <ucumUnits id="infotech">
+      <caption>Units used in Information Science and Technology</caption>
+<derivedUnit id="800010" Code="bit_s" CODE="BIT_S" isMetric="no"><name>bit</name><printSymbol>bit<sub>s</sub></printSymbol><property>amount of information</property><value Unit="ld(1 1)" UNIT="ld(1 1)" ><function/></value></derivedUnit>
+<derivedUnit id="800020" Code="bit" CODE="BIT" isMetric="yes"><name>bit</name><printSymbol>bit</printSymbol><property>amount of information</property><value Unit="1" UNIT="1" value="1">1</value></derivedUnit>
+<derivedUnit id="800030" Code="By" CODE="BY" isMetric="yes"><name>byte</name><printSymbol>B</printSymbol><property>amount of information</property><value Unit="bit" UNIT="bit" value="8">8</value></derivedUnit>
+<derivedUnit id="800030" Code="Bd" CODE="Bd" isMetric="yes"><name>baud</name><printSymbol>Bd</printSymbol><property>signal transmission rate</property><value Unit="/s" UNIT="/s" value="1">1</value></derivedUnit>
+    </ucumUnits>
+
+    <p id="para-pfx" name="prefixes">
+<verse>
+The prefix symbols based on powers of two for use in information
+technology as proposed by the IEEE are defined in <tabref ref="infopfx"/>.
+</verse>
+
+<verse> 
+The meaning of the columns is declared in <pref ref="para-pfx" verse="2"/>.
+</verse>
+
+<verse>
+Only the columns titled &ldquo;c/s,&rdquo; &ldquo;c/i,&rdquo; and
+&ldquo;value,&rdquo; are normative. Full name and print symbol are out
+of scope of &TUCUM;.
+</verse>
+    </p>
+
+    <comment>
+      <p>
+This table reflects proposed prefixes which are not yet standardized.
+[Bruce Barrow, <emph>A Lesson in Megabytes.</emph> IEEE Standards
+Bearer, January 1997]
+      </p>
+    </comment>
+
+    <ucumPrefixes id="infopfx">
+     <caption>The special prefix symbols for powers of 2</caption>
+<prefix Code="Ki" CODE="KIB"><name>kibi</name><printSymbol>Ki</printSymbol><value value="1024">1024</value></prefix>
+<prefix Code="Mi" CODE="MIB"><name>mebi</name><printSymbol>Mi</printSymbol><value value="1048576">1048576</value></prefix>
+<prefix Code="Gi" CODE="GIB"><name>gibi</name><printSymbol>Gi</printSymbol><value value="1073741824">1073741824</value></prefix>
+<prefix Code="Ti" CODE="TIB"><name>tebi</name><printSymbol>Ti</printSymbol><value value="1099511627776">1099511627776</value></prefix>
+    </ucumPrefixes>
+  </div2>
+ </div1>
+</body>
+
+<back>
+ <div1>
+    <head>Examples for some Non-Units.</head>
+    <p name="Non-units"> 
+<verse>
+Symbols commonly used as units that are no real units of measurements
+are not defined by &TUCUM;.
+</verse>
+
+<verse>
+Users are free to use curly braces expressions (<pref
+ref="para-curly"/>) if they think it is important to use symbols
+rather than the default unit <un>1</un>.
+</verse>
+
+<verse>
+Curly braces expressions are equivalent to the unit <un>1</un>. The
+details of the annotations in the curly braces have no defined meaning
+in &TUCUM;.
+</verse>
+
+<verse>
+<table ref="junk"/> gives some example for those non-units but is not normative.
+</verse>
+    </p>
+    <ucumUnits id="junk"> 
+      <caption>Examples for Non-Units</caption>
+<junkUnit id="600710" Code="{tot}" CODE="{TOT}" isMetric="no"><name>particles total count</name><printSymbol>tot.</printSymbol><property>number</property><value Unit="1" UNIT="1" /></junkUnit>
+<junkUnit id="600710" Code="{tbl}" CODE="{TBL}" isMetric="no"><name>tablets</name><printSymbol>tbl.</printSymbol><property>number</property><value Unit="1" UNIT="1" /></junkUnit>
+<junkUnit id="600720" Code="{cfu}" CODE="{CFU}" isMetric="no"><name>colony forming units</name><printSymbol>C.F.U.</printSymbol><property>number</property><value Unit="1" UNIT="1" /></junkUnit>
+<junkUnit id="600730" Code="{rbc}" CODE="{RBC}" isMetric="no"><name>red blood cell count</name><printSymbol>R.B.C.</printSymbol><property>number</property><value Unit="1" UNIT="1" /></junkUnit>
+<junkUnit id="600740" Code="g.m/{H.B.}" CODE="G.M/{H.B.}" isMetric="no"><name>gram meter per heartbeat</name><printSymbol>g&middot; m/H.B.</printSymbol><property>proportional to ventricular stroke work</property><value Unit="1" UNIT="1" /></junkUnit>
+<junkUnit id="600750" Code="kg{wet'tis}" CODE="KG{wet'tis}" isMetric="no"><name>kilogram of wet tissue</name><printSymbol>kg(wet tissue)</printSymbol><property>mass</property><value Unit="1" UNIT="1" /></junkUnit>
+<junkUnit id="600750" Code="mg{creat}" CODE="MG{creat}" isMetric="no"><name>milligram of creatinine</name><printSymbol>mg(creat.)</printSymbol><property>mass</property><value Unit="1" UNIT="1" /></junkUnit>
+    </ucumUnits> 
+  </div1>
+
+  <div1>
+    <head>Summary of Conflicts</head>
+    <p>
+&TUCUM; is designed and maintained so that severe name conflicts do
+not occur. However, avoiding all conflicts is possible only at the
+cost of defining very unusual symbols for those units. As the <table
+ref="conflicts"/> shows, all current conflicts are of type IVa between
+metric and nonmetric units. This means that there is only a conflict
+if the metric predicate is violated so that non-metric units are used
+with a prefix.
+
+<smallref> [Schadow G, McDonald CJ et al: Units of Measure in
+Clinical Information Systems. <emph>JAMIA</emph> 6(2); Mar/Apr
+1999. p.&nbsp;151--162.]}
+</smallref>
+    </p>
+
+    <table id="conflicts">
+      <caption>Summary of name conflicts</caption>
+<tr><td>Gb </td><td> G-b    </td><td> Type IVa (metric-nonmetric)</td></tr>
+<tr><td>Pa </td><td> P-a    </td><td> Type IVa (metric-nonmetric)</td></tr>
+<tr><td>ph </td><td> p-h    </td><td> Type IVa (metric-nonmetric)</td></tr>
+<tr><td>cd </td><td> c-d    </td><td> Type IVa (metric-nonmetric)</td></tr>
+<tr><td>CD </td><td> C-D    </td><td> Type IVa (metric-nonmetric)</td></tr>
+    </table>
+  </div1>
+  <div1>
+    <head>Alphabetic Index</head>
+    <div2>
+      <head>Alphabetic Index By Unit Name</head>
+      <ucumIndex by="name"/>
+    </div2>
+    <div2>
+      <head>Alphabetic Index By Unit Symbol</head>
+      <ucumIndex by="Code"/>
+    </div2>
+    <div2>
+      <head>Alphabetic Index By Kind Of Quantity</head>
+      <ucumIndex by="property" by2="name"/>
+    </div2>
+  </div1>
+</back>
+</spec>
