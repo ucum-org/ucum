@@ -2429,10 +2429,18 @@ The meaning of the columns is declared in  <pref ref="para-custint"/>.
 </verse>
 
 <verse>
-The function pairs denoted &ldquo;<code>lg</code>&rdquo; and
-&ldquo;<code>lc</code>&rdquo; are defined as the decadic logarithm and
-the logarithm to basis 100 respectively, with their respective inverse
-functions.
+The function pair denoted &ldquo;<code>hpX(1 l)</code>&rdquo; is
+defined as <v>f</v><sub>hp X</sub>(<v>x</v>) = - lg <v>x</v> to
+convert from a number fraction (dillution) per liter to the
+homeopathic potency value of the X-series, and <v>f</v><sub>hp
+X</sub><sup>-1</sup>(<v>x</v>) = 10<sup>-<v>x</v></sup> to convert
+from the potency value back to the number fraction. Likewise, the
+function pair denoted &ldquo;<code>hpC(1 l)</code>&rdquo; is defined
+as <v>f</v><sub>hp C</sub>(<v>x</v>) = - ln(<v>x</v>) / ln(100)
+to convert from a number fraction (dillution) per liter to the
+homeopathic potency value of the C-series, and <v>f</v><sub>hp
+C</sub><sup>-1</sup>(<v>x</v>) = 100<sup>-<v>x</v></sup> to convert
+from the potency value back to the number fraction.
 </verse>
     </p>
 
@@ -2449,8 +2457,8 @@ functions.
 <derivedUnit id="600260" Code="[drp]" CODE="[DRP]" isMetric="no"><name>drop</name><printSymbol>drp</printSymbol><property>volume</property><value Unit="ml/12" UNIT="ML/12" value="1">1</value></derivedUnit>
 <derivedUnit id="600550" Code="[hnsf'U]" CODE="[HNSF'U]" isMetric="no"><name>Hounsfield unit</name><printSymbol>HF</printSymbol><property>x-ray attenuation</property><value Unit="1" UNIT="1" value="1">1</value></derivedUnit>
 <derivedUnit id="600555" Code="[MET]" CODE="[MET]" isMetric="no"><name>metabolic equivalent</name><printSymbol>MET</printSymbol><property>metabolic cost of physical activity</property><value Unit="mL/min/kg" UNIT="ML/MIN/KG" value="3.5">3.5</value></derivedUnit>
-<derivedUnit id="600556" Code="[hp_X]" CODE="[HP_X]" isMetric="no"><name>homeopathic potency &ndash; decimal-series</name><printSymbol reverse="yes">X</printSymbol><property>homeopathic potency</property><value Unit="lg(1 1)" UNIT="LG(1 1)"><function/></value></derivedUnit>
-<derivedUnit id="600557" Code="[hp_C]" CODE="[HP_C]" isMetric="no"><name>homeopathic potency &ndash; centesimal-series</name><printSymbol reverse="yes">C</printSymbol><property>homeopathic potency</property><value Unit="lc(1 1)" UNIT="LC(1 1)"><function/></value></derivedUnit>
+<derivedUnit id="600556" Code="[hp_X]" CODE="[HP_X]" isMetric="no"><name>homeopathic potency &ndash; decimal-series</name><printSymbol reverse="yes">X</printSymbol><property>homeopathic potency</property><value Unit="hpX(1 1)" UNIT="HPX(1 1)"><function/></value></derivedUnit>
+<derivedUnit id="600557" Code="[hp_C]" CODE="[HP_C]" isMetric="no"><name>homeopathic potency &ndash; centesimal-series</name><printSymbol reverse="yes">C</printSymbol><property>homeopathic potency</property><value Unit="hpC(1 1)" UNIT="hpc(1 1)"><function/></value></derivedUnit>
     </ucumUnits>
 
     <comment>
@@ -2500,6 +2508,13 @@ CT scans. It is defined on an interval scale where air is -1000 HF,
 water is 0 HF and bone is +1000 HF. Any advice as to how this unit can
 be related to metric units of radiant intensity decremence is
 appreciated.
+      </p>
+      <p>
+It should be pointed out that the homeopathic teaching takes potency
+not as equivalent to dillution and the C and X series would not equate
+to each other in the strictly numerical manner. Homeopathic potency
+includes the &ldquo;agitation&rdquo; (a vigorous shaking) that needs
+to occur in every step of the dilluting process.
       </p>
     </comment>
 
