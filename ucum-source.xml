@@ -2675,22 +2675,38 @@ enzyme activities are in the range of 1&nbsp;U-100&nbsp;U. This unit
 could not be adopted by the CGPM because it violates the style rules
 of the SI, i.e. &ldquo;unit&rdquo; is a very indistinctive word,
 &ldquo;U&rdquo; is a capital letter, and the definition is not
-coherent with the SI. The SI-coherent unit katal 1&nbsp;kat =
-1&nbsp;mol/s, however, is 7 orders of magnitudes greater than normal
-catalytic activities, which is why in practice the katal is not used
-very much. And still, the katal has not been adopted by the CGPM.
+coherent with the SI. 
       </p>
       <p>
-The general problem with catalytic activities is that these depend not
+An SI-coherent unit katal 1&nbsp;kat = 1&nbsp;mol/s, had been proposed
+for adoption into the SI over 30 years ago and was finally adopted by
+the CGPM in 1999. However, perhaps because the unit katal is 7 orders
+of magnitudes greater than normal catalytic activities, in practice
+the katal has not gained much in popularity over the unit
+&ldquo;U&rdquo;.
+      </p>
+      <p>
+In its 1999 decision to add the katal to the SI, the CGPM explicitly
+&ldquo;recommends that when the katal is used, the measurand be
+specified by reference to the measurement procedure; the measurement
+procedure must identify the indicator reaction.&rdquo;  The general
+problem with catalytic activities is that these heavily depend not
 only on the substance but on many side-conditions, such as
 temperature, acidity of the solution, presence or absense of
-cofactors, inhibitors or activators, and the amount of substrate. Thus
-a catalytic activity measured <emph>in vitro</emph> says little about the
-activity <emph>in vivo</emph>.  Only when a standardized measurement protocol
-is used the values can be compared. Thus, the use of katal is not much
-more informative than any arbitrary unit. &TUCUM; currently defines
-all arbitrary units as dimensionless. Advice on how these many enzyme
-units convert to standard catalytic activities is appreciated.
+cofactors, inhibitors or activators, and the amount of substrate.
+Particularly a catalytic activity measured <emph>in vitro</emph> says
+little about the activity <emph>in vivo</emph>. Hence the use of katal
+alone without specifying exactly the measurement method, is not 
+sufficient to improve comparability of the measurement of catalytic 
+substances.
+      </p>
+      <p>
+Because of the influence of the measurement method, results of
+biologic activity measurement cannot usually be converted. This is a
+particular problem with the many named arbitraty units that are still
+used. &TUCUM; currently defines all arbitrary units as
+dimensionless. Advice on how these many enzyme units convert to
+standard catalytic activities is appreciated.
       </p>
     </comment>
 
@@ -2928,9 +2944,9 @@ normative.
 <u:junk-unit id="600710" Code="{tbl}" CODE="{TBL}" isMetric="no"><name>tablets</name><printSymbol>tbl.</printSymbol><property>number</property><value Unit="1" UNIT="1" /></u:junk-unit>
 <u:junk-unit id="600720" Code="{cfu}" CODE="{CFU}" isMetric="no"><name>colony forming units</name><printSymbol>C.F.U.</printSymbol><property>number</property><value Unit="1" UNIT="1" /></u:junk-unit>
 <u:junk-unit id="600730" Code="{rbc}" CODE="{RBC}" isMetric="no"><name>red blood cell count</name><printSymbol>R.B.C.</printSymbol><property>number</property><value Unit="1" UNIT="1" /></u:junk-unit>
-<u:junk-unit id="600740" Code="g.m/{H.B.}" CODE="G.M/{H.B.}" isMetric="no"><name>gram meter per heartbeat</name><printSymbol>g&middot; m/H.B.</printSymbol><property>proportional to ventricular stroke work</property><value Unit="1" UNIT="1" /></u:junk-unit>
-<u:junk-unit id="600750" Code="kg{wet'tis}" CODE="KG{wet'tis}" isMetric="no"><name>kilogram of wet tissue</name><printSymbol>kg(wet tissue)</printSymbol><property>mass</property><value Unit="1" UNIT="1" /></u:junk-unit>
-<u:junk-unit id="600750" Code="mg{creat}" CODE="MG{creat}" isMetric="no"><name>milligram of creatinine</name><printSymbol>mg(creat.)</printSymbol><property>mass</property><value Unit="1" UNIT="1" /></u:junk-unit>
+<u:junk-unit id="600740" Code="g.m/{H.B.}" CODE="G.M/{H.B.}" isMetric="no"><name>gram meter per heartbeat</name><printSymbol>g&middot; m/H.B.</printSymbol><property>proportional to ventricular stroke work</property><value value="1" Unit="g.m" UNIT="G.M" /></u:junk-unit>
+<u:junk-unit id="600750" Code="kg{wet'tis}" CODE="KG{wet'tis}" isMetric="no"><name>kilogram of wet tissue</name><printSymbol>kg(wet tissue)</printSymbol><property>mass</property><value value="1" Unit="kg" UNIT="KG"/></u:junk-unit>
+<u:junk-unit id="600750" Code="mg{creat}" CODE="MG{creat}" isMetric="no"><name>milligram of creatinine</name><printSymbol>mg(creat.)</printSymbol><property>mass</property><value value="1" Unit="mg" UNIT="MG" /></u:junk-unit>
     </u:units> 
   </div1>
 
