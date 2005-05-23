@@ -307,6 +307,7 @@ st = 1 m3 metric  # stere
 Ao = 0.1 nm nonmetric  # Ångström
 b = 100 fm2 nonmetric  # barn
 att = 1 kgf/cm2 nonmetric  # technical atmosphere
+mho = 1 S metric  # mho
 [psi] = 1 [lbf_av]/[in_i]2 nonmetric  # pound per sqare inch
 circ = 2 [pi].rad nonmetric  # circle
 sph = 4 [pi].sr nonmetric  # spere
