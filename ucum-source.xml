@@ -26,7 +26,7 @@
   <!ENTITY ouml   "&#xf6;">
   <!ENTITY Aring  "&#xc5;">
   <!ENTITY aring  "&#xe5;">
-  <!ENTITY ccedilla "&#xa7;">
+  <!ENTITY ccedilla "&#xe7;">
   <!ENTITY deg    "&#xb0;">
   <!ENTITY box    "&#x25a1;">
   <!ENTITY middot "&#xb7;">
@@ -2024,7 +2024,7 @@ The meaning of the columns is declared in  <pref ref="para-custint"/>.
       <caption>British Imperial lengths</caption>
 <u:unit id="500340" Code="[in_br]" CODE="[IN_BR]" isMetric="no"><name>inch</name><property>length</property><value Unit="cm" UNIT="CM" value="2.539998">2.539998</value></u:unit>
 <u:unit id="500350" Code="[ft_br]" CODE="[FT_BR]" isMetric="no"><name>foot</name><property>length</property><value Unit="[in_br]" UNIT="[IN_BR]" value="12">12</value></u:unit>
-<u:unit id="500360" Code="[rd_br]" CODE="[RD_BR]" isMetric="no"><name>foot</name><property>length</property><value Unit="[ft_br]" UNIT="[FT_BR]" value="16.5">16.5</value></u:unit>
+<u:unit id="500360" Code="[rd_br]" CODE="[RD_BR]" isMetric="no"><name>rod</name><property>length</property><value Unit="[ft_br]" UNIT="[FT_BR]" value="16.5">16.5</value></u:unit>
 <u:unit id="500370" Code="[ch_br]" CODE="[CH_BR]" isMetric="no"><name>Gunter's chain</name><property>length</property><value Unit="[rd_br]" UNIT="[RD_BR]" value="4">4</value></u:unit>
 <u:unit id="500380" Code="[lk_br]" CODE="[LK_BR]" isMetric="no"><name>link for Gunter's chain</name><property>length</property><value Unit="[ch_br]/100" UNIT="[CH_BR]/100" value="1">1</value></u:unit>
 <u:unit id="500390" Code="[fth_br]" CODE="[FTH_BR]" isMetric="no"><name>fathom</name><property>length</property><value Unit="[ft_br]" UNIT="[FT_BR]" value="6">6</value></u:unit>
@@ -2133,8 +2133,8 @@ The meaning of the columns is declared in  <pref ref="para-custint"/>.
     <u:units id="brit-volumes" omit="printSymbol">
       <caption>British Imperial volumes</caption>
 <u:unit id="500600" Code="[gal_br]" CODE="[GAL_BR]" isMetric="no"><name>gallon</name><property>volume</property><value Unit="l" UNIT="L" value="4.54609">4.54609</value></u:unit>
-<u:unit id="500610" Code="[pk_br]" CODE="[PK_BR]" isMetric="no"><name>bushel</name><property>volume</property><value Unit="[gal_br]" UNIT="[GAL_BR]" value="2">2</value></u:unit>
-<u:unit id="500620" Code="[bu_br]" CODE="[BU_BR]" isMetric="no"><name>peck</name><property>volume</property><value Unit="[pk_br]" UNIT="[PK_BR]" value="4">4</value></u:unit>
+<u:unit id="500610" Code="[pk_br]" CODE="[PK_BR]" isMetric="no"><name>peck</name><property>volume</property><value Unit="[gal_br]" UNIT="[GAL_BR]" value="2">2</value></u:unit>
+<u:unit id="500620" Code="[bu_br]" CODE="[BU_BR]" isMetric="no"><name>bushel</name><property>volume</property><value Unit="[pk_br]" UNIT="[PK_BR]" value="4">4</value></u:unit>
 <u:unit id="500630" Code="[qt_br]" CODE="[QT_BR]" isMetric="no"><name>quart</name><property>volume</property><value Unit="[gal_br]/4" UNIT="[GAL_BR]/4" value="1">1</value></u:unit>
 <u:unit id="500640" Code="[pt_br]" CODE="[PT_BR]" isMetric="no"><name>pint</name><property>volume</property><value Unit="[qt_br]/2" UNIT="[QT_BR]/2" value="1">1</value></u:unit>
 <u:unit id="500650" Code="[gil_br]" CODE="[GIL_BR]" isMetric="no"><name>gill</name><property>volume</property><value Unit="[pt_br]/4" UNIT="[PT_BR]/4" value="1">1</value></u:unit>
@@ -2250,7 +2250,7 @@ Note also that the troy pound was abolished in England on January 6,
 
     <p name="apothecaries' weights.">
 <verse>
-The apothecarie's system of mass units is defined in <tabref ref="apoth"/>.
+The apothecaries' system of mass units is defined in <tabref ref="apoth"/>.
 </verse>
 
 <verse>
