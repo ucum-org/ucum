@@ -77,9 +77,8 @@
 </header>
 
 <body>
-  <div1 id="warning">
-    <head>SPECIAL RELEASE NOTE</head>
-    <p><strong>Ever since we changed the internal maintenance of &TUCUM; to
+  <p><strong>IMPORTANT SPECIAL RELEASE NOTE</strong></p>
+  <p><strong>Ever since we changed the internal maintenance of &TUCUM; to
 XML (which happened after release 1.4 in May of 2002) the definition
 of some units that used exponential notation for the magnitude was 
 incorrect. A systematic text-conversion error had caused the minus
@@ -99,7 +98,6 @@ Roentgen (R), and U.S. and international mil ([mil_i], [mil_us]).</p>
     <p>Because these units were used in some (though not many)
 definitions of other units, the indirectly affected units are:
 electron volt (eV), and circular mil ([cml_i]).</p>
-  </div1>
   <div1 id="section-introduction">
     <head>Introduction</head>
     <p>
