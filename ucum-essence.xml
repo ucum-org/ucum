@@ -472,7 +472,7 @@
    <name>unified atomic mass unit</name>
    <printSymbol>u</printSymbol>
    <property>mass</property>
-   <value Unit="g" UNIT="G" value="1.6605402e4">1.6605402 &#215; 10<sup>4</sup>
+   <value Unit="g" UNIT="G" value="1.6605402e-24">1.6605402 &#215; 10<sup>-24</sup>
    </value>
 </unit>
 <unit Code="eV" CODE="EV" isMetric="yes" class="iso1000">
@@ -491,7 +491,7 @@
    <name>parsec</name>
    <printSymbol>pc</printSymbol>
    <property>length</property>
-   <value Unit="m" UNIT="M" value="3.085678e6">3.085678 &#215; 10<sup>6</sup>
+   <value Unit="m" UNIT="M" value="3.085678e16">3.085678 &#215; 10<sup>16</sup>
    </value>
 </unit>
 <unit Code="[c]" CODE="[C]" isMetric="yes" class="const">
@@ -508,7 +508,7 @@
       <i>h</i>
    </printSymbol>
    <property>action</property>
-   <value Unit="J.s" UNIT="J.S" value="6.6260755e4">6.6260755 &#215; 10<sup>4</sup>
+   <value Unit="J.s" UNIT="J.S" value="6.6260755e-24">6.6260755 &#215; 10<sup>-24</sup>
    </value>
 </unit>
 <unit Code="[k]" CODE="[K]" isMetric="yes" class="const">
@@ -517,7 +517,7 @@
       <i>k</i>
    </printSymbol>
    <property>(unclassified)</property>
-   <value Unit="J/K" UNIT="J/K" value="1.380658e3">1.380658 &#215; 10<sup>3</sup>
+   <value Unit="J/K" UNIT="J/K" value="1.380658e-23">1.380658 &#215; 10<sup>-23</sup>
    </value>
 </unit>
 <unit Code="[eps_0]" CODE="[eps_0]" isMetric="yes" class="const">
@@ -529,7 +529,7 @@
       </i>
    </printSymbol>
    <property>electric permittivity</property>
-   <value Unit="F/m" UNIT="F/M" value="8.854187817e2">8.854187817 &#215; 10<sup>2</sup>
+   <value Unit="F/m" UNIT="F/M" value="8.854187817e-12">8.854187817 &#215; 10<sup>-12</sup>
    </value>
 </unit>
 <unit Code="[mu_0]" CODE="[mu_0]" isMetric="yes" class="const">
@@ -549,7 +549,7 @@
       <i>e</i>
    </printSymbol>
    <property>electric charge</property>
-   <value Unit="C" UNIT="C" value="1.60217733e9">1.60217733 &#215; 10<sup>9</sup>
+   <value Unit="C" UNIT="C" value="1.60217733e-19">1.60217733 &#215; 10<sup>-19</sup>
    </value>
 </unit>
 <unit Code="[m_e]" CODE="[M_E]" isMetric="yes" class="const">
@@ -561,7 +561,7 @@
       </i>
    </printSymbol>
    <property>mass</property>
-   <value Unit="g" UNIT="g" value="9.1093897e8">9.1093897 &#215; 10<sup>8</sup>
+   <value Unit="g" UNIT="g" value="9.1093897e-28">9.1093897 &#215; 10<sup>-28</sup>
    </value>
 </unit>
 <unit Code="[m_p]" CODE="[M_P]" isMetric="yes" class="const">
@@ -573,7 +573,7 @@
       </i>
    </printSymbol>
    <property>mass</property>
-   <value Unit="g" UNIT="g" value="1.6726231e4">1.6726231 &#215; 10<sup>4</sup>
+   <value Unit="g" UNIT="g" value="1.6726231e-24">1.6726231 &#215; 10<sup>-24</sup>
    </value>
 </unit>
 <unit Code="[G]" CODE="[GC]" isMetric="yes" class="const">
@@ -582,7 +582,7 @@
       <i>G</i>
    </printSymbol>
    <property>(unclassified)</property>
-   <value Unit="m3.kg-1.s-2" UNIT="M3.KG-1.S-2" value="6.67259e1">6.67259 &#215; 10<sup>1</sup>
+   <value Unit="m3.kg-1.s-2" UNIT="M3.KG-1.S-2" value="6.67259e-11">6.67259 &#215; 10<sup>-11</sup>
    </value>
 </unit>
 <unit Code="[g]" CODE="[G]" isMetric="yes" class="const">
@@ -664,14 +664,14 @@
    <name>Maxwell</name>
    <printSymbol>Mx</printSymbol>
    <property>flux of magnetic induction</property>
-   <value Unit="Wb" UNIT="WB" value="1e8">1 &#215; 10<sup>8</sup>
+   <value Unit="Wb" UNIT="WB" value="1e-8">1 &#215; 10<sup>-8</sup>
    </value>
 </unit>
 <unit Code="G" CODE="GS" isMetric="yes" class="cgs">
    <name>Gauss</name>
    <printSymbol>Gs, G</printSymbol>
    <property>magnetic flux density</property>
-   <value Unit="T" UNIT="T" value="1e4">1 &#215; 10<sup>4</sup>
+   <value Unit="T" UNIT="T" value="1e-4">1 &#215; 10<sup>-4</sup>
    </value>
 </unit>
 <unit Code="Oe" CODE="OE" isMetric="yes" class="cgs">
@@ -702,21 +702,21 @@
    <name>phot</name>
    <printSymbol>ph</printSymbol>
    <property>illuminance</property>
-   <value Unit="lx" UNIT="LX" value="1e4">1 &#215; 10<sup>4</sup>
+   <value Unit="lx" UNIT="LX" value="1e-4">1 &#215; 10<sup>-4</sup>
    </value>
 </unit>
 <unit Code="Ci" CODE="CI" isMetric="yes" class="cgs">
    <name>Curie</name>
    <printSymbol>Ci</printSymbol>
    <property>radioactivity</property>
-   <value Unit="Bq" UNIT="BQ" value="3.7e0">3.7 &#215; 10<sup>0</sup>
+   <value Unit="Bq" UNIT="BQ" value="3.7e10">3.7 &#215; 10<sup>10</sup>
    </value>
 </unit>
 <unit Code="R" CODE="ROE" isMetric="yes" class="cgs">
    <name>Roentgen</name>
    <printSymbol>R</printSymbol>
    <property>ion dose</property>
-   <value Unit="C/kg" UNIT="C/KG" value="2.58e4">2.58 &#215; 10<sup>4</sup>
+   <value Unit="C/kg" UNIT="C/KG" value="2.58e-4">2.58 &#215; 10<sup>-4</sup>
    </value>
 </unit>
 <unit Code="RAD" CODE="[RAD]" isMetric="yes" class="cgs">
@@ -818,7 +818,7 @@
    <name>mil</name>
    <printSymbol>mil</printSymbol>
    <property>length</property>
-   <value Unit="[in_i]" UNIT="[IN_I]" value="1e3">1 &#215; 10<sup>3</sup>
+   <value Unit="[in_i]" UNIT="[IN_I]" value="1e-3">1 &#215; 10<sup>-3</sup>
    </value>
 </unit>
 <unit Code="[cml_i]" CODE="[CML_I]" isMetric="no" class="intcust">
@@ -920,7 +920,7 @@
 <unit Code="[mil_us]" CODE="[MIL_US]" isMetric="no" class="us-lengths">
    <name>mil</name>
    <property>length</property>
-   <value Unit="[in_us]" UNIT="[IN_US]" value="1e3">1 &#215; 10<sup>3</sup>
+   <value Unit="[in_us]" UNIT="[IN_US]" value="1e-3">1 &#215; 10<sup>-3</sup>
    </value>
 </unit>
 <unit Code="[in_br]" CODE="[IN_BR]" isMetric="no" class="brit-length">

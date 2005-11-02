@@ -88,8 +88,14 @@ affected natural constants, such as parsec, proton mass, electron
 charge, Boltzman's constant, and all units that are defined based 
 on these. Fortunately these units are rather rare in everyday use in
 trade and medicine, however, we must urge everyone to regenerate
-their knowledge and check their data immediately based on this
-corrected release of &TUCUM;</strong></p>
+their tables, dictionaries, and knowledge bases, and check their data
+immediately based on this corrected release of &TUCUM;</strong></p>
+    <p>The units directly affected by this error were: unified atomic
+mass unit (u), parsec (pc), Planck's constant [h], Boltzman's
+constant [k], electric permittivity ([eps_0]), elementary charge
+([e]), electron mass ([m_e]), proton mass ([m_p]), Newton's constant
+of gravitation ([G]), Maxwell (Mx), Gauss (G), phot (ph), Curie (Ci),
+Roentgen (R), and U.S. and international mil ([mil_i], [mil_us]).</p>
   </div1>
   <div1 id="section-introduction">
     <head>Introduction</head>
