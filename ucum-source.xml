@@ -55,7 +55,7 @@
 <spec xmlns:u="http://aurora.regenstrief.org/UCUM">
 <header>
   <title>The Unified Code for Units of Measure</title>
-  <version>1.5</version>
+  <version>1.6 (contains important corrections)</version>
   <revision>$Revision$</revision>
   <date>$Date$</date>
   <authlist>
@@ -72,7 +72,7 @@
       <email href="cmcdonald@regenstrief.org"/>
     </author>
   </authlist>
-  <copyright>1998-2003, Regenstrief Institute for
+  <copyright>1998-2005, Regenstrief Institute for
   Health Care. All rigthts reserved.</copyright>
 </header>
 
