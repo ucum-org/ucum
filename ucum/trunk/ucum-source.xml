@@ -77,6 +77,20 @@
 </header>
 
 <body>
+  <div1 id="warning">
+    <head>SPECIAL RELEASE NOTE</head>
+    <p><strong>Ever since we changed the internal maintenance of &TUCUM; to
+XML (which happened after release 1.4 in May of 2002) the definition
+of some units that used exponential notation for the magnitude was 
+incorrect. A systematic text-conversion error had caused the minus
+sign and the first digit of all exponents to be deleted. This mostly
+affected natural constants, such as parsec, proton mass, electron
+charge, Boltzman's constant, and all units that are defined based 
+on these. Fortunately these units are rather rare in everyday use in
+trade and medicine, however, we must urge everyone to regenerate
+their knowledge and check their data immediately based on this
+corrected release of &TUCUM;</strong></p>
+  </div1>
   <div1 id="section-introduction">
     <head>Introduction</head>
     <p>
@@ -1000,8 +1014,8 @@ between the sets of units that they generate.
       <p>
 <pref ref="para-dimension" verse="1"/> allows to limit the set of
 supported dimensions. Most practically used units contain exponents of
--4 to +4, some may contain -5, such as hemodynamic resistance measured
-traditionally in 1&nbsp;dyn&middot;s/cm<sup>5</sup>. Thus if memory is
+-4 to +4.<!-- wrong: , some may contain -5, such as hemodynamic resistance measured
+traditionally in 1&nbsp;dyn&middot;s/cm<sup>5</sup>.--> Thus if memory is
 limited, 4 bit per component of the dimension vector could be
 sufficient.
       </p>
@@ -1509,10 +1523,10 @@ out of scope of &TUCUM;.
 <u:unit id="200162" Code="mo" CODE="MO" isMetric="no"><name>month</name><printSymbol>mo</printSymbol><property>time</property><value Unit="mo_j" UNIT="MO_J" value="1">1</value></u:unit>
 <u:unit id="200170" Code="t" CODE="TNE" isMetric="yes"><name>tonne</name><printSymbol>t</printSymbol><property>mass</property><value Unit="kg" UNIT="KG" value="1e3">1 &mult; 10<sup>3</sup></value></u:unit>
 <u:unit id="200180" Code="bar" CODE="BAR" isMetric="yes"><name>bar</name><printSymbol>bar</printSymbol><property>pressure</property><value Unit="Pa" UNIT="PAL" value="1e5">1 &mult; 10<sup>5</sup></value></u:unit>
-<u:unit id="200210" Code="u" CODE="AMU" isMetric="yes"><name>unified atomic mass unit</name><printSymbol>u</printSymbol><property>mass</property><value Unit="g" UNIT="G" value="1.6605402e4">1.6605402 &mult; 10<sup>4</sup></value></u:unit>
+<u:unit id="200210" Code="u" CODE="AMU" isMetric="yes"><name>unified atomic mass unit</name><printSymbol>u</printSymbol><property>mass</property><value Unit="g" UNIT="G" value="1.6605402e-24">1.6605402 &mult; 10<sup>-24</sup></value></u:unit>
 <u:unit id="200200" Code="eV" CODE="EV" isMetric="yes"><name>electronvolt</name><printSymbol>eV</printSymbol><property>energy</property><value Unit="[e].V" UNIT="[E].V" value="1">1</value></u:unit>
 <u:unit id="200220" Code="AU" CODE="ASU" isMetric="no"><name>astronomic unit</name><printSymbol>AU</printSymbol><property>length</property><value Unit="Mm" UNIT="MAM" value="149597.870">149597.870</value></u:unit>
-<u:unit id="200230" Code="pc" CODE="PRS" isMetric="yes"><name>parsec</name><printSymbol>pc</printSymbol><property>length</property><value Unit="m" UNIT="M" value="3.085678e6">3.085678 &mult; 10<sup>6</sup></value></u:unit>
+<u:unit id="200230" Code="pc" CODE="PRS" isMetric="yes"><name>parsec</name><printSymbol>pc</printSymbol><property>length</property><value Unit="m" UNIT="M" value="3.085678e16">3.085678 &mult; 10<sup>16</sup></value></u:unit>
     </u:units>
     <comment>
       <p>
@@ -1650,14 +1664,14 @@ out of scope of &TUCUM;.
     <u:units id="const">
       <caption>Natural units.</caption>
 <u:unit id="300010" Code="[c]" CODE="[C]" isMetric="yes"><name>velocity of light</name><printSymbol><i>c</i></printSymbol><property>velocity</property><value Unit="m/s" UNIT="M/S" value="299792458">299792458</value></u:unit>
-<u:unit id="300020" Code="[h]" CODE="[H]" isMetric="yes"><name>Planck constant</name><printSymbol><i>h</i></printSymbol><property>action</property><value Unit="J.s" UNIT="J.S" value="6.6260755e4">6.6260755 &mult; 10<sup>4</sup></value></u:unit>
-<u:unit id="300021" Code="[k]" CODE="[K]" isMetric="yes"><name>Boltzmann constant</name><printSymbol><i>k</i></printSymbol><property>(unclassified)</property><value Unit="J/K" UNIT="J/K" value="1.380658e3">1.380658 &mult; 10<sup>3</sup></value></u:unit>
-<u:unit id="300022" Code="[eps_0]" CODE="[eps_0]" isMetric="yes"><name>permittivity of vacuum</name><printSymbol><i>&epsilon;<sub><r>0</r></sub></i></printSymbol><property>electric permittivity</property><value Unit="F/m" UNIT="F/M" value="8.854187817e2">8.854187817 &mult; 10<sup>2</sup></value></u:unit>
+<u:unit id="300020" Code="[h]" CODE="[H]" isMetric="yes"><name>Planck constant</name><printSymbol><i>h</i></printSymbol><property>action</property><value Unit="J.s" UNIT="J.S" value="6.6260755e-24">6.6260755 &mult; 10<sup>-24</sup></value></u:unit>
+<u:unit id="300021" Code="[k]" CODE="[K]" isMetric="yes"><name>Boltzmann constant</name><printSymbol><i>k</i></printSymbol><property>(unclassified)</property><value Unit="J/K" UNIT="J/K" value="1.380658e-23">1.380658 &mult; 10<sup>-23</sup></value></u:unit>
+<u:unit id="300022" Code="[eps_0]" CODE="[eps_0]" isMetric="yes"><name>permittivity of vacuum</name><printSymbol><i>&epsilon;<sub><r>0</r></sub></i></printSymbol><property>electric permittivity</property><value Unit="F/m" UNIT="F/M" value="8.854187817e-12">8.854187817 &mult; 10<sup>-12</sup></value></u:unit>
 <u:unit id="300023" Code="[mu_0]" CODE="[mu_0]" isMetric="yes"><name>permeability of vacuum</name><printSymbol><i>&mu;<sub><r>0</r></sub></i></printSymbol><property>magnetic permeability</property><value Unit="4.[pi].10*-7.N/A2" UNIT="4.[PI].10*-7.N/A2" value="1">1</value></u:unit>
-<u:unit id="200190" Code="[e]" CODE="[E]" isMetric="yes"><name>elementary charge</name><printSymbol><i>e</i></printSymbol><property>electric charge</property><value Unit="C" UNIT="C" value="1.60217733e9">1.60217733 &mult; 10<sup>9</sup></value></u:unit>
-<u:unit id="300022" Code="[m_e]" CODE="[M_E]" isMetric="yes"><name>electron mass</name><printSymbol><i>m<sub><r>e</r></sub></i></printSymbol><property>mass</property><value Unit="g" UNIT="g" value="9.1093897e8">9.1093897 &mult; 10<sup>8</sup></value></u:unit>
-<u:unit id="300023" Code="[m_p]" CODE="[M_P]" isMetric="yes"><name>proton mass</name><printSymbol><i>m<sub><r>p</r></sub></i></printSymbol><property>mass</property><value Unit="g" UNIT="g" value="1.6726231e4">1.6726231 &mult; 10<sup>4</sup></value></u:unit>
-<u:unit id="300029" Code="[G]" CODE="[GC]" isMetric="yes"><name>Newtonian constant of gravitation</name><printSymbol><i>G</i></printSymbol><property>(unclassified)</property><value Unit="m3.kg-1.s-2" UNIT="M3.KG-1.S-2" value="6.67259e1">6.67259 &mult; 10<sup>1</sup></value></u:unit>
+<u:unit id="200190" Code="[e]" CODE="[E]" isMetric="yes"><name>elementary charge</name><printSymbol><i>e</i></printSymbol><property>electric charge</property><value Unit="C" UNIT="C" value="1.60217733e-19">1.60217733 &mult; 10<sup>-19</sup></value></u:unit>
+<u:unit id="300022" Code="[m_e]" CODE="[M_E]" isMetric="yes"><name>electron mass</name><printSymbol><i>m<sub><r>e</r></sub></i></printSymbol><property>mass</property><value Unit="g" UNIT="g" value="9.1093897e-28">9.1093897 &mult; 10<sup>-28</sup></value></u:unit>
+<u:unit id="300023" Code="[m_p]" CODE="[M_P]" isMetric="yes"><name>proton mass</name><printSymbol><i>m<sub><r>p</r></sub></i></printSymbol><property>mass</property><value Unit="g" UNIT="g" value="1.6726231e-24">1.6726231 &mult; 10<sup>-24</sup></value></u:unit>
+<u:unit id="300029" Code="[G]" CODE="[GC]" isMetric="yes"><name>Newtonian constant of gravitation</name><printSymbol><i>G</i></printSymbol><property>(unclassified)</property><value Unit="m3.kg-1.s-2" UNIT="M3.KG-1.S-2" value="6.67259e-11">6.67259 &mult; 10<sup>-11</sup></value></u:unit>
 <u:unit id="300030" Code="[g]" CODE="[G]" isMetric="yes"><name>standard acceleration of free fall</name><printSymbol><i>g<sub>n</sub></i></printSymbol><property>acceleration</property><value Unit="m/s2" UNIT="M/S" value="9.80665">9.80665</value></u:unit>
 <u:unit id="600410" Code="atm" CODE="ATM" isMetric="no"><name>standard atmosphere</name><printSymbol>atm</printSymbol><property>pressure</property><value Unit="Pa" UNIT="KPAL" value="101325">101325</value></u:unit>
 <u:unit id="300040" Code="[ly]" CODE="[LY]" isMetric="yes"><name>light-year</name><printSymbol>l.y.</printSymbol><property>length</property><value Unit="[c].a_j" UNIT="[C].ANN_J" value="1">1</value></u:unit>
@@ -1713,15 +1727,15 @@ normative. Full name and print symbol are out of scope of &TUCUM;.
 <u:unit id="400040" Code="P" CODE="P" isMetric="yes"><name>Poise</name><printSymbol>P</printSymbol><property>dynamic viscosity</property><value Unit="dyn.s/cm2" UNIT="DYN.S/CM2" value="1">1</value></u:unit>
 <u:unit id="400150" Code="Bi" CODE="BI" isMetric="yes"><name>Biot</name><printSymbol>Bi</printSymbol><property>electric current</property><value Unit="A" UNIT="A" value="10">10</value></u:unit>
 <u:unit id="400050" Code="St" CODE="ST" isMetric="yes"><name>Stokes</name><printSymbol>St</printSymbol><property>kinematic viscosity</property><value Unit="cm2/s" UNIT="CM2/S" value="1">1</value></u:unit>
-<u:unit id="400060" Code="Mx" CODE="MX" isMetric="yes"><name>Maxwell</name><printSymbol>Mx</printSymbol><property>flux of magnetic induction</property><value Unit="Wb" UNIT="WB" value="1e8">1 &mult; 10<sup>8</sup></value></u:unit>
-<u:unit id="400070" Code="G" CODE="GS" isMetric="yes"><name>Gauss</name><printSymbol>Gs, G</printSymbol><property>magnetic flux density</property><value Unit="T" UNIT="T" value="1e4">1 &mult; 10<sup>4</sup></value></u:unit>
+<u:unit id="400060" Code="Mx" CODE="MX" isMetric="yes"><name>Maxwell</name><printSymbol>Mx</printSymbol><property>flux of magnetic induction</property><value Unit="Wb" UNIT="WB" value="1e-8">1 &mult; 10<sup>-8</sup></value></u:unit>
+<u:unit id="400070" Code="G" CODE="GS" isMetric="yes"><name>Gauss</name><printSymbol>Gs, G</printSymbol><property>magnetic flux density</property><value Unit="T" UNIT="T" value="1e-4">1 &mult; 10<sup>-4</sup></value></u:unit>
 <u:unit id="400080" Code="Oe" CODE="OE" isMetric="yes"><name>Oersted</name><printSymbol>Oe</printSymbol><property>magnetic field intensity</property><value Unit="/[pi].A/m" UNIT="/[PI].A/M" value="250">250</value></u:unit>
 <u:unit id="400090" Code="Gb" CODE="GB" isMetric="yes"><name>Gilbert</name><printSymbol>Gb</printSymbol><property>magnetic tension</property><value Unit="Oe.cm" UNIT="OE.CM" value="1">1</value></u:unit>
 <u:unit id="400100" Code="sb" CODE="SB" isMetric="yes"><name>stilb</name><printSymbol>sb</printSymbol><property>lum. intensity density</property><value Unit="cd/cm2" UNIT="CD/CM2" value="1">1</value></u:unit>
 <u:unit id="400110" Code="Lmb" CODE="LMB" isMetric="yes"><name>Lambert</name><printSymbol>L</printSymbol><property>brightness</property><value Unit="cd/cm2/[pi]" UNIT="CD/CM2/[PI]" value="1">1</value></u:unit>
-<u:unit id="400120" Code="ph" CODE="PHT" isMetric="yes"><name>phot</name><printSymbol>ph</printSymbol><property>illuminance</property><value Unit="lx" UNIT="LX" value="1e4">1 &mult; 10<sup>4</sup></value></u:unit>
-<u:unit id="400130" Code="Ci" CODE="CI" isMetric="yes"><name>Curie</name><printSymbol>Ci</printSymbol><property>radioactivity</property><value Unit="Bq" UNIT="BQ" value="3.7e0">3.7 &mult; 10<sup>0</sup></value></u:unit>
-<u:unit id="400140" Code="R" CODE="ROE" isMetric="yes"><name>Roentgen</name><printSymbol>R</printSymbol><property>ion dose</property><value Unit="C/kg" UNIT="C/KG" value="2.58e4">2.58 &mult; 10<sup>4</sup></value></u:unit>
+<u:unit id="400120" Code="ph" CODE="PHT" isMetric="yes"><name>phot</name><printSymbol>ph</printSymbol><property>illuminance</property><value Unit="lx" UNIT="LX" value="1e-4">1 &mult; 10<sup>-4</sup></value></u:unit>
+<u:unit id="400130" Code="Ci" CODE="CI" isMetric="yes"><name>Curie</name><printSymbol>Ci</printSymbol><property>radioactivity</property><value Unit="Bq" UNIT="BQ" value="3.7e10">3.7 &mult; 10<sup>10</sup></value></u:unit>
+<u:unit id="400140" Code="R" CODE="ROE" isMetric="yes"><name>Roentgen</name><printSymbol>R</printSymbol><property>ion dose</property><value Unit="C/kg" UNIT="C/KG" value="2.58e-4">2.58 &mult; 10<sup>-4</sup></value></u:unit>
 <u:unit id="400160" Code="RAD" CODE="[RAD]" isMetric="yes"><name>radiation absorbed dose</name><printSymbol>RAD</printSymbol><property>energy dose</property><value Unit="erg/g" UNIT="ERG/G" value="100">100</value></u:unit>
 <u:unit id="400170" Code="REM" CODE="[REM]" isMetric="yes"><name>radiation equivalent man</name><printSymbol>REM</printSymbol><property>dose equivalent</property><value Unit="RAD" UNIT="[RAD]" value="1">1</value></u:unit>
     </u:units>
@@ -1905,7 +1919,7 @@ exponents 2 and 3 respectively as shown in the column
 <u:unit id="500150" Code="[cyd_i]" CODE="[CYD_I]" isMetric="no"><name>cubic yard</name><printSymbol>cu.yd</printSymbol><property>volume</property><value Unit="[yd_i]3" UNIT="[YD_I]3" value="1">1</value></u:unit>
 <u:unit id="500141" Code="[bf_i]" CODE="[BF_I]" isMetric="no"><name>board foot</name><property>volume</property><value Unit="[in_i]3" UNIT="[IN_I]3" value="144">144</value></u:unit>
 <u:unit id="500142" Code="[cr_i]" CODE="[CR_I]" isMetric="no"><name>cord</name><property>volume</property><value Unit="[ft_i]3" UNIT="[FT_I]3" value="128">128</value></u:unit>
-<u:unit id="500060" Code="[mil_i]" CODE="[MIL_I]" isMetric="no"><name>mil</name><printSymbol>mil</printSymbol><property>length</property><value Unit="[in_i]" UNIT="[IN_I]" value="1e3">1 &mult; 10<sup>3</sup></value></u:unit>
+<u:unit id="500060" Code="[mil_i]" CODE="[MIL_I]" isMetric="no"><name>mil</name><printSymbol>mil</printSymbol><property>length</property><value Unit="[in_i]" UNIT="[IN_I]" value="1e-3">1 &mult; 10<sup>-3</sup></value></u:unit>
 <u:unit id="500160" Code="[cml_i]" CODE="[CML_I]" isMetric="no"><name>circular mil</name><printSymbol>circ.mil</printSymbol><property>area</property><value Unit="[pi]/4.[mil_i]2" UNIT="[PI]/4.[MIL_I]2" value="1">1</value></u:unit>
 <u:unit id="500020" Code="[hd_i]" CODE="[HD_I]" isMetric="no"><name>hand</name><printSymbol>hd</printSymbol><property>height of horses</property><value Unit="[in_i]" UNIT="[IN_I]" value="4">4</value></u:unit>
     </u:units>
@@ -1998,7 +2012,7 @@ Standards and Technology (NIST), 1995. Available from: URL:
 <u:unit id="500300" Code="[smi_us]" CODE="[SMI_US]" isMetric="no"><name>square mile</name><property>area</property><value Unit="[mi_us]2" UNIT="[MI_US]2" value="1">1</value></u:unit>
 <u:unit id="500320" Code="[sct]" CODE="[SCT]" isMetric="no"><name>section</name><property>area</property><value Unit="[mi_us]2" UNIT="[MI_US]2" value="1">1</value></u:unit>
 <u:unit id="500330" Code="[twp]" CODE="[TWP]" isMetric="no"><name>township</name><property>area</property><value Unit="[sct]" UNIT="[SCT]" value="36">36</value></u:unit>
-<u:unit id="500310" Code="[mil_us]" CODE="[MIL_US]" isMetric="no"><name>mil</name><property>length</property><value Unit="[in_us]" UNIT="[IN_US]" value="1e3">1 &mult; 10<sup>3</sup></value></u:unit>
+<u:unit id="500310" Code="[mil_us]" CODE="[MIL_US]" isMetric="no"><name>mil</name><property>length</property><value Unit="[in_us]" UNIT="[IN_US]" value="1e-3">1 &mult; 10<sup>-3</sup></value></u:unit>
     </u:units>
     <comment>
       <p>
@@ -3216,7 +3230,7 @@ more straightforward or more appropriate or both.
           <td/>
           <td>international unit per day</td>
           <td/>
-          <td>1.15740740740741 &mult; 10-5</td>
+          <td>1.15740740740741 &mult; 10<sup>-5</sup></td>
           <td>s-1</td>
           <td/>
         </tr>
@@ -3540,7 +3554,7 @@ more straightforward or more appropriate or both.
           <td/>
           <td>gram per 8-hour shift</td>
           <td/>
-          <td>3.47222222222222 &mult; 10-5</td>
+          <td>3.47222222222222 &mult; 10<sup>-5</sup></td>
           <td>g.s-1</td>
           <td/>
         </tr>
@@ -3549,7 +3563,7 @@ more straightforward or more appropriate or both.
           <td>g/kg/(8.h) 125/h</td>
           <td>gram per kilogram and 8-hour shift</td>
           <td>mass dose rate per body mass</td>
-          <td>3.47222222222222 &mult; 10-8</td>
+          <td>3.47222222222222 &mult; 10<sup>-8</sup></td>
           <td>s-1</td>
           <td/>
         </tr>
@@ -3559,7 +3573,7 @@ more straightforward or more appropriate or both.
           <td>10*-3/d</td>
           <td>gram per kilogram and day</td>
           <td>mass dose rate  per body mass</td>
-          <td>1.15740740740741 &mult; 10-8</td>
+          <td>1.15740740740741 &mult; 10<sup>-8</sup></td>
           <td>s-1</td>
         </tr>
         <tr>
@@ -3567,7 +3581,7 @@ more straightforward or more appropriate or both.
           <td>g/kg/h 10*-3/h</td>
           <td>gram per kilogram and hour</td>
           <td>mass dose rate per body mass</td>
-          <td>2.77777777777778 &mult; 10-7</td>
+          <td>2.77777777777778 &mult; 10<sup>-7</sup></td>
           <td>s-1</td>
           <td/>
         </tr>
@@ -3576,7 +3590,7 @@ more straightforward or more appropriate or both.
           <td>g/kg/min 10*-3/min</td>
           <td>gram per kilogram and minute</td>
           <td>mass dose rate per body mass</td>
-          <td>1.66666666666667 &mult; 10-5</td>
+          <td>1.66666666666667 &mult; 10<sup>-5</sup></td>
           <td>s-1</td>
           <td/>
         </tr>
@@ -3585,7 +3599,7 @@ more straightforward or more appropriate or both.
           <td/>
           <td>gram per day</td>
           <td/>
-          <td>1.15740740740741 &mult; 10-5</td>
+          <td>1.15740740740741 &mult; 10<sup>-5</sup></td>
           <td>g.s-1</td>
           <td/>
         </tr>
@@ -3675,7 +3689,7 @@ more straightforward or more appropriate or both.
           <td/>
           <td>katal per kilogram</td>
           <td/>
-          <td>6.0221367 &mult; 1020</td>
+          <td>6.0221367 &mult; 10<sup>20</sup></td>
           <td>g-1.s-1</td>
           <td/>
         </tr>
@@ -3684,7 +3698,7 @@ more straightforward or more appropriate or both.
           <td/>
           <td>katal per liter</td>
           <td/>
-          <td>6.0221367 &mult; 1026</td>
+          <td>6.0221367 &mult; 10<sup>26</sup></td>
           <td>m-3.s-1</td>
           <td/>
         </tr>
@@ -3801,7 +3815,7 @@ more straightforward or more appropriate or both.
           <td/>
           <td>kilogram per mole</td>
           <td/>
-          <td>1.66054018667494 &mult; 10-21</td>
+          <td>1.66054018667494 &mult; 10<sup>-21</sup></td>
           <td>g</td>
           <td/>
         </tr>
@@ -3846,7 +3860,7 @@ more straightforward or more appropriate or both.
           <td/>
           <td>liter per 8-hour shift</td>
           <td/>
-          <td>3.47222222222222 &mult; 10-8</td>
+          <td>3.47222222222222 &mult; 10<sup>-8</sup></td>
           <td>m3.s-1</td>
           <td/>
         </tr>
@@ -3855,7 +3869,7 @@ more straightforward or more appropriate or both.
           <td/>
           <td>liter per minute and square meter</td>
           <td>cardiac index (cardiac output per body surface area)</td>
-          <td>1.66666666666667 &mult; 10-5</td>
+          <td>1.66666666666667 &mult; 10<sup>-5</sup></td>
           <td>m.s-1</td>
           <td/>
         </tr>
@@ -3864,7 +3878,7 @@ more straightforward or more appropriate or both.
           <td/>
           <td>liter per day</td>
           <td/>
-          <td>1.15740740740741 &mult; 10-8</td>
+          <td>1.15740740740741 &mult; 10<sup>-8</sup></td>
           <td>m3.s-1</td>
           <td/>
         </tr>
@@ -3873,7 +3887,7 @@ more straightforward or more appropriate or both.
           <td/>
           <td>liter per hour</td>
           <td/>
-          <td>2.77777777777778 &mult; 10-7</td>
+          <td>2.77777777777778 &mult; 10<sup>-7</sup></td>
           <td>m3.s-1</td>
           <td/>
         </tr>
@@ -3891,7 +3905,7 @@ more straightforward or more appropriate or both.
           <td/>
           <td>liter per minute</td>
           <td/>
-          <td>1.66666666666667 &mult; 10-5</td>
+          <td>1.66666666666667 &mult; 10<sup>-5</sup></td>
           <td>m3.s-1</td>
           <td/>
         </tr>
@@ -3990,7 +4004,7 @@ more straightforward or more appropriate or both.
           <td/>
           <td>milliequivalent</td>
           <td/>
-          <td>6.0221367 &mult; 1020</td>
+          <td>6.0221367 &mult; 10<sup>20</sup></td>
           <td>1</td>
           <td/>
         </tr>
@@ -3999,7 +4013,7 @@ more straightforward or more appropriate or both.
           <td/>
           <td>milliequivalent per 8-hour shift</td>
           <td/>
-          <td>2.0910196875 &mult; 1016</td>
+          <td>2.0910196875 &mult; 10<sup>16</sup></td>
           <td>s-1</td>
           <td/>
         </tr>
@@ -4035,7 +4049,7 @@ more straightforward or more appropriate or both.
           <td>meq/kg/min</td>
           <td>milliequivalent per kilogram and minute</td>
           <td>dose rate per patient body mass</td>
-          <td>1.00368945 &mult; 1016</td>
+          <td>1.00368945 &mult; 10<sup>16</sup></td>
           <td>g-1.s-1</td>
           <td/>
         </tr>
@@ -4044,7 +4058,7 @@ more straightforward or more appropriate or both.
           <td/>
           <td>milliequivalent per day</td>
           <td/>
-          <td>6.970065625 &mult; 1015</td>
+          <td>6.970065625 &mult; 10<sup>15</sup></td>
           <td>s-1</td>
           <td/>
         </tr>
@@ -4053,7 +4067,7 @@ more straightforward or more appropriate or both.
           <td/>
           <td>milliequivalent per hour</td>
           <td/>
-          <td>1.67281575 &mult; 1017</td>
+          <td>1.67281575 &mult; 10<sup>17</sup></td>
           <td>s-1</td>
           <td/>
         </tr>
@@ -4062,7 +4076,7 @@ more straightforward or more appropriate or both.
           <td/>
           <td>milliequivalent per kilogram</td>
           <td>dose per patient body mass</td>
-          <td>6.0221367 &mult; 1017</td>
+          <td>6.0221367 &mult; 10<sup>17</sup></td>
           <td>g-1</td>
           <td/>
         </tr>
@@ -4071,7 +4085,7 @@ more straightforward or more appropriate or both.
           <td/>
           <td>milliequivalent per liter</td>
           <td/>
-          <td>6.0221367 &mult; 1023</td>
+          <td>6.0221367 &mult; 10<sup>23</sup></td>
           <td>m-3</td>
           <td/>
         </tr>
@@ -4080,7 +4094,7 @@ more straightforward or more appropriate or both.
           <td/>
           <td>milliequivalent per square meter</td>
           <td>dose per patient body surface area</td>
-          <td>6.0221367 &mult; 1020</td>
+          <td>6.0221367 &mult; 10<sup>20</sup></td>
           <td>m-2</td>
           <td/>
         </tr>
@@ -4089,7 +4103,7 @@ more straightforward or more appropriate or both.
           <td/>
           <td>milliequivalent per minute</td>
           <td/>
-          <td>1.00368945 &mult; 1019</td>
+          <td>1.00368945 &mult; 10<sup>19</sup></td>
           <td>s-1</td>
           <td/>
         </tr>
@@ -4107,7 +4121,7 @@ more straightforward or more appropriate or both.
           <td/>
           <td>milligram per 8-hour shift</td>
           <td/>
-          <td>3.47222222222222 &mult; 10-8</td>
+          <td>3.47222222222222 &mult; 10<sup>-8</sup></td>
           <td>g.s-1</td>
           <td/>
         </tr>
@@ -4116,7 +4130,7 @@ more straightforward or more appropriate or both.
           <td>mg/kg/(8.h) 10*-6/(8.h)</td>
           <td>milligram per kilogram and 8-hour shift</td>
           <td>mass dose rate per patient body mass</td>
-          <td>3.47222222222222 &mult; 10-11</td>
+          <td>3.47222222222222 &mult; 10<sup>-11</sup></td>
           <td>s-1</td>
           <td/>
         </tr>
@@ -4125,7 +4139,7 @@ more straightforward or more appropriate or both.
           <td>mg/kg/d 10*-6/d</td>
           <td>milligram per kilogram and day</td>
           <td>mass dose rate per patient body mass</td>
-          <td>1.15740740740741 &mult; 10-11</td>
+          <td>1.15740740740741 &mult; 10<sup>-11</sup></td>
           <td>s-1</td>
           <td/>
         </tr>
@@ -4134,7 +4148,7 @@ more straightforward or more appropriate or both.
           <td>mg/kg/h 10*-6/h</td>
           <td>milligram per kilogram and hour</td>
           <td>mass dose rate  per patient body mass</td>
-          <td>2.77777777777778 &mult; 10-10</td>
+          <td>2.77777777777778 &mult; 10<sup>-10</sup></td>
           <td>s-1</td>
           <td/>
         </tr>
@@ -4143,7 +4157,7 @@ more straightforward or more appropriate or both.
           <td>mg/kg/min 10*-6/min</td>
           <td>milligram per kilogram and minute</td>
           <td>mass dose rate per patient body mass</td>
-          <td>1.66666666666667 &mult; 10-8</td>
+          <td>1.66666666666667 &mult; 10<sup>-8</sup></td>
           <td>s-1</td>
           <td/>
         </tr>
@@ -4152,7 +4166,7 @@ more straightforward or more appropriate or both.
           <td/>
           <td>milligram per day</td>
           <td/>
-          <td>1.15740740740741 &mult; 10-8</td>
+          <td>1.15740740740741 &mult; 10<sup>-8</sup></td>
           <td>g.s-1</td>
           <td/>
         </tr>
@@ -4170,7 +4184,7 @@ more straightforward or more appropriate or both.
           <td/>
           <td>milligram per hour</td>
           <td/>
-          <td>2.77777777777778 &mult; 10-7</td>
+          <td>2.77777777777778 &mult; 10<sup>-7</sup></td>
           <td>g.s-1</td>
           <td/>
         </tr>
@@ -4215,7 +4229,7 @@ more straightforward or more appropriate or both.
           <td/>
           <td>milligram per minute</td>
           <td/>
-          <td>1.66666666666667 &mult; 10-5</td>
+          <td>1.66666666666667 &mult; 10<sup>-5</sup></td>
           <td>g.s-1</td>
           <td/>
         </tr>
@@ -4242,7 +4256,7 @@ more straightforward or more appropriate or both.
           <td/>
           <td>milliliter per 8-hour shift</td>
           <td/>
-          <td>3.47222222222222 &mult; 10-11</td>
+          <td>3.47222222222222 &mult; 10<sup>-11</sup></td>
           <td>m3.s-1</td>
           <td/>
         </tr>
@@ -4251,7 +4265,7 @@ more straightforward or more appropriate or both.
           <td>mL/kg/(8.h)</td>
           <td>milliliter per kilogram and 8-hour shift</td>
           <td>renal excretion volume rate per body mass</td>
-          <td>3.47222222222222 &mult; 10-14</td>
+          <td>3.47222222222222 &mult; 10<sup>-14</sup></td>
           <td>m3.g-1.s-1</td>
           <td/>
         </tr>
@@ -4260,7 +4274,7 @@ more straightforward or more appropriate or both.
           <td>mL/kg/d</td>
           <td>milliliter per kilogram and day</td>
           <td>renal excretion volume rate per body mass</td>
-          <td>1.15740740740741 &mult; 10-14</td>
+          <td>1.15740740740741 &mult; 10<sup>-14</sup></td>
           <td>m3.g-1.s-1</td>
           <td/>
         </tr>
@@ -4269,7 +4283,7 @@ more straightforward or more appropriate or both.
           <td>mL/kg/h</td>
           <td>milliliter per kilogram and hour</td>
           <td>renal excretion volume rate per body mass</td>
-          <td>2.77777777777778 &mult; 10-13</td>
+          <td>2.77777777777778 &mult; 10<sup>-13</sup></td>
           <td>m3.g-1.s-1</td>
           <td/>
         </tr>
@@ -4278,7 +4292,7 @@ more straightforward or more appropriate or both.
           <td>mL/kg/min</td>
           <td>milliliter per kilogram and minute</td>
           <td>respiratory volume rate per body mass</td>
-          <td>1.66666666666667 &mult; 10-11</td>
+          <td>1.66666666666667 &mult; 10<sup>-11</sup></td>
           <td>m3.g-1.s-1</td>
           <td/>
         </tr>
@@ -4287,7 +4301,7 @@ more straightforward or more appropriate or both.
           <td>mL/m2/min</td>
           <td>milliliter per minute and square meter</td>
           <td>volume per body surface area; oxygen consumption index</td>
-          <td>1.66666666666667 &mult; 10-8</td>
+          <td>1.66666666666667 &mult; 10<sup>-8</sup></td>
           <td>m.s-1</td>
           <td/>
         </tr>
@@ -4305,7 +4319,7 @@ more straightforward or more appropriate or both.
           <td/>
           <td>milliliter per centimeters H20</td>
           <td>dynamic lung compliance</td>
-          <td>1.01971621297793 &mult; 10-11</td>
+          <td>1.01971621297793 &mult; 10<sup>-11</sup></td>
           <td>m4.g-1.s2</td>
           <td/>
         </tr>
@@ -4314,7 +4328,7 @@ more straightforward or more appropriate or both.
           <td/>
           <td>milliliter per day</td>
           <td/>
-          <td>1.15740740740741 &mult; 10-11</td>
+          <td>1.15740740740741 &mult; 10<sup>-11</sup></td>
           <td>m3.s-1</td>
           <td/>
         </tr>
@@ -4323,7 +4337,7 @@ more straightforward or more appropriate or both.
           <td/>
           <td>milliliter per hour</td>
           <td/>
-          <td>2.77777777777778 &mult; 10-10</td>
+          <td>2.77777777777778 &mult; 10<sup>-10</sup></td>
           <td>m3.s-1</td>
           <td/>
         </tr>
@@ -4359,7 +4373,7 @@ more straightforward or more appropriate or both.
           <td/>
           <td>milliliter per minute</td>
           <td/>
-          <td>1.66666666666667 &mult; 10-8</td>
+          <td>1.66666666666667 &mult; 10<sup>-8</sup></td>
           <td>m3.s-1</td>
           <td/>
         </tr>
@@ -4386,7 +4400,7 @@ more straightforward or more appropriate or both.
           <td/>
           <td>millimeter hour</td>
           <td/>
-          <td>2.77777777777778 &mult; 10-7</td>
+          <td>2.77777777777778 &mult; 10<sup>-7</sup></td>
           <td>m.s-1</td>
           <td/>
         </tr>
@@ -4404,7 +4418,7 @@ more straightforward or more appropriate or both.
           <td/>
           <td>millimole per 8-hour shift</td>
           <td/>
-          <td>2.0910196875 &mult; 1016</td>
+          <td>2.0910196875 &mult; 10<sup>16</sup></td>
           <td>s-1</td>
           <td/>
         </tr>
@@ -4440,7 +4454,7 @@ more straightforward or more appropriate or both.
           <td>mmol/kg/min</td>
           <td>millimole per kilogram and minute</td>
           <td>molar dose rate per patient body mass</td>
-          <td>1.00368945 &mult; 1016</td>
+          <td>1.00368945 &mult; 10<sup>16</sup></td>
           <td>g-1.s-1</td>
           <td/>
         </tr>
@@ -4449,7 +4463,7 @@ more straightforward or more appropriate or both.
           <td/>
           <td>millimole per hour</td>
           <td/>
-          <td>1.67281575 &mult; 1017</td>
+          <td>1.67281575 &mult; 10<sup>17</sup></td>
           <td>s-1</td>
           <td/>
         </tr>
@@ -4458,7 +4472,7 @@ more straightforward or more appropriate or both.
           <td/>
           <td>millimole per kilogram</td>
           <td>molar dose per patient body mass</td>
-          <td>6.0221367 &mult; 1017</td>
+          <td>6.0221367 &mult; 10<sup>17</sup></td>
           <td>g-1</td>
           <td/>
         </tr>
@@ -4467,7 +4481,7 @@ more straightforward or more appropriate or both.
           <td/>
           <td>millimole per liter</td>
           <td/>
-          <td>6.0221367 &mult; 1023</td>
+          <td>6.0221367 &mult; 10<sup>23</sup></td>
           <td>m-3</td>
           <td/>
         </tr>
@@ -4476,7 +4490,7 @@ more straightforward or more appropriate or both.
           <td/>
           <td>millimole per square meter</td>
           <td>molar dose per patient body surface area</td>
-          <td>6.0221367 &mult; 1020</td>
+          <td>6.0221367 &mult; 10<sup>20</sup></td>
           <td>m-2</td>
           <td/>
         </tr>
@@ -4485,7 +4499,7 @@ more straightforward or more appropriate or both.
           <td/>
           <td>millimole per minute</td>
           <td/>
-          <td>1.00368945 &mult; 1019</td>
+          <td>1.00368945 &mult; 10<sup>19</sup></td>
           <td>s-1</td>
           <td/>
         </tr>
@@ -4494,7 +4508,7 @@ more straightforward or more appropriate or both.
           <td>mol/kg/s</td>
           <td>mole per kilogram and second</td>
           <td/>
-          <td>6.0221367 &mult; 1020</td>
+          <td>6.0221367 &mult; 10<sup>20</sup></td>
           <td>g-1.s-1</td>
           <td/>
         </tr>
@@ -4503,7 +4517,7 @@ more straightforward or more appropriate or both.
           <td/>
           <td>mole per Kilogram</td>
           <td/>
-          <td>6.0221367 &mult; 1020</td>
+          <td>6.0221367 &mult; 10<sup>20</sup></td>
           <td>g-1</td>
           <td/>
         </tr>
@@ -4512,7 +4526,7 @@ more straightforward or more appropriate or both.
           <td/>
           <td>mole per liter</td>
           <td/>
-          <td>6.0221367 &mult; 1026</td>
+          <td>6.0221367 &mult; 10<sup>26</sup></td>
           <td>m-3</td>
           <td/>
         </tr>
@@ -4521,7 +4535,7 @@ more straightforward or more appropriate or both.
           <td/>
           <td>mole per cubic meter</td>
           <td/>
-          <td>6.0221367 &mult; 1023</td>
+          <td>6.0221367 &mult; 10<sup>23</sup></td>
           <td>m-3</td>
           <td/>
         </tr>
@@ -4530,7 +4544,7 @@ more straightforward or more appropriate or both.
           <td/>
           <td>mole per second</td>
           <td/>
-          <td>6.0221367 &mult; 1023</td>
+          <td>6.0221367 &mult; 10<sup>23</sup></td>
           <td>s-1</td>
           <td/>
         </tr>
@@ -4539,7 +4553,7 @@ more straightforward or more appropriate or both.
           <td/>
           <td>milliosmole per liter</td>
           <td/>
-          <td>6.0221367 &mult; 1023</td>
+          <td>6.0221367 &mult; 10<sup>23</sup></td>
           <td>m-3</td>
           <td/>
         </tr>
@@ -4593,7 +4607,7 @@ more straightforward or more appropriate or both.
           <td/>
           <td>nanogram per 8-hour shift</td>
           <td/>
-          <td>3.47222222222222 &mult; 10-14</td>
+          <td>3.47222222222222 &mult; 10<sup>-14</sup></td>
           <td>g.s-1</td>
           <td/>
         </tr>
@@ -4602,7 +4616,7 @@ more straightforward or more appropriate or both.
           <td>ng/kg/(8.h)</td>
           <td>nanogram per kilogram  and 8-hour shift</td>
           <td>mass dose rate per patient body mass</td>
-          <td>3.47222222222222 &mult; 10-17</td>
+          <td>3.47222222222222 &mult; 10<sup>-17</sup></td>
           <td>s-1</td>
           <td/>
         </tr>
@@ -4611,7 +4625,7 @@ more straightforward or more appropriate or both.
           <td>ng/kg/d</td>
           <td>nanogram per kilogram and day</td>
           <td>mass dose rate per patient body mass</td>
-          <td>1.15740740740741 &mult; 10-17</td>
+          <td>1.15740740740741 &mult; 10<sup>-17</sup></td>
           <td>s-1</td>
           <td/>
         </tr>
@@ -4620,7 +4634,7 @@ more straightforward or more appropriate or both.
           <td>ng/kg/h</td>
           <td>nanogram per kilogram and hour</td>
           <td>mass dose rate per patient body mass</td>
-          <td>2.77777777777778 &mult; 10-16</td>
+          <td>2.77777777777778 &mult; 10<sup>-16</sup></td>
           <td>s-1</td>
           <td/>
         </tr>
@@ -4629,7 +4643,7 @@ more straightforward or more appropriate or both.
           <td>ng/kg/min</td>
           <td>nanogram per kilogram and minute</td>
           <td>mass dose rate per patient body mass</td>
-          <td>1.66666666666667 &mult; 10-14</td>
+          <td>1.66666666666667 &mult; 10<sup>-14</sup></td>
           <td>s-1</td>
           <td/>
         </tr>
@@ -4638,7 +4652,7 @@ more straightforward or more appropriate or both.
           <td/>
           <td>nanogram per day</td>
           <td/>
-          <td>1.15740740740741 &mult; 10-14</td>
+          <td>1.15740740740741 &mult; 10<sup>-14</sup></td>
           <td>g.s-1</td>
           <td/>
         </tr>
@@ -4647,7 +4661,7 @@ more straightforward or more appropriate or both.
           <td/>
           <td>nanogram per hour</td>
           <td/>
-          <td>2.77777777777778 &mult; 10-13</td>
+          <td>2.77777777777778 &mult; 10<sup>-13</sup></td>
           <td>g.s-1</td>
           <td/>
         </tr>
@@ -4683,7 +4697,7 @@ more straightforward or more appropriate or both.
           <td/>
           <td>nanogram per minute</td>
           <td/>
-          <td>1.66666666666667 &mult; 10-11</td>
+          <td>1.66666666666667 &mult; 10<sup>-11</sup></td>
           <td>g.s-1</td>
           <td/>
         </tr>
@@ -4755,7 +4769,7 @@ more straightforward or more appropriate or both.
           <td/>
           <td>osmole per kilogram</td>
           <td/>
-          <td>6.0221367 &mult; 1020</td>
+          <td>6.0221367 &mult; 10<sup>20</sup></td>
           <td>g-1</td>
           <td/>
         </tr>
@@ -4764,7 +4778,7 @@ more straightforward or more appropriate or both.
           <td/>
           <td>osmole per liter</td>
           <td/>
-          <td>6.0221367 &mult; 1026</td>
+          <td>6.0221367 &mult; 10<sup>26</sup></td>
           <td>m-3</td>
           <td/>
         </tr>
@@ -4863,7 +4877,7 @@ more straightforward or more appropriate or both.
           <td/>
           <td>microequivalents</td>
           <td/>
-          <td>6.0221367 &mult; 1017</td>
+          <td>6.0221367 &mult; 10<sup>17</sup></td>
           <td>1</td>
           <td/>
         </tr>
@@ -4881,7 +4895,7 @@ more straightforward or more appropriate or both.
           <td/>
           <td>microgram per 8-hour shift</td>
           <td/>
-          <td>3.47222222222222 &mult; 10-11</td>
+          <td>3.47222222222222 &mult; 10<sup>-11</sup></td>
           <td>g.s-1</td>
           <td/>
         </tr>
@@ -4890,7 +4904,7 @@ more straightforward or more appropriate or both.
           <td>ug/kg/d</td>
           <td>microgram per kilogram and day</td>
           <td>mass dose rate per patient body mass</td>
-          <td>1.15740740740741 &mult; 10-14</td>
+          <td>1.15740740740741 &mult; 10<sup>-14</sup></td>
           <td>s-1</td>
           <td/>
         </tr>
@@ -4899,7 +4913,7 @@ more straightforward or more appropriate or both.
           <td>ug/kg/h</td>
           <td>microgram per kilogram and hour</td>
           <td>mass dose rate  per patient body mass</td>
-          <td>2.77777777777778 &mult; 10-13</td>
+          <td>2.77777777777778 &mult; 10<sup>-13</sup></td>
           <td>s-1</td>
           <td/>
         </tr>
@@ -4908,7 +4922,7 @@ more straightforward or more appropriate or both.
           <td>ug/kg/min</td>
           <td>microgram per kilogram and minute</td>
           <td>mass dose rate per patient body mass</td>
-          <td>1.66666666666667 &mult; 10-11</td>
+          <td>1.66666666666667 &mult; 10<sup>-11</sup></td>
           <td>s-1</td>
           <td/>
         </tr>
@@ -4917,7 +4931,7 @@ more straightforward or more appropriate or both.
           <td/>
           <td>microgram per day</td>
           <td/>
-          <td>1.15740740740741 &mult; 10-11</td>
+          <td>1.15740740740741 &mult; 10<sup>-11</sup></td>
           <td>g.s-1</td>
           <td/>
         </tr>
@@ -4944,7 +4958,7 @@ more straightforward or more appropriate or both.
           <td/>
           <td>microgram per hour</td>
           <td/>
-          <td>2.77777777777778 &mult; 10-10</td>
+          <td>2.77777777777778 &mult; 10<sup>-10</sup></td>
           <td>g.s-1</td>
           <td/>
         </tr>
@@ -4962,7 +4976,7 @@ more straightforward or more appropriate or both.
           <td/>
           <td>microgram per kilogram and 8-hour shift</td>
           <td>mass dose rate per patient body mass</td>
-          <td>3.47222222222222 &mult; 10-14</td>
+          <td>3.47222222222222 &mult; 10<sup>-14</sup></td>
           <td>s-1</td>
           <td/>
         </tr>
@@ -4989,7 +5003,7 @@ more straightforward or more appropriate or both.
           <td/>
           <td>microgram per minute</td>
           <td/>
-          <td>1.66666666666667 &mult; 10-8</td>
+          <td>1.66666666666667 &mult; 10<sup>-8</sup></td>
           <td>g.s-1</td>
           <td/>
         </tr>
@@ -4998,7 +5012,7 @@ more straightforward or more appropriate or both.
           <td/>
           <td>microkatal</td>
           <td/>
-          <td>6.0221367 &mult; 1017</td>
+          <td>6.0221367 &mult; 10<sup>17</sup></td>
           <td>s-1</td>
           <td/>
         </tr>
@@ -5016,7 +5030,7 @@ more straightforward or more appropriate or both.
           <td/>
           <td>micromole</td>
           <td/>
-          <td>6.0221367 &mult; 1017</td>
+          <td>6.0221367 &mult; 10<sup>17</sup></td>
           <td>1</td>
           <td/>
         </tr>
@@ -5034,7 +5048,7 @@ more straightforward or more appropriate or both.
           <td/>
           <td>micromole per liter</td>
           <td/>
-          <td>6.0221367 &mult; 1020</td>
+          <td>6.0221367 &mult; 10<sup>20</sup></td>
           <td>m-3</td>
           <td/>
         </tr>
@@ -5043,7 +5057,7 @@ more straightforward or more appropriate or both.
           <td/>
           <td>micromole per minute</td>
           <td/>
-          <td>1.00368945 &mult; 1016</td>
+          <td>1.00368945 &mult; 10<sup>16</sup></td>
           <td>s-1</td>
           <td/>
         </tr>
