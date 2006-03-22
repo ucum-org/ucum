@@ -1464,8 +1464,8 @@ base unit kelvin measures the same kind of quantity.
     <u:units id="si">
       <caption>SI units</caption>
 <u:unit id="600190" Code="mol" CODE="MOL" isMetric="yes"><name>mole</name><printSymbol>mol</printSymbol><property>amount of substance</property><value Unit="10*23" UNIT="10*23" value="6.0221367">6.0221367</value></u:unit>
-<u:unit id="100010" Code="sr" CODE="SR" isMetric="yes"><name>streadian</name><printSymbol>sr</printSymbol><property>solid angle</property><value Unit="rad2" UNIT="RAD2" value="1">1</value></u:unit>
-<u:unit id="100020" Code="Hz" CODE="HZ" isMetric="yes"><name>Herz</name><printSymbol>Hz</printSymbol><property>frequency</property><value Unit="s-1" UNIT="S-1" value="1">1</value></u:unit>
+<u:unit id="100010" Code="sr" CODE="SR" isMetric="yes"><name>steradian</name><printSymbol>sr</printSymbol><property>solid angle</property><value Unit="rad2" UNIT="RAD2" value="1">1</value></u:unit>
+<u:unit id="100020" Code="Hz" CODE="HZ" isMetric="yes"><name>Hertz</name><printSymbol>Hz</printSymbol><property>frequency</property><value Unit="s-1" UNIT="S-1" value="1">1</value></u:unit>
 <u:unit id="100030" Code="N" CODE="N" isMetric="yes"><name>Newton</name><printSymbol>N</printSymbol><property>force</property><value Unit="kg.m/s2" UNIT="KG.M/S2" value="1">1</value></u:unit>
 <u:unit id="100040" Code="Pa" CODE="PAL" isMetric="yes"><name>Pascal</name><printSymbol>Pa</printSymbol><property>pressure</property><value Unit="N/m2" UNIT="N/M2" value="1">1</value></u:unit>
 <u:unit id="100050" Code="J" CODE="J" isMetric="yes"><name>Joule</name><printSymbol>J</printSymbol><property>energy</property><value Unit="N.m" UNIT="N.M" value="1">1</value></u:unit>
