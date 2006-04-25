@@ -212,13 +212,13 @@
       <value Unit="10*23" UNIT="10*23" value="6.0221367">6.0221367</value>
    </unit>
    <unit Code="sr" CODE="SR" isMetric="yes" class="si">
-      <name>streadian</name>
+      <name>steradian</name>
       <printSymbol>sr</printSymbol>
       <property>solid angle</property>
       <value Unit="rad2" UNIT="RAD2" value="1">1</value>
    </unit>
    <unit Code="Hz" CODE="HZ" isMetric="yes" class="si">
-      <name>Herz</name>
+      <name>Hertz</name>
       <printSymbol>Hz</printSymbol>
       <property>frequency</property>
       <value Unit="s-1" UNIT="S-1" value="1">1</value>
@@ -288,7 +288,7 @@
       <printSymbol>&#176;C</printSymbol>
       <property>temperature</property>
       <value Unit="cel(1 K)" UNIT="CEL(1 K)">
-         <function/>
+         <function name="Cel" value="1" Unit="K"/>
       </value>
    </unit>
    <unit Code="T" CODE="T" isMetric="yes" class="si">
@@ -1263,7 +1263,7 @@
       <printSymbol>&#176;F</printSymbol>
       <property>temperature</property>
       <value Unit="degf(5 K/9)" UNIT="DEGF(5 K/9)">
-         <function/>
+         <function name="degF" value="5" Unit="K/9"/>
       </value>
    </unit>
    <unit Code="cal_[15]" CODE="CAL_[15]" isMetric="yes" class="heat">
@@ -1441,7 +1441,7 @@
       <printSymbol reverse="yes">X</printSymbol>
       <property>homeopathic potency</property>
       <value Unit="hpX(1 1)" UNIT="HPX(1 1)">
-         <function/>
+         <function name="hpX" value="1" Unit="1"/>
       </value>
    </unit>
    <unit Code="[hp_C]" CODE="[HP_C]" isMetric="no" class="clinical">
@@ -1449,7 +1449,7 @@
       <printSymbol reverse="yes">C</printSymbol>
       <property>homeopathic potency</property>
       <value Unit="hpC(1 1)" UNIT="hpc(1 1)">
-         <function/>
+         <function name="hpC" value="1" Unit="1"/>
       </value>
    </unit>
    <unit Code="eq" CODE="EQ" isMetric="yes" class="chemical">
@@ -1469,7 +1469,7 @@
       <printSymbol>pH</printSymbol>
       <property>acidity</property>
       <value Unit="pH(1 mol/l)" UNIT="PH(1 MOL/L)">
-         <function/>
+         <function name="pH" value="1" Unit="mol/l"/>
       </value>
    </unit>
    <unit Code="g%" CODE="G%" isMetric="yes" class="chemical">
@@ -1591,7 +1591,7 @@
       <printSymbol>Np</printSymbol>
       <property>level</property>
       <value Unit="ln(1 1)" UNIT="LN(1 1)">
-         <function/>
+         <function name="ln" value="1" Unit="1"/>
       </value>
    </unit>
    <unit Code="B" CODE="B" isMetric="yes" class="levels">
@@ -1599,7 +1599,7 @@
       <printSymbol>B</printSymbol>
       <property>level</property>
       <value Unit="lg(1 1)" UNIT="LG(1 1)">
-         <function/>
+         <function name="lg" value="1" Unit="1"/>
       </value>
    </unit>
    <unit Code="B[SPL]" CODE="B[SPL]" isMetric="yes" class="levels">
@@ -1607,7 +1607,7 @@
       <printSymbol>B(SPL)</printSymbol>
       <property>pressure level</property>
       <value Unit="2lg(2 10*-5.Pa)" UNIT="2LG(2 10*-5.PAL)">
-         <function/>
+         <function name="lgTimes2" value="2" Unit="10*-5.Pa"/>
       </value>
    </unit>
    <unit Code="B[V]" CODE="B[V]" isMetric="yes" class="levels">
@@ -1615,7 +1615,7 @@
       <printSymbol>B(V)</printSymbol>
       <property>electric potential level</property>
       <value Unit="2lg(1 V)" UNIT="2LG(1 V)">
-         <function/>
+         <function name="lgTimes2" value="1" Unit="V"/>
       </value>
    </unit>
    <unit Code="B[mV]" CODE="B[MV]" isMetric="yes" class="levels">
@@ -1623,7 +1623,7 @@
       <printSymbol>B(mV)</printSymbol>
       <property>electric potential level</property>
       <value Unit="2lg(1 mV)" UNIT="2LG(1 MV)">
-         <function/>
+         <function name="lgTimes2" value="1" Unit="mV"/>
       </value>
    </unit>
    <unit Code="B[uV]" CODE="B[UV]" isMetric="yes" class="levels">
@@ -1631,7 +1631,7 @@
       <printSymbol>B(&#956;V)</printSymbol>
       <property>electric potential level</property>
       <value Unit="2lg(1 uV)" UNIT="2LG(1 UV)">
-         <function/>
+         <function name="lgTimes2" value="1" Unit="uV"/>
       </value>
    </unit>
    <unit Code="B[W]" CODE="B[W]" isMetric="yes" class="levels">
@@ -1639,7 +1639,7 @@
       <printSymbol>B(W)</printSymbol>
       <property>power level</property>
       <value Unit="lg(1 W)" UNIT="LG(1 W)">
-         <function/>
+         <function name="lg" value="1" Unit="W"/>
       </value>
    </unit>
    <unit Code="B[kW]" CODE="B[KW]" isMetric="yes" class="levels">
@@ -1647,7 +1647,7 @@
       <printSymbol>B(kW)</printSymbol>
       <property>power level</property>
       <value Unit="lg(1 kW)" UNIT="LG(1 KW)">
-         <function/>
+         <function name="lg" value="1" Unit="kW"/>
       </value>
    </unit>
    <unit Code="st" CODE="STR" isMetric="yes" class="misc">
@@ -1720,7 +1720,7 @@
       </printSymbol>
       <property>amount of information</property>
       <value Unit="ld(1 1)" UNIT="ld(1 1)">
-         <function/>
+         <function name="ld" value="1" Unit="1"/>
       </value>
    </unit>
    <unit Code="bit" CODE="BIT" isMetric="yes" class="infotech">

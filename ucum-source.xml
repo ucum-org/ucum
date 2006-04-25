@@ -1476,7 +1476,7 @@ base unit kelvin measures the same kind of quantity.
 <u:unit id="100100" Code="Ohm" CODE="OHM" isMetric="yes"><name>Ohm</name><printSymbol>&Omega;</printSymbol><property>electric resistance</property><value Unit="V/A" UNIT="V/A" value="1">1</value></u:unit>
 <u:unit id="100110" Code="S" CODE="SIE" isMetric="yes"><name>Siemens</name><printSymbol>S</printSymbol><property>electric conductance</property><value Unit="Ohm-1" UNIT="OHM-1" value="1">1</value></u:unit>
 <u:unit id="100120" Code="Wb" CODE="WB" isMetric="yes"><name>Weber</name><printSymbol>Wb</printSymbol><property>magentic flux</property><value Unit="V.s" UNIT="V.S" value="1">1</value></u:unit>
-<u:unit id="100130" Code="Cel" CODE="CEL" isMetric="yes"><name>degree Celsius</name><printSymbol>&deg;C</printSymbol><property>temperature</property><value Unit="cel(1 K)" UNIT="CEL(1 K)" ><function/></value></u:unit>
+<u:unit id="100130" Code="Cel" CODE="CEL" isMetric="yes"><name>degree Celsius</name><printSymbol>&deg;C</printSymbol><property>temperature</property><value Unit="cel(1 K)" UNIT="CEL(1 K)" ><function name="Cel" value="1" Unit="K"/></value></u:unit>
 <u:unit id="100140" Code="T" CODE="T" isMetric="yes"><name>Tesla</name><printSymbol>T</printSymbol><property>magnetic flux density</property><value Unit="Wb/m2" UNIT="WB/M2" value="1">1</value></u:unit>
 <u:unit id="100150" Code="H" CODE="H" isMetric="yes"><name>Henry</name><printSymbol>H</printSymbol><property>inductance</property><value Unit="Wb/A" UNIT="WB/A" value="1">1</value></u:unit>
 <u:unit id="100160" Code="lm" CODE="LM" isMetric="yes"><name>lumen</name><printSymbol>lm</printSymbol><property>luminous flux</property><value Unit="cd.sr" UNIT="CD.SR" value="1">1</value></u:unit>
@@ -2382,7 +2382,7 @@ convert from degree Fahrenheit back to kelvin.
 
     <u:units id="heat">
       <caption>Other Units for Heat and Temperature</caption>
-<u:unit id="600030" Code="[degF]" CODE="[DEGF]" isMetric="no"><name>degree Fahrenheit</name><printSymbol>&deg;F</printSymbol><property>temperature</property><value Unit="degf(5 K/9)" UNIT="DEGF(5 K/9)" ><function/></value></u:unit>
+<u:unit id="600030" Code="[degF]" CODE="[DEGF]" isMetric="no"><name>degree Fahrenheit</name><printSymbol>&deg;F</printSymbol><property>temperature</property><value Unit="degf(5 K/9)" UNIT="DEGF(5 K/9)" ><function name="degF" value="5" Unit="K/9"/></value></u:unit>
 <u:unit id="610010" Code="cal_[15]" CODE="CAL_[15]" isMetric="yes"><name>calorie at 15&nbsp;&deg;C</name><printSymbol>cal<sub>15&deg;C</sub></printSymbol><property>energy</property><value Unit="J" UNIT="J" value="4.18580">4.18580</value></u:unit>
 <u:unit id="610020" Code="cal_[20]" CODE="CAL_[20]" isMetric="yes"><name>calorie at 20&nbsp;&deg;C</name><printSymbol>cal<sub>20&deg;C</sub></printSymbol><property>energy</property><value Unit="J" UNIT="J" value="4.18190">4.18190</value></u:unit>
 <u:unit id="610030" Code="cal_m" CODE="CAL_M" isMetric="yes"><name>mean calorie</name><printSymbol>cal<sub>m</sub></printSymbol><property>energy</property><value Unit="J" UNIT="J" value="4.19002">4.19002</value></u:unit>
@@ -2508,8 +2508,8 @@ from the potency value back to the number fraction.
 <u:unit id="600260" Code="[drp]" CODE="[DRP]" isMetric="no"><name>drop</name><printSymbol>drp</printSymbol><property>volume</property><value Unit="ml/12" UNIT="ML/12" value="1">1</value></u:unit>
 <u:unit id="600550" Code="[hnsf'U]" CODE="[HNSF'U]" isMetric="no"><name>Hounsfield unit</name><printSymbol>HF</printSymbol><property>x-ray attenuation</property><value Unit="1" UNIT="1" value="1">1</value></u:unit>
 <u:unit id="600555" Code="[MET]" CODE="[MET]" isMetric="no"><name>metabolic equivalent</name><printSymbol>MET</printSymbol><property>metabolic cost of physical activity</property><value Unit="mL/min/kg" UNIT="ML/MIN/KG" value="3.5">3.5</value></u:unit>
-<u:unit id="600556" Code="[hp_X]" CODE="[HP_X]" isMetric="no"><name>homeopathic potency of decimal series</name><printSymbol reverse="yes">X</printSymbol><property>homeopathic potency</property><value Unit="hpX(1 1)" UNIT="HPX(1 1)"><function/></value></u:unit>
-<u:unit id="600557" Code="[hp_C]" CODE="[HP_C]" isMetric="no"><name>homeopathic potency of centesimal series</name><printSymbol reverse="yes">C</printSymbol><property>homeopathic potency</property><value Unit="hpC(1 1)" UNIT="hpc(1 1)"><function/></value></u:unit>
+<u:unit id="600556" Code="[hp_X]" CODE="[HP_X]" isMetric="no"><name>homeopathic potency of decimal series</name><printSymbol reverse="yes">X</printSymbol><property>homeopathic potency</property><value Unit="hpX(1 1)" UNIT="HPX(1 1)"><function name="hpX" value="1" Unit="1"/></value></u:unit>
+<u:unit id="600557" Code="[hp_C]" CODE="[HP_C]" isMetric="no"><name>homeopathic potency of centesimal series</name><printSymbol reverse="yes">C</printSymbol><property>homeopathic potency</property><value Unit="hpC(1 1)" UNIT="hpc(1 1)"><function name="hpC" value="1" Unit="1"/></value></u:unit>
     </u:units>
 
     <comment>
@@ -2591,7 +2591,7 @@ to convert from the pH value back to moles per liter.
       <caption>Units used in Chemical and Biomedical Laboratories</caption>
 <u:unit id="600200" Code="eq" CODE="EQ" isMetric="yes"><name>equivalents</name><printSymbol>eq</printSymbol><property>amount of substance</property><value Unit="mol" UNIT="MOL" value="1">1</value></u:unit>
 <u:unit id="600240" Code="osm" CODE="OSM" isMetric="yes"><name>osmole of dissolved particles</name><printSymbol>osm</printSymbol><property>amount of substance</property><value Unit="mol" UNIT="MOL" value="1">1</value></u:unit>
-<u:unit id="600210" Code="[pH]" CODE="[PH]" isMetric="no"><name>pH</name><printSymbol>pH</printSymbol><property>acidity</property><value Unit="pH(1 mol/l)" UNIT="PH(1 MOL/L)" ><function/></value></u:unit>
+<u:unit id="600210" Code="[pH]" CODE="[PH]" isMetric="no"><name>pH</name><printSymbol>pH</printSymbol><property>acidity</property><value Unit="pH(1 mol/l)" UNIT="PH(1 MOL/L)" ><function name="pH" value="1" Unit="mol/l"/></value></u:unit>
 <u:unit id="600250" Code="g%" CODE="G%" isMetric="yes"><name>gram percent</name><printSymbol>g%</printSymbol><property>mass fraction</property><value Unit="g/dl" UNIT="G/DL" value="1">1</value></u:unit>
 <u:unit id="600420" Code="[S]" CODE="[S]" isMetric="no"><name>Svedberg unit</name><printSymbol>S</printSymbol><property>sedimentation coefficient</property><value Unit="10*-13.s" UNIT="10*-13.S" value="1">1</value></u:unit>
 <u:unit id="600530" Code="[HPF]" CODE="[HPF]" isMetric="no"><name>high power field</name><printSymbol>HPF</printSymbol><property>view area in microscope</property><value Unit="1" UNIT="1" value="1">1</value></u:unit>
@@ -2758,14 +2758,14 @@ decadic logarithm times two with their respective inverse functions.
     </p>
     <u:units id="levels">
       <caption>Levels</caption>
-<u:unit id="600100" Code="Np" CODE="NEP" isMetric="yes"><name>neper</name><printSymbol>Np</printSymbol><property>level</property><value Unit="ln(1 1)" UNIT="LN(1 1)" ><function/></value></u:unit>
-<u:unit id="600110" Code="B" CODE="B" isMetric="yes"><name>bel</name><printSymbol>B</printSymbol><property>level</property><value Unit="lg(1 1)" UNIT="LG(1 1)" ><function/></value></u:unit>
-<u:unit id="600130" Code="B[SPL]" CODE="B[SPL]" isMetric="yes"><name>bel sound pressure</name><printSymbol>B(SPL)</printSymbol><property>pressure level</property><value Unit="2lg(2 10*-5.Pa)" UNIT="2LG(2 10*-5.PAL)" ><function/></value></u:unit>
-<u:unit id="600140" Code="B[V]" CODE="B[V]" isMetric="yes"><name>bel volt</name><printSymbol>B(V)</printSymbol><property>electric potential level</property><value Unit="2lg(1 V)" UNIT="2LG(1 V)" ><function/></value></u:unit>
-<u:unit id="600150" Code="B[mV]" CODE="B[MV]" isMetric="yes"><name>bel millivolt</name><printSymbol>B(mV)</printSymbol><property>electric potential level</property><value Unit="2lg(1 mV)" UNIT="2LG(1 MV)" ><function/></value></u:unit>
-<u:unit id="600160" Code="B[uV]" CODE="B[UV]" isMetric="yes"><name>bel microvolt</name><printSymbol>B(&mu;V)</printSymbol><property>electric potential level</property><value Unit="2lg(1 uV)" UNIT="2LG(1 UV)" ><function/></value></u:unit>
-<u:unit id="600170" Code="B[W]" CODE="B[W]" isMetric="yes"><name>bel watt</name><printSymbol>B(W)</printSymbol><property>power level</property><value Unit="lg(1 W)" UNIT="LG(1 W)" ><function/></value></u:unit>
-<u:unit id="600180" Code="B[kW]" CODE="B[KW]" isMetric="yes"><name>bel kilowatt</name><printSymbol>B(kW)</printSymbol><property>power level</property><value Unit="lg(1 kW)" UNIT="LG(1 KW)" ><function/></value></u:unit>
+<u:unit id="600100" Code="Np" CODE="NEP" isMetric="yes"><name>neper</name><printSymbol>Np</printSymbol><property>level</property><value Unit="ln(1 1)" UNIT="LN(1 1)" ><function name="ln" value="1" Unit="1"/></value></u:unit>
+<u:unit id="600110" Code="B" CODE="B" isMetric="yes"><name>bel</name><printSymbol>B</printSymbol><property>level</property><value Unit="lg(1 1)" UNIT="LG(1 1)" ><function name="lg" value="1" Unit="1"/></value></u:unit>
+<u:unit id="600130" Code="B[SPL]" CODE="B[SPL]" isMetric="yes"><name>bel sound pressure</name><printSymbol>B(SPL)</printSymbol><property>pressure level</property><value Unit="2lg(2 10*-5.Pa)" UNIT="2LG(2 10*-5.PAL)" ><function name="lgTimes2" value="2" Unit="10*-5.Pa"/></value></u:unit>
+<u:unit id="600140" Code="B[V]" CODE="B[V]" isMetric="yes"><name>bel volt</name><printSymbol>B(V)</printSymbol><property>electric potential level</property><value Unit="2lg(1 V)" UNIT="2LG(1 V)" ><function name="lgTimes2" value="1" Unit="V"/></value></u:unit>
+<u:unit id="600150" Code="B[mV]" CODE="B[MV]" isMetric="yes"><name>bel millivolt</name><printSymbol>B(mV)</printSymbol><property>electric potential level</property><value Unit="2lg(1 mV)" UNIT="2LG(1 MV)" ><function name="lgTimes2" value="1" Unit="mV"/></value></u:unit>
+<u:unit id="600160" Code="B[uV]" CODE="B[UV]" isMetric="yes"><name>bel microvolt</name><printSymbol>B(&mu;V)</printSymbol><property>electric potential level</property><value Unit="2lg(1 uV)" UNIT="2LG(1 UV)" ><function name="lgTimes2" value="1" Unit="uV"/></value></u:unit>
+<u:unit id="600170" Code="B[W]" CODE="B[W]" isMetric="yes"><name>bel watt</name><printSymbol>B(W)</printSymbol><property>power level</property><value Unit="lg(1 W)" UNIT="LG(1 W)" ><function name="lg" value="1" Unit="W"/></value></u:unit>
+<u:unit id="600180" Code="B[kW]" CODE="B[KW]" isMetric="yes"><name>bel kilowatt</name><printSymbol>B(kW)</printSymbol><property>power level</property><value Unit="lg(1 kW)" UNIT="LG(1 KW)" ><function name="lg" value="1" Unit="kW"/></value></u:unit>
     </u:units>
 
     <comment>
@@ -2900,7 +2900,7 @@ usually carries more than one bit of information.
 
     <u:units id="infotech">
       <caption>Units used in Information Science and Technology</caption>
-<u:unit id="800010" Code="bit_s" CODE="BIT_S" isMetric="no"><name>bit</name><printSymbol>bit<sub>s</sub></printSymbol><property>amount of information</property><value Unit="ld(1 1)" UNIT="ld(1 1)" ><function/></value></u:unit>
+<u:unit id="800010" Code="bit_s" CODE="BIT_S" isMetric="no"><name>bit</name><printSymbol>bit<sub>s</sub></printSymbol><property>amount of information</property><value Unit="ld(1 1)" UNIT="ld(1 1)" ><function name="ld" value="1" Unit="1"/></value></u:unit>
 <u:unit id="800020" Code="bit" CODE="BIT" isMetric="yes"><name>bit</name><printSymbol>bit</printSymbol><property>amount of information</property><value Unit="1" UNIT="1" value="1">1</value></u:unit>
 <u:unit id="800030" Code="By" CODE="BY" isMetric="yes"><name>byte</name><printSymbol>B</printSymbol><property>amount of information</property><value Unit="bit" UNIT="bit" value="8">8</value></u:unit>
 <u:unit id="800030" Code="Bd" CODE="Bd" isMetric="yes"><name>baud</name><printSymbol>Bd</printSymbol><property>signal transmission rate</property><value Unit="/s" UNIT="/s" value="1">1</value></u:unit>
