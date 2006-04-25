@@ -66,8 +66,8 @@ base cd
 [ppb] = 1 10*-9 nonmetric  # parts per billion
 [pptr] = 1 10*-12 nonmetric  # parts per trillion
 mol = 6.0221367 10*23 metric  # mole
-sr = 1 rad2 metric  # streadian
-Hz = 1 s-1 metric  # Herz
+sr = 1 rad2 metric  # steradian
+Hz = 1 s-1 metric  # Hertz
 N = 1 kg.m/s2 metric  # Newton
 Pa = 1 N/m2 metric  # Pascal
 J = 1 N.m metric  # Joule
