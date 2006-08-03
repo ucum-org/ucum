@@ -2825,6 +2825,7 @@ standarized by other bodies and are out of scope of &TUCUM;.
 <u:unit id="600020" Code="sph" CODE="SPH" isMetric="no"><name>spere</name><printSymbol>sph</printSymbol><property>solid angle</property><value Unit="[pi].sr" UNIT="[PI].SR" value="4">4</value></u:unit>
 <u:unit id="600520" Code="[car_m]" CODE="[CAR_M]" isMetric="no"><name>metric carat</name><printSymbol>ct<sub>m</sub></printSymbol><property>mass</property><value Unit="g" UNIT="G" value="0.2">0.2</value></u:unit>
 <u:unit id="600521" Code="[car_Au]" CODE="[CAR_AU]" isMetric="no"><name>carat of gold alloys</name><printSymbol>ct<sub><r>Au</r></sub></printSymbol><property>mass fraction</property><value Unit="/24" UNIT="/24" value="1">1</value></u:unit>
+<u:unit id="600522" Code="[smoot]" CODE="[SMOOT]" isMetric="no"><name>Smoot</name><printSymbol></printSymbol><property>length</property><value Unit="[in_i]" UNIT="[IN_I]" value="67">67</value></u:unit>
     </u:units>
 
     <comment>
