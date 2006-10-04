@@ -1911,7 +1911,7 @@ exponents 2 and 3 respectively as shown in the column
     </p>
     <u:units id="intcust" omit="printSymbol">
       <caption>International customary units</caption>
-<u:unit id="500010" Code="[in_i]" CODE="[IN_I]" isMetric="no"><name>inch</name><printSymbol>in, ''</printSymbol><property>length</property><value Unit="cm" UNIT="CM" value="2.54">2.54</value></u:unit>
+<u:unit id="500010" Code="[in_i]" CODE="[IN_I]" isMetric="no"><name>inch</name><printSymbol>in, ''</printSymbol><property>length</property><value Unit="cm" UNIT="CM" value="254e-2">2.54</value></u:unit>
 <u:unit id="500030" Code="[ft_i]" CODE="[FT_I]" isMetric="no"><name>foot</name><printSymbol>ft, '</printSymbol><property>length</property><value Unit="[in_i]" UNIT="[IN_I]" value="12">12</value></u:unit>
 <u:unit id="500040" Code="[yd_i]" CODE="[YD_I]" isMetric="no"><name>yard</name><printSymbol>yd</printSymbol><property>length</property><value Unit="[ft_i]" UNIT="[FT_I]" value="3">3</value></u:unit>
 <u:unit id="500050" Code="[mi_i]" CODE="[MI_I]" isMetric="no"><name>statute mile</name><printSymbol>mi</printSymbol><property>length</property><value Unit="[ft_i]" UNIT="[FT_I]" value="5280">5280</value></u:unit>
