@@ -736,7 +736,7 @@
       <name>inch</name>
       <printSymbol>in, ''</printSymbol>
       <property>length</property>
-      <value Unit="cm" UNIT="CM" value="2.54">2.54</value>
+      <value Unit="cm" UNIT="CM" value="254e-2">2.54</value>
    </unit>
    <unit Code="[ft_i]" CODE="[FT_I]" isMetric="no" class="intcust">
       <name>foot</name>
@@ -1713,6 +1713,12 @@
       </printSymbol>
       <property>mass fraction</property>
       <value Unit="/24" UNIT="/24" value="1">1</value>
+   </unit>
+   <unit Code="[smoot]" CODE="[SMOOT]" isMetric="no" class="misc">
+      <name>Smoot</name>
+      <printSymbol/>
+      <property>length</property>
+      <value Unit="[in_i]" UNIT="[IN_I]" value="67">67</value>
    </unit>
    <unit Code="bit_s" CODE="BIT_S" isMetric="no" class="infotech">
       <name>bit</name>
