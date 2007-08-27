@@ -2493,6 +2493,15 @@ homeopathic potency value of the C-series, and <v>f</v><sub>hp
 C</sub><sup>-1</sup>(<v>x</v>) = 100<sup>-<v>x</v></sup> to convert
 from the potency value back to the number fraction.
 </verse>
+
+<verse>
+The function pair denoted &ldquo;<code>tan100(1 deg)</code>&rdquo; is
+defined as <v>f</v><sub>PD</sub>(<v>&alpha;</v>) = tan(<v>&alpha;</v>) * 100 to
+convert from a plane angle <v>&alpha;</v> to a prism diopter value (or a
+slope percent value) and
+<v>f</v><sub>PD</sub><sup>-1</sup>(<v>x</v>) = arctan(<v>x / 100</v>) to
+convert from prism diopter (or slope percent) value <v>x</v> back to a plane angle.
+</verse>
     </p>
 
     <u:units id="clinical">
@@ -2503,6 +2512,8 @@ from the potency value back to the number fraction.
 <u:unit id="600460" Code="[in_i'Hg]" CODE="[IN_i'HG]" isMetric="no"><name>inch of mercury column</name><printSymbol>in&nbsp;Hg</printSymbol><property>pressure</property><value Unit="m[Hg].[in_i]/m" UNIT="M[HG].[IN_I]/M" value="1">1</value></u:unit>
 <u:unit id="600560" Code="[PRU]" CODE="[PRU]" isMetric="no"><name>peripheral vascular resistance unit</name><printSymbol>P.R.U.</printSymbol><property>fluid resistance</property><value Unit="mm[Hg].s/ml" UNIT="MM[HG].S/ML" value="1">1</value></u:unit>
 <u:unit id="600270" Code="[diop]" CODE="[DIOP]" isMetric="no"><name>diopter</name><printSymbol>dpt</printSymbol><property>refraction of a lens</property><value Unit="/m" UNIT="/M" value="1">1</value></u:unit>
+<u:unit id="600270" Code="[p'diop]" CODE="[P'DIOP]" isMetric="no"><name>prism diopter</name><printSymbol>PD</printSymbol><property>refraction of a prism</property><value Unit="100tan(1 deg)" UNIT="100TAN(1 DEG)"><function name="tanTimes100" value="1" Unit="deg"/></value></u:unit>
+<u:unit id="600270" Code="%[slope]" CODE="%[SLOPE]" isMetric="no"><name>percent of slope</name><printSymbol>%</printSymbol><property>slope</property><value Unit="100tan(1 deg)" UNIT="100TAN(1 DEG)"><function name="100tan" value="1" Unit="deg"/></value></u:unit>
 <u:unit id="500011" Code="[mesh_i]" CODE="[MESH_I]" isMetric="no"><name>mesh</name><property>lineic number</property><value Unit="/[in_i]" UNIT="/[IN_I]" value="1">1</value></u:unit>
 <u:unit id="600275" Code="[Ch]" CODE="[CH]" isMetric="no"><name>Charri&egrave;re</name><name>french</name><printSymbol>Ch</printSymbol><property>gauge of catheters</property><value Unit="mm/[pi]" UNIT="MM/[PI]" value="1">1</value></u:unit>
 <u:unit id="600260" Code="[drp]" CODE="[DRP]" isMetric="no"><name>drop</name><printSymbol>drp</printSymbol><property>volume</property><value Unit="ml/12" UNIT="ML/12" value="1">1</value></u:unit>

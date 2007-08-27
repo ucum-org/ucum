@@ -1406,6 +1406,22 @@
       <property>refraction of a lens</property>
       <value Unit="/m" UNIT="/M" value="1">1</value>
    </unit>
+   <unit Code="[p'diop]" CODE="[P'DIOP]" isMetric="no" class="clinical">
+      <name>prism diopter</name>
+      <printSymbol>PD</printSymbol>
+      <property>refraction of a prism</property>
+      <value Unit="100tan(1 deg)" UNIT="100TAN(1 DEG)">
+         <function name="100tan" value="1" Unit="deg"/>
+      </value>
+   </unit>
+   <unit Code="%[slope]" CODE="%[SLOPE]" isMetric="no" class="clinical">
+      <name>percent of slope</name>
+      <printSymbol>%</printSymbol>
+      <property>slope</property>
+      <value Unit="100tan(1 deg)" UNIT="100TAN(1 DEG)">
+         <function name="100tan" value="1" Unit="deg"/>
+      </value>
+   </unit>
    <unit Code="[mesh_i]" CODE="[MESH_I]" isMetric="no" class="clinical">
       <name>mesh</name>
       <property>lineic number</property>
