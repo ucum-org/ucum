@@ -1863,10 +1863,10 @@ standard for it, and because defining print symbols is out of scope of
 whatever print symbols are being used. According to <pref
 from="para-underscore"/>, &TUCUM; uses the underscore to denote those
 subscripts, and also encloses the entire unit atom into square
-brackets. Hence, the symbols for the U.S. survey foot and the British
-Imperial foot are defined as &ldquo;<code>[ft_i]</code>,&rdquo;
-&ldquo;<code>[ft_us]</code>,&rdquo; and
-&ldquo;<code>[ft_br]</code>&rdquo; respectively.
+brackets. Hence, the symbols for the international foot, the
+U.S. survey foot and the British Imperial foot are defined as
+&ldquo;<code>[ft_i]</code>,&rdquo; &ldquo;<code>[ft_us]</code>,&rdquo;
+and &ldquo;<code>[ft_br]</code>&rdquo; respectively.
       </p>
       <p>
 Prospective users of &TUCUM; may be disappointed by the fact that

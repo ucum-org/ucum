@@ -173,7 +173,8 @@
       <name>the number pi</name>
       <printSymbol>&#960;</printSymbol>
       <property>number</property>
-      <value Unit="1" UNIT="1" value="3.1415926535897932384626433832795028841971693993751058209749445923">&#960;</value>
+      <value Unit="1" UNIT="1"
+             value="3.1415926535897932384626433832795028841971693993751058209749445923">&#960;</value>
    </unit>
    <unit Code="%" CODE="%" isMetric="no" class="dimless">
       <name>percent</name>
@@ -1410,15 +1411,15 @@
       <name>prism diopter</name>
       <printSymbol>PD</printSymbol>
       <property>refraction of a prism</property>
-      <value Unit="100tan(1 deg)" UNIT="100TAN(1 DEG)">
-         <function name="100tan" value="1" Unit="deg"/>
+      <value Unit="100tan(1 rad)" UNIT="100TAN(1 RAD)">
+         <function name="tanTimes100" value="1" Unit="deg"/>
       </value>
    </unit>
    <unit Code="%[slope]" CODE="%[SLOPE]" isMetric="no" class="clinical">
       <name>percent of slope</name>
       <printSymbol>%</printSymbol>
       <property>slope</property>
-      <value Unit="100tan(1 deg)" UNIT="100TAN(1 DEG)">
+      <value Unit="100tan(1 rad)" UNIT="100TAN(1 RAD)">
          <function name="100tan" value="1" Unit="deg"/>
       </value>
    </unit>
