@@ -46,10 +46,10 @@
 	xmlns:hl7v3dtMapping='urn::hl7v3dtMapping'
         xmlns:hl7="urn:hl7.org"
 	xmlns:u="http://aurora.regenstrief.org/UCUM"
-	xmlns:saxon="http://icl.com/saxon"
+	xmlns:saxon="http://saxon.sf.net/"
         extension-element-prefixes="saxon"
 	exclude-result-prefixes="xsd hl7 hl7v3dtMapping saxon u"
-	version='1.0'>
+	version='2.0'>
 
 <xsl:import href="xml-verbatim.xsl"/>
 <xsl:import href="v3dt-schema.xsl"/>
@@ -249,7 +249,7 @@
     <xsl:apply-templates mode="inherit" select="ancestor::prop[1]"/>
   </xsl:variable>
   <emph>
-    <xsl:value-of select='$theprop/@shortname'/>
+    <xsl:value-of select='$theprop/*/@shortname'/>
     <xsl:apply-templates/>
   </emph>
 </xsl:template>

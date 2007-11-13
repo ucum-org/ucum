@@ -1,4 +1,4 @@
-XSLTPROC=saxon8
+XSLTPROC=java -jar saxon8.jar
 
 all: ucum.html ucum-cs.units ucum-ci.units ucum-essence.xml
 
