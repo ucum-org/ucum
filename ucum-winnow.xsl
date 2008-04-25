@@ -9,7 +9,7 @@
 
 <xsl:template match="/">
   <root>
-    <xsl:apply-templates select="@*|node()"/>
+    <xsl:apply-templates select="node()"/>
   </root>
 </xsl:template>
 
@@ -32,8 +32,8 @@
 <xsl:template match="u:base-unit">
   <xsl:element name="{local-name()}">
     <xsl:apply-templates select="@*"/>
-    <xsl:if test="function">
-      <xsl:attribute name="isSpecial">text</xsl:attribute>
+    <xsl:if test="value/function">
+       <xsl:message terminate="yes">A special unit cannot be a base unit.</xsl:message>
     </xsl:if>
     <xsl:apply-templates select="node()"/>
   </xsl:element>
@@ -48,8 +48,8 @@
 <xsl:template match="u:unit">
   <xsl:element name="{local-name()}">
     <xsl:apply-templates select="@*"/>
-    <xsl:if test="function">
-      <xsl:attribute name="isSpecial">text</xsl:attribute>
+    <xsl:if test="value/function">
+      <xsl:attribute name="isSpecial">yes</xsl:attribute>
     </xsl:if>
     <xsl:attribute name="class">
       <xsl:value-of select="ancestor::u:units/@id"/>
@@ -57,7 +57,7 @@
     <xsl:apply-templates select="node()"/>
   </xsl:element>
 </xsl:template>
-<xsl:template match="u:unit/@Code|u:unit/@CODE|u:unit/@isMetric">
+<xsl:template match="u:unit/@Code|u:unit/@CODE|u:unit/@isMetric|u:unit/@isArbitrary">
   <xsl:copy/>
 </xsl:template>
 <xsl:template match="u:unit/value|u:unit/printSymbol|u:unit/name|u:unit/property">

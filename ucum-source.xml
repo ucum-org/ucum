@@ -55,49 +55,31 @@
 <spec xmlns:u="http://aurora.regenstrief.org/UCUM">
 <header>
   <title>The Unified Code for Units of Measure</title>
-  <version>1.6 (contains important corrections)</version>
+  <version>1.7</version>
   <revision>$Revision$</revision>
   <date>$Date$</date>
   <authlist>
     <author>
       <name>Gunther Schadow</name>
-      <affiliation>Regenstrief Institute for Health Care and Indiana
-      University School of Medicine</affiliation>
+      <affiliation>Regenstrief Institute and Indiana University School of Informatics</affiliation>
       <email href="gschadow@regenstrief.org"/>
     </author>
     <author>
       <name>Clement J. McDonald</name>
-      <affiliation>Regenstrief Institute for Health Care and Indiana
-      University School of Medicine</affiliation>
+      <affiliation>National Library of Medicine, Lister Hill</affiliation>
       <email href="cmcdonald@regenstrief.org"/>
     </author>
   </authlist>
-  <copyright>1998-2005, Regenstrief Institute for
-  Health Care. All rigthts reserved.</copyright>
+  <copyright>1998-2008, Regenstrief Institute, Inc. All rigthts reserved.</copyright>
 </header>
 
 <body>
-  <p><strong>IMPORTANT SPECIAL RELEASE NOTE</strong></p>
-  <p><strong>Ever since we changed the internal maintenance of &TUCUM; to
-XML (which happened after release 1.4 in May of 2002) the definition
-of some units that used exponential notation for the magnitude was 
-incorrect. A systematic text-conversion error had caused the minus
-sign and the first digit of all exponents to be deleted. This mostly
-affected natural constants, such as parsec, proton mass, electron
-charge, Boltzman's constant, and all units that are defined based 
-on these. Fortunately these units are rather rare in everyday use in
-trade and medicine, however, we must urge everyone to regenerate
-their tables, dictionaries, and knowledge bases, and check their data
-immediately based on this corrected release of &TUCUM;</strong></p>
-    <p>The units directly affected by this error were: unified atomic
-mass unit (u), parsec (pc), Planck's constant [h], Boltzman's
-constant [k], electric permittivity ([eps_0]), elementary charge
-([e]), electron mass ([m_e]), proton mass ([m_p]), Newton's constant
-of gravitation ([G]), Maxwell (Mx), Gauss (G), phot (ph), Curie (Ci),
-Roentgen (R), and U.S. and international mil ([mil_i], [mil_us]).</p>
-    <p>Because these units were used in some (though not many)
-definitions of other units, the indirectly affected units are:
-electron volt (eV), and circular mil ([cml_i]).</p>
+  <p><strong>CHANGE NOTE</strong></p>
+  <p>The major change of this release is the establishment of a class
+  of "arbitrary units" which are no longer simply dimensionless. This
+  is to protect the misassumption as if one could convert measurement
+  values expressed in some arbitrary units into other arbitrary or
+  dimensionless units.</p>
   <div1 id="section-introduction">
     <head>Introduction</head>
     <p>
@@ -1166,6 +1148,51 @@ needed.
 <verse>
 Special expressions are <emph>not</emph> valid expressions in &TUCUM;,
 they are <emph>only</emph> used for defining special units.
+</verse>
+      </p>
+    </div2>
+    <div2>
+      <head>Arbitrary Units</head>
+      <p id="para-arbitrary" name="arbitrary units">
+<verse>
+Arbitrary or procedure defined units are units whose meaning entirely
+depends on the measurement procedure (assay). These units have no
+general meaning in relation with any other unit in the SI. Therefore those arbitrary
+semantic entities are called <emph>arbitrary units</emph>, as oposed to
+<emph>proper units</emph>. The set of arbitrary units is denoted
+<v>A</v>, where <v>A</v> &cap; <v>U</v> = &emptyset;.
+</verse>
+
+<verse>
+An arbitrary unit has no further definition in the semantic framework of &TUCUM;
+</verse>
+
+<verse>
+Arbitrary units are not &ldquo;of any specific dimension&rdquo; and are
+not &ldquo;commensurable with&rdquo; any other unit.
+</verse>
+      </p>
+      <comment>
+        <p>
+Until version 1.6 &TUCUM; has dealth with arbitrary units as dimensionless,
+but as an effect the semantics of &TUCUM; made all arbitrary units 
+commensurable. Since version 1.7 of &TUCUM; it is no longer possible to
+convert or compare arbitrary units with any other arbitrary unit.
+        </p>
+      </comment>
+
+      <p name="operations on arbitrary units">
+<verse>
+Any term involving arbitrary units, is itself an arbitrary unit and is not
+comparable with any other arbitrary unit or term.
+</verse>
+      </p>
+
+      <p name="definition of arbitrary units">
+<verse>
+Arbitrary units are marked in the definition tables for unit atoms by a
+bullet (&lquo;&bullet;&rquo;) in the column titled &ldquo;value&rdquo;
+and a bullet in the column titled &ldquo;definition&rdquo;.
 </verse>
       </p>
     </div2>
@@ -2610,20 +2637,25 @@ to convert from the pH value back to moles per liter.
 <u:unit id="600220" Code="kat" CODE="KAT" isMetric="yes"><name>katal</name><printSymbol>kat</printSymbol><property>catalytic activity</property><value Unit="mol/s" UNIT="MOL/S" value="1">1</value></u:unit>
 <u:unit id="600230" Code="U" CODE="U" isMetric="yes"><name>Unit</name><printSymbol>U</printSymbol><property>catalytic activity</property><value Unit="umol/min" UNIT="UMOL/MIN" value="1">1</value></u:unit>
 <u:unit id="600570" Code="[iU]" CODE="[IU]" isMetric="yes"><name>international unit</name><printSymbol>i.U.</printSymbol><property>arbitrary</property><value Unit="1" UNIT="1" value="1">1</value></u:unit>
-<u:unit id="600580" Code="[arb'U]" CODE="[ARB'U]" isMetric="no"><name>arbitary unit</name><printSymbol>arb. U</printSymbol><property>arbitrary</property><value Unit="1" UNIT="1" value="1">1</value></u:unit>
-<u:unit id="600590" Code="[USP'U]" CODE="[USP'U]" isMetric="no"><name>United States Pharmacopeia unit</name><printSymbol>U.S.P.</printSymbol><property>arbitrary</property><value Unit="1" UNIT="1" value="1">1</value></u:unit>
-<u:unit id="600600" Code="[GPL'U]" CODE="[GPL'U]" isMetric="no"><name>GPL unit</name><property>biologic activity of anticardiolipin IgG</property><value Unit="1" UNIT="1" value="1">1</value></u:unit>
-<u:unit id="600610" Code="[MPL'U]" CODE="[MPL'U]" isMetric="no"><name>MPL unit</name><property>biologic activity of anticardiolipin IgM</property><value Unit="1" UNIT="1" value="1">1</value></u:unit>
-<u:unit id="600620" Code="[APL'U]" CODE="[APL'U]" isMetric="no"><name>APL unit</name><property>biologic activity of anticardiolipin IgA</property><value Unit="1" UNIT="1" value="1">1</value></u:unit>
-<u:unit id="600630" Code="[beth'U]" CODE="[BETH'U]" isMetric="no"><name>Bethesda unit</name><property>biologic activity of factor VIII inhibitor</property><value Unit="1" UNIT="1" value="1">1</value></u:unit>
-<u:unit id="600640" Code="[todd'U]" CODE="[TODD'U]" isMetric="no"><name>Todd unit</name><property>biologic activity antistreptolysin O</property><value Unit="1" UNIT="1" value="1">1</value></u:unit>
-<u:unit id="600650" Code="[dye'U]" CODE="[DYE'U]" isMetric="no"><name>Dye unit</name><property>biologic activity of amylase</property><value Unit="1" UNIT="1" value="1">1</value></u:unit>
-<u:unit id="600660" Code="[smgy'U]" CODE="[SMGY'U]" isMetric="no"><name>Somogyi unit</name><property>biologic activity of amylase</property><value Unit="1" UNIT="1" value="1">1</value></u:unit>
-<u:unit id="600670" Code="[bdsk'U]" CODE="[BDSK'U]" isMetric="no"><name>Bodansky unit</name><property>biologic activity of phosphatase</property><value Unit="1" UNIT="1" value="1">1</value></u:unit>
-<u:unit id="600680" Code="[ka'U]" CODE="[KA'U]" isMetric="no"><name>King-Armstrong unit</name><property>biologic activity of phosphatase</property><value Unit="1" UNIT="1" value="1">1</value></u:unit>
-<u:unit id="600680" Code="[knk'U]" CODE="[KNK'U]" isMetric="no"><name>Kunkel unit</name><property>arbitrary biologic activity</property><value Unit="1" UNIT="1" value="1">1</value></u:unit>
-<u:unit id="600690" Code="[mclg'U]" CODE="[MCLG'U]" isMetric="no"><name>Mac Lagan unit</name><property>arbitrary biologic activity</property><value Unit="1" UNIT="1" value="1">1</value></u:unit>
-<u:unit id="600700" Code="[tb'U]" CODE="[TB'U]" isMetric="no"><name>tuberculin unit</name><property>biologic activity of tuberculin</property><value Unit="1" UNIT="1" value="1">1</value></u:unit>
+<u:unit id="600580" Code="[arb'U]" CODE="[ARB'U]" isMetric="no" isArbitrary="yes"><name>arbitary unit</name><printSymbol>arb. U</printSymbol><property>arbitrary</property><value Unit="1" UNIT="1" value="1">1</value></u:unit>
+<u:unit id="600590" Code="[USP'U]" CODE="[USP'U]" isMetric="no" isArbitrary="yes"><name>United States Pharmacopeia unit</name><printSymbol>U.S.P.</printSymbol><property>arbitrary</property><value Unit="1" UNIT="1" value="1">1</value></u:unit>
+<u:unit id="600600" Code="[GPL'U]" CODE="[GPL'U]" isMetric="no" isArbitrary="yes"><name>GPL unit</name><property>biologic activity of anticardiolipin IgG</property><value Unit="1" UNIT="1" value="1">1</value></u:unit>
+<u:unit id="600610" Code="[MPL'U]" CODE="[MPL'U]" isMetric="no" isArbitrary="yes"><name>MPL unit</name><property>biologic activity of anticardiolipin IgM</property><value Unit="1" UNIT="1" value="1">1</value></u:unit>
+<u:unit id="600620" Code="[APL'U]" CODE="[APL'U]" isMetric="no" isArbitrary="yes"><name>APL unit</name><property>biologic activity of anticardiolipin IgA</property><value Unit="1" UNIT="1" value="1">1</value></u:unit>
+<u:unit id="600630" Code="[beth'U]" CODE="[BETH'U]" isMetric="no" isArbitrary="yes"><name>Bethesda unit</name><property>biologic activity of factor VIII inhibitor</property><value Unit="1" UNIT="1" value="1">1</value></u:unit>
+<u:unit id="600640" Code="[todd'U]" CODE="[TODD'U]" isMetric="no" isArbitrary="yes"><name>Todd unit</name><property>biologic activity antistreptolysin O</property><value Unit="1" UNIT="1" value="1">1</value></u:unit>
+<u:unit id="600650" Code="[dye'U]" CODE="[DYE'U]" isMetric="no" isArbitrary="yes"><name>Dye unit</name><property>biologic activity of amylase</property><value Unit="1" UNIT="1" value="1">1</value></u:unit>
+<u:unit id="600660" Code="[smgy'U]" CODE="[SMGY'U]" isMetric="no" isArbitrary="yes"><name>Somogyi unit</name><property>biologic activity of amylase</property><value Unit="1" UNIT="1" value="1">1</value></u:unit>
+<u:unit id="600670" Code="[bdsk'U]" CODE="[BDSK'U]" isMetric="no" isArbitrary="yes"><name>Bodansky unit</name><property>biologic activity of phosphatase</property><value Unit="1" UNIT="1" value="1">1</value></u:unit>
+<u:unit id="600680" Code="[ka'U]" CODE="[KA'U]" isMetric="no" isArbitrary="yes"><name>King-Armstrong unit</name><property>biologic activity of phosphatase</property><value Unit="1" UNIT="1" value="1">1</value></u:unit>
+<u:unit id="600680" Code="[knk'U]" CODE="[KNK'U]" isMetric="no" isArbitrary="yes"><name>Kunkel unit</name><property>arbitrary biologic activity</property><value Unit="1" UNIT="1" value="1">1</value></u:unit>
+<u:unit id="600690" Code="[mclg'U]" CODE="[MCLG'U]" isMetric="no" isArbitrary="yes"><name>Mac Lagan unit</name><property>arbitrary biologic activity</property><value Unit="1" UNIT="1" value="1">1</value></u:unit>
+<u:unit id="600700" Code="[tb'U]" CODE="[TB'U]" isMetric="no" isArbitrary="yes"><name>tuberculin unit</name><property>biologic activity of tuberculin</property><value Unit="1" UNIT="1" value="1">1</value></u:unit>
+<u:unit id="600701" Code="[CCID_50]" CODE="[CCID_50]" isMetric="no" isArbitrary="yes"><name>50% cell culture infective dose</name><printSymbol>CCID<sub>50</sub></printSymbol><property>biologic activity (infectivity) of an infectious agent preparation</property><value Unit="1" UNIT="1" value="1">1</value></u:unit>
+<u:unit id="600702" Code="[TCID_50]" CODE="[TCID_50]" isMetric="no" isArbitrary="yes"><name>50% tissue culture infective dose</name><printSymbol>TCID<sub>50</sub></printSymbol><property>biologic activity (infectivity) of an infectious agent preparation</property><value Unit="1" UNIT="1" value="1">1</value></u:unit>
+<u:unit id="600703" Code="[PFU]" CODE="[PFU]" isMetric="no" isArbitrary="yes"><name>plaque forming units</name><printSymbol>PFU</printSymbol><property>amount of an infectious agent</property><value Unit="1" UNIT="1" value="1">1</value></u:unit>
+<u:unit id="600704" Code="[FFU]" CODE="[FFU]" isMetric="no" isArbitrary="yes"><name>immunofocus forming units</name><printSymbol>FFU</printSymbol><property>amount of an infectious agent</property><value Unit="1" UNIT="1" value="1">1</value></u:unit>
+<u:unit id="600705" Code="[CFU]" CODE="[CFU]" isMetric="no" isArbitrary="yes"><name>colony forming units</name><printSymbol>CFU</printSymbol><property>amount of a proliferating organism</property><value Unit="1" UNIT="1" value="1">1</value></u:unit>
     </u:units>
 
     <comment>
@@ -2744,9 +2776,46 @@ substances.
 Because of the influence of the measurement method, results of
 biologic activity measurement cannot usually be converted. This is a
 particular problem with the many named arbitrary units that are still
-used. &TUCUM; currently defines all arbitrary units as
-dimensionless. Advice on how these many enzyme units convert to
-standard catalytic activities is appreciated.
+used. &TUCUM; initially we defined all arbitrary units as
+dimensionless. But since this leads to the false conclusion that all
+arbitrary units are the same, &TUCUM; now accounts for arbitrary units
+using a special flag. When a unit is marked as arbitrary, it is 
+isolated from all other units, and no result can be converted from 
+and to that unit.
+      </p>
+      <p>
+The unit &ldquo;TCID<sub>50</sub>&rdquo; expresses the result of
+quantifying an infectious agent in tissue culture. It is a titer, expressing the
+highest dilution of the specimen which produces a cytopathic effect in
+50% of the cell cultures or wells inoculated.
+
+[Sources: Clinical Microbiology Reviews, July 1998, Vol. 11(3), p. 533-554]
+      </p>
+      <p>
+The unit &ldquo;CCID<sub>50</sub>&rdquo; expresses the result of
+quantifying an infectious agent in a cell culture. It is a titer, expressing the
+highest dilution of the specimen which produces a cytopathic effect in
+50% of the cell cultures or wells inoculated.
+
+[Sources: Schmidt NJ. Cell culture procedures for diagnostic
+virology, p. 78-79. In Schmidt NJ, Emmons RW (ed.),
+<emph>Diagnostic procedures for viral, rickettsial and chlamydial
+infections</emph>, 5th ed. American Public Health Association, Inc.,
+Washington, D.C.]
+      </p>
+      <p>
+The unit &ldquo;PFU&rdquo; measures viral infectivity in a sensitive assay in cell
+culture where the titer is determined by counting the number of
+visible plaques developed following viral infection of a sensitive
+cell culture and results recorded as PFU/ml.
+      </p>
+      <p>
+The unit &ldquo;FFU&rdquo; measures viral infectivity in a sensitive assay in cell
+culture using immunofocus technology. The titer is determined by
+visualizing infected areas of a cell monolayer by probing with
+virus-specific monoclonal antibodies and results recorded as FFU/ml.
+
+[Sources: <emph>WHO expert committee on biological standardization (55th Edition).</emph> WHO Technical Report #932;]
       </p>
     </comment>
 
@@ -2984,7 +3053,6 @@ normative.
       <caption>Examples for Non-Units</caption>
 <u:junk-unit id="600710" Code="{tot}" CODE="{TOT}" isMetric="no"><name>particles total count</name><printSymbol>tot.</printSymbol><property>number</property><value Unit="1" UNIT="1" /></u:junk-unit>
 <u:junk-unit id="600710" Code="{tbl}" CODE="{TBL}" isMetric="no"><name>tablets</name><printSymbol>tbl.</printSymbol><property>number</property><value Unit="1" UNIT="1" /></u:junk-unit>
-<u:junk-unit id="600720" Code="{cfu}" CODE="{CFU}" isMetric="no"><name>colony forming units</name><printSymbol>C.F.U.</printSymbol><property>number</property><value Unit="1" UNIT="1" /></u:junk-unit>
 <u:junk-unit id="600730" Code="{rbc}" CODE="{RBC}" isMetric="no"><name>red blood cell count</name><printSymbol>R.B.C.</printSymbol><property>number</property><value Unit="1" UNIT="1" /></u:junk-unit>
 <u:junk-unit id="600740" Code="g.m/{H.B.}" CODE="G.M/{H.B.}" isMetric="no"><name>gram meter per heartbeat</name><printSymbol>g&middot; m/H.B.</printSymbol><property>proportional to ventricular stroke work</property><value value="1" Unit="g.m" UNIT="G.M" /></u:junk-unit>
 <u:junk-unit id="600750" Code="kg{wet'tis}" CODE="KG{wet'tis}" isMetric="no"><name>kilogram of wet tissue</name><printSymbol>kg(wet tissue)</printSymbol><property>mass</property><value value="1" Unit="kg" UNIT="KG"/></u:junk-unit>
@@ -3296,15 +3364,6 @@ more straightforward or more appropriate or both.
           <td/>
           <td>1000000</td>
           <td>m-3</td>
-          <td/>
-        </tr>
-        <tr>
-          <td>{CFU}</td>
-          <td/>
-          <td>colony forming units</td>
-          <td/>
-          <td>1</td>
-          <td>1</td>
           <td/>
         </tr>
         <tr>
