@@ -284,7 +284,7 @@
       <property>magentic flux</property>
       <value Unit="V.s" UNIT="V.S" value="1">1</value>
    </unit>
-   <unit Code="Cel" CODE="CEL" isMetric="yes" class="si">
+   <unit Code="Cel" CODE="CEL" isMetric="yes" isSpecial="yes" class="si">
       <name>degree Celsius</name>
       <printSymbol>&#176;C</printSymbol>
       <property>temperature</property>
@@ -1259,7 +1259,7 @@
       <property>length</property>
       <value Unit="[didot]" UNIT="[DIDOT]" value="12">12</value>
    </unit>
-   <unit Code="[degF]" CODE="[DEGF]" isMetric="no" class="heat">
+   <unit Code="[degF]" CODE="[DEGF]" isMetric="no" isSpecial="yes" class="heat">
       <name>degree Fahrenheit</name>
       <printSymbol>&#176;F</printSymbol>
       <property>temperature</property>
@@ -1407,7 +1407,7 @@
       <property>refraction of a lens</property>
       <value Unit="/m" UNIT="/M" value="1">1</value>
    </unit>
-   <unit Code="[p'diop]" CODE="[P'DIOP]" isMetric="no" class="clinical">
+   <unit Code="[p'diop]" CODE="[P'DIOP]" isMetric="no" isSpecial="yes" class="clinical">
       <name>prism diopter</name>
       <printSymbol>PD</printSymbol>
       <property>refraction of a prism</property>
@@ -1415,7 +1415,7 @@
          <function name="tanTimes100" value="1" Unit="deg"/>
       </value>
    </unit>
-   <unit Code="%[slope]" CODE="%[SLOPE]" isMetric="no" class="clinical">
+   <unit Code="%[slope]" CODE="%[SLOPE]" isMetric="no" isSpecial="yes" class="clinical">
       <name>percent of slope</name>
       <printSymbol>%</printSymbol>
       <property>slope</property>
@@ -1453,7 +1453,7 @@
       <property>metabolic cost of physical activity</property>
       <value Unit="mL/min/kg" UNIT="ML/MIN/KG" value="3.5">3.5</value>
    </unit>
-   <unit Code="[hp_X]" CODE="[HP_X]" isMetric="no" class="clinical">
+   <unit Code="[hp_X]" CODE="[HP_X]" isMetric="no" isSpecial="yes" class="clinical">
       <name>homeopathic potency of decimal series</name>
       <printSymbol reverse="yes">X</printSymbol>
       <property>homeopathic potency</property>
@@ -1461,7 +1461,7 @@
          <function name="hpX" value="1" Unit="1"/>
       </value>
    </unit>
-   <unit Code="[hp_C]" CODE="[HP_C]" isMetric="no" class="clinical">
+   <unit Code="[hp_C]" CODE="[HP_C]" isMetric="no" isSpecial="yes" class="clinical">
       <name>homeopathic potency of centesimal series</name>
       <printSymbol reverse="yes">C</printSymbol>
       <property>homeopathic potency</property>
@@ -1481,7 +1481,7 @@
       <property>amount of substance</property>
       <value Unit="mol" UNIT="MOL" value="1">1</value>
    </unit>
-   <unit Code="[pH]" CODE="[PH]" isMetric="no" class="chemical">
+   <unit Code="[pH]" CODE="[PH]" isMetric="no" isSpecial="yes" class="chemical">
       <name>pH</name>
       <printSymbol>pH</printSymbol>
       <property>acidity</property>
@@ -1531,79 +1531,118 @@
       <property>arbitrary</property>
       <value Unit="1" UNIT="1" value="1">1</value>
    </unit>
-   <unit Code="[arb'U]" CODE="[ARB'U]" isMetric="no" class="chemical">
+   <unit Code="[arb'U]" CODE="[ARB'U]" isMetric="no" isArbitrary="yes" class="chemical">
       <name>arbitary unit</name>
       <printSymbol>arb. U</printSymbol>
       <property>arbitrary</property>
       <value Unit="1" UNIT="1" value="1">1</value>
    </unit>
-   <unit Code="[USP'U]" CODE="[USP'U]" isMetric="no" class="chemical">
+   <unit Code="[USP'U]" CODE="[USP'U]" isMetric="no" isArbitrary="yes" class="chemical">
       <name>United States Pharmacopeia unit</name>
       <printSymbol>U.S.P.</printSymbol>
       <property>arbitrary</property>
       <value Unit="1" UNIT="1" value="1">1</value>
    </unit>
-   <unit Code="[GPL'U]" CODE="[GPL'U]" isMetric="no" class="chemical">
+   <unit Code="[GPL'U]" CODE="[GPL'U]" isMetric="no" isArbitrary="yes" class="chemical">
       <name>GPL unit</name>
       <property>biologic activity of anticardiolipin IgG</property>
       <value Unit="1" UNIT="1" value="1">1</value>
    </unit>
-   <unit Code="[MPL'U]" CODE="[MPL'U]" isMetric="no" class="chemical">
+   <unit Code="[MPL'U]" CODE="[MPL'U]" isMetric="no" isArbitrary="yes" class="chemical">
       <name>MPL unit</name>
       <property>biologic activity of anticardiolipin IgM</property>
       <value Unit="1" UNIT="1" value="1">1</value>
    </unit>
-   <unit Code="[APL'U]" CODE="[APL'U]" isMetric="no" class="chemical">
+   <unit Code="[APL'U]" CODE="[APL'U]" isMetric="no" isArbitrary="yes" class="chemical">
       <name>APL unit</name>
       <property>biologic activity of anticardiolipin IgA</property>
       <value Unit="1" UNIT="1" value="1">1</value>
    </unit>
-   <unit Code="[beth'U]" CODE="[BETH'U]" isMetric="no" class="chemical">
+   <unit Code="[beth'U]" CODE="[BETH'U]" isMetric="no" isArbitrary="yes"
+         class="chemical">
       <name>Bethesda unit</name>
       <property>biologic activity of factor VIII inhibitor</property>
       <value Unit="1" UNIT="1" value="1">1</value>
    </unit>
-   <unit Code="[todd'U]" CODE="[TODD'U]" isMetric="no" class="chemical">
+   <unit Code="[todd'U]" CODE="[TODD'U]" isMetric="no" isArbitrary="yes"
+         class="chemical">
       <name>Todd unit</name>
       <property>biologic activity antistreptolysin O</property>
       <value Unit="1" UNIT="1" value="1">1</value>
    </unit>
-   <unit Code="[dye'U]" CODE="[DYE'U]" isMetric="no" class="chemical">
+   <unit Code="[dye'U]" CODE="[DYE'U]" isMetric="no" isArbitrary="yes" class="chemical">
       <name>Dye unit</name>
       <property>biologic activity of amylase</property>
       <value Unit="1" UNIT="1" value="1">1</value>
    </unit>
-   <unit Code="[smgy'U]" CODE="[SMGY'U]" isMetric="no" class="chemical">
+   <unit Code="[smgy'U]" CODE="[SMGY'U]" isMetric="no" isArbitrary="yes"
+         class="chemical">
       <name>Somogyi unit</name>
       <property>biologic activity of amylase</property>
       <value Unit="1" UNIT="1" value="1">1</value>
    </unit>
-   <unit Code="[bdsk'U]" CODE="[BDSK'U]" isMetric="no" class="chemical">
+   <unit Code="[bdsk'U]" CODE="[BDSK'U]" isMetric="no" isArbitrary="yes"
+         class="chemical">
       <name>Bodansky unit</name>
       <property>biologic activity of phosphatase</property>
       <value Unit="1" UNIT="1" value="1">1</value>
    </unit>
-   <unit Code="[ka'U]" CODE="[KA'U]" isMetric="no" class="chemical">
+   <unit Code="[ka'U]" CODE="[KA'U]" isMetric="no" isArbitrary="yes" class="chemical">
       <name>King-Armstrong unit</name>
       <property>biologic activity of phosphatase</property>
       <value Unit="1" UNIT="1" value="1">1</value>
    </unit>
-   <unit Code="[knk'U]" CODE="[KNK'U]" isMetric="no" class="chemical">
+   <unit Code="[knk'U]" CODE="[KNK'U]" isMetric="no" isArbitrary="yes" class="chemical">
       <name>Kunkel unit</name>
       <property>arbitrary biologic activity</property>
       <value Unit="1" UNIT="1" value="1">1</value>
    </unit>
-   <unit Code="[mclg'U]" CODE="[MCLG'U]" isMetric="no" class="chemical">
+   <unit Code="[mclg'U]" CODE="[MCLG'U]" isMetric="no" isArbitrary="yes"
+         class="chemical">
       <name>Mac Lagan unit</name>
       <property>arbitrary biologic activity</property>
       <value Unit="1" UNIT="1" value="1">1</value>
    </unit>
-   <unit Code="[tb'U]" CODE="[TB'U]" isMetric="no" class="chemical">
+   <unit Code="[tb'U]" CODE="[TB'U]" isMetric="no" isArbitrary="yes" class="chemical">
       <name>tuberculin unit</name>
       <property>biologic activity of tuberculin</property>
       <value Unit="1" UNIT="1" value="1">1</value>
    </unit>
-   <unit Code="Np" CODE="NEP" isMetric="yes" class="levels">
+   <unit Code="[CCID_50]" CODE="[CCID_50]" isMetric="no" isArbitrary="yes"
+         class="chemical">
+      <name>50% cell culture infective dose</name>
+      <printSymbol>CCID<sub>50</sub>
+      </printSymbol>
+      <property>biologic activity (infectivity) of an infectious agent preparation</property>
+      <value Unit="1" UNIT="1" value="1">1</value>
+   </unit>
+   <unit Code="[TCID_50]" CODE="[TCID_50]" isMetric="no" isArbitrary="yes"
+         class="chemical">
+      <name>50% tissue culture infective dose</name>
+      <printSymbol>TCID<sub>50</sub>
+      </printSymbol>
+      <property>biologic activity (infectivity) of an infectious agent preparation</property>
+      <value Unit="1" UNIT="1" value="1">1</value>
+   </unit>
+   <unit Code="[PFU]" CODE="[PFU]" isMetric="no" isArbitrary="yes" class="chemical">
+      <name>plaque forming units</name>
+      <printSymbol>PFU</printSymbol>
+      <property>amount of an infectious agent</property>
+      <value Unit="1" UNIT="1" value="1">1</value>
+   </unit>
+   <unit Code="[FFU]" CODE="[FFU]" isMetric="no" isArbitrary="yes" class="chemical">
+      <name>immunofocus forming units</name>
+      <printSymbol>FFU</printSymbol>
+      <property>amount of an infectious agent</property>
+      <value Unit="1" UNIT="1" value="1">1</value>
+   </unit>
+   <unit Code="[CFU]" CODE="[CFU]" isMetric="no" isArbitrary="yes" class="chemical">
+      <name>colony forming units</name>
+      <printSymbol>CFU</printSymbol>
+      <property>amount of a proliferating organism</property>
+      <value Unit="1" UNIT="1" value="1">1</value>
+   </unit>
+   <unit Code="Np" CODE="NEP" isMetric="yes" isSpecial="yes" class="levels">
       <name>neper</name>
       <printSymbol>Np</printSymbol>
       <property>level</property>
@@ -1611,7 +1650,7 @@
          <function name="ln" value="1" Unit="1"/>
       </value>
    </unit>
-   <unit Code="B" CODE="B" isMetric="yes" class="levels">
+   <unit Code="B" CODE="B" isMetric="yes" isSpecial="yes" class="levels">
       <name>bel</name>
       <printSymbol>B</printSymbol>
       <property>level</property>
@@ -1619,7 +1658,7 @@
          <function name="lg" value="1" Unit="1"/>
       </value>
    </unit>
-   <unit Code="B[SPL]" CODE="B[SPL]" isMetric="yes" class="levels">
+   <unit Code="B[SPL]" CODE="B[SPL]" isMetric="yes" isSpecial="yes" class="levels">
       <name>bel sound pressure</name>
       <printSymbol>B(SPL)</printSymbol>
       <property>pressure level</property>
@@ -1627,7 +1666,7 @@
          <function name="lgTimes2" value="2" Unit="10*-5.Pa"/>
       </value>
    </unit>
-   <unit Code="B[V]" CODE="B[V]" isMetric="yes" class="levels">
+   <unit Code="B[V]" CODE="B[V]" isMetric="yes" isSpecial="yes" class="levels">
       <name>bel volt</name>
       <printSymbol>B(V)</printSymbol>
       <property>electric potential level</property>
@@ -1635,7 +1674,7 @@
          <function name="lgTimes2" value="1" Unit="V"/>
       </value>
    </unit>
-   <unit Code="B[mV]" CODE="B[MV]" isMetric="yes" class="levels">
+   <unit Code="B[mV]" CODE="B[MV]" isMetric="yes" isSpecial="yes" class="levels">
       <name>bel millivolt</name>
       <printSymbol>B(mV)</printSymbol>
       <property>electric potential level</property>
@@ -1643,7 +1682,7 @@
          <function name="lgTimes2" value="1" Unit="mV"/>
       </value>
    </unit>
-   <unit Code="B[uV]" CODE="B[UV]" isMetric="yes" class="levels">
+   <unit Code="B[uV]" CODE="B[UV]" isMetric="yes" isSpecial="yes" class="levels">
       <name>bel microvolt</name>
       <printSymbol>B(&#956;V)</printSymbol>
       <property>electric potential level</property>
@@ -1651,7 +1690,7 @@
          <function name="lgTimes2" value="1" Unit="uV"/>
       </value>
    </unit>
-   <unit Code="B[W]" CODE="B[W]" isMetric="yes" class="levels">
+   <unit Code="B[W]" CODE="B[W]" isMetric="yes" isSpecial="yes" class="levels">
       <name>bel watt</name>
       <printSymbol>B(W)</printSymbol>
       <property>power level</property>
@@ -1659,7 +1698,7 @@
          <function name="lg" value="1" Unit="W"/>
       </value>
    </unit>
-   <unit Code="B[kW]" CODE="B[KW]" isMetric="yes" class="levels">
+   <unit Code="B[kW]" CODE="B[KW]" isMetric="yes" isSpecial="yes" class="levels">
       <name>bel kilowatt</name>
       <printSymbol>B(kW)</printSymbol>
       <property>power level</property>
@@ -1737,7 +1776,7 @@
       <property>length</property>
       <value Unit="[in_i]" UNIT="[IN_I]" value="67">67</value>
    </unit>
-   <unit Code="bit_s" CODE="BIT_S" isMetric="no" class="infotech">
+   <unit Code="bit_s" CODE="BIT_S" isMetric="no" isSpecial="yes" class="infotech">
       <name>bit</name>
       <printSymbol>bit<sub>s</sub>
       </printSymbol>

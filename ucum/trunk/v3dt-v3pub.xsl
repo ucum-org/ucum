@@ -1897,8 +1897,28 @@
     <td><code><xsl:value-of select="@Code"/></code>&nbsp;</td>
     <td><code><xsl:value-of select="@CODE"/></code>&nbsp;</td>
     <td><xsl:value-of select="@isMetric"/></td>
-    <td><xsl:apply-templates select="value/node()"/>&nbsp;</td>
-    <td><code><xsl:value-of select="value/@Unit"/></code>&nbsp;</td>
+    <td>
+       <xsl:choose>
+	  <xsl:when test="@isArbitrary='yes'">
+	     <xsl:text>&bullet;</xsl:text>	     
+	  </xsl:when>
+	  <xsl:otherwise>
+	     <xsl:apply-templates select="value/node()"/>
+	  </xsl:otherwise>
+       </xsl:choose>
+       <xsl:text>&nbsp;</xsl:text>
+    </td>
+    <td>
+       <xsl:choose>
+	  <xsl:when test="@isArbitrary='yes'">
+	     <xsl:text>&bullet;</xsl:text>	     
+	  </xsl:when>
+	  <xsl:otherwise>
+	     <code><xsl:value-of select="value/@Unit"/></code>
+	  </xsl:otherwise>
+       </xsl:choose>
+       <xsl:text>&nbsp;</xsl:text>
+    </td>
   </tr>
 </xsl:template>
 
@@ -1907,6 +1927,10 @@
     <xsl:text>, </xsl:text>
   </xsl:if>
   <xsl:apply-templates select="node()"/>
+</xsl:template>
+
+<xsl:template match="u:*/value/function">
+   <xsl:text>&bullet;</xsl:text>
 </xsl:template>
 
 <xsl:template match="p[@name]">

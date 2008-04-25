@@ -96,11 +96,17 @@
     <xsl:when test="@isMetric='yes'">
       <xsl:text> metric </xsl:text>
     </xsl:when>
+    <!-- xsl:when test="@isArbitrary='yes'">
+      <xsl:text> arbitrary </xsl:text>
+    </xsl:when -->
     <xsl:otherwise>
       <xsl:text> nonmetric </xsl:text>
     </xsl:otherwise>
   </xsl:choose>
   <xsl:text> # </xsl:text>
+  <xsl:if test="@isArbitrary='yes'">
+     <xsl:text> arbitrary </xsl:text>
+  </xsl:if>
   <xsl:value-of select="name"/>
   <xsl:text>
 </xsl:text>
