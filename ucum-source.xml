@@ -2636,7 +2636,7 @@ to convert from the pH value back to moles per liter.
 <u:unit id="600540" Code="[LPF]" CODE="[LPF]" isMetric="no"><name>low power field</name><printSymbol>LPF</printSymbol><property>view area in microscope</property><value Unit="1" UNIT="1" value="100">100</value></u:unit>
 <u:unit id="600220" Code="kat" CODE="KAT" isMetric="yes"><name>katal</name><printSymbol>kat</printSymbol><property>catalytic activity</property><value Unit="mol/s" UNIT="MOL/S" value="1">1</value></u:unit>
 <u:unit id="600230" Code="U" CODE="U" isMetric="yes"><name>Unit</name><printSymbol>U</printSymbol><property>catalytic activity</property><value Unit="umol/min" UNIT="UMOL/MIN" value="1">1</value></u:unit>
-<u:unit id="600570" Code="[iU]" CODE="[IU]" isMetric="yes"><name>international unit</name><printSymbol>i.U.</printSymbol><property>arbitrary</property><value Unit="1" UNIT="1" value="1">1</value></u:unit>
+<u:unit id="600570" Code="[iU]" CODE="[IU]" isMetric="yes" isArbitrary="yes"><name>international unit</name><printSymbol>i.U.</printSymbol><property>arbitrary</property><value Unit="1" UNIT="1" value="1">1</value></u:unit>
 <u:unit id="600580" Code="[arb'U]" CODE="[ARB'U]" isMetric="no" isArbitrary="yes"><name>arbitary unit</name><printSymbol>arb. U</printSymbol><property>arbitrary</property><value Unit="1" UNIT="1" value="1">1</value></u:unit>
 <u:unit id="600590" Code="[USP'U]" CODE="[USP'U]" isMetric="no" isArbitrary="yes"><name>United States Pharmacopeia unit</name><printSymbol>U.S.P.</printSymbol><property>arbitrary</property><value Unit="1" UNIT="1" value="1">1</value></u:unit>
 <u:unit id="600600" Code="[GPL'U]" CODE="[GPL'U]" isMetric="no" isArbitrary="yes"><name>GPL unit</name><property>biologic activity of anticardiolipin IgG</property><value Unit="1" UNIT="1" value="1">1</value></u:unit>
@@ -2776,12 +2776,12 @@ substances.
 Because of the influence of the measurement method, results of
 biologic activity measurement cannot usually be converted. This is a
 particular problem with the many named arbitrary units that are still
-used. &TUCUM; initially we defined all arbitrary units as
+used. &TUCUM; initially defined all arbitrary units as
 dimensionless. But since this leads to the false conclusion that all
-arbitrary units are the same, &TUCUM; now accounts for arbitrary units
+arbitrary units are the same, the &UCUM; now accounts for arbitrary units
 using a special flag. When a unit is marked as arbitrary, it is 
 isolated from all other units, and no result can be converted from 
-and to that unit.
+and to that unit (See <pref ref="para-arbitrary"/>).
       </p>
       <p>
 The unit &ldquo;TCID<sub>50</sub>&rdquo; expresses the result of
@@ -3102,7 +3102,7 @@ Clinical Information Systems. <emph>JAMIA</emph> 6(2); Mar/Apr
     </div2>
   </div1>
 
-  <div1 ignore="yes" id="datyp2apdxatblxmp">
+  <div1 ignore="no" id="datyp2apdxatblxmp">
     <head>Example Unit Terms</head>
     <p>
 The following table lists example unit terms that are commonly used in

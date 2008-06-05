@@ -1525,7 +1525,7 @@
       <property>catalytic activity</property>
       <value Unit="umol/min" UNIT="UMOL/MIN" value="1">1</value>
    </unit>
-   <unit Code="[iU]" CODE="[IU]" isMetric="yes" class="chemical">
+   <unit Code="[iU]" CODE="[IU]" isMetric="yes" isArbitrary="yes" class="chemical">
       <name>international unit</name>
       <printSymbol>i.U.</printSymbol>
       <property>arbitrary</property>
