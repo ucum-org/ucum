@@ -8,7 +8,7 @@
 <xsl:strip-space elements="*"/> 
 
 <xsl:template match="/">
-  <root>
+  <root version="{spec/header/version}" revision="{spec/header/revision}" revision-date="{spec/header/date}">
     <xsl:apply-templates select="node()"/>
   </root>
 </xsl:template>

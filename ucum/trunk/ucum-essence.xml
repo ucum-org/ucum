@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="ascii"?>
-<root>
+<root version="1.7" revision="$Revision$"
+      revision-date="$Date$">
    <prefix Code="Y" CODE="YA">
       <name>yotta</name>
       <printSymbol>Y</printSymbol>
