@@ -765,7 +765,7 @@
       <value Unit="[ft_i]" UNIT="[FT_I]" value="6">6</value>
    </unit>
    <unit Code="[nmi_i]" CODE="[NMI_I]" isMetric="no" class="intcust">
-      <name>nautic mile</name>
+      <name>nautical mile</name>
       <printSymbol>n.mi</printSymbol>
       <property>length</property>
       <value Unit="m" UNIT="M" value="1852">1852</value>
@@ -972,7 +972,7 @@
       <value Unit="[ft_br]" UNIT="[FT_BR]" value="5280">5280</value>
    </unit>
    <unit Code="[nmi_br]" CODE="[NMI_BR]" isMetric="no" class="brit-length">
-      <name>nautic mile</name>
+      <name>nautical mile</name>
       <property>length</property>
       <value Unit="[ft_br]" UNIT="[FT_BR]" value="6080">6080</value>
    </unit>
@@ -1477,9 +1477,9 @@
       <value Unit="mol" UNIT="MOL" value="1">1</value>
    </unit>
    <unit Code="osm" CODE="OSM" isMetric="yes" class="chemical">
-      <name>osmole of dissolved particles</name>
+      <name>osmole</name>
       <printSymbol>osm</printSymbol>
-      <property>amount of substance</property>
+      <property>amount of substance (dissolved particles)</property>
       <value Unit="mol" UNIT="MOL" value="1">1</value>
    </unit>
    <unit Code="[pH]" CODE="[PH]" isMetric="no" isSpecial="yes" class="chemical">
@@ -1493,7 +1493,7 @@
    <unit Code="g%" CODE="G%" isMetric="yes" class="chemical">
       <name>gram percent</name>
       <printSymbol>g%</printSymbol>
-      <property>mass fraction</property>
+      <property>mass concentration</property>
       <value Unit="g/dl" UNIT="G/DL" value="1">1</value>
    </unit>
    <unit Code="[S]" CODE="[S]" isMetric="no" class="chemical">
