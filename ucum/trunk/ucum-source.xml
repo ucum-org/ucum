@@ -297,7 +297,7 @@ important step towards a commonly used coding scheme for units.
   <div2>
     <head>Character Set and Lexical Rules</head>
     <p name="character set">
-<verse> All expressions of &TUCUM; shall be build from characters of
+<verse> All expressions of &TUCUM; shall be built from characters of
 the 7-bit US-ASCII character set exclusively.
 </verse>
 
@@ -1943,7 +1943,7 @@ exponents 2 and 3 respectively as shown in the column
 <u:unit id="500040" Code="[yd_i]" CODE="[YD_I]" isMetric="no"><name>yard</name><printSymbol>yd</printSymbol><property>length</property><value Unit="[ft_i]" UNIT="[FT_I]" value="3">3</value></u:unit>
 <u:unit id="500050" Code="[mi_i]" CODE="[MI_I]" isMetric="no"><name>statute mile</name><printSymbol>mi</printSymbol><property>length</property><value Unit="[ft_i]" UNIT="[FT_I]" value="5280">5280</value></u:unit>
 <u:unit id="500070" Code="[fth_i]" CODE="[FTH_I]" isMetric="no"><name>fathom</name><printSymbol>fth</printSymbol><property>depth of water</property><value Unit="[ft_i]" UNIT="[FT_I]" value="6">6</value></u:unit>
-<u:unit id="500080" Code="[nmi_i]" CODE="[NMI_I]" isMetric="no"><name>nautic mile</name><printSymbol>n.mi</printSymbol><property>length</property><value Unit="m" UNIT="M" value="1852">1852</value></u:unit>
+<u:unit id="500080" Code="[nmi_i]" CODE="[NMI_I]" isMetric="no"><name>nautical mile</name><printSymbol>n.mi</printSymbol><property>length</property><value Unit="m" UNIT="M" value="1852">1852</value></u:unit>
 <u:unit id="500090" Code="[kn_i]" CODE="[KN_I]" isMetric="no"><name>knot</name><printSymbol>knot</printSymbol><property>velocity</property><value Unit="[nmi_i]/h" UNIT="[NMI_I]/H" value="1">1</value></u:unit>
 <u:unit id="500100" Code="[sin_i]" CODE="[SIN_I]" isMetric="no"><name>square inch</name><property>area</property><value Unit="[in_i]2" UNIT="[IN_I]2" value="1">1</value></u:unit>
 <u:unit id="500110" Code="[sft_i]" CODE="[SFT_I]" isMetric="no"><name>square foot</name><property>area</property><value Unit="[ft_i]2" UNIT="[FT_I]2" value="1">1</value></u:unit>
@@ -2079,7 +2079,7 @@ The meaning of the columns is declared in  <pref ref="para-custint"/>.
 <u:unit id="500400" Code="[pc_br]" CODE="[PC_BR]" isMetric="no"><name>pace</name><property>length</property><value Unit="[ft_br]" UNIT="[FT_BR]" value="2.5">2.5</value></u:unit>
 <u:unit id="500410" Code="[yd_br]" CODE="[YD_BR]" isMetric="no"><name>yard</name><property>length</property><value Unit="[ft_br]" UNIT="[FT_BR]" value="3">3</value></u:unit>
 <u:unit id="500420" Code="[mi_br]" CODE="[MI_BR]" isMetric="no"><name>mile</name><property>length</property><value Unit="[ft_br]" UNIT="[FT_BR]" value="5280">5280</value></u:unit>
-<u:unit id="500430" Code="[nmi_br]" CODE="[NMI_BR]" isMetric="no"><name>nautic mile</name><property>length</property><value Unit="[ft_br]" UNIT="[FT_BR]" value="6080">6080</value></u:unit>
+<u:unit id="500430" Code="[nmi_br]" CODE="[NMI_BR]" isMetric="no"><name>nautical mile</name><property>length</property><value Unit="[ft_br]" UNIT="[FT_BR]" value="6080">6080</value></u:unit>
 <u:unit id="500440" Code="[kn_br]" CODE="[KN_BR]" isMetric="no"><name>knot</name><property>velocity</property><value Unit="[nmi_br]/h" UNIT="[NMI_BR]/H" value="1">1</value></u:unit>
 <u:unit id="500450" Code="[acr_br]" CODE="[ACR_BR]" isMetric="no"><name>acre</name><property>area</property><value Unit="[yd_br]2" UNIT="[YD_BR]2" value="4840">4840</value></u:unit>
     </u:units>
@@ -2628,9 +2628,9 @@ to convert from the pH value back to moles per liter.
     <u:units id="chemical">
       <caption>Units used in Chemical and Biomedical Laboratories</caption>
 <u:unit id="600200" Code="eq" CODE="EQ" isMetric="yes"><name>equivalents</name><printSymbol>eq</printSymbol><property>amount of substance</property><value Unit="mol" UNIT="MOL" value="1">1</value></u:unit>
-<u:unit id="600240" Code="osm" CODE="OSM" isMetric="yes"><name>osmole of dissolved particles</name><printSymbol>osm</printSymbol><property>amount of substance</property><value Unit="mol" UNIT="MOL" value="1">1</value></u:unit>
+<u:unit id="600240" Code="osm" CODE="OSM" isMetric="yes"><name>osmole</name><printSymbol>osm</printSymbol><property>amount of substance (dissolved particles)</property><value Unit="mol" UNIT="MOL" value="1">1</value></u:unit>
 <u:unit id="600210" Code="[pH]" CODE="[PH]" isMetric="no"><name>pH</name><printSymbol>pH</printSymbol><property>acidity</property><value Unit="pH(1 mol/l)" UNIT="PH(1 MOL/L)" ><function name="pH" value="1" Unit="mol/l"/></value></u:unit>
-<u:unit id="600250" Code="g%" CODE="G%" isMetric="yes"><name>gram percent</name><printSymbol>g%</printSymbol><property>mass fraction</property><value Unit="g/dl" UNIT="G/DL" value="1">1</value></u:unit>
+<u:unit id="600250" Code="g%" CODE="G%" isMetric="yes"><name>gram percent</name><printSymbol>g%</printSymbol><property>mass concentration</property><value Unit="g/dl" UNIT="G/DL" value="1">1</value></u:unit>
 <u:unit id="600420" Code="[S]" CODE="[S]" isMetric="no"><name>Svedberg unit</name><printSymbol>S</printSymbol><property>sedimentation coefficient</property><value Unit="10*-13.s" UNIT="10*-13.S" value="1">1</value></u:unit>
 <u:unit id="600530" Code="[HPF]" CODE="[HPF]" isMetric="no"><name>high power field</name><printSymbol>HPF</printSymbol><property>view area in microscope</property><value Unit="1" UNIT="1" value="1">1</value></u:unit>
 <u:unit id="600540" Code="[LPF]" CODE="[LPF]" isMetric="no"><name>low power field</name><printSymbol>LPF</printSymbol><property>view area in microscope</property><value Unit="1" UNIT="1" value="100">100</value></u:unit>
