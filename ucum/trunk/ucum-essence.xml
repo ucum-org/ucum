@@ -158,15 +158,13 @@
    </base-unit>
    <unit Code="10*" CODE="10*" isMetric="no" class="dimless">
       <name>the number ten for arbitrary powers</name>
-      <printSymbol>10<sup>n</sup>
-      </printSymbol>
+      <printSymbol>10</printSymbol>
       <property>number</property>
       <value Unit="1" UNIT="1" value="10">10</value>
    </unit>
    <unit Code="10^" CODE="10^" isMetric="no" class="dimless">
       <name>the number ten for arbitrary powers</name>
-      <printSymbol>10<sup>n</sup>
-      </printSymbol>
+      <printSymbol>10</printSymbol>
       <property>number</property>
       <value Unit="1" UNIT="1" value="10">10</value>
    </unit>
@@ -672,7 +670,7 @@
    </unit>
    <unit Code="G" CODE="GS" isMetric="yes" class="cgs">
       <name>Gauss</name>
-      <printSymbol>Gs, G</printSymbol>
+      <printSymbol>Gs</printSymbol>
       <property>magnetic flux density</property>
       <value Unit="T" UNIT="T" value="1e-4">1 &#215; 10<sup>-4</sup>
       </value>
@@ -736,13 +734,13 @@
    </unit>
    <unit Code="[in_i]" CODE="[IN_I]" isMetric="no" class="intcust">
       <name>inch</name>
-      <printSymbol>in, ''</printSymbol>
+      <printSymbol>in</printSymbol>
       <property>length</property>
       <value Unit="cm" UNIT="CM" value="254e-2">2.54</value>
    </unit>
    <unit Code="[ft_i]" CODE="[FT_I]" isMetric="no" class="intcust">
       <name>foot</name>
-      <printSymbol>ft, '</printSymbol>
+      <printSymbol>ft</printSymbol>
       <property>length</property>
       <value Unit="[in_i]" UNIT="[IN_I]" value="12">12</value>
    </unit>

@@ -1,0 +1,16 @@
+<root>
+  <test unit="cm"/>
+  <test unit="cd"/>
+  <test unit="ug"/>
+  <test unit="mmol/g{RBC}"/>
+  <test unit="[lb_av]"/>
+  <test unit="[in_us]"/>
+  <test unit="ug/mm2"/>
+  <test unit="g/kg/(24.h)"/>
+  <test unit="mg/dL"/>
+  <test unit="mg/cm3"/>
+  <test unit="10^6/uL"/>
+  <test unit="10*6/cm3"/>
+  <test unit="[in_i]"/>
+  <test unit="k[iU]/L"/>
+</root>
