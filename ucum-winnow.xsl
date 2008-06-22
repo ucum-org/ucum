@@ -63,6 +63,12 @@
 <xsl:template match="u:unit/value|u:unit/printSymbol|u:unit/name|u:unit/property">
   <xsl:apply-templates mode="copy" select="."/>
 </xsl:template>
+<xsl:template match="u:unit[@Code=('10*', '10^')]/printSymbol" priority="2">
+   <printSymbol>10</printSymbol>
+</xsl:template>
+<xsl:template match="u:unit/printSymbol[contains(text(),',')]" priority="2">
+   <printSymbol><xsl:value-of select="tokenize(.,',')[1]"/></printSymbol>
+</xsl:template>
 
 
 <xsl:template mode="copy" match="/">
