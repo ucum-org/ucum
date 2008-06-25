@@ -2654,7 +2654,7 @@ to convert from the pH value back to moles per liter.
 <u:unit id="600701" Code="[CCID_50]" CODE="[CCID_50]" isMetric="no" isArbitrary="yes"><name>50% cell culture infectious dose</name><printSymbol>CCID<sub>50</sub></printSymbol><property>biologic activity (infectivity) of an infectious agent preparation</property><value Unit="1" UNIT="1" value="1">1</value></u:unit>
 <u:unit id="600702" Code="[TCID_50]" CODE="[TCID_50]" isMetric="no" isArbitrary="yes"><name>50% tissue culture infectious dose</name><printSymbol>TCID<sub>50</sub></printSymbol><property>biologic activity (infectivity) of an infectious agent preparation</property><value Unit="1" UNIT="1" value="1">1</value></u:unit>
 <u:unit id="600703" Code="[PFU]" CODE="[PFU]" isMetric="no" isArbitrary="yes"><name>plaque forming units</name><printSymbol>PFU</printSymbol><property>amount of an infectious agent</property><value Unit="1" UNIT="1" value="1">1</value></u:unit>
-<u:unit id="600704" Code="[FFU]" CODE="[FFU]" isMetric="no" isArbitrary="yes"><name>immunofocus forming units</name><printSymbol>FFU</printSymbol><property>amount of an infectious agent</property><value Unit="1" UNIT="1" value="1">1</value></u:unit>
+<u:unit id="600704" Code="[FFU]" CODE="[FFU]" isMetric="no" isArbitrary="yes"><name>focus forming units</name><printSymbol>FFU</printSymbol><property>amount of an infectious agent</property><value Unit="1" UNIT="1" value="1">1</value></u:unit>
 <u:unit id="600705" Code="[CFU]" CODE="[CFU]" isMetric="no" isArbitrary="yes"><name>colony forming units</name><printSymbol>CFU</printSymbol><property>amount of a proliferating organism</property><value Unit="1" UNIT="1" value="1">1</value></u:unit>
     </u:units>
 
@@ -2810,10 +2810,11 @@ visible plaques developed following viral infection of a sensitive
 cell culture and results recorded as PFU/ml.
       </p>
       <p>
-The unit &ldquo;FFU&rdquo; measures viral infectivity in a sensitive assay in cell
-culture using immunofocus technology. The titer is determined by
-visualizing infected areas of a cell monolayer by probing with
-virus-specific monoclonal antibodies and results recorded as FFU/ml.
+The unit &ldquo;FFU&rdquo; measures viral infectivity in a sensitive
+assay in cell culture, for example, using immunofocus or vital dyes
+technology.  For example, the titer is determined by visualizing
+infected areas of a cell monolayer by probing with virus-specific
+antibodies and results are recorded as FFU/ml.
 
 [Sources: <emph>WHO expert committee on biological standardization (55th Edition).</emph> WHO Technical Report #932;]
       </p>

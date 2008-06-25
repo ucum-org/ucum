@@ -1630,7 +1630,7 @@
       <value Unit="1" UNIT="1" value="1">1</value>
    </unit>
    <unit Code="[FFU]" CODE="[FFU]" isMetric="no" isArbitrary="yes" class="chemical">
-      <name>immunofocus forming units</name>
+      <name>focus forming units</name>
       <printSymbol>FFU</printSymbol>
       <property>amount of an infectious agent</property>
       <value Unit="1" UNIT="1" value="1">1</value>
