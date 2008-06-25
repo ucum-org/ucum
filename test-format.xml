@@ -13,4 +13,5 @@
   <test unit="10*6/cm3"/>
   <test unit="[in_i]"/>
   <test unit="k[iU]/L"/>
+  <test unit="1000/mm3"/>
 </root>
