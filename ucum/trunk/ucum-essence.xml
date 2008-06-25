@@ -1609,7 +1609,7 @@
    </unit>
    <unit Code="[CCID_50]" CODE="[CCID_50]" isMetric="no" isArbitrary="yes"
          class="chemical">
-      <name>50% cell culture infective dose</name>
+      <name>50% cell culture infectious dose</name>
       <printSymbol>CCID<sub>50</sub>
       </printSymbol>
       <property>biologic activity (infectivity) of an infectious agent preparation</property>
@@ -1617,7 +1617,7 @@
    </unit>
    <unit Code="[TCID_50]" CODE="[TCID_50]" isMetric="no" isArbitrary="yes"
          class="chemical">
-      <name>50% tissue culture infective dose</name>
+      <name>50% tissue culture infectious dose</name>
       <printSymbol>TCID<sub>50</sub>
       </printSymbol>
       <property>biologic activity (infectivity) of an infectious agent preparation</property>
