@@ -8,6 +8,7 @@
   <!ENTITY beta   "&#x3b2;">
   <!ENTITY mu     "&#x3bc;">
   <!ENTITY pi     "&#x3c0;">
+  <!ENTITY Pi     "&#x3a0;">
   <!ENTITY rho    "&#x3c1;">
   <!ENTITY epsilon "&#x3b5;">
   <!ENTITY Omega "&#x3a9;">
@@ -823,6 +824,15 @@
   <xsl:text>&ldquo;</xsl:text>
   <code><xsl:value-of select="@value"/></code>
   <xsl:text>&rdquo;</xsl:text>
+</xsl:template>
+<xsl:template match="prod">
+   <emph role="strong"><xsl:text>&Pi;</xsl:text></emph><xsl:apply-templates select="@*|node()"/>
+</xsl:template>
+<xsl:template match="prod/@from">
+   <emph role="sub"><xsl:value-of select="."/></emph>
+</xsl:template>
+<xsl:template match="prod/@to">
+   <emph role="sup"><xsl:value-of select="."/></emph>
 </xsl:template>
 
 <xsl:template match="strong">
