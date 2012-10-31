@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="ascii"?>
-<root version="1.7" revision="$Revision$"
+<root version="1.8.2" revision="$Revision$"
       revision-date="$Date$">
    <prefix Code="Y" CODE="YA">
       <name>yotta</name>
@@ -1400,6 +1400,12 @@
       <property>fluid resistance</property>
       <value Unit="mm[Hg].s/ml" UNIT="MM[HG].S/ML" value="1">1</value>
    </unit>
+   <unit Code="[wood'U]" CODE="[WOOD'U]" isMetric="no" class="clinical">
+      <name>Wood unit</name>
+      <printSymbol>Wood U.</printSymbol>
+      <property>fluid resistance</property>
+      <value Unit="mm[Hg].min/L" UNIT="MM[HG].MIN/L" value="1">1</value>
+   </unit>
    <unit Code="[diop]" CODE="[DIOP]" isMetric="no" class="clinical">
       <name>diopter</name>
       <printSymbol>dpt</printSymbol>
@@ -1452,21 +1458,85 @@
       <property>metabolic cost of physical activity</property>
       <value Unit="mL/min/kg" UNIT="ML/MIN/KG" value="3.5">3.5</value>
    </unit>
-   <unit Code="[hp_X]" CODE="[HP_X]" isMetric="no" isSpecial="yes" class="clinical">
-      <name>homeopathic potency of decimal series</name>
-      <printSymbol reverse="yes">X</printSymbol>
-      <property>homeopathic potency</property>
+   <unit Code="[hp'_X]" CODE="[HP'_X]" isMetric="no" isSpecial="yes" class="clinical">
+      <name>homeopathic potency of decimal series (retired)</name>
+      <printSymbol>X</printSymbol>
+      <property>homeopathic potency (retired)</property>
       <value Unit="hpX(1 1)" UNIT="HPX(1 1)">
          <function name="hpX" value="1" Unit="1"/>
       </value>
    </unit>
-   <unit Code="[hp_C]" CODE="[HP_C]" isMetric="no" isSpecial="yes" class="clinical">
-      <name>homeopathic potency of centesimal series</name>
-      <printSymbol reverse="yes">C</printSymbol>
-      <property>homeopathic potency</property>
-      <value Unit="hpC(1 1)" UNIT="hpc(1 1)">
+   <unit Code="[hp'_C]" CODE="[HP'_C]" isMetric="no" isSpecial="yes" class="clinical">
+      <name>homeopathic potency of centesimal series (retired)</name>
+      <printSymbol>C</printSymbol>
+      <property>homeopathic potency (retired)</property>
+      <value Unit="hpC(1 1)" UNIT="HPC(1 1)">
          <function name="hpC" value="1" Unit="1"/>
       </value>
+   </unit>
+   <unit Code="[hp'_M]" CODE="[HP'_M]" isMetric="no" isSpecial="yes" class="clinical">
+      <name>homeopathic potency of millesimal series (retired)</name>
+      <printSymbol>M</printSymbol>
+      <property>homeopathic potency (retired)</property>
+      <value Unit="hpM(1 1)" UNIT="HPM(1 1)">
+         <function name="hpM" value="1" Unit="1"/>
+      </value>
+   </unit>
+   <unit Code="[hp'_Q]" CODE="[HP'_Q]" isMetric="no" isSpecial="yes" class="clinical">
+      <name>homeopathic potency of quintamillesimal series (retired)</name>
+      <printSymbol>Q</printSymbol>
+      <property>homeopathic potency (retired)</property>
+      <value Unit="hpQ(1 1)" UNIT="HPQ(1 1)">
+         <function name="hpQ" value="1" Unit="1"/>
+      </value>
+   </unit>
+   <unit Code="[hp_X]" CODE="[HP_X]" isMetric="no" isArbitrary="yes" class="clinical">
+      <name>homeopathic potency of decimal hahnemannian series</name>
+      <printSymbol>X</printSymbol>
+      <property>homeopathic potency (Hahnemann)</property>
+      <value Unit="1" UNIT="1" value="1">1</value>
+   </unit>
+   <unit Code="[hp_C]" CODE="[HP_C]" isMetric="no" isArbitrary="yes" class="clinical">
+      <name>homeopathic potency of centesimal hahnemannian series</name>
+      <printSymbol>C</printSymbol>
+      <property>homeopathic potency (Hahnemann)</property>
+      <value Unit="1" UNIT="1" value="1">1</value>
+   </unit>
+   <unit Code="[hp_M]" CODE="[HP_M]" isMetric="no" isArbitrary="yes" class="clinical">
+      <name>homeopathic potency of millesimal hahnemannian series</name>
+      <printSymbol>M</printSymbol>
+      <property>homeopathic potency (Hahnemann)</property>
+      <value Unit="1" UNIT="1" value="1">1</value>
+   </unit>
+   <unit Code="[hp_Q]" CODE="[HP_Q]" isMetric="no" isArbitrary="yes" class="clinical">
+      <name>homeopathic potency of quintamillesimal hahnemannian series</name>
+      <printSymbol>Q</printSymbol>
+      <property>homeopathic potency (Hahnemann)</property>
+      <value Unit="1" UNIT="1" value="1">1</value>
+   </unit>
+   <unit Code="[kp_X]" CODE="[KP_X]" isMetric="no" isArbitrary="yes" class="clinical">
+      <name>homeopathic potency of decimal korsakovian series</name>
+      <printSymbol>X</printSymbol>
+      <property>homeopathic potency (Korsakov)</property>
+      <value Unit="1" UNIT="1" value="1">1</value>
+   </unit>
+   <unit Code="[kp_C]" CODE="[KP_C]" isMetric="no" isArbitrary="yes" class="clinical">
+      <name>homeopathic potency of centesimal korsakovian series</name>
+      <printSymbol>C</printSymbol>
+      <property>homeopathic potency (Korsakov)</property>
+      <value Unit="1" UNIT="1" value="1">1</value>
+   </unit>
+   <unit Code="[kp_M]" CODE="[KP_M]" isMetric="no" isArbitrary="yes" class="clinical">
+      <name>homeopathic potency of millesimal korsakovian series</name>
+      <printSymbol>M</printSymbol>
+      <property>homeopathic potency (Korsakov)</property>
+      <value Unit="1" UNIT="1" value="1">1</value>
+   </unit>
+   <unit Code="[kp_Q]" CODE="[KP_Q]" isMetric="no" isArbitrary="yes" class="clinical">
+      <name>homeopathic potency of quintamillesimal korsakovian series</name>
+      <printSymbol>Q</printSymbol>
+      <property>homeopathic potency (Korsakov)</property>
+      <value Unit="1" UNIT="1" value="1">1</value>
    </unit>
    <unit Code="eq" CODE="EQ" isMetric="yes" class="chemical">
       <name>equivalents</name>
@@ -1526,9 +1596,15 @@
    </unit>
    <unit Code="[iU]" CODE="[IU]" isMetric="yes" isArbitrary="yes" class="chemical">
       <name>international unit</name>
-      <printSymbol>i.U.</printSymbol>
+      <printSymbol>IU</printSymbol>
       <property>arbitrary</property>
       <value Unit="1" UNIT="1" value="1">1</value>
+   </unit>
+   <unit Code="[IU]" CODE="[IU]" isMetric="yes" isArbitrary="yes" class="chemical">
+      <name>international unit</name>
+      <printSymbol>i.U.</printSymbol>
+      <property>arbitrary</property>
+      <value Unit="[iU]" UNIT="[IU]" value="1">1</value>
    </unit>
    <unit Code="[arb'U]" CODE="[ARB'U]" isMetric="no" isArbitrary="yes" class="chemical">
       <name>arbitary unit</name>
@@ -1641,6 +1717,44 @@
       <property>amount of a proliferating organism</property>
       <value Unit="1" UNIT="1" value="1">1</value>
    </unit>
+   <unit Code="[BAU]" CODE="[BAU]" isMetric="no" isArbitrary="yes" class="chemical">
+      <name>bioequivalent allergen unit</name>
+      <printSymbol>BAU</printSymbol>
+      <property>amount of an allergen callibrated through in-vivo testing based on the ID50EAL method of (intradermal dilution for 50mm sum of erythema diameters</property>
+      <value Unit="1" UNIT="1" value="1">1</value>
+   </unit>
+   <unit Code="[AU]" CODE="[AU]" isMetric="no" isArbitrary="yes" class="chemical">
+      <name>allergen unit</name>
+      <printSymbol>AU</printSymbol>
+      <property>procedure defined amount of an allergen using some reference standard</property>
+      <value Unit="1" UNIT="1" value="1">1</value>
+   </unit>
+   <unit Code="[Amb'a'1'U]" CODE="[AMB'A'1'U]" isMetric="no" isArbitrary="yes"
+         class="chemical">
+      <name>allergen unit for Ambrosia artemisiifolia</name>
+      <printSymbol>Amb a 1 U</printSymbol>
+      <property>procedure defined amount of the major allergen of ragweed.</property>
+      <value Unit="1" UNIT="1" value="1">1</value>
+   </unit>
+   <unit Code="[PNU]" CODE="[PNU]" isMetric="no" isArbitrary="yes" class="chemical">
+      <name>protein nitrogen unit</name>
+      <printSymbol>PNU</printSymbol>
+      <property>procedure defined amount of a protein substance</property>
+      <value Unit="1" UNIT="1" value="1">1</value>
+   </unit>
+   <unit Code="[Lf]" CODE="[LF]" isMetric="no" isArbitrary="yes" class="chemical">
+      <name>Limit of flocculation</name>
+      <printSymbol>Lf</printSymbol>
+      <property>procedure defined amount of an antigen substance</property>
+      <value Unit="1" UNIT="1" value="1">1</value>
+   </unit>
+   <unit Code="[D'ag'U]" CODE="[D'AG'U]" isMetric="no" isArbitrary="yes"
+         class="chemical">
+      <name>D-antigen unit</name>
+      <printSymbol/>
+      <property>procedure defined amount of an antigen substance</property>
+      <value Unit="1" UNIT="1" value="1">1</value>
+   </unit>
    <unit Code="Np" CODE="NEP" isMetric="yes" isSpecial="yes" class="levels">
       <name>neper</name>
       <printSymbol>Np</printSymbol>
@@ -1687,6 +1801,14 @@
       <property>electric potential level</property>
       <value Unit="2lg(1 uV)" UNIT="2LG(1 UV)">
          <function name="lgTimes2" value="1" Unit="uV"/>
+      </value>
+   </unit>
+   <unit Code="B[10.nV]" CODE="B[10.NV]" isMetric="yes" isSpecial="yes" class="levels">
+      <name>bel 10 nanovolt</name>
+      <printSymbol>B(10 nV)</printSymbol>
+      <property>electric potential level</property>
+      <value Unit="2lg(10 nV)" UNIT="2LG(10 NV)">
+         <function name="lgTimes2" value="10" Unit="nV"/>
       </value>
    </unit>
    <unit Code="B[W]" CODE="B[W]" isMetric="yes" isSpecial="yes" class="levels">

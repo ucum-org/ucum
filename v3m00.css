@@ -15,6 +15,7 @@ body {
 	background-position: top left;
 	background-attachment: fixed;
 	background-repeat: no-repeat;
+	line-height: 14pt;
 }
 
 :link { color: #00C; background: transparent }

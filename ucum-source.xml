@@ -1,4 +1,4 @@
-<!-- COPYRIGHT 1998-2004, REGENSTRIEF INSTITUTE, INC. ALL RIGHTS RESERVED.
+<!-- COPYRIGHT 1998-2010, REGENSTRIEF INSTITUTE, INC. ALL RIGHTS RESERVED.
 
   Use and redistribution of this data is permitted without charge
   as long as you make no changes to it. DO NOT CHANGE THIS FILE if 
@@ -11,6 +11,7 @@
   <!ENTITY beta   "&#x3b2;">
   <!ENTITY mu     "&#x3bc;">
   <!ENTITY pi     "&#x3c0;">
+  <!ENTITY Pi     "&#x3a0;">
   <!ENTITY rho     "&#x3c1;">
   <!ENTITY epsilon "&#x3b5;">
   <!ENTITY kappa  "&#x3ba;">
@@ -55,7 +56,7 @@
 <spec xmlns:u="http://aurora.regenstrief.org/UCUM">
 <header>
   <title>The Unified Code for Units of Measure</title>
-  <version>1.7</version>
+  <version>1.8.2</version>
   <revision>$Revision$</revision>
   <date>$Date$</date>
   <authlist>
@@ -70,7 +71,7 @@
       <email href="cmcdonald@regenstrief.org"/>
     </author>
   </authlist>
-  <copyright>1998-2008, Regenstrief Institute, Inc. All rigthts reserved.</copyright>
+  <copyright>1998-2009, Regenstrief Institute, Inc. and the UCUM Organization. All rigthts reserved.</copyright>
 </header>
 
 <body>
@@ -752,7 +753,7 @@ Furthermore, for a unit to be metric it must be a quantity on a ratio
 scale where multiplication and division with scalars are defined.  The
 <emph>Comit&eacute; Consultatif d'Unit&eacute;s</emph> (CCU) decided
 in February 1995 that SI prefixes may be used with the degree
-Celsius. This statement has not been made explicitely before. This is
+Celsius. This statement has not been made explicitly before. This is
 an unfortunate decision because difference-scale units like the degree
 Celsius have no multiplication operation, so that the prefix value
 could be multiplied with the unit. Instead the prefix at non-ratio
@@ -924,7 +925,7 @@ all commensurable expressions are equal.</verse>
 are called <emph>units</emph>.
 </verse>
 
-<verse> The set of units <v>U</v> has a binay multiplication operator
+<verse> The set of units <v>U</v> has a binary multiplication operator
 &middot; that is associative and commutative and has the neutral
 element <un>1</un> (so called <emph>the unity</emph>). For each unit
 <un>u</un> &element; <v>U</v> there is an inverse unit
@@ -937,7 +938,7 @@ an Abelian group.
 <un>u</un> &middot; <un>v</un><sup>-1</sup>. </verse>
 
 <verse> The exponentiation operation with integer exponents <v>n</v>
-is defined as <un>u</un><sup>n</sup> = <prod from="1"
+is defined as <un>u</un><sup><v>n</v></sup> = <prod from="1"
 to="n"><un>u</un></prod>. 
 </verse>
 
@@ -952,11 +953,11 @@ unit, where <un>u</un>' &sim; <un>u</un>.
 relation &sim; are called <emph>dimensions</emph>.  The set <v>D</v>
 of dimensions is infinite in principle, but only a finite subset of
 dimensions are used in practice. Thus, implementations of &TUCUM; need
-not be able to represent the inifinite set of dimensions.
+not be able to represent the infinite set of dimensions.
 </verse>
 
 <verse>
-Two commmensurable units that are not equal differ only by their
+Two commensurable units that are not equal differ only by their
 magnitude.
 </verse>
 
@@ -1017,7 +1018,7 @@ Those symbols that are used as units that imply a measurement on a
 scale other than a ratio scale (e.g., interval scale, logarithmic
 scale) are defined differently. These do not represent proper units as
 elements of the group (<v>U</v>,&middot;). Therefore those special
-semantic entities are called <emph>special units</emph>, as oposed to
+semantic entities are called <emph>special units</emph>, as opposed to
 <emph>proper units</emph>. The set of special units is denoted
 <v>S</v>, where <v>S</v> &cap; <v>U</v> = &emptyset;.
 </verse>
@@ -1111,12 +1112,12 @@ such candidates.
         <p>
 The <emph>Comit&eacute; Consultatif d'Unit&eacute;s</emph> (CCU)
 decided in February 1995 that any SI prefix may be used with degree
-Celsius. This statement has not been made explicitely before. This is
+Celsius. This statement has not been made explicitly before. This is
 an unfortunate decision because difference-scale units like the degree
 Celsius have no multiplication operation, so that the prefix value
 could be multiplied with the unit. Instead the prefix at non-ratio
 units scales the measurement value. One wonders why the CGPM keeps the
-celsius temperature in the SI as it is superflous and in a unique way
+celsius temperature in the SI as it is superfluous and in a unique way
 incoherent with the SI.
         </p>
         <p>
@@ -1158,7 +1159,7 @@ they are <emph>only</emph> used for defining special units.
 Arbitrary or procedure defined units are units whose meaning entirely
 depends on the measurement procedure (assay). These units have no
 general meaning in relation with any other unit in the SI. Therefore those arbitrary
-semantic entities are called <emph>arbitrary units</emph>, as oposed to
+semantic entities are called <emph>arbitrary units</emph>, as opposed to
 <emph>proper units</emph>. The set of arbitrary units is denoted
 <v>A</v>, where <v>A</v> &cap; <v>U</v> = &emptyset;.
 </verse>
@@ -1174,7 +1175,7 @@ not &ldquo;commensurable with&rdquo; any other unit.
       </p>
       <comment>
         <p>
-Until version 1.6 &TUCUM; has dealth with arbitrary units as dimensionless,
+Until version 1.6 &TUCUM; has dealt with arbitrary units as dimensionless,
 but as an effect the semantics of &TUCUM; made all arbitrary units 
 commensurable. Since version 1.7 of &TUCUM; it is no longer possible to
 convert or compare arbitrary units with any other arbitrary unit.
@@ -1483,7 +1484,7 @@ the name conflict between pascal and pico-amp&egrave;re.
       <p>
 Without reference to history, it is difficult to explain that the
 degree Celsius is part of the SI, because the degree Celsius is in a
-unique way incoherent with the SI, and is even superflous since the
+unique way incoherent with the SI, and is even superfluous since the
 base unit kelvin measures the same kind of quantity.
       </p>
     </comment>
@@ -1580,7 +1581,7 @@ The unit &ldquo;are&rdquo; competes with year for the symbol
 &ldquo;a&rdquo; not only in ISO&nbsp;2955, and ANSI&nbsp;X3.50, but also in
 ISO&nbsp;1000 as stating the official CGPM approved symbols. This is why
 the symbol for are is &ldquo;<code>ar</code>&rdquo; in
-&TUCUM;. ISO&nbsp;2955 explicitely adds the unit atom
+&TUCUM;. ISO&nbsp;2955 explicitly adds the unit atom
 &ldquo;<code>ha</code>&rdquo; for hectare, while &ldquo;hectare&rdquo;
 is just the correct spelling of the compositum of &ldquo;hecto&rdquo;
 and &ldquo;are&rdquo; and thus would not require a separate unit
@@ -2510,15 +2511,17 @@ The meaning of the columns is declared in  <pref ref="para-custint"/>.
 The function pair denoted &ldquo;<code>hpX(1 l)</code>&rdquo; is
 defined as <v>f</v><sub>hp X</sub>(<v>x</v>) = - lg <v>x</v> to
 convert from a number fraction (dillution) per liter to the
-homeopathic potency value of the X-series, and <v>f</v><sub>hp
+homeopathic potency value of the decimal (X) series, and <v>f</v><sub>hp
 X</sub><sup>-1</sup>(<v>x</v>) = 10<sup>-<v>x</v></sup> to convert
 from the potency value back to the number fraction. Likewise, the
 function pair denoted &ldquo;<code>hpC(1 l)</code>&rdquo; is defined
 as <v>f</v><sub>hp C</sub>(<v>x</v>) = - ln(<v>x</v>) / ln(100)
 to convert from a number fraction (dillution) per liter to the
-homeopathic potency value of the C-series, and <v>f</v><sub>hp
+homeopathic potency value of the centesimal (C) series, and <v>f</v><sub>hp
 C</sub><sup>-1</sup>(<v>x</v>) = 100<sup>-<v>x</v></sup> to convert
-from the potency value back to the number fraction.
+from the potency value back to the number fraction. Aanalogous 
+functions are defined for the millesimal (M) series with basis 1,000 
+and the series and the quintamillesimal (Q) series with basis 50,000.
 </verse>
 
 <verse>
@@ -2538,6 +2541,7 @@ convert from prism diopter (or slope percent) value <v>x</v> back to a plane ang
 <u:unit id="600450" Code="[in_i'H2O]" CODE="[IN_I'H2O]" isMetric="no"><name>inch of water column</name><printSymbol>in&nbsp;H<sub><r>2</r></sub>O</printSymbol><property>pressure</property><value Unit="m[H2O].[in_i]/m" UNIT="M[H2O].[IN_I]/M" value="1">1</value></u:unit>
 <u:unit id="600460" Code="[in_i'Hg]" CODE="[IN_i'HG]" isMetric="no"><name>inch of mercury column</name><printSymbol>in&nbsp;Hg</printSymbol><property>pressure</property><value Unit="m[Hg].[in_i]/m" UNIT="M[HG].[IN_I]/M" value="1">1</value></u:unit>
 <u:unit id="600560" Code="[PRU]" CODE="[PRU]" isMetric="no"><name>peripheral vascular resistance unit</name><printSymbol>P.R.U.</printSymbol><property>fluid resistance</property><value Unit="mm[Hg].s/ml" UNIT="MM[HG].S/ML" value="1">1</value></u:unit>
+<u:unit id="600569" Code="[wood'U]" CODE="[WOOD'U]" isMetric="no"><name>Wood unit</name><printSymbol>Wood U.</printSymbol><property>fluid resistance</property><value Unit="mm[Hg].min/L" UNIT="MM[HG].MIN/L" value="1">1</value></u:unit>
 <u:unit id="600270" Code="[diop]" CODE="[DIOP]" isMetric="no"><name>diopter</name><printSymbol>dpt</printSymbol><property>refraction of a lens</property><value Unit="/m" UNIT="/M" value="1">1</value></u:unit>
 <u:unit id="600271" Code="[p'diop]" CODE="[P'DIOP]" isMetric="no"><name>prism diopter</name><printSymbol>PD</printSymbol><property>refraction of a prism</property><value Unit="100tan(1 rad)" UNIT="100TAN(1 RAD)"><function name="tanTimes100" value="1" Unit="deg"/></value></u:unit>
 <u:unit id="600272" Code="%[slope]" CODE="%[SLOPE]" isMetric="no"><name>percent of slope</name><printSymbol>%</printSymbol><property>slope</property><value Unit="100tan(1 rad)" UNIT="100TAN(1 RAD)"><function name="100tan" value="1" Unit="deg"/></value></u:unit>
@@ -2546,8 +2550,18 @@ convert from prism diopter (or slope percent) value <v>x</v> back to a plane ang
 <u:unit id="600260" Code="[drp]" CODE="[DRP]" isMetric="no"><name>drop</name><printSymbol>drp</printSymbol><property>volume</property><value Unit="ml/12" UNIT="ML/12" value="1">1</value></u:unit>
 <u:unit id="600550" Code="[hnsf'U]" CODE="[HNSF'U]" isMetric="no"><name>Hounsfield unit</name><printSymbol>HF</printSymbol><property>x-ray attenuation</property><value Unit="1" UNIT="1" value="1">1</value></u:unit>
 <u:unit id="600555" Code="[MET]" CODE="[MET]" isMetric="no"><name>metabolic equivalent</name><printSymbol>MET</printSymbol><property>metabolic cost of physical activity</property><value Unit="mL/min/kg" UNIT="ML/MIN/KG" value="3.5">3.5</value></u:unit>
-<u:unit id="600556" Code="[hp_X]" CODE="[HP_X]" isMetric="no"><name>homeopathic potency of decimal series</name><printSymbol reverse="yes">X</printSymbol><property>homeopathic potency</property><value Unit="hpX(1 1)" UNIT="HPX(1 1)"><function name="hpX" value="1" Unit="1"/></value></u:unit>
-<u:unit id="600557" Code="[hp_C]" CODE="[HP_C]" isMetric="no"><name>homeopathic potency of centesimal series</name><printSymbol reverse="yes">C</printSymbol><property>homeopathic potency</property><value Unit="hpC(1 1)" UNIT="hpc(1 1)"><function name="hpC" value="1" Unit="1"/></value></u:unit>
+<u:unit id="600556" Code="[hp'_X]" CODE="[HP'_X]" isMetric="no"><name>homeopathic potency of decimal series (retired)</name><printSymbol>X</printSymbol><property>homeopathic potency (retired)</property><value Unit="hpX(1 1)" UNIT="HPX(1 1)"><function name="hpX" value="1" Unit="1"/></value></u:unit>
+<u:unit id="600557" Code="[hp'_C]" CODE="[HP'_C]" isMetric="no"><name>homeopathic potency of centesimal series (retired)</name><printSymbol>C</printSymbol><property>homeopathic potency (retired)</property><value Unit="hpC(1 1)" UNIT="HPC(1 1)"><function name="hpC" value="1" Unit="1"/></value></u:unit>
+<u:unit id="600558" Code="[hp'_M]" CODE="[HP'_M]" isMetric="no"><name>homeopathic potency of millesimal series (retired)</name><printSymbol>M</printSymbol><property>homeopathic potency (retired)</property><value Unit="hpM(1 1)" UNIT="HPM(1 1)"><function name="hpM" value="1" Unit="1"/></value></u:unit>
+<u:unit id="600559" Code="[hp'_Q]" CODE="[HP'_Q]" isMetric="no"><name>homeopathic potency of quintamillesimal series (retired)</name><printSymbol>Q</printSymbol><property>homeopathic potency (retired)</property><value Unit="hpQ(1 1)" UNIT="HPQ(1 1)"><function name="hpQ" value="1" Unit="1"/></value></u:unit>
+<u:unit id="600551" Code="[hp_X]" CODE="[HP_X]" isMetric="no" isArbitrary="yes"><name>homeopathic potency of decimal hahnemannian series</name><printSymbol>X</printSymbol><property>homeopathic potency (Hahnemann)</property><value Unit="1" UNIT="1" value="1">1</value></u:unit>
+<u:unit id="600552" Code="[hp_C]" CODE="[HP_C]" isMetric="no" isArbitrary="yes"><name>homeopathic potency of centesimal hahnemannian series</name><printSymbol>C</printSymbol><property>homeopathic potency (Hahnemann)</property><value Unit="1" UNIT="1" value="1">1</value></u:unit>
+<u:unit id="600553" Code="[hp_M]" CODE="[HP_M]" isMetric="no" isArbitrary="yes"><name>homeopathic potency of millesimal hahnemannian series</name><printSymbol>M</printSymbol><property>homeopathic potency (Hahnemann)</property><value Unit="1" UNIT="1" value="1">1</value></u:unit>
+<u:unit id="600554" Code="[hp_Q]" CODE="[HP_Q]" isMetric="no" isArbitrary="yes"><name>homeopathic potency of quintamillesimal hahnemannian series</name><printSymbol>Q</printSymbol><property>homeopathic potency (Hahnemann)</property><value Unit="1" UNIT="1" value="1">1</value></u:unit>
+<u:unit id="600546" Code="[kp_X]" CODE="[KP_X]" isMetric="no" isArbitrary="yes"><name>homeopathic potency of decimal korsakovian series</name><printSymbol>X</printSymbol><property>homeopathic potency (Korsakov)</property><value Unit="1" UNIT="1" value="1">1</value></u:unit>
+<u:unit id="600547" Code="[kp_C]" CODE="[KP_C]" isMetric="no" isArbitrary="yes"><name>homeopathic potency of centesimal korsakovian series</name><printSymbol>C</printSymbol><property>homeopathic potency (Korsakov)</property><value Unit="1" UNIT="1" value="1">1</value></u:unit>
+<u:unit id="600548" Code="[kp_M]" CODE="[KP_M]" isMetric="no" isArbitrary="yes"><name>homeopathic potency of millesimal korsakovian series</name><printSymbol>M</printSymbol><property>homeopathic potency (Korsakov)</property><value Unit="1" UNIT="1" value="1">1</value></u:unit>
+<u:unit id="600549" Code="[kp_Q]" CODE="[KP_Q]" isMetric="no" isArbitrary="yes"><name>homeopathic potency of quintamillesimal korsakovian series</name><printSymbol>Q</printSymbol><property>homeopathic potency (Korsakov)</property><value Unit="1" UNIT="1" value="1">1</value></u:unit>
     </u:units>
 
     <comment>
@@ -2599,11 +2613,19 @@ be related to metric units of radiant intensity decremence is
 appreciated.
       </p>
       <p>
-It should be pointed out that the homeopathic teaching takes potency
+We have always pointed out that the homeopathic teaching takes potency
 not as equivalent to dillution and the C and X series would not equate
 to each other in the strictly numerical manner. Homeopathic potency
 includes the &ldquo;agitation&rdquo; (a vigorous shaking) that needs
-to occur in every step of the dilluting process.
+to occur in every step of the dilluting process. Therefore as of April 2010, 
+the hoemeopathic units are declared "arbitrary units", that is, they 
+are no longer convertible. Therefore, also, we discontinue defining them
+using the dillution functions. The dillution functions sometimes cause
+truly astronomical values, leading to overflow conditions, e.g. in 
+such potencies as 30 C or 100 X or 10 M, which do actually occur in
+hoemeopathics that are on the market. The previous units continue to
+exist as "retired", but their symbols now have a prime (apostrophe) in
+them.
       </p>
     </comment>
 
@@ -2636,7 +2658,8 @@ to convert from the pH value back to moles per liter.
 <u:unit id="600540" Code="[LPF]" CODE="[LPF]" isMetric="no"><name>low power field</name><printSymbol>LPF</printSymbol><property>view area in microscope</property><value Unit="1" UNIT="1" value="100">100</value></u:unit>
 <u:unit id="600220" Code="kat" CODE="KAT" isMetric="yes"><name>katal</name><printSymbol>kat</printSymbol><property>catalytic activity</property><value Unit="mol/s" UNIT="MOL/S" value="1">1</value></u:unit>
 <u:unit id="600230" Code="U" CODE="U" isMetric="yes"><name>Unit</name><printSymbol>U</printSymbol><property>catalytic activity</property><value Unit="umol/min" UNIT="UMOL/MIN" value="1">1</value></u:unit>
-<u:unit id="600570" Code="[iU]" CODE="[IU]" isMetric="yes" isArbitrary="yes"><name>international unit</name><printSymbol>i.U.</printSymbol><property>arbitrary</property><value Unit="1" UNIT="1" value="1">1</value></u:unit>
+<u:unit id="600570" Code="[iU]" CODE="[IU]" isMetric="yes" isArbitrary="yes"><name>international unit</name><printSymbol>IU</printSymbol><property>arbitrary</property><value Unit="1" UNIT="1" value="1">1</value></u:unit>
+<u:unit id="600571" Code="[IU]" CODE="[IU]" isMetric="yes" isArbitrary="yes"><name>international unit</name><printSymbol>i.U.</printSymbol><property>arbitrary</property><value Unit="[iU]" UNIT="[IU]" value="1">1</value></u:unit>
 <u:unit id="600580" Code="[arb'U]" CODE="[ARB'U]" isMetric="no" isArbitrary="yes"><name>arbitary unit</name><printSymbol>arb. U</printSymbol><property>arbitrary</property><value Unit="1" UNIT="1" value="1">1</value></u:unit>
 <u:unit id="600590" Code="[USP'U]" CODE="[USP'U]" isMetric="no" isArbitrary="yes"><name>United States Pharmacopeia unit</name><printSymbol>U.S.P.</printSymbol><property>arbitrary</property><value Unit="1" UNIT="1" value="1">1</value></u:unit>
 <u:unit id="600600" Code="[GPL'U]" CODE="[GPL'U]" isMetric="no" isArbitrary="yes"><name>GPL unit</name><property>biologic activity of anticardiolipin IgG</property><value Unit="1" UNIT="1" value="1">1</value></u:unit>
@@ -2656,6 +2679,12 @@ to convert from the pH value back to moles per liter.
 <u:unit id="600703" Code="[PFU]" CODE="[PFU]" isMetric="no" isArbitrary="yes"><name>plaque forming units</name><printSymbol>PFU</printSymbol><property>amount of an infectious agent</property><value Unit="1" UNIT="1" value="1">1</value></u:unit>
 <u:unit id="600704" Code="[FFU]" CODE="[FFU]" isMetric="no" isArbitrary="yes"><name>focus forming units</name><printSymbol>FFU</printSymbol><property>amount of an infectious agent</property><value Unit="1" UNIT="1" value="1">1</value></u:unit>
 <u:unit id="600705" Code="[CFU]" CODE="[CFU]" isMetric="no" isArbitrary="yes"><name>colony forming units</name><printSymbol>CFU</printSymbol><property>amount of a proliferating organism</property><value Unit="1" UNIT="1" value="1">1</value></u:unit>
+<u:unit id="600710" Code="[BAU]" CODE="[BAU]" isMetric="no" isArbitrary="yes"><name>bioequivalent allergen unit</name><printSymbol>BAU</printSymbol><property>amount of an allergen callibrated through in-vivo testing based on the ID50EAL method of (intradermal dilution for 50mm sum of erythema diameters</property><value Unit="1" UNIT="1" value="1">1</value></u:unit>
+<u:unit id="600711" Code="[AU]" CODE="[AU]" isMetric="no" isArbitrary="yes"><name>allergen unit</name><printSymbol>AU</printSymbol><property>procedure defined amount of an allergen using some reference standard</property><value Unit="1" UNIT="1" value="1">1</value></u:unit>
+<u:unit id="600712" Code="[Amb'a'1'U]" CODE="[AMB'A'1'U]" isMetric="no" isArbitrary="yes"><name>allergen unit for Ambrosia artemisiifolia</name><printSymbol>Amb a 1 U</printSymbol><property>procedure defined amount of the major allergen of ragweed.</property><value Unit="1" UNIT="1" value="1">1</value></u:unit>
+<u:unit id="600715" Code="[PNU]" CODE="[PNU]" isMetric="no" isArbitrary="yes"><name>protein nitrogen unit</name><printSymbol>PNU</printSymbol><property>procedure defined amount of a protein substance</property><value Unit="1" UNIT="1" value="1">1</value></u:unit>
+<u:unit id="600716" Code="[Lf]" CODE="[LF]" isMetric="no" isArbitrary="yes"><name>Limit of flocculation</name><printSymbol>Lf</printSymbol><property>procedure defined amount of an antigen substance</property><value Unit="1" UNIT="1" value="1">1</value></u:unit>
+<u:unit id="600717" Code="[D'ag'U]" CODE="[D'AG'U]" isMetric="no" isArbitrary="yes"><name>D-antigen unit</name><printSymbol/><property>procedure defined amount of an antigen substance</property><value Unit="1" UNIT="1" value="1">1</value></u:unit>
     </u:units>
 
     <comment>
@@ -2818,6 +2847,112 @@ antibodies and results are recorded as FFU/ml.
 
 [Sources: <emph>WHO expert committee on biological standardization (55th Edition).</emph> WHO Technical Report #932;]
       </p>
+      <p>
+The unit &ldquo;BAU&rdquo; measures amount of an allergen based on an in-vivo callibrated test using the Intradermal Dilution for 50mm sum of Erythema Diameters (ID50EAL) Method. In this meathod. 
+
+[Source: <emph>Turkeltaub PC. Biological Standardization based on
+Quantitative Skin Testing - The 1D50 EAL Method. Arbeiten aus dem
+Paul-Ehrlich-Institut, dem Georg-Speyer-Haus und dem
+Ferdinand-Blum-Institut, Band 80 Gustav Fischer Verlag' Stuttgart, New
+York. 1987</emph>]
+      </p>
+
+      <p>
+EDITORIAL NOTE: This method needs to be further investigated to
+determine a quantitative model which relates that would relate 1 BAU
+with a standardized amount of substance of the standardized allergenic
+protein. The situation is not unlike the titer and is not worse than
+for many of the arbitrary units listed already. In a future revision a
+stronger formalized metrologic model will be added to this
+specification.
+      </p>
+
+      <p>
+The unit &ldquo;AU&rdquo; (for allergen unit) is for the amount of an
+allergen based some procedure defined and allergen specific reference
+standard. Note, do not confuse with astronomical unit, distinguish
+<code>[AU]</code> from <code>AU</code>
+      </p>
+
+      <p>
+The unit &ldquo;Amb a 1 U&rdquo; is an arbitrary unit for the
+amount of Amb a 1, a 38 kD glycoprotein that is the major allergen in
+short ragweed (Ambrosia artemisiifolia) pollen allergen extracts. The
+amount of Amb a 1 units are determined by an in-vitro comparison of a
+test short ragweed extract to a FDA CBER Amb a 1 reference standard.
+Amb a 1 is the up-to-date term for the short ragweed pollen allergen
+that was originally described as Antigen E. They are
+synonyms. Although Antigen E is no longer used in the scientific
+literature, its meaning is unambiguous. The manufacturers are still
+licensed to use Antigen E as the designation. Therefore, Amb a 1 U =
+AgE U.  There is an empiric relationship between Amb a 1 U and BAU
+(350 Amb a 1 U/mL = 100,000 BAU/mL). It was based on studies done
+decades ago on 15 study subjects. FDA's CBER considered mandating a
+conversion to BAU/mL in the labeling of short ragweed pollen products,
+based on AgE content, but this was never implemented.  CBER provides
+two US standard reagents to manufacturers for their determination of
+Amb a 1 content, a reference standard and a reference serum. The assay
+used is a radial immunodiffusion assay (RID). Solid references
+discussing the relationship between Antigen E U/mL/Amb a 1 U/mL and
+micrograms of Antigen E U/mL/Amb a 1/mL are being researched.
+      </p>
+
+      <p>
+EDITORIAL NOTE: The University of Texas' Structural Database of
+Allergenic Proteins (SDAP) contains close to 1000 allergens,
+isoallergens. Comparing the prospect of thousands of such special
+units for every allergen, one begins to appreciate even the
+metrologically comlex BAU unit.
+      </p>
+
+      <p>
+The unit &ldquo;PNU&rdquo; is defined as follows: 1 PNU/ml is
+equivalent to 1 x 10-5 mg of nitrogen determined to be in the material
+precipitated from 1 ml of allergenic extract by phosphotungstic acid
+(micro-Kjeldahl method). Typically, 1 mg of protein nitrogen equals
+100,000 PNU. The unit &ldquo;PNU&rdquo; is an old protein unit
+unrelated to SI units. Several hundred products, from several
+manufacturers, are labeled in PNUs, and a switch to SI units for
+protein content is impractical.
+      </p>      
+
+      <p>
+The unit &ldquo;Lf&rdquo; is called the &ldquo;Limit of
+Floculation&rdquo; or &ldquo;limes flocculationis&rdquo;. It is based
+on an antigen-antibody precipitation reaction and used for the
+quantification of the antigenic content of tetanus and diphteria toxin
+and toxoid. The limes flocculationis is the smallest amount of antigen
+that when mixed with one unit (Ramon) of antitoxin (antibody),
+produces the most rapid floccules in the flocculation test. For a
+purified crystalline tetanus or diphteria toxin 1 Lf is equivalent to
+~ 2 &mu;g of protein. For tetanus and diphtheria toxoids, antigenic
+purity is defined and controlled by Lf units per mg of protein
+nitrogen. 
+      </p>
+      <p>
+Many sources describe the unit of antitoxin as "international unit"
+(IU), however, this is no longer correct. It was correct for the first
+international standard for antitoxin, established in 1920s. It had an
+arbitrary unit defined as IU for in vivo antitoxic activity and that
+unit was also used for establishing Lf units of toxins and toxoids,
+that is why this standard had a ratio of 1 between flocculating
+activity (Lf) and antitoxic activity (IU). When WHO replaced that
+standard in 1970s, the second international standard related to Lf by
+a factor of 1.4 instead of 1. Ultimately, WHO decided to move to the
+toxoid standards and calibrated tetanus toxoid for flocculation using
+Lf unit (not IU). With the implementation of WHO standards for
+flocculation as tetanus and diphtheria toxoids, antitoxin standards
+were discontinued by the WHO.  [Source: <emph>Lyng J. Quantitative
+Estimation of Diphtheria and Tetanus Toxoids - 4 - Toxoids as
+International Reference Materials Defining Lf-units for Diphtheria and
+Tetanus Toxoids. Biologicals (1990) 18, 11-17.</emph> Also on the
+definition of the IU for antitoxin: <emph>Spaun J, Lyng J. Replacement
+of the International Standard for Tetanus Antitoxin and the Use of the
+Standard in the Flocculation Test. Bull. Wid Hith Org. 1970, 42,
+523-534.</emph>
+<code>http://www.ncbi.nlm.nih.gov/pmc/articles/PMC2427455</code> and
+personal communication with FDA CBER representatives.]
+      </p>
     </comment>
 
     <p name="levels">
@@ -2845,6 +2980,7 @@ decadic logarithm times two with their respective inverse functions.
 <u:unit id="600140" Code="B[V]" CODE="B[V]" isMetric="yes"><name>bel volt</name><printSymbol>B(V)</printSymbol><property>electric potential level</property><value Unit="2lg(1 V)" UNIT="2LG(1 V)" ><function name="lgTimes2" value="1" Unit="V"/></value></u:unit>
 <u:unit id="600150" Code="B[mV]" CODE="B[MV]" isMetric="yes"><name>bel millivolt</name><printSymbol>B(mV)</printSymbol><property>electric potential level</property><value Unit="2lg(1 mV)" UNIT="2LG(1 MV)" ><function name="lgTimes2" value="1" Unit="mV"/></value></u:unit>
 <u:unit id="600160" Code="B[uV]" CODE="B[UV]" isMetric="yes"><name>bel microvolt</name><printSymbol>B(&mu;V)</printSymbol><property>electric potential level</property><value Unit="2lg(1 uV)" UNIT="2LG(1 UV)" ><function name="lgTimes2" value="1" Unit="uV"/></value></u:unit>
+<u:unit id="600161" Code="B[10.nV]" CODE="B[10.NV]" isMetric="yes"><name>bel 10 nanovolt</name><printSymbol>B(10 nV)</printSymbol><property>electric potential level</property><value Unit="2lg(10 nV)" UNIT="2LG(10 NV)" ><function name="lgTimes2" value="10" Unit="nV"/></value></u:unit>
 <u:unit id="600170" Code="B[W]" CODE="B[W]" isMetric="yes"><name>bel watt</name><printSymbol>B(W)</printSymbol><property>power level</property><value Unit="lg(1 W)" UNIT="LG(1 W)" ><function name="lg" value="1" Unit="W"/></value></u:unit>
 <u:unit id="600180" Code="B[kW]" CODE="B[KW]" isMetric="yes"><name>bel kilowatt</name><printSymbol>B(kW)</printSymbol><property>power level</property><value Unit="lg(1 kW)" UNIT="LG(1 KW)" ><function name="lg" value="1" Unit="kW"/></value></u:unit>
     </u:units>
@@ -3056,10 +3192,17 @@ normative.
 <u:junk-unit id="600710" Code="{tbl}" CODE="{TBL}" isMetric="no"><name>tablets</name><printSymbol>tbl.</printSymbol><property>number</property><value Unit="1" UNIT="1" /></u:junk-unit>
 <u:junk-unit id="600730" Code="{rbc}" CODE="{RBC}" isMetric="no"><name>red blood cell count</name><printSymbol>R.B.C.</printSymbol><property>number</property><value Unit="1" UNIT="1" /></u:junk-unit>
 <u:junk-unit id="600740" Code="g.m/{H.B.}" CODE="G.M/{H.B.}" isMetric="no"><name>gram meter per heartbeat</name><printSymbol>g&middot; m/H.B.</printSymbol><property>proportional to ventricular stroke work</property><value value="1" Unit="g.m" UNIT="G.M" /></u:junk-unit>
+<u:junk-unit id="600741" Code="gf.m/{H.B.}" CODE="GF.M/{H.B.}" isMetric="no"><name>gram-force meter per heartbeat</name><printSymbol>gf&middot; m/H.B.</printSymbol><property>ventricular stroke work</property><value value="1" Unit="gf.m" UNIT="GF.M" /></u:junk-unit>
 <u:junk-unit id="600750" Code="kg{wet'tis}" CODE="KG{wet'tis}" isMetric="no"><name>kilogram of wet tissue</name><printSymbol>kg(wet tissue)</printSymbol><property>mass</property><value value="1" Unit="kg" UNIT="KG"/></u:junk-unit>
 <u:junk-unit id="600750" Code="mg{creat}" CODE="MG{creat}" isMetric="no"><name>milligram of creatinine</name><printSymbol>mg(creat.)</printSymbol><property>mass</property><value value="1" Unit="mg" UNIT="MG" /></u:junk-unit>
     </u:units> 
   </div1>
+
+  <comment>
+    <p>
+       Although customarily cardiac stroke work is notated as "g.m" this is not a true unit of work. Instead one should use gram-force meter.
+    </p>
+  </comment>
 
   <div1>
     <head>Summary of Conflicts</head>
@@ -3611,21 +3754,30 @@ more straightforward or more appropriate or both.
           <td/>
         </tr>
         <tr>
-          <td>g.m/({hb}.m2)</td>
-          <td>g.m/{hb}/m2 g/m</td>
-          <td>gram meter per heartbeat and square meter</td>
+          <td>gf.m</td>
           <td/>
-          <td>1</td>
-          <td>m-1.g</td>
+          <td>gram-force meter</td>
+          <td/>
+          <td>9.80665</td>
+          <td>m2.s-2.g</td>
           <td/>
         </tr>
         <tr>
-          <td>g.m/{hb}</td>
-          <td>g.m</td>
-          <td>gram meter per heartbeat</td>
+          <td>gf.m/({hb}.m2)</td>
+          <td>gf.m/{hb}/m2 gf/m</td>
+          <td>gram-force meter per heartbeat and square meter</td>
+          <td/>
+          <td>9.80665</td>
+          <td>s-2.g</td>
+          <td/>
+        </tr>
+        <tr>
+          <td>gf.m/{hb}</td>
+          <td>gf.m</td>
+          <td>gram-force meter per heartbeat</td>
           <td>ventricular stroke work</td>
-          <td>1</td>
-          <td>m.g</td>
+          <td>9.80665</td>
+          <td>m2.s-2.g</td>
           <td/>
         </tr>
         <tr>
@@ -5160,6 +5312,66 @@ more straightforward or more appropriate or both.
         </tr>
       </tbody>
     </table>
+  </div1>
+  <div1 ignore="no" id="license">
+     <head>Copyright and License Terms of Use</head>
+     <p>
+The UCUM codes, UCUM table (regardless of format), and UCUM Specification are copyright © 1999-2009, Regenstrief Institute, Inc. and the Unified Codes for Units of Measures (UCUM) Organization. All rights reserved.
+     </p>
+     <p>
+Regenstrief Institute, Inc. and the Unified Codes for Units of Measures (UCUM) Organization are hereunder collectively referred to as "The Organization".
+     </p>
+     <p>
+Permission is hereby granted in perpetuity, without payment of license fees or royalties, to use, copy, or distribute the UCUM codes, UCUM Specification, and UCUM table (in all formats in which it is distributed by The Organization and the UCUM Organization) (collectively, the "Licensed Materials") for any commercial or non-commercial purpose, subject to the following terms and conditions:
+     </p>
+     <list role="ordered">
+	<item>
+To prevent the dilution of the purpose of the Licensed Materials, i.e., that of providing a definitive standard for identifying units of measures in electronic documents and messages, users shall not use any of the Licensed Materials for the purpose of developing or promulgating a different standard for identifying units of measure, regardless of whether the intended use is in the field of medicine, or any other field of science or trade.
+	</item>
+	<item>
+Users shall not modify the Licensed Materials and may not distribute modified versions of the UCUM table (regardless of format) or UCUM Specification. Users shall not modify any existing contents, fields, description, or comments of the Licensed Materials, and may not add any new contents to it.
+	</item>
+	<item>
+Users shall not use any of the UCUM codes in a way that expressly or implicitly changes their meaning.
+	</item>
+	<item>
+RESERVED
+	</item>
+	<item>
+UCUM codes and other information from the UCUM table may be used in electronic messages communicating measurements without the need to include this Copyright Notice and License or a reference thereto in the message (and without the need to include all fields required by Section 7 hereof).
+	</item>
+	<item>
+Users may make and distribute an unlimited number of copies of the Licensed Materials. Each copy thereof must include this Copyright Notice and License, and must include the appropriate version or revision number of the Licensed Materials if the Licensed Materials have a version or revision number, or the release date if the Licensed Materials do not have a version or revision number. This Copyright Notice and License must appear on every printed copy of the Licensed Materials. Where the Licensed Materials are distributed on a fixed storage medium (such as a CD-ROM), a printed copy of this Copyright Notice and License must be included on or with the storage medium, and a text file containing this information also must be stored on the storage medium in a file called "license.txt". Where the Licensed Materials are distributed via the Internet, this Copyright Notice and License must be accessible on the same Internet page from which the Licensed Materials are available for download. This Copyright Notice and License must appear verbatim on every electronic or printed copy of the Licensed Materials. The UCUM Specification and related documents may not be modified, nor may derivative works be created from it, without the prior written permission of The Organization. To request written permission, please contact ucum@unitsofmeasure.org. The Organization retains the right to approve any modification to, or derivative work of the Licensed Materials.
+	</item>
+	<item>
+Subject to Section 1 and the other restrictions hereof, users may incorporate portions of the UCUM table and definitions into another master term dictionary (e.g. laboratory test definition database), or software program for distribution outside of the user's corporation or organization, provided that any such master term dictionary or software program includes the following fields reproduced in their entirety from the UCUM table: UCUM code, definition value and unit. Every copy of the UCUM table incorporated into or distributed in conjunction with another database or software program must include the following notice:
+<quote>
+      &ldquo;This product includes all or a portion of the UCUM table, UCUM codes, and UCUM definitions or is derived from it, subject to a license from Regenstrief Institute, Inc. and The UCUM Organization. Your use of the UCUM table, UCUM codes, UCUM definitions also is subject to this license, a copy of which is available at http://unisofmeasure.org. The current complete UCUM table, UCUM Specification are available for download at http://unitsofmeasure.org. The UCUM table and UCUM codes are copyright © 1995-2009, Regenstrief Institute, Inc. and the Unified Codes for Units of Measures (UCUM) Organization. All rights reserved.
+</quote>
+<quote>
+    THE UCUM TABLE (IN ALL FORMATS), UCUM DEFINITIONS, AND SPECIFICATION ARE PROVIDED "AS IS." ANY EXPRESS OR IMPLIED WARRANTIES ARE DISCLAIMED, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE.&rdquo;
+</quote>
+If the master term dictionary or software program containing the UCUM table, UCUM definitions and/or UCUM specification is distributed with a printed license, this statement must appear in the printed license. Where the master term dictionary or software program containing the UCUM table, UCUM definitions, and/or UCUM specification is distributed on a fixed storage medium, a text file containing this information also must be stored on the storage medium in a file called "UCUM_short_license.txt". Where the master term dictionary or software program containing the UCUM table, UCUM definitions, and/or UCUM specification is distributed via the Internet, this information must be accessible on the same Internet page from which the product is available for download.
+	</item>
+	<item>
+Use and distribution of the Licensed Materials in ways that are not specifically discussed herein shall always be accompanied by the notice provided in Section 7 hereof. The guidelines for providing the notice that are contained in the last paragraph of Section 7 also shall apply. If a user has a question about whether a particular use of any of the Licensed Materials is permissible, the user is invited to contact The Organization by e-mail at ucum@unitsofmeasure.org.
+	</item>
+	<item>
+If the user desires to translate any of the Licensed Materials into a language other than English, then user shall notify The Organization via email at ucum@unitsofmeasure.org. Any such translation is a derivative work, and the user agrees and does hereby assign all right, title and interest in and to such derivative work to The Organization. Further, user shall fully cooperate with The Organization in the filing and reviewing of any copyright applications or other legal documents, and signing any documents (such as declarations, assignments, affidavits, and the like) that are reasonably necessary to the preparation of any such copyright application. The assignment granted by this paragraph extends to all proprietary rights both in the United States, and in all foreign countries. No other right to create a derivative work of any of the Licensed Materials is hereby granted (except the right to translate into a language other than English granted in this Section 9), and The Organization reserves all other rights not specifically granted herein. All such translations shall be electronically transmitted to The Organization, and such translations shall be made available and are subject to the same license rights and restrictions contained herein. The Organization will give credit on its website to the user and/or entity that did the translation.
+	</item>
+	<item>
+The Organization welcome requests for new UCUM content (terms, codes or associated material such as text descriptions and synonyms) and suggestions about revisions to existing content within the Licensed Materials. Such submissions should be done on The Organization's web site http://unitsofmeasure.org/newticket.
+	</item>
+	<item>
+The names "UCUM Organization" may not be used in a way which could be interpreted as an endorsement or a promotion of any product or service without prior written permission of The Organization. To request written permission, please contact ucum@unitsofmeasure.org.
+	</item>
+	<item>
+DISCLAIMER: REGENSTRIEF INSTITUTE, INC. AND THE UCUM ORGANIZATION DO NOT ACCEPT LIABILITY FOR ANY OMISSIONS OR ERRORS IN THE LICENSED MATERIALS OR ANY OTHER MATERIALS OBTAINED FROM REGENSTRIEF INSTITUTE, INC. AND/OR THE UCUM ORGANIZATION. THE LICENSED MATERIALS AND ALL OTHER MATERIALS OBTAINED FROM REGENSTRIEF INSTITUTE, INC. AND/OR THE UCUM ORGANIZATION ARE PROVIDED "AS IS," WITHOUT WARRANTY OF ANY KIND. ANY EXPRESSED OR IMPLIED WARRANTIES ARE HEREBY DISCLAIMED, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES OF TITLE, NON-INFRINGEMENT, MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE AND WARRANTIES ARISING FROM A COURSE OF DEALING, TRADE USAGE, OR TRADE PRACTICE. FURTHER, NO WARRANTY OR REPRESENTATION IS MADE CONCERNING THE ACCURACY, COMPLETENESS, SEQUENCE, TIMELINESS OR AVAILABILITY OF THE LICENSED MATERIALS OR ANY OTHER MATERIALS OBTAINED FROM REGENSTRIEF INSTITUTE, INC. AND/OR THE UCUM ORGANIZATION, OR ANY TRANSLATIONS OR DERIVATIVE WORKS OF ANY OF THE FOREGOING. IN NO EVENT SHALL REGENSTRIEF INSTITUTE, INC. OR THE UCUM ORGANIZATION OR ITS CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, RELIANCE, OR CONSEQUENTIAL DAMAGES OR ATTORNEYS' FEES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; OPPORTUNITY COSTS; LOSS OF USE, DATA, SAVINGS OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THE LICENSED MATERIALS OR ANY OTHER MATERIALS OBTAINED FROM REGENSTRIEF INSTITUTE, INC. AND/OR THE UCUM ORGANIZATION, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE OR IF SUCH DAMAGES WERE FORESEEABLE. SOME JURISDICTIONS DO NOT ALLOW THE LIMITATION OR EXCLUSION OF CERTAIN WARRANTIES OR CONDITIONS, SO SOME OF THE FOREGOING MAY NOT APPLY TO YOU.
+	</item>
+	<item>
+This license shall be construed and interpreted in accordance with the laws of the State of Indiana, United States of America, excluding its conflicts of law rules. 
+	</item>
+     </list>
   </div1>
 </back>
 </spec>
