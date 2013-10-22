@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="ISO-8859-1" ?>
+<?xml version="1.0" encoding="utf-8" ?>
 <!-- $Id: v3dt-v3pub.xsl,v 1.29.2.3 2005/06/10 12:30:18 gschadow Exp $ -->
 <!-- XSL Style sheet, DTD omitted -->
 <!DOCTYPE xsl:stylesheet [
@@ -58,7 +58,7 @@
 <xsl:output
 	method='xml'
 	indent='no'
-	encoding='ISO-8859-1'/>
+	encoding='utf-8'/>
 
 <!--
 	doctype-public='-//W3C//XML specification DTD//EN'/ -->
