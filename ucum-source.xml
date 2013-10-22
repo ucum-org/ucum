@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<!-- COPYRIGHT 1998-2010, REGENSTRIEF INSTITUTE, INC. ALL RIGHTS RESERVED.
+<!-- COPYRIGHT 1998-2013, REGENSTRIEF INSTITUTE, INC. AND THE UCUM ORGANIZATION ALL RIGHTS RESERVED.
 
   Use and redistribution of this data is permitted without charge
   as long as you make no changes to it. DO NOT CHANGE THIS FILE if 
@@ -72,7 +72,7 @@
       <email href="cmcdonald@regenstrief.org"/>
     </author>
   </authlist>
-  <copyright>1998-2009, Regenstrief Institute, Inc. and the UCUM Organization. All rigthts reserved.</copyright>
+  <copyright>1998-2013, Regenstrief Institute, Inc. and the UCUM Organization. All rigthts reserved.</copyright>
 </header>
 
 <body>
@@ -5352,7 +5352,7 @@ more straightforward or more appropriate or both.
   <div1 ignore="no" id="license">
      <head>Copyright and License Terms of Use</head>
      <p>
-The UCUM codes, UCUM table (regardless of format), and UCUM Specification are copyright © 1999-2009, Regenstrief Institute, Inc. and the Unified Codes for Units of Measures (UCUM) Organization. All rights reserved.
+The UCUM codes, UCUM table (regardless of format), and UCUM Specification are copyright © 1999-2013, Regenstrief Institute, Inc. and the Unified Codes for Units of Measures (UCUM) Organization. All rights reserved.
      </p>
      <p>
 Regenstrief Institute, Inc. and the Unified Codes for Units of Measures (UCUM) Organization are hereunder collectively referred to as "The Organization".
@@ -5382,7 +5382,7 @@ Users may make and distribute an unlimited number of copies of the Licensed Mate
 	<item>
 Subject to Section 1 and the other restrictions hereof, users may incorporate portions of the UCUM table and definitions into another master term dictionary (e.g. laboratory test definition database), or software program for distribution outside of the user's corporation or organization, provided that any such master term dictionary or software program includes the following fields reproduced in their entirety from the UCUM table: UCUM code, definition value and unit. Every copy of the UCUM table incorporated into or distributed in conjunction with another database or software program must include the following notice:
 <quote>
-      &ldquo;This product includes all or a portion of the UCUM table, UCUM codes, and UCUM definitions or is derived from it, subject to a license from Regenstrief Institute, Inc. and The UCUM Organization. Your use of the UCUM table, UCUM codes, UCUM definitions also is subject to this license, a copy of which is available at http://unisofmeasure.org. The current complete UCUM table, UCUM Specification are available for download at http://unitsofmeasure.org. The UCUM table and UCUM codes are copyright © 1995-2009, Regenstrief Institute, Inc. and the Unified Codes for Units of Measures (UCUM) Organization. All rights reserved.
+      &ldquo;This product includes all or a portion of the UCUM table, UCUM codes, and UCUM definitions or is derived from it, subject to a license from Regenstrief Institute, Inc. and The UCUM Organization. Your use of the UCUM table, UCUM codes, UCUM definitions also is subject to this license, a copy of which is available at http://unisofmeasure.org. The current complete UCUM table, UCUM Specification are available for download at http://unitsofmeasure.org. The UCUM table and UCUM codes are copyright © 1995-2013, Regenstrief Institute, Inc. and the Unified Codes for Units of Measures (UCUM) Organization. All rights reserved.
 </quote>
 <quote>
     THE UCUM TABLE (IN ALL FORMATS), UCUM DEFINITIONS, AND SPECIFICATION ARE PROVIDED "AS IS." ANY EXPRESS OR IMPLIED WARRANTIES ARE DISCLAIMED, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE.&rdquo;
