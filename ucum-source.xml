@@ -2720,7 +2720,8 @@ to convert from the pH value back to moles per liter.
 <u:unit id="600716" Code="[Lf]" CODE="[LF]" isMetric="no" isArbitrary="yes"><name>Limit of flocculation</name><printSymbol>Lf</printSymbol><property>procedure defined amount of an antigen substance</property><value Unit="1" UNIT="1" value="1">1</value></u:unit>
 <u:unit id="600717" Code="[D'ag'U]" CODE="[D'AG'U]" isMetric="no" isArbitrary="yes"><name>D-antigen unit</name><printSymbol/><property>procedure defined amount of a poliomyelitis d-antigen substance</property><value Unit="1" UNIT="1" value="1">1</value></u:unit>
 <u:unit id="600718" Code="[FEU]" CODE="[FEU]" isMetric="no" isArbitrary="yes"><name>fibrinogen equivalent unit</name><printSymbol/><property>amount of fibrinogen broken down into the measured d-dimers</property><value Unit="1" UNIT="1" value="1">1</value></u:unit>
-<u:unit id="600720" Code="[EU]" CODE="[EU]" isMetric="no" isArbitrary="yes"><name>ELISA unit</name><printSymbol/><property>arbitrary ELISA unit</property><value Unit="1" UNIT="1" value="1">1</value></u:unit>
+<u:unit id="600720" Code="[ELU]" CODE="[ELU]" isMetric="no" isArbitrary="yes"><name>ELISA unit</name><printSymbol/><property>arbitrary ELISA unit</property><value Unit="1" UNIT="1" value="1">1</value></u:unit>
+<u:unit id="600721" Code="[EU]" CODE="[EU]" isMetric="no" isArbitrary="yes"><name>Ehrlich unit</name><printSymbol/><property>Ehrlich unit</property><value Unit="1" UNIT="1" value="1">1</value></u:unit>
     </u:units>
 
     <comment>
