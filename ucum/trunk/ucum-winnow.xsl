@@ -8,7 +8,7 @@
 <xsl:strip-space elements="*"/> 
 
 <xsl:template match="/">
-  <root version="{spec/header/version}" revision="{spec/header/revision}" revision-date="{spec/header/date}">
+  <root xmlns="http://unitsofmeasure.org/ucum-essence" version="{spec/header/version}" revision="{spec/header/revision}" revision-date="{spec/header/date}">
     <xsl:apply-templates select="node()"/>
   </root>
 </xsl:template>

@@ -56,7 +56,7 @@
 <spec xmlns:u="http://aurora.regenstrief.org/UCUM">
 <header>
   <title>The Unified Code for Units of Measure</title>
-  <version>1.8.2</version>
+  <version>1.9</version>
   <revision>$Revision$</revision>
   <date>$Date$</date>
   <authlist>
@@ -75,12 +75,6 @@
 </header>
 
 <body>
-  <p><strong>CHANGE NOTE</strong></p>
-  <p>The major change of this release is the establishment of a class
-  of "arbitrary units" which are no longer simply dimensionless. This
-  is to protect the misassumption as if one could convert measurement
-  values expressed in some arbitrary units into other arbitrary or
-  dimensionless units.</p>
   <div1 id="section-introduction">
     <head>Introduction</head>
     <p>
@@ -661,17 +655,20 @@ raises the whole term within the parentheses to the power.
         | <sym name="factor"/><br/>
 	| <lit value="("/> <sym name="term"/> <lit value=")"/></td></tr>
   <tr valign="top"><td><sym name="term"/></td><td>::=</td>
-    <td>  <lit value="/"/> <sym name="component"/><br/>
-        | <sym name="component"/> <lit value="."/> <sym name="term"/><br/>
+    <td>  <sym name="component"/> <lit value="."/> <sym name="term"/><br/>
         | <sym name="component"/> <lit value="/"/> <sym name="term"/><br/>
         | <sym name="component"/></td></tr>
+  <tr valign="top"><td><sym name="main-term"/></td><td>::=</td>
+    <td>  <lit value="/"/> <sym name="term"/><br/>
+        | <sym name="term"/></td></tr>
   <tr valign="top"><td><sym name="annotation"/></td><td>::=</td>
     <td><lit value="{"/> <sym name="ANNOTATION-STRING"/> 
           <lit value="}"/></td></tr>
   </table>
   <caption>
-The complete syntax in the Backus-Naur Form: The <emph>term</emph> of
-units takes care of multiplication and division. A <emph>power</emph>
+The complete syntax in the Backus-Naur Form: 
+The <emph>main-term</emph> is the start symbol. 
+The <emph>term</emph> of units takes care of multiplication and division. A <emph>power</emph>
 can be a simple unit with or without exponent (the default exponent is
 1). A simple unit is a symbol like &ldquo;<code>cm</code>&rdquo;
 &ldquo;<code>cd</code>&rdquo; that may have a prefix
@@ -1560,7 +1557,7 @@ out of scope of &TUCUM;.
 <u:unit id="200180" Code="bar" CODE="BAR" isMetric="yes"><name>bar</name><printSymbol>bar</printSymbol><property>pressure</property><value Unit="Pa" UNIT="PAL" value="1e5">1 &mult; 10<sup>5</sup></value></u:unit>
 <u:unit id="200210" Code="u" CODE="AMU" isMetric="yes"><name>unified atomic mass unit</name><printSymbol>u</printSymbol><property>mass</property><value Unit="g" UNIT="G" value="1.6605402e-24">1.6605402 &mult; 10<sup>-24</sup></value></u:unit>
 <u:unit id="200200" Code="eV" CODE="EV" isMetric="yes"><name>electronvolt</name><printSymbol>eV</printSymbol><property>energy</property><value Unit="[e].V" UNIT="[E].V" value="1">1</value></u:unit>
-<u:unit id="200220" Code="AU" CODE="ASU" isMetric="no"><name>astronomic unit</name><printSymbol>AU</printSymbol><property>length</property><value Unit="Mm" UNIT="MAM" value="149597.870">149597.870</value></u:unit>
+<u:unit id="200220" Code="AU" CODE="ASU" isMetric="no"><name>astronomic unit</name><printSymbol>AU</printSymbol><property>length</property><value Unit="Mm" UNIT="MAM" value="149597.870691">149597.870691</value></u:unit>
 <u:unit id="200230" Code="pc" CODE="PRS" isMetric="yes"><name>parsec</name><printSymbol>pc</printSymbol><property>length</property><value Unit="m" UNIT="M" value="3.085678e16">3.085678 &mult; 10<sup>16</sup></value></u:unit>
     </u:units>
     <comment>
@@ -1701,14 +1698,14 @@ out of scope of &TUCUM;.
 <u:unit id="300010" Code="[c]" CODE="[C]" isMetric="yes"><name>velocity of light</name><printSymbol><i>c</i></printSymbol><property>velocity</property><value Unit="m/s" UNIT="M/S" value="299792458">299792458</value></u:unit>
 <u:unit id="300020" Code="[h]" CODE="[H]" isMetric="yes"><name>Planck constant</name><printSymbol><i>h</i></printSymbol><property>action</property><value Unit="J.s" UNIT="J.S" value="6.6260755e-24">6.6260755 &mult; 10<sup>-24</sup></value></u:unit>
 <u:unit id="300021" Code="[k]" CODE="[K]" isMetric="yes"><name>Boltzmann constant</name><printSymbol><i>k</i></printSymbol><property>(unclassified)</property><value Unit="J/K" UNIT="J/K" value="1.380658e-23">1.380658 &mult; 10<sup>-23</sup></value></u:unit>
-<u:unit id="300022" Code="[eps_0]" CODE="[eps_0]" isMetric="yes"><name>permittivity of vacuum</name><printSymbol><i>&epsilon;<sub><r>0</r></sub></i></printSymbol><property>electric permittivity</property><value Unit="F/m" UNIT="F/M" value="8.854187817e-12">8.854187817 &mult; 10<sup>-12</sup></value></u:unit>
-<u:unit id="300023" Code="[mu_0]" CODE="[mu_0]" isMetric="yes"><name>permeability of vacuum</name><printSymbol><i>&mu;<sub><r>0</r></sub></i></printSymbol><property>magnetic permeability</property><value Unit="4.[pi].10*-7.N/A2" UNIT="4.[PI].10*-7.N/A2" value="1">1</value></u:unit>
+<u:unit id="300022" Code="[eps_0]" CODE="[EPS_0]" isMetric="yes"><name>permittivity of vacuum</name><printSymbol><i>&epsilon;<sub><r>0</r></sub></i></printSymbol><property>electric permittivity</property><value Unit="F/m" UNIT="F/M" value="8.854187817e-12">8.854187817 &mult; 10<sup>-12</sup></value></u:unit>
+<u:unit id="300023" Code="[mu_0]" CODE="[MU_0]" isMetric="yes"><name>permeability of vacuum</name><printSymbol><i>&mu;<sub><r>0</r></sub></i></printSymbol><property>magnetic permeability</property><value Unit="4.[pi].10*-7.N/A2" UNIT="4.[PI].10*-7.N/A2" value="1">1</value></u:unit>
 <u:unit id="200190" Code="[e]" CODE="[E]" isMetric="yes"><name>elementary charge</name><printSymbol><i>e</i></printSymbol><property>electric charge</property><value Unit="C" UNIT="C" value="1.60217733e-19">1.60217733 &mult; 10<sup>-19</sup></value></u:unit>
 <u:unit id="300022" Code="[m_e]" CODE="[M_E]" isMetric="yes"><name>electron mass</name><printSymbol><i>m<sub><r>e</r></sub></i></printSymbol><property>mass</property><value Unit="g" UNIT="g" value="9.1093897e-28">9.1093897 &mult; 10<sup>-28</sup></value></u:unit>
 <u:unit id="300023" Code="[m_p]" CODE="[M_P]" isMetric="yes"><name>proton mass</name><printSymbol><i>m<sub><r>p</r></sub></i></printSymbol><property>mass</property><value Unit="g" UNIT="g" value="1.6726231e-24">1.6726231 &mult; 10<sup>-24</sup></value></u:unit>
 <u:unit id="300029" Code="[G]" CODE="[GC]" isMetric="yes"><name>Newtonian constant of gravitation</name><printSymbol><i>G</i></printSymbol><property>(unclassified)</property><value Unit="m3.kg-1.s-2" UNIT="M3.KG-1.S-2" value="6.67259e-11">6.67259 &mult; 10<sup>-11</sup></value></u:unit>
-<u:unit id="300030" Code="[g]" CODE="[G]" isMetric="yes"><name>standard acceleration of free fall</name><printSymbol><i>g<sub>n</sub></i></printSymbol><property>acceleration</property><value Unit="m/s2" UNIT="M/S" value="9.80665">9.80665</value></u:unit>
-<u:unit id="600410" Code="atm" CODE="ATM" isMetric="no"><name>standard atmosphere</name><printSymbol>atm</printSymbol><property>pressure</property><value Unit="Pa" UNIT="KPAL" value="101325">101325</value></u:unit>
+<u:unit id="300030" Code="[g]" CODE="[G]" isMetric="yes"><name>standard acceleration of free fall</name><printSymbol><i>g<sub>n</sub></i></printSymbol><property>acceleration</property><value Unit="m/s2" UNIT="M/S2" value="980665e-5">9.80665</value></u:unit>
+<u:unit id="600410" Code="atm" CODE="ATM" isMetric="no"><name>standard atmosphere</name><printSymbol>atm</printSymbol><property>pressure</property><value Unit="Pa" UNIT="PAL" value="101325">101325</value></u:unit>
 <u:unit id="300040" Code="[ly]" CODE="[LY]" isMetric="yes"><name>light-year</name><printSymbol>l.y.</printSymbol><property>length</property><value Unit="[c].a_j" UNIT="[C].ANN_J" value="1">1</value></u:unit>
 <u:unit id="600411" Code="gf" CODE="GF" isMetric="yes"><name>gram-force</name><printSymbol>gf</printSymbol><property>force</property><value Unit="g.[g]" UNIT="G.[G]" value="1">1</value></u:unit>
 <u:unit id="500820" Code="[lbf_av]" CODE="[LBF_AV]" isMetric="no"><name>pound force</name><printSymbol>lbf</printSymbol><property>force</property><value Unit="[lb_av].[g]" UNIT="[LB_AV].[G]" value="1">1</value></u:unit>
@@ -1769,7 +1766,7 @@ normative. Full name and print symbol are out of scope of &TUCUM;.
 <u:unit id="400100" Code="sb" CODE="SB" isMetric="yes"><name>stilb</name><printSymbol>sb</printSymbol><property>lum. intensity density</property><value Unit="cd/cm2" UNIT="CD/CM2" value="1">1</value></u:unit>
 <u:unit id="400110" Code="Lmb" CODE="LMB" isMetric="yes"><name>Lambert</name><printSymbol>L</printSymbol><property>brightness</property><value Unit="cd/cm2/[pi]" UNIT="CD/CM2/[PI]" value="1">1</value></u:unit>
 <u:unit id="400120" Code="ph" CODE="PHT" isMetric="yes"><name>phot</name><printSymbol>ph</printSymbol><property>illuminance</property><value Unit="lx" UNIT="LX" value="1e-4">1 &mult; 10<sup>-4</sup></value></u:unit>
-<u:unit id="400130" Code="Ci" CODE="CI" isMetric="yes"><name>Curie</name><printSymbol>Ci</printSymbol><property>radioactivity</property><value Unit="Bq" UNIT="BQ" value="3.7e10">3.7 &mult; 10<sup>10</sup></value></u:unit>
+<u:unit id="400130" Code="Ci" CODE="CI" isMetric="yes"><name>Curie</name><printSymbol>Ci</printSymbol><property>radioactivity</property><value Unit="Bq" UNIT="BQ" value="37e9">3.7 &mult; 10<sup>10</sup></value></u:unit>
 <u:unit id="400140" Code="R" CODE="ROE" isMetric="yes"><name>Roentgen</name><printSymbol>R</printSymbol><property>ion dose</property><value Unit="C/kg" UNIT="C/KG" value="2.58e-4">2.58 &mult; 10<sup>-4</sup></value></u:unit>
 <u:unit id="400160" Code="RAD" CODE="[RAD]" isMetric="yes"><name>radiation absorbed dose</name><printSymbol>RAD</printSymbol><property>energy dose</property><value Unit="erg/g" UNIT="ERG/G" value="100">100</value></u:unit>
 <u:unit id="400170" Code="REM" CODE="[REM]" isMetric="yes"><name>radiation equivalent man</name><printSymbol>REM</printSymbol><property>dose equivalent</property><value Unit="RAD" UNIT="[RAD]" value="1">1</value></u:unit>
@@ -2135,6 +2132,11 @@ The meaning of the columns is declared in <pref ref="para-custint"/>.
 <u:unit id="500690" Code="[tbs_us]" CODE="[TBS_US]" isMetric="no"><name>tablespoon</name><property>volume</property><value Unit="[foz_us]/2" UNIT="[FOZ_US]/2" value="1">1</value></u:unit>
 <u:unit id="500700" Code="[tsp_us]" CODE="[TSP_US]" isMetric="no"><name>teaspoon</name><property>volume</property><value Unit="[tbs_us]/3" UNIT="[TBS_US]/3" value="1">1</value></u:unit>
 <u:unit id="500710" Code="[cup_us]" CODE="[CUP_US]" isMetric="no"><name>cup</name><property>volume</property><value Unit="[tbs_us]" UNIT="[TBS_US]" value="16">16</value></u:unit>
+<u:unit id="500511" Code="[foz_m]" CODE="[FOZ_M]" isMetric="no"><name>metric fluid ounce</name><printSymbol>oz fl</printSymbol><property>fluid volume</property><value Unit="mL" UNIT="ML" value="30">30</value></u:unit>
+<u:unit id="500711" Code="[cup_m]" CODE="[CUP_M]" isMetric="no"><name>metric cup</name><property>volume</property><value Unit="mL" UNIT="ML" value="240">240</value></u:unit>
+<u:unit id="500701" Code="[tsp_m]" CODE="[TSP_M]" isMetric="no"><name>metric teaspoon</name><property>volume</property><value Unit="mL" UNIT="mL" value="5">5</value></u:unit>
+<u:unit id="500691" Code="[tbs_m]" CODE="[TBS_M]" isMetric="no"><name>metric tablespoon</name><property>volume</property><value Unit="mL" UNIT="mL" value="15">15</value></u:unit>
+
     </u:units>
 
     <comment>
@@ -2312,6 +2314,7 @@ The meaning of the columns is declared in  <pref ref="para-custint"/>.
 <u:unit id="500890" Code="[dr_ap]" CODE="[DR_AP]" isMetric="no"><name>dram</name><name>drachm</name><property>mass</property><value Unit="[sc_ap]" UNIT="[SC_AP]" value="3">3</value></u:unit>
 <u:unit id="500900" Code="[oz_ap]" CODE="[OZ_AP]" isMetric="no"><name>ounce</name><property>mass</property><value Unit="[dr_ap]" UNIT="[DR_AP]" value="8">8</value></u:unit>
 <u:unit id="500910" Code="[lb_ap]" CODE="[LB_AP]" isMetric="no"><name>pound</name><property>mass</property><value Unit="[oz_ap]" UNIT="[OZ_AP]" value="12">12</value></u:unit>
+<u:unit id="500901" Code="[oz_m]" CODE="[OZ_M]" isMetric="no"><name>metric ounce</name><property>mass</property><value Unit="g" UNIT="g" value="28">28</value></u:unit>
     </u:units>
 
     <comment>
@@ -2411,6 +2414,7 @@ convert from degree Fahrenheit back to kelvin.
     <u:units id="heat">
       <caption>Other Units for Heat and Temperature</caption>
 <u:unit id="600030" Code="[degF]" CODE="[DEGF]" isMetric="no"><name>degree Fahrenheit</name><printSymbol>&deg;F</printSymbol><property>temperature</property><value Unit="degf(5 K/9)" UNIT="DEGF(5 K/9)" ><function name="degF" value="5" Unit="K/9"/></value></u:unit>
+<u:unit id="600031" Code="[degR]" CODE="[degR]" isMetric="no"><name>degree Rankine</name><printSymbol>&deg;R</printSymbol><property>temperature</property><value value="5" Unit="K/9" UNIT="K/9">5</value></u:unit>
 <u:unit id="610010" Code="cal_[15]" CODE="CAL_[15]" isMetric="yes"><name>calorie at 15&nbsp;&deg;C</name><printSymbol>cal<sub>15&deg;C</sub></printSymbol><property>energy</property><value Unit="J" UNIT="J" value="4.18580">4.18580</value></u:unit>
 <u:unit id="610020" Code="cal_[20]" CODE="CAL_[20]" isMetric="yes"><name>calorie at 20&nbsp;&deg;C</name><printSymbol>cal<sub>20&deg;C</sub></printSymbol><property>energy</property><value Unit="J" UNIT="J" value="4.18190">4.18190</value></u:unit>
 <u:unit id="610030" Code="cal_m" CODE="CAL_M" isMetric="yes"><name>mean calorie</name><printSymbol>cal<sub>m</sub></printSymbol><property>energy</property><value Unit="J" UNIT="J" value="4.19002">4.19002</value></u:unit>
@@ -2426,6 +2430,8 @@ convert from degree Fahrenheit back to kelvin.
 <u:unit id="610130" Code="[Btu_th]" CODE="[BTU_TH]" isMetric="no"><name>thermochemical British thermal unit</name><printSymbol>Btu<sub>th</sub></printSymbol><property>energy</property><value Unit="kJ" UNIT="kJ" value="1.054350">1.054350</value></u:unit>
 <u:unit id="610140" Code="[Btu]" CODE="[BTU]" isMetric="no"><name>British thermal unit</name><printSymbol>btu</printSymbol><property>energy</property><value Unit="[Btu_th]" UNIT="[BTU_TH]" value="1">1</value></u:unit>
 <u:unit id="610145" Code="[HP]" CODE="[HP]" isMetric="no"><name>horsepower</name><property>power</property><value Unit="[ft_i].[lbf_av]/s" UNIT="[FT_I].[LBF_AV]/S" value="550">550</value></u:unit>
+<u:unit id="610150" Code="tex" CODE="TEX" isMetric="yes"><name>tex</name><printSymbol>tex</printSymbol><property>linear mass density (of textile thread)</property><value value="1" Unit="g/km" UNIT="G/KM">1</value></u:unit>
+<u:unit id="610151" Code="[den]" CODE="[DEN]" isMetric="no"><name>Denier</name><printSymbol>den</printSymbol><property>linear mass density (of textile thread)</property><value value="1" Unit="g/9/km" UNIT="G/9/KM">1</value></u:unit>
     </u:units>
 
     <comment>
@@ -2536,18 +2542,18 @@ convert from prism diopter (or slope percent) value <v>x</v> back to a plane ang
 
     <u:units id="clinical">
       <caption>Units Used Predominantly in Clinical Medicine</caption>
-<u:unit id="600430" Code="m[H2O]" CODE="M[H2O]" isMetric="yes"><name>meter of water column</name><printSymbol>m&nbsp;H<sub><r>2</r></sub>O</printSymbol><property>pressure</property><value Unit="kPa" UNIT="KPAL" value="9.80665">9.80665</value></u:unit>
+<u:unit id="600430" Code="m[H2O]" CODE="M[H2O]" isMetric="yes"><name>meter of water column</name><printSymbol>m&nbsp;H<sub><r>2</r></sub>O</printSymbol><property>pressure</property><value Unit="kPa" UNIT="KPAL" value="980665e-5">9.80665</value></u:unit>
 <u:unit id="600440" Code="m[Hg]" CODE="M[HG]" isMetric="yes"><name>meter of mercury column</name><printSymbol>m&nbsp;Hg</printSymbol><property>pressure</property><value Unit="kPa" UNIT="KPAL" value="133.3220">133.3220</value></u:unit>
 <u:unit id="600450" Code="[in_i'H2O]" CODE="[IN_I'H2O]" isMetric="no"><name>inch of water column</name><printSymbol>in&nbsp;H<sub><r>2</r></sub>O</printSymbol><property>pressure</property><value Unit="m[H2O].[in_i]/m" UNIT="M[H2O].[IN_I]/M" value="1">1</value></u:unit>
-<u:unit id="600460" Code="[in_i'Hg]" CODE="[IN_i'HG]" isMetric="no"><name>inch of mercury column</name><printSymbol>in&nbsp;Hg</printSymbol><property>pressure</property><value Unit="m[Hg].[in_i]/m" UNIT="M[HG].[IN_I]/M" value="1">1</value></u:unit>
+<u:unit id="600460" Code="[in_i'Hg]" CODE="[IN_I'HG]" isMetric="no"><name>inch of mercury column</name><printSymbol>in&nbsp;Hg</printSymbol><property>pressure</property><value Unit="m[Hg].[in_i]/m" UNIT="M[HG].[IN_I]/M" value="1">1</value></u:unit>
 <u:unit id="600560" Code="[PRU]" CODE="[PRU]" isMetric="no"><name>peripheral vascular resistance unit</name><printSymbol>P.R.U.</printSymbol><property>fluid resistance</property><value Unit="mm[Hg].s/ml" UNIT="MM[HG].S/ML" value="1">1</value></u:unit>
 <u:unit id="600569" Code="[wood'U]" CODE="[WOOD'U]" isMetric="no"><name>Wood unit</name><printSymbol>Wood U.</printSymbol><property>fluid resistance</property><value Unit="mm[Hg].min/L" UNIT="MM[HG].MIN/L" value="1">1</value></u:unit>
 <u:unit id="600270" Code="[diop]" CODE="[DIOP]" isMetric="no"><name>diopter</name><printSymbol>dpt</printSymbol><property>refraction of a lens</property><value Unit="/m" UNIT="/M" value="1">1</value></u:unit>
 <u:unit id="600271" Code="[p'diop]" CODE="[P'DIOP]" isMetric="no"><name>prism diopter</name><printSymbol>PD</printSymbol><property>refraction of a prism</property><value Unit="100tan(1 rad)" UNIT="100TAN(1 RAD)"><function name="tanTimes100" value="1" Unit="deg"/></value></u:unit>
 <u:unit id="600272" Code="%[slope]" CODE="%[SLOPE]" isMetric="no"><name>percent of slope</name><printSymbol>%</printSymbol><property>slope</property><value Unit="100tan(1 rad)" UNIT="100TAN(1 RAD)"><function name="100tan" value="1" Unit="deg"/></value></u:unit>
 <u:unit id="500011" Code="[mesh_i]" CODE="[MESH_I]" isMetric="no"><name>mesh</name><property>lineic number</property><value Unit="/[in_i]" UNIT="/[IN_I]" value="1">1</value></u:unit>
-<u:unit id="600275" Code="[Ch]" CODE="[CH]" isMetric="no"><name>Charri&egrave;re</name><name>french</name><printSymbol>Ch</printSymbol><property>gauge of catheters</property><value Unit="mm/[pi]" UNIT="MM/[PI]" value="1">1</value></u:unit>
-<u:unit id="600260" Code="[drp]" CODE="[DRP]" isMetric="no"><name>drop</name><printSymbol>drp</printSymbol><property>volume</property><value Unit="ml/12" UNIT="ML/12" value="1">1</value></u:unit>
+<u:unit id="600275" Code="[Ch]" CODE="[CH]" isMetric="no"><name>Charri&egrave;re</name><name>french</name><printSymbol>Ch</printSymbol><property>gauge of catheters</property><value Unit="mm/3" UNIT="MM/3" value="1">1</value></u:unit>
+<u:unit id="600260" Code="[drp]" CODE="[DRP]" isMetric="no"><name>drop</name><printSymbol>drp</printSymbol><property>volume</property><value Unit="ml/20" UNIT="ML/20" value="1">1</value></u:unit>
 <u:unit id="600550" Code="[hnsf'U]" CODE="[HNSF'U]" isMetric="no"><name>Hounsfield unit</name><printSymbol>HF</printSymbol><property>x-ray attenuation</property><value Unit="1" UNIT="1" value="1">1</value></u:unit>
 <u:unit id="600555" Code="[MET]" CODE="[MET]" isMetric="no"><name>metabolic equivalent</name><printSymbol>MET</printSymbol><property>metabolic cost of physical activity</property><value Unit="mL/min/kg" UNIT="ML/MIN/KG" value="3.5">3.5</value></u:unit>
 <u:unit id="600556" Code="[hp'_X]" CODE="[HP'_X]" isMetric="no"><name>homeopathic potency of decimal series (retired)</name><printSymbol>X</printSymbol><property>homeopathic potency (retired)</property><value Unit="hpX(1 1)" UNIT="HPX(1 1)"><function name="hpX" value="1" Unit="1"/></value></u:unit>
@@ -2593,9 +2599,17 @@ the customary counterpart of the diopter.
       <p>
 The unit &ldquo;charri&egrave;re&rdquo; originates from a French manufacturer of
 medical instruments by that name. One charri&egrave;re is the gauge of a
-catheter with a circumference of 1&nbsp;mm. In the U.S. the
-charri&egrave;re is simply called &ldquo;french&rdquo; 
+catheter with a circumference of approximately 1&nbsp;mm 
+such that it is by convention exactly one third of a millimeter. 
+In the U.S. the charri&egrave;re is simply called &ldquo;french&rdquo; 
       </p>
+			<note>
+				<p>
+Note that &UCUM; versions prior to 1.9 defined this unit as 1/&pi;, this use, 
+however this was never common use of the unit. 
+This is why the definition has been corrected instead of adding another one.
+				</p>
+			</note>
       <p>
 A drop is a variable amount of fluid and depends on the device and
 technique used to produce the drop and on the physical properties of
@@ -2604,7 +2618,24 @@ that depend on the spoon or cup and are not exact either. However, in
 clinical medicine medication is dispensed by drops and unlike a
 &ldquo;tablet&rdquo; a drop refers to a real physical kind of quantity, volume,
 though not very exact.
-      </p>
+			</p>
+			<note>
+				<p>
+Note that &UCUM; versions prior to 1.9 defined this unit as mL/12, this use, 
+however this was not common use of the unit.  
+This is why the definition has been corrected instead of adding another one.
+Typically it is stated as mL/20.
+Original research using a 20 mL syringe filled to 5 mL shows that 
+1 mL has 25 drops of water, 
+when tensides are added, the number goes up to 45. 
+A saturated saline solution required 30 and plant oil 35. 
+The speed of dropping, pressure and position of the syringe or the lumen of the outlet, 
+open or partially clogged with wax, 
+did not have a significant influence on the number of drops.
+While the original research suggests that the division should be by 25 or more, we use the common notion.
+It is discouraged to use the drop as any standard unit.
+				</p>
+			</note>
       <p>
 The Hounsfield unit is a unit of X-ray attenuation used in evaluating
 CT scans. It is defined on an interval scale where air is -1000 HF,
@@ -2666,6 +2697,7 @@ to convert from the pH value back to moles per liter.
 <u:unit id="600610" Code="[MPL'U]" CODE="[MPL'U]" isMetric="no" isArbitrary="yes"><name>MPL unit</name><property>biologic activity of anticardiolipin IgM</property><value Unit="1" UNIT="1" value="1">1</value></u:unit>
 <u:unit id="600620" Code="[APL'U]" CODE="[APL'U]" isMetric="no" isArbitrary="yes"><name>APL unit</name><property>biologic activity of anticardiolipin IgA</property><value Unit="1" UNIT="1" value="1">1</value></u:unit>
 <u:unit id="600630" Code="[beth'U]" CODE="[BETH'U]" isMetric="no" isArbitrary="yes"><name>Bethesda unit</name><property>biologic activity of factor VIII inhibitor</property><value Unit="1" UNIT="1" value="1">1</value></u:unit>
+<u:unit id="600635" Code="[anti'Xa'U]" CODE="[ANTI'XA'U]" isMetric="no" isArbitrary="yes"><name>anti factor Xa unit</name><property>biologic activity of factor Xa inhibitor (heparin)</property><value Unit="1" UNIT="1" value="1">1</value></u:unit>
 <u:unit id="600640" Code="[todd'U]" CODE="[TODD'U]" isMetric="no" isArbitrary="yes"><name>Todd unit</name><property>biologic activity antistreptolysin O</property><value Unit="1" UNIT="1" value="1">1</value></u:unit>
 <u:unit id="600650" Code="[dye'U]" CODE="[DYE'U]" isMetric="no" isArbitrary="yes"><name>Dye unit</name><property>biologic activity of amylase</property><value Unit="1" UNIT="1" value="1">1</value></u:unit>
 <u:unit id="600660" Code="[smgy'U]" CODE="[SMGY'U]" isMetric="no" isArbitrary="yes"><name>Somogyi unit</name><property>biologic activity of amylase</property><value Unit="1" UNIT="1" value="1">1</value></u:unit>
@@ -2676,6 +2708,7 @@ to convert from the pH value back to moles per liter.
 <u:unit id="600700" Code="[tb'U]" CODE="[TB'U]" isMetric="no" isArbitrary="yes"><name>tuberculin unit</name><property>biologic activity of tuberculin</property><value Unit="1" UNIT="1" value="1">1</value></u:unit>
 <u:unit id="600701" Code="[CCID_50]" CODE="[CCID_50]" isMetric="no" isArbitrary="yes"><name>50% cell culture infectious dose</name><printSymbol>CCID<sub>50</sub></printSymbol><property>biologic activity (infectivity) of an infectious agent preparation</property><value Unit="1" UNIT="1" value="1">1</value></u:unit>
 <u:unit id="600702" Code="[TCID_50]" CODE="[TCID_50]" isMetric="no" isArbitrary="yes"><name>50% tissue culture infectious dose</name><printSymbol>TCID<sub>50</sub></printSymbol><property>biologic activity (infectivity) of an infectious agent preparation</property><value Unit="1" UNIT="1" value="1">1</value></u:unit>
+<u:unit id="600719" Code="[EID_50]" CODE="[EID_50]" isMetric="no" isArbitrary="yes"><name>50% embryo infectious dose</name><printSymbol>EID<sub>50</sub></printSymbol><property>biologic activity (infectivity) of an infectious agent preparation</property><value Unit="1" UNIT="1" value="1">1</value></u:unit>
 <u:unit id="600703" Code="[PFU]" CODE="[PFU]" isMetric="no" isArbitrary="yes"><name>plaque forming units</name><printSymbol>PFU</printSymbol><property>amount of an infectious agent</property><value Unit="1" UNIT="1" value="1">1</value></u:unit>
 <u:unit id="600704" Code="[FFU]" CODE="[FFU]" isMetric="no" isArbitrary="yes"><name>focus forming units</name><printSymbol>FFU</printSymbol><property>amount of an infectious agent</property><value Unit="1" UNIT="1" value="1">1</value></u:unit>
 <u:unit id="600705" Code="[CFU]" CODE="[CFU]" isMetric="no" isArbitrary="yes"><name>colony forming units</name><printSymbol>CFU</printSymbol><property>amount of a proliferating organism</property><value Unit="1" UNIT="1" value="1">1</value></u:unit>
@@ -2684,7 +2717,9 @@ to convert from the pH value back to moles per liter.
 <u:unit id="600712" Code="[Amb'a'1'U]" CODE="[AMB'A'1'U]" isMetric="no" isArbitrary="yes"><name>allergen unit for Ambrosia artemisiifolia</name><printSymbol>Amb a 1 U</printSymbol><property>procedure defined amount of the major allergen of ragweed.</property><value Unit="1" UNIT="1" value="1">1</value></u:unit>
 <u:unit id="600715" Code="[PNU]" CODE="[PNU]" isMetric="no" isArbitrary="yes"><name>protein nitrogen unit</name><printSymbol>PNU</printSymbol><property>procedure defined amount of a protein substance</property><value Unit="1" UNIT="1" value="1">1</value></u:unit>
 <u:unit id="600716" Code="[Lf]" CODE="[LF]" isMetric="no" isArbitrary="yes"><name>Limit of flocculation</name><printSymbol>Lf</printSymbol><property>procedure defined amount of an antigen substance</property><value Unit="1" UNIT="1" value="1">1</value></u:unit>
-<u:unit id="600717" Code="[D'ag'U]" CODE="[D'AG'U]" isMetric="no" isArbitrary="yes"><name>D-antigen unit</name><printSymbol/><property>procedure defined amount of an antigen substance</property><value Unit="1" UNIT="1" value="1">1</value></u:unit>
+<u:unit id="600717" Code="[D'ag'U]" CODE="[D'AG'U]" isMetric="no" isArbitrary="yes"><name>D-antigen unit</name><printSymbol/><property>procedure defined amount of a poliomyelitis d-antigen substance</property><value Unit="1" UNIT="1" value="1">1</value></u:unit>
+<u:unit id="600718" Code="[FEU]" CODE="[FEU]" isMetric="no" isArbitrary="yes"><name>fibrinogen equivalent unit</name><printSymbol/><property>amount of fibrinogen broken down into the measured d-dimers</property><value Unit="1" UNIT="1" value="1">1</value></u:unit>
+<u:unit id="600720" Code="[EU]" CODE="[EU]" isMetric="no" isArbitrary="yes"><name>ELISA unit</name><printSymbol/><property>arbitrary ELISA unit</property><value Unit="1" UNIT="1" value="1">1</value></u:unit>
     </u:units>
 
     <comment>
@@ -3040,7 +3075,7 @@ standarized by other bodies and are out of scope of &TUCUM;.
 <u:unit id="600413" Code="[psi]" CODE="[PSI]" isMetric="no"><name>pound per sqare inch</name><printSymbol>psi</printSymbol><property>pressure</property><value Unit="[lbf_av]/[in_i]2" UNIT="[LBF_AV]/[IN_I]2" value="1">1</value></u:unit>
 <u:unit id="600010" Code="circ" CODE="CIRC" isMetric="no"><name>circle</name><printSymbol>circ</printSymbol><property>plane angle</property><value Unit="[pi].rad" UNIT="[PI].RAD" value="2">2</value></u:unit>
 <u:unit id="600020" Code="sph" CODE="SPH" isMetric="no"><name>spere</name><printSymbol>sph</printSymbol><property>solid angle</property><value Unit="[pi].sr" UNIT="[PI].SR" value="4">4</value></u:unit>
-<u:unit id="600520" Code="[car_m]" CODE="[CAR_M]" isMetric="no"><name>metric carat</name><printSymbol>ct<sub>m</sub></printSymbol><property>mass</property><value Unit="g" UNIT="G" value="0.2">0.2</value></u:unit>
+<u:unit id="600520" Code="[car_m]" CODE="[CAR_M]" isMetric="no"><name>metric carat</name><printSymbol>ct<sub>m</sub></printSymbol><property>mass</property><value Unit="g" UNIT="G" value="2e-1">0.2</value></u:unit>
 <u:unit id="600521" Code="[car_Au]" CODE="[CAR_AU]" isMetric="no"><name>carat of gold alloys</name><printSymbol>ct<sub><r>Au</r></sub></printSymbol><property>mass fraction</property><value Unit="/24" UNIT="/24" value="1">1</value></u:unit>
 <u:unit id="600522" Code="[smoot]" CODE="[SMOOT]" isMetric="no"><name>Smoot</name><printSymbol></printSymbol><property>length</property><value Unit="[in_i]" UNIT="[IN_I]" value="67">67</value></u:unit>
     </u:units>
@@ -3121,7 +3156,7 @@ usually carries more than one bit of information.
 <u:unit id="800010" Code="bit_s" CODE="BIT_S" isMetric="no"><name>bit</name><printSymbol>bit<sub>s</sub></printSymbol><property>amount of information</property><value Unit="ld(1 1)" UNIT="ld(1 1)" ><function name="ld" value="1" Unit="1"/></value></u:unit>
 <u:unit id="800020" Code="bit" CODE="BIT" isMetric="yes"><name>bit</name><printSymbol>bit</printSymbol><property>amount of information</property><value Unit="1" UNIT="1" value="1">1</value></u:unit>
 <u:unit id="800030" Code="By" CODE="BY" isMetric="yes"><name>byte</name><printSymbol>B</printSymbol><property>amount of information</property><value Unit="bit" UNIT="bit" value="8">8</value></u:unit>
-<u:unit id="800030" Code="Bd" CODE="Bd" isMetric="yes"><name>baud</name><printSymbol>Bd</printSymbol><property>signal transmission rate</property><value Unit="/s" UNIT="/s" value="1">1</value></u:unit>
+<u:unit id="800030" Code="Bd" CODE="BD" isMetric="yes"><name>baud</name><printSymbol>Bd</printSymbol><property>signal transmission rate</property><value Unit="/s" UNIT="/s" value="1">1</value></u:unit>
     </u:units>
 
     <p id="para-pfx" name="prefixes">
