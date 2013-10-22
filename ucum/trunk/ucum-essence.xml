@@ -1853,11 +1853,18 @@
       <property>amount of fibrinogen broken down into the measured d-dimers</property>
       <value Unit="1" UNIT="1" value="1">1</value>
    </unit>
-   <unit xmlns="" Code="[EU]" CODE="[EU]" isMetric="no" isArbitrary="yes"
+   <unit xmlns="" Code="[ELU]" CODE="[ELU]" isMetric="no" isArbitrary="yes"
          class="chemical">
       <name>ELISA unit</name>
       <printSymbol/>
       <property>arbitrary ELISA unit</property>
+      <value Unit="1" UNIT="1" value="1">1</value>
+   </unit>
+   <unit xmlns="" Code="[EU]" CODE="[EU]" isMetric="no" isArbitrary="yes"
+         class="chemical">
+      <name>Ehrlich unit</name>
+      <printSymbol/>
+      <property>Ehrlich unit</property>
       <value Unit="1" UNIT="1" value="1">1</value>
    </unit>
    <unit xmlns="" Code="Np" CODE="NEP" isMetric="yes" isSpecial="yes" class="levels">
