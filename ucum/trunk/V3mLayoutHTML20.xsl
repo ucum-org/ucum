@@ -1,4 +1,4 @@
-<?xml version="1.0"?>
+<?xml version="1.0" encoding="utf-8"?>
 <!-- File: v3pub-online-Woody-1020 
 This is Paul's 9/10/01 file with a LIMITED number of changes as detailed below.
 -->
@@ -16,7 +16,7 @@ This is Paul's 9/10/01 file with a LIMITED number of changes as detailed below.
 	xmlns:xlink="http://www.w3.org/TR/WD-xlink" 
 	exclude-result-prefixes="xlink" version="1.1">
 	
-	<xsl:output method="html" indent="yes" encoding="ISO-8859-1" doctype-public="-//W3C//DTD HTML 4.0 Transitional//EN"/>
+	<xsl:output method="html" indent="yes" encoding="utf-8" doctype-public="-//W3C//DTD HTML 4.0 Transitional//EN"/>
 	<xsl:template match="spec" mode="css"/>
 	<xsl:template match="/" name="root">
 		<html>
