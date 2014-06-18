@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<!-- COPYRIGHT 1998-2013, REGENSTRIEF INSTITUTE, INC. AND THE UCUM ORGANIZATION ALL RIGHTS RESERVED.
+<!-- COPYRIGHT 1998-2014, REGENSTRIEF INSTITUTE, INC. AND THE UCUM ORGANIZATION ALL RIGHTS RESERVED.
 
   Use and redistribution of this data is permitted without charge
   as long as you make no changes to it. DO NOT CHANGE THIS FILE if 
@@ -58,7 +58,7 @@
 <spec xmlns:u="http://aurora.regenstrief.org/UCUM">
 <header>
   <title>The Unified Code for Units of Measure</title>
-  <version>1.9</version>
+  <version>2.0</version>
   <revision>$Revision$</revision>
   <date>$Date$</date>
   <authlist>
@@ -73,7 +73,7 @@
       <email href="cmcdonald@regenstrief.org"/>
     </author>
   </authlist>
-  <copyright>1998-2013, Regenstrief Institute, Inc. and the UCUM Organization. All rigthts reserved.</copyright>
+  <copyright>1998-2014, Regenstrief Institute, Inc. and the UCUM Organization. All rigthts reserved.</copyright>
 </header>
 
 <body>
