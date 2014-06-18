@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="ascii"?>
-<root xmlns="http://unitsofmeasure.org/ucum-essence" version="1.9"
+<root xmlns="http://unitsofmeasure.org/ucum-essence" version="2.0"
       revision="$Revision$"
       revision-date="$Date$">
    <prefix xmlns="" Code="Y" CODE="YA">
