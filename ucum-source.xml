@@ -1945,7 +1945,7 @@ exponents 2 and 3 respectively as shown in the column
 <u:unit id="500010" Code="[in_i]" CODE="[IN_I]" isMetric="no"><name>inch</name><printSymbol>in, ''</printSymbol><property>length</property><value Unit="cm" UNIT="CM" value="254e-2">2.54</value></u:unit>
 <u:unit id="500030" Code="[ft_i]" CODE="[FT_I]" isMetric="no"><name>foot</name><printSymbol>ft, '</printSymbol><property>length</property><value Unit="[in_i]" UNIT="[IN_I]" value="12">12</value></u:unit>
 <u:unit id="500040" Code="[yd_i]" CODE="[YD_I]" isMetric="no"><name>yard</name><printSymbol>yd</printSymbol><property>length</property><value Unit="[ft_i]" UNIT="[FT_I]" value="3">3</value></u:unit>
-<u:unit id="500050" Code="[mi_i]" CODE="[MI_I]" isMetric="no"><name>statute mile</name><printSymbol>mi</printSymbol><property>length</property><value Unit="[ft_i]" UNIT="[FT_I]" value="5280">5280</value></u:unit>
+<u:unit id="500050" Code="[mi_i]" CODE="[MI_I]" isMetric="no"><name>mile</name><printSymbol>mi</printSymbol><property>length</property><value Unit="[ft_i]" UNIT="[FT_I]" value="5280">5280</value></u:unit>
 <u:unit id="500070" Code="[fth_i]" CODE="[FTH_I]" isMetric="no"><name>fathom</name><printSymbol>fth</printSymbol><property>depth of water</property><value Unit="[ft_i]" UNIT="[FT_I]" value="6">6</value></u:unit>
 <u:unit id="500080" Code="[nmi_i]" CODE="[NMI_I]" isMetric="no"><name>nautical mile</name><printSymbol>n.mi</printSymbol><property>length</property><value Unit="m" UNIT="M" value="1852">1852</value></u:unit>
 <u:unit id="500090" Code="[kn_i]" CODE="[KN_I]" isMetric="no"><name>knot</name><printSymbol>knot</printSymbol><property>velocity</property><value Unit="[nmi_i]/h" UNIT="[NMI_I]/H" value="1">1</value></u:unit>
@@ -2033,7 +2033,7 @@ Standards and Technology (NIST), 1995. Available from: URL:
     </p>
 
     <u:units id="us-lengths" omit="printSymbol">
-      <caption>Older U.S. &ldquo;survey&rdquo; lengths</caption>
+      <caption>Older U.S. &ldquo;survey&rdquo; lengths (also called "statute" lengths)</caption>
 <u:unit id="500170" Code="[ft_us]" CODE="[FT_US]" isMetric="no"><name>foot</name><printSymbol>ft<sub>us</sub></printSymbol><property>length</property><value Unit="m/3937" UNIT="M/3937" value="1200">1200</value></u:unit>
 <u:unit id="500180" Code="[yd_us]" CODE="[YD_US]" isMetric="no"><name>yard</name><property>length</property><value Unit="[ft_us]" UNIT="[FT_US]" value="3">3</value></u:unit>
 <u:unit id="500190" Code="[in_us]" CODE="[IN_US]" isMetric="no"><name>inch</name><property>length</property><value Unit="[ft_us]/12" UNIT="[FT_US]/12" value="1">1</value></u:unit>
@@ -2053,6 +2053,9 @@ Standards and Technology (NIST), 1995. Available from: URL:
 <u:unit id="500310" Code="[mil_us]" CODE="[MIL_US]" isMetric="no"><name>mil</name><property>length</property><value Unit="[in_us]" UNIT="[IN_US]" value="1e-3">1 &mult; 10<sup>-3</sup></value></u:unit>
     </u:units>
     <comment>
+			<p>
+After the 1959 international agreement changed the definition of the foot in the US to be 0.9144 m exactly, surveyors and civil engineers complained that volumnious legacy surveys and so forth used the previous definition of (1200/3937) m and that this change would be disruptive. So, by statute, Congress created a survey foot of (1200/3937) m (the old 1893 Mendenhall Order definition). Thus, by statute, miles used in surveying are referred to as statute miles of 5280 survey feet each. The fathom, rod, and furlong are likewise based on the survey foot.
+			</p>
       <p>
 According to NIST, the acre as normally used in the U.S. is defined
 in terms of U.S. survey lengths, and not in terms of the
@@ -2414,6 +2417,14 @@ defined as <v>f</v><sub>F</sub>(<v>x</v>) = 9/5 <v>x</v> - 459.67 to convert
 from kelvin to degree Fahrenheit, and
 <v>f</v><sub>F</sub><sup>-1</sup>(<v>x</v>) = 5/9 (<v>x</v> + 459.67) to
 convert from degree Fahrenheit back to kelvin.
+</verse>
+
+<verse>
+The function pair denoted &ldquo;<code>degre(5 K/4)</code>&rdquo; is
+defined as <v>f</v><sub>R&eacute;</sub>(<v>x</v>) = 4/5 <v>x</v> - 218.52 to convert
+from kelvin to degree R&eacute;aumur, and
+<v>f</v><sub>R&eacute;</sub><sup>-1</sup>(<v>x</v>) = 5/4 (<v>x</v> + 218.52) to
+convert from degree R&eacute;aumur back to kelvin.
 </verse>
     </p>
 
@@ -3088,6 +3099,11 @@ Only the columns titled &ldquo;c/s,&rdquo; &ldquo;c/i,&rdquo;
 normative. Full name and print symbol are either not standardized or
 standarized by other bodies and are out of scope of &TUCUM;.
 </verse>
+
+<verse>
+The function pair denoted &ldquo;<code>sqrt</code>&rdquo; is defined as
+the square root with its respective inverse function, the square.
+</verse>
     </p>
     <u:units id="misc">
       <caption>Miscellaneous Units</caption>
@@ -3133,6 +3149,9 @@ parts of gold on 16 parts of silver = 8/24 = 1/3, or 333 per
 mille. This carat is spelled &ldquo;karat&rdquo; in the U.S. while other
 countries do not use different spellings.
       </p>
+			<p>
+The unit &ldquo;<code>[m/s2/Hz^(1/2)]</code>&rdquo; is defined as a special unit to represent the odd fractional exponent of the second obtaining for the unit of the amplitude spectral density (ASD). It is defined based on the unit for the power spectral density (PSD), that is 1 (m/s2)<sup>2</sup>/Hz or 1 m<sup>2</sup> &middot; s<sup>-3</sup>. Since the two measurements are directly comparable, PSD = ASD<sup>2</sup>. 
+			</p>
     </comment>
   </div2>
 
