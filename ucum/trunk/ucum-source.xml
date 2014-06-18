@@ -34,6 +34,7 @@
   <!ENTITY middot "&#xb7;">
   <!ENTITY mult   "&#xd7;"> 
   <!ENTITY nbsp   "&#xa0;"> 
+  <!ENTITY reg    "&#xae;">
   <!ENTITY ndash  "&#x2013;">
   <!ENTITY mdash  "&#x2014;">
   <!ENTITY ldquo  "&#x201C;">
@@ -63,8 +64,8 @@
   <authlist>
     <author>
       <name>Gunther Schadow</name>
-      <affiliation>Regenstrief Institute and Indiana University School of Informatics</affiliation>
-      <email href="gschadow@regenstrief.org"/>
+      <affiliation>Pragmatic Data LLC</affiliation>
+      <email href="gschadow@pragmaticdata.com"/>
     </author>
     <author>
       <name>Clement J. McDonald</name>
@@ -360,6 +361,12 @@ case and one for lower case.  In &TUCUM; all units can be written in
 mixed upper and lower case, but in the case insensitive variant the
 mixing of case does not matter.
       </p>
+			<p>
+White space is not recognized in a a unit term and should generally 
+not occur. UCUM implementations may flag whitespace as an error 
+rather than ignore it. Whitespace is not used as a separator of 
+otherwise ambiguous parts of a unit term.
+			</p>
     </comment>
 
     <p name="prefixes">
@@ -620,12 +627,23 @@ overridden with parentheses. </verse>
 
 <verse> Parenthesized terms are <emph>not</emph> considered unit atoms
 and hence must not be preceded by a prefix. </verse>
-
-<verse> Since a unit term in parenthesis can be used in place of
-a simple unit, an exponent may follow on a closing parenthesis which
-raises the whole term within the parentheses to the power.
-</verse>
      </p>
+		 <comment>
+			 <p>
+Up until revision 1.9 there was a third clause 
+&ldquo;Since a unit term in parenthesis can be used in place of
+a simple unit, an exponent may follow on a closing parenthesis which
+raises the whole term within the parentheses to the power.&rdquo;
+However this feature was inconsistent with any BNF or other syntax
+description ever provided, was never used and seems to have no 
+relevant use case. For this reason this clause has been stricken.
+This is a <emph>tentative</emph> change. Users who have used this 
+feature in the past, should please comment on this deprecation. 
+If we receive indication that this feature was used by anyone, we
+would undo the deprecation. If no comments are received, the 
+deprecation continues to take effect.
+			 </p>
+		 </comment>
 <exhibit>
 <table class="plain" border="0">
   <tr valign="top"><td><sym name="sign"/></td><td>::=</td>
@@ -656,9 +674,9 @@ raises the whole term within the parentheses to the power.
         | <sym name="factor"/><br/>
 	| <lit value="("/> <sym name="term"/> <lit value=")"/></td></tr>
   <tr valign="top"><td><sym name="term"/></td><td>::=</td>
-    <td>  <sym name="component"/> <lit value="."/> <sym name="term"/><br/>
-        | <sym name="component"/> <lit value="/"/> <sym name="term"/><br/>
-        | <sym name="component"/></td></tr>
+    <td>  <sym name="term"/> <lit value="."/> <sym name="component"/><br/>
+        | <sym name="term"/> <lit value="/"/> <sym name="component"/><br/>
+        | <sym name="term"/></td></tr>
   <tr valign="top"><td><sym name="main-term"/></td><td>::=</td>
     <td>  <lit value="/"/> <sym name="term"/><br/>
         | <sym name="term"/></td></tr>
@@ -667,20 +685,7 @@ raises the whole term within the parentheses to the power.
           <lit value="}"/></td></tr>
   </table>
   <caption>
-The complete syntax in the Backus-Naur Form: 
-The <emph>main-term</emph> is the start symbol. 
-The <emph>term</emph> of units takes care of multiplication and division. A <emph>power</emph>
-can be a simple unit with or without exponent (the default exponent is
-1). A simple unit is a symbol like &ldquo;<code>cm</code>&rdquo;
-&ldquo;<code>cd</code>&rdquo; that may have a prefix
-(&ldquo;<code>cm</code>&rdquo;) or not
-(&ldquo;<code>cd</code>&rdquo;). A whole unit term in parentheses
-can also be in place of a simple unit. A positive integer number may
-also be used as a simple unit. The terminal symbols for prefixes and
-unit atoms are entirely defined in their respective table. Unit atoms
-may be followed by any annotation inside a matching pair of curly
-braces, when such an annotation occurs without a leading symbol, the
-default unit 1 is assumed
+The complete syntax in the Backus-Naur Form.
   </caption>
 </exhibit>
       <figure id="ucum-state-automaton">
@@ -1360,8 +1365,8 @@ are metric.</caption>
 <u:base-unit Code="s" CODE="S" dim="T"><name>second</name><printSymbol>s</printSymbol><property>time</property></u:base-unit>
 <u:base-unit Code="g" CODE="G" dim="M"><name>gram</name><printSymbol>g</printSymbol><property>mass</property></u:base-unit>
 <u:base-unit Code="rad" CODE="RAD" dim="A"><name>radian</name><printSymbol>rad</printSymbol><property>plane angle</property></u:base-unit>
-<u:base-unit Code="K" CODE="K" dim="C"><name>Kelvin</name><printSymbol>K</printSymbol><property>temperature</property></u:base-unit>
-<u:base-unit Code="C" CODE="C" dim="Q"><name>Coulomb</name><printSymbol>C</printSymbol><property>electric charge</property></u:base-unit>
+<u:base-unit Code="K" CODE="K" dim="C"><name>kelvin</name><printSymbol>K</printSymbol><property>temperature</property></u:base-unit>
+<u:base-unit Code="C" CODE="C" dim="Q"><name>coulomb</name><printSymbol>C</printSymbol><property>electric charge</property></u:base-unit>
 <u:base-unit Code="cd" CODE="CD" dim="F"><name>candela</name><printSymbol>cd</printSymbol><property>luminous intensity</property></u:base-unit>
     </u:base>
   </div2>
@@ -1491,25 +1496,25 @@ base unit kelvin measures the same kind of quantity.
       <caption>SI units</caption>
 <u:unit id="600190" Code="mol" CODE="MOL" isMetric="yes"><name>mole</name><printSymbol>mol</printSymbol><property>amount of substance</property><value Unit="10*23" UNIT="10*23" value="6.0221367">6.0221367</value></u:unit>
 <u:unit id="100010" Code="sr" CODE="SR" isMetric="yes"><name>steradian</name><printSymbol>sr</printSymbol><property>solid angle</property><value Unit="rad2" UNIT="RAD2" value="1">1</value></u:unit>
-<u:unit id="100020" Code="Hz" CODE="HZ" isMetric="yes"><name>Hertz</name><printSymbol>Hz</printSymbol><property>frequency</property><value Unit="s-1" UNIT="S-1" value="1">1</value></u:unit>
-<u:unit id="100030" Code="N" CODE="N" isMetric="yes"><name>Newton</name><printSymbol>N</printSymbol><property>force</property><value Unit="kg.m/s2" UNIT="KG.M/S2" value="1">1</value></u:unit>
-<u:unit id="100040" Code="Pa" CODE="PAL" isMetric="yes"><name>Pascal</name><printSymbol>Pa</printSymbol><property>pressure</property><value Unit="N/m2" UNIT="N/M2" value="1">1</value></u:unit>
-<u:unit id="100050" Code="J" CODE="J" isMetric="yes"><name>Joule</name><printSymbol>J</printSymbol><property>energy</property><value Unit="N.m" UNIT="N.M" value="1">1</value></u:unit>
-<u:unit id="100060" Code="W" CODE="W" isMetric="yes"><name>Watt</name><printSymbol>W</printSymbol><property>power</property><value Unit="J/s" UNIT="J/S" value="1">1</value></u:unit>
-<u:unit id="100070" Code="A" CODE="A" isMetric="yes"><name>Amp&egrave;re</name><printSymbol>A</printSymbol><property>electric current</property><value Unit="C/s" UNIT="C/S" value="1">1</value></u:unit>
-<u:unit id="100080" Code="V" CODE="V" isMetric="yes"><name>Volt</name><printSymbol>V</printSymbol><property>electric potential</property><value Unit="J/C" UNIT="J/C" value="1">1</value></u:unit>
-<u:unit id="100090" Code="F" CODE="F" isMetric="yes"><name>Farad</name><printSymbol>F</printSymbol><property>electric capacitance</property><value Unit="C/V" UNIT="C/V" value="1">1</value></u:unit>
-<u:unit id="100100" Code="Ohm" CODE="OHM" isMetric="yes"><name>Ohm</name><printSymbol>&Omega;</printSymbol><property>electric resistance</property><value Unit="V/A" UNIT="V/A" value="1">1</value></u:unit>
-<u:unit id="100110" Code="S" CODE="SIE" isMetric="yes"><name>Siemens</name><printSymbol>S</printSymbol><property>electric conductance</property><value Unit="Ohm-1" UNIT="OHM-1" value="1">1</value></u:unit>
-<u:unit id="100120" Code="Wb" CODE="WB" isMetric="yes"><name>Weber</name><printSymbol>Wb</printSymbol><property>magentic flux</property><value Unit="V.s" UNIT="V.S" value="1">1</value></u:unit>
+<u:unit id="100020" Code="Hz" CODE="HZ" isMetric="yes"><name>hertz</name><printSymbol>Hz</printSymbol><property>frequency</property><value Unit="s-1" UNIT="S-1" value="1">1</value></u:unit>
+<u:unit id="100030" Code="N" CODE="N" isMetric="yes"><name>newton</name><printSymbol>N</printSymbol><property>force</property><value Unit="kg.m/s2" UNIT="KG.M/S2" value="1">1</value></u:unit>
+<u:unit id="100040" Code="Pa" CODE="PAL" isMetric="yes"><name>pascal</name><printSymbol>Pa</printSymbol><property>pressure</property><value Unit="N/m2" UNIT="N/M2" value="1">1</value></u:unit>
+<u:unit id="100050" Code="J" CODE="J" isMetric="yes"><name>joule</name><printSymbol>J</printSymbol><property>energy</property><value Unit="N.m" UNIT="N.M" value="1">1</value></u:unit>
+<u:unit id="100060" Code="W" CODE="W" isMetric="yes"><name>watt</name><printSymbol>W</printSymbol><property>power</property><value Unit="J/s" UNIT="J/S" value="1">1</value></u:unit>
+<u:unit id="100070" Code="A" CODE="A" isMetric="yes"><name>amp&egrave;re</name><printSymbol>A</printSymbol><property>electric current</property><value Unit="C/s" UNIT="C/S" value="1">1</value></u:unit>
+<u:unit id="100080" Code="V" CODE="V" isMetric="yes"><name>volt</name><printSymbol>V</printSymbol><property>electric potential</property><value Unit="J/C" UNIT="J/C" value="1">1</value></u:unit>
+<u:unit id="100090" Code="F" CODE="F" isMetric="yes"><name>farad</name><printSymbol>F</printSymbol><property>electric capacitance</property><value Unit="C/V" UNIT="C/V" value="1">1</value></u:unit>
+<u:unit id="100100" Code="Ohm" CODE="OHM" isMetric="yes"><name>ohm</name><printSymbol>&Omega;</printSymbol><property>electric resistance</property><value Unit="V/A" UNIT="V/A" value="1">1</value></u:unit>
+<u:unit id="100110" Code="S" CODE="SIE" isMetric="yes"><name>siemens</name><printSymbol>S</printSymbol><property>electric conductance</property><value Unit="Ohm-1" UNIT="OHM-1" value="1">1</value></u:unit>
+<u:unit id="100120" Code="Wb" CODE="WB" isMetric="yes"><name>weber</name><printSymbol>Wb</printSymbol><property>magentic flux</property><value Unit="V.s" UNIT="V.S" value="1">1</value></u:unit>
 <u:unit id="100130" Code="Cel" CODE="CEL" isMetric="yes"><name>degree Celsius</name><printSymbol>&deg;C</printSymbol><property>temperature</property><value Unit="cel(1 K)" UNIT="CEL(1 K)" ><function name="Cel" value="1" Unit="K"/></value></u:unit>
-<u:unit id="100140" Code="T" CODE="T" isMetric="yes"><name>Tesla</name><printSymbol>T</printSymbol><property>magnetic flux density</property><value Unit="Wb/m2" UNIT="WB/M2" value="1">1</value></u:unit>
-<u:unit id="100150" Code="H" CODE="H" isMetric="yes"><name>Henry</name><printSymbol>H</printSymbol><property>inductance</property><value Unit="Wb/A" UNIT="WB/A" value="1">1</value></u:unit>
+<u:unit id="100140" Code="T" CODE="T" isMetric="yes"><name>tesla</name><printSymbol>T</printSymbol><property>magnetic flux density</property><value Unit="Wb/m2" UNIT="WB/M2" value="1">1</value></u:unit>
+<u:unit id="100150" Code="H" CODE="H" isMetric="yes"><name>henry</name><printSymbol>H</printSymbol><property>inductance</property><value Unit="Wb/A" UNIT="WB/A" value="1">1</value></u:unit>
 <u:unit id="100160" Code="lm" CODE="LM" isMetric="yes"><name>lumen</name><printSymbol>lm</printSymbol><property>luminous flux</property><value Unit="cd.sr" UNIT="CD.SR" value="1">1</value></u:unit>
 <u:unit id="100170" Code="lx" CODE="LX" isMetric="yes"><name>lux</name><printSymbol>lx</printSymbol><property>illuminance</property><value Unit="lm/m2" UNIT="LM/M2" value="1">1</value></u:unit>
-<u:unit id="100180" Code="Bq" CODE="BQ" isMetric="yes"><name>Becquerel</name><printSymbol>Bq</printSymbol><property>radioactivity</property><value Unit="s-1" UNIT="S-1" value="1">1</value></u:unit>
-<u:unit id="100190" Code="Gy" CODE="GY" isMetric="yes"><name>Gray</name><printSymbol>Gy</printSymbol><property>energy dose</property><value Unit="J/kg" UNIT="J/KG" value="1">1</value></u:unit>
-<u:unit id="100200" Code="Sv" CODE="SV" isMetric="yes"><name>Sievert</name><printSymbol>Sv</printSymbol><property>dose equivalent</property><value Unit="J/kg" UNIT="J/KG" value="1">1</value></u:unit>
+<u:unit id="100180" Code="Bq" CODE="BQ" isMetric="yes"><name>becquerel</name><printSymbol>Bq</printSymbol><property>radioactivity</property><value Unit="s-1" UNIT="S-1" value="1">1</value></u:unit>
+<u:unit id="100190" Code="Gy" CODE="GY" isMetric="yes"><name>gray</name><printSymbol>Gy</printSymbol><property>energy dose</property><value Unit="J/kg" UNIT="J/KG" value="1">1</value></u:unit>
+<u:unit id="100200" Code="Sv" CODE="SV" isMetric="yes"><name>sievert</name><printSymbol>Sv</printSymbol><property>dose equivalent</property><value Unit="J/kg" UNIT="J/KG" value="1">1</value></u:unit>
     </u:units>
 
     <p id="para-other" name="other units from ISO&nbsp;1000, ISO&nbsp;2955 and ANSI&nbsp;X3.50">
@@ -2416,6 +2421,7 @@ convert from degree Fahrenheit back to kelvin.
       <caption>Other Units for Heat and Temperature</caption>
 <u:unit id="600030" Code="[degF]" CODE="[DEGF]" isMetric="no"><name>degree Fahrenheit</name><printSymbol>&deg;F</printSymbol><property>temperature</property><value Unit="degf(5 K/9)" UNIT="DEGF(5 K/9)" ><function name="degF" value="5" Unit="K/9"/></value></u:unit>
 <u:unit id="600031" Code="[degR]" CODE="[degR]" isMetric="no"><name>degree Rankine</name><printSymbol>&deg;R</printSymbol><property>temperature</property><value value="5" Unit="K/9" UNIT="K/9">5</value></u:unit>
+<u:unit id="600031" Code="[degRe]" CODE="[degRe]" isMetric="no"><name>degree R&eacute;aumur</name><printSymbol>&deg;R&eacute;</printSymbol><property>temperature</property><value Unit="degre(5 K/4)" UNIT="DEGRE(5 K/4)" ><function name="degRe" value="5" Unit="K/4"/></value></u:unit>
 <u:unit id="610010" Code="cal_[15]" CODE="CAL_[15]" isMetric="yes"><name>calorie at 15&nbsp;&deg;C</name><printSymbol>cal<sub>15&deg;C</sub></printSymbol><property>energy</property><value Unit="J" UNIT="J" value="4.18580">4.18580</value></u:unit>
 <u:unit id="610020" Code="cal_[20]" CODE="CAL_[20]" isMetric="yes"><name>calorie at 20&nbsp;&deg;C</name><printSymbol>cal<sub>20&deg;C</sub></printSymbol><property>energy</property><value Unit="J" UNIT="J" value="4.18190">4.18190</value></u:unit>
 <u:unit id="610030" Code="cal_m" CODE="CAL_M" isMetric="yes"><name>mean calorie</name><printSymbol>cal<sub>m</sub></printSymbol><property>energy</property><value Unit="J" UNIT="J" value="4.19002">4.19002</value></u:unit>
@@ -2713,6 +2719,7 @@ to convert from the pH value back to moles per liter.
 <u:unit id="600703" Code="[PFU]" CODE="[PFU]" isMetric="no" isArbitrary="yes"><name>plaque forming units</name><printSymbol>PFU</printSymbol><property>amount of an infectious agent</property><value Unit="1" UNIT="1" value="1">1</value></u:unit>
 <u:unit id="600704" Code="[FFU]" CODE="[FFU]" isMetric="no" isArbitrary="yes"><name>focus forming units</name><printSymbol>FFU</printSymbol><property>amount of an infectious agent</property><value Unit="1" UNIT="1" value="1">1</value></u:unit>
 <u:unit id="600705" Code="[CFU]" CODE="[CFU]" isMetric="no" isArbitrary="yes"><name>colony forming units</name><printSymbol>CFU</printSymbol><property>amount of a proliferating organism</property><value Unit="1" UNIT="1" value="1">1</value></u:unit>
+<u:unit id="600709" Code="[IR]" CODE="[IR]" isMetric="no" isArbitrary="yes"><name>index of reactivity</name><printSymbol>IR</printSymbol><property>amount of an allergen callibrated through in-vivo testing using the Stallergenes&reg; method.</property><value Unit="1" UNIT="1" value="1">1</value></u:unit>
 <u:unit id="600710" Code="[BAU]" CODE="[BAU]" isMetric="no" isArbitrary="yes"><name>bioequivalent allergen unit</name><printSymbol>BAU</printSymbol><property>amount of an allergen callibrated through in-vivo testing based on the ID50EAL method of (intradermal dilution for 50mm sum of erythema diameters</property><value Unit="1" UNIT="1" value="1">1</value></u:unit>
 <u:unit id="600711" Code="[AU]" CODE="[AU]" isMetric="no" isArbitrary="yes"><name>allergen unit</name><printSymbol>AU</printSymbol><property>procedure defined amount of an allergen using some reference standard</property><value Unit="1" UNIT="1" value="1">1</value></u:unit>
 <u:unit id="600712" Code="[Amb'a'1'U]" CODE="[AMB'A'1'U]" isMetric="no" isArbitrary="yes"><name>allergen unit for Ambrosia artemisiifolia</name><printSymbol>Amb a 1 U</printSymbol><property>procedure defined amount of the major allergen of ragweed.</property><value Unit="1" UNIT="1" value="1">1</value></u:unit>
@@ -2885,7 +2892,7 @@ antibodies and results are recorded as FFU/ml.
 [Sources: <emph>WHO expert committee on biological standardization (55th Edition).</emph> WHO Technical Report #932;]
       </p>
       <p>
-The unit &ldquo;BAU&rdquo; measures amount of an allergen based on an in-vivo callibrated test using the Intradermal Dilution for 50mm sum of Erythema Diameters (ID50EAL) Method. In this meathod. 
+The unit &ldquo;BAU&rdquo; measures amount of an allergen based on an in-vivo callibrated test using the Intradermal Dilution for 50mm sum of Erythema Diameters (ID50EAL) Method.
 
 [Source: <emph>Turkeltaub PC. Biological Standardization based on
 Quantitative Skin Testing - The 1D50 EAL Method. Arbeiten aus dem
@@ -2909,6 +2916,21 @@ The unit &ldquo;AU&rdquo; (for allergen unit) is for the amount of an
 allergen based some procedure defined and allergen specific reference
 standard. Note, do not confuse with astronomical unit, distinguish
 <code>[AU]</code> from <code>AU</code>
+      </p>
+
+      <p>
+The unit &ldquo;IR&rdquo; has been defined to measure the
+allergenicity of an allergen extract. The allergen extract contains
+100 IR/ml when, on a skin prick-test using a Stallerpoint&reg;, it induces
+a wheal diameter of 7 mm in 30 patients sensitized to this allergen,
+(geometric mean).  The cutaneous reactivity of these patients is
+simultaneously demonstrated by a positive skin prick-test to either 9
+% codeine phosphate or 10 mg/ml histamine. The IR unit of Stallergenes
+is not comparable to the units used by other allergen manufacturers.
+      </p>
+      <p>
+EDITORIAL NOTE: Should more manufacturer specific units come up in the 
+future, we will include a manufacturer abbreviation in the unit symbol.
       </p>
 
       <p>
@@ -3080,6 +3102,7 @@ standarized by other bodies and are out of scope of &TUCUM;.
 <u:unit id="600520" Code="[car_m]" CODE="[CAR_M]" isMetric="no"><name>metric carat</name><printSymbol>ct<sub>m</sub></printSymbol><property>mass</property><value Unit="g" UNIT="G" value="2e-1">0.2</value></u:unit>
 <u:unit id="600521" Code="[car_Au]" CODE="[CAR_AU]" isMetric="no"><name>carat of gold alloys</name><printSymbol>ct<sub><r>Au</r></sub></printSymbol><property>mass fraction</property><value Unit="/24" UNIT="/24" value="1">1</value></u:unit>
 <u:unit id="600522" Code="[smoot]" CODE="[SMOOT]" isMetric="no"><name>Smoot</name><printSymbol></printSymbol><property>length</property><value Unit="[in_i]" UNIT="[IN_I]" value="67">67</value></u:unit>
+<u:unit id="600523" Code="[m/s2/Hz^(1/2)]" CODE="[M/S2/HZ^(1/2)]" isMetric="no"><name>meter per square seconds per square root of hertz</name><printSymbol></printSymbol><property>amplitude spectral density</property><value Unit="sqrt(1 m2/s4/Hz)" UNIT="SQRT(1 M2/S4/HZ)"><function name="sqrt" value="1" Unit="m2/s4/Hz"/></value></u:unit>
     </u:units>
 
     <comment>
@@ -3444,7 +3467,7 @@ more straightforward or more appropriate or both.
           <td>/kg</td>
           <td>per kilogram body weight</td>
           <td></td>
-          <td>1000</td>
+          <td>.001</td>
           <td>g-1</td>
           <td></td>
         </tr>
@@ -3552,7 +3575,7 @@ more straightforward or more appropriate or both.
           <td>/pL</td>
           <td>trillion per liter</td>
           <td/>
-          <td>1015</td>
+          <td>10<sup>15</sup></td>
           <td>m-3</td>
           <td/>
         </tr>
@@ -3615,7 +3638,7 @@ more straightforward or more appropriate or both.
           <td>/pL</td>
           <td>million per cubic millimeter</td>
           <td/>
-          <td>1015</td>
+          <td>10<sup>15</sup></td>
           <td>m-3</td>
           <td/>
         </tr>
@@ -3633,7 +3656,7 @@ more straightforward or more appropriate or both.
           <td>/pL</td>
           <td>billion per milliliter</td>
           <td/>
-          <td>1015</td>
+          <td>10<sup>15</sup></td>
           <td>m-3</td>
           <td/>
         </tr>
@@ -3642,7 +3665,7 @@ more straightforward or more appropriate or both.
           <td>/fL</td>
           <td>billion per cubic millimeter</td>
           <td/>
-          <td>1018</td>
+          <td>10<sup>18</sup></td>
           <td>m-3</td>
           <td/>
         </tr>
@@ -3685,7 +3708,7 @@ more straightforward or more appropriate or both.
         <tr>
           <td>A/m</td>
           <td/>
-          <td>Ampere per meter</td>
+          <td>ampere per meter</td>
           <td/>
           <td>1</td>
           <td>m-1.s-1.C</td>
@@ -3736,7 +3759,7 @@ more straightforward or more appropriate or both.
           <td>m2.s-1</td>
           <td/>
         </tr>
-        <tr>
+        <!-- tr>
           <td>dB</td>
           <td/>
           <td>decibel</td>
@@ -3744,7 +3767,7 @@ more straightforward or more appropriate or both.
           <td>1</td>
           <td>1</td>
           <td>LG</td>
-        </tr>
+        </tr -->
         <tr>
           <td>dm2/s2</td>
           <td/>
@@ -3838,7 +3861,6 @@ more straightforward or more appropriate or both.
         <tr>
           <td>g/(kg.d)</td>
           <td>g/kg/d</td>
-          <td>10*-3/d</td>
           <td>gram per kilogram and day</td>
           <td>mass dose rate  per body mass</td>
           <td>1.15740740740741 &mult; 10<sup>-8</sup></td>
