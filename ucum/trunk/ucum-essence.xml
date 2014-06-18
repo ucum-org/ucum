@@ -752,7 +752,7 @@
       <value Unit="[ft_i]" UNIT="[FT_I]" value="3">3</value>
    </unit>
    <unit xmlns="" Code="[mi_i]" CODE="[MI_I]" isMetric="no" class="intcust">
-      <name>statute mile</name>
+      <name>mile</name>
       <printSymbol>mi</printSymbol>
       <property>length</property>
       <value Unit="[ft_i]" UNIT="[FT_I]" value="5280">5280</value>
