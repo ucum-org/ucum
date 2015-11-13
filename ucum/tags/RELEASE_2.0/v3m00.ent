@@ -1,0 +1,35 @@
+<!-- edited with XML Spy v4.0 NT beta 2 build Jul 26 2001 (http://www.xmlspy.com) by George Beeler (Beeler Consulting LLC) -->
+<!--
+	these entities define the file names for various V3 publications
+	Note: these are NOT the full URLs to where these publications
+	can be accessed, see below for those
+  -->
+<!ENTITY v3dt "v3dt">
+<!ENTITY datatypes "datatypes.htm">
+<!ENTITY v3dtp1 "Datatypes1">
+<!ENTITY v3dtp2 "Datatypes2">
+<!ENTITY stofprin "stofprin">
+<!ENTITY vocab "vocabulary">
+<!ENTITY v3guide 'v3Guide'>
+<!ENTITY v3guidefile '../../foundationdocuments/helpfiles/v3guide'>
+<!ENTITY itsxmlfile '../../itsxml/itsxml'>
+<!ENTITY vocabfile '../../foundationdocuments/referencefiles/vocabulary'>
+<!ENTITY conformancefile '../../foundationdocuments/helpfiles/conformance'>
+<!ENTITY glossaryfile '../../foundationdocuments/helpfiles/glossary'>
+<!ENTITY datatypesfile '../../foundationdocuments/helpfiles/datatypes'>
+<!ENTITY rimfile '../../foundationdocuments/referencefiles/rim'>
+<!ENTITY backbonefile '../../foundationdocuments/helpfiles/backbone'>
+<!ENTITY hmdlocation '../../sectioncontenthmd'>
+<!ENTITY examplelocation '../../sectioncontentexamples'>
+<!ENTITY inframgmt '../../sectioncontent/introductions/im____'>
+<!ENTITY healthmgmt '../../sectioncontent/introductions/hm____'>
+<!ENTITY adminmgmt '../../sectioncontent/introductions/am____'>
+<!ENTITY rimlocation '../../foundationdocuments/referencefiles/rim'>
+<!ENTITY contentlocation '../../sectioncontent'>
+
+<!--
+	this URL is the base for all V3 publications, if you append the
+	filenames above to this base URL you will get the full URLs
+	for all V3 pubs
+  -->
+<!ENTITY v3BaseURL "http://www.hl7.org/v3">
