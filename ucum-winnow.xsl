@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <xsl:transform version="1.1"
+		xmlns="http://unitsofmeasure.org/ucum-essence"
     xmlns:u="http://aurora.regenstrief.org/UCUM"
     xmlns:xsl="http://www.w3.org/1999/XSL/Transform"
     exclude-result-prefixes="u xsl">
@@ -8,7 +9,7 @@
 <xsl:strip-space elements="*"/> 
 
 <xsl:template match="/">
-  <root xmlns="http://unitsofmeasure.org/ucum-essence" version="{spec/header/version}" revision="{spec/header/revision}" revision-date="{spec/header/date}">
+  <root version="{spec/header/version}" revision="{spec/header/revision}" revision-date="{spec/header/date}">
     <xsl:apply-templates select="node()"/>
   </root>
 </xsl:template>
