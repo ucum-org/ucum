@@ -1702,7 +1702,7 @@ out of scope of &TUCUM;.
     <u:units id="const">
       <caption>Natural units.</caption>
 <u:unit id="300010" Code="[c]" CODE="[C]" isMetric="yes"><name>velocity of light</name><printSymbol><i>c</i></printSymbol><property>velocity</property><value Unit="m/s" UNIT="M/S" value="299792458">299792458</value></u:unit>
-<u:unit id="300020" Code="[h]" CODE="[H]" isMetric="yes"><name>Planck constant</name><printSymbol><i>h</i></printSymbol><property>action</property><value Unit="J.s" UNIT="J.S" value="6.6260755e-24">6.6260755 &mult; 10<sup>-24</sup></value></u:unit>
+<u:unit id="300020" Code="[h]" CODE="[H]" isMetric="yes"><name>Planck constant</name><printSymbol><i>h</i></printSymbol><property>action</property><value Unit="J.s" UNIT="J.S" value="6.6260755e-34">6.6260755 &mult; 10<sup>-34</sup></value></u:unit>
 <u:unit id="300021" Code="[k]" CODE="[K]" isMetric="yes"><name>Boltzmann constant</name><printSymbol><i>k</i></printSymbol><property>(unclassified)</property><value Unit="J/K" UNIT="J/K" value="1.380658e-23">1.380658 &mult; 10<sup>-23</sup></value></u:unit>
 <u:unit id="300022" Code="[eps_0]" CODE="[EPS_0]" isMetric="yes"><name>permittivity of vacuum</name><printSymbol><i>&epsilon;<sub><r>0</r></sub></i></printSymbol><property>electric permittivity</property><value Unit="F/m" UNIT="F/M" value="8.854187817e-12">8.854187817 &mult; 10<sup>-12</sup></value></u:unit>
 <u:unit id="300023" Code="[mu_0]" CODE="[MU_0]" isMetric="yes"><name>permeability of vacuum</name><printSymbol><i>&mu;<sub><r>0</r></sub></i></printSymbol><property>magnetic permeability</property><value Unit="4.[pi].10*-7.N/A2" UNIT="4.[PI].10*-7.N/A2" value="1">1</value></u:unit>

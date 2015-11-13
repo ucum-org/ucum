@@ -510,7 +510,7 @@
          <i>h</i>
       </printSymbol>
       <property>action</property>
-      <value Unit="J.s" UNIT="J.S" value="6.6260755e-24">6.6260755 &#215; 10<sup>-24</sup>
+      <value Unit="J.s" UNIT="J.S" value="6.6260755e-34">6.6260755 &#215; 10<sup>-34</sup>
       </value>
    </unit>
    <unit xmlns="" Code="[k]" CODE="[K]" isMetric="yes" class="const">
