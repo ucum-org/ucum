@@ -403,7 +403,7 @@ lexical elements and not separate syntactical tokens. </verse>
 <verse> Within a matching pair of square brackets the full range of
 characters 33&ndash;126 can be used.<footnote>
         <p>
-see the section about syle in <pref from="para-curly"/>, to find out
+see the section about style in <pref from="para-curly"/>, to find out
 how square brackets are actually used. Note, however, that the user
 has no choice about square bracket symbols, as these are fixed in the
 list of atomic unit symbols.
@@ -2054,7 +2054,7 @@ Standards and Technology (NIST), 1995. Available from: URL:
     </u:units>
     <comment>
 			<p>
-After the 1959 international agreement changed the definition of the foot in the US to be 0.9144 m exactly, surveyors and civil engineers complained that volumnious legacy surveys and so forth used the previous definition of (1200/3937) m and that this change would be disruptive. So, by statute, Congress created a survey foot of (1200/3937) m (the old 1893 Mendenhall Order definition). Thus, by statute, miles used in surveying are referred to as statute miles of 5280 survey feet each. The fathom, rod, and furlong are likewise based on the survey foot.
+After the 1959 international agreement changed the definition of the yard in the US to be 0.9144 m exactly, surveyors and civil engineers complained that volumnious legacy surveys and so forth used the previous definition of (1200/3937) m and that this change would be disruptive. So, by statute, Congress created a survey foot of (1200/3937) m (the old 1893 Mendenhall Order definition). Thus, by statute, miles used in surveying are referred to as statute miles of 5280 survey feet each. The fathom, rod, and furlong are likewise based on the survey foot.
 			</p>
       <p>
 According to NIST, the acre as normally used in the U.S. is defined
