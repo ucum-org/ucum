@@ -99,7 +99,7 @@ This is Paul's 9/10/01 file with a LIMITED number of changes as detailed below.
 			</p>
 		</xsl:if>
 		<xsl:apply-templates select="authlist"/>
-		<xsl:apply-templates select="version|ballot|revision"/>		
+		<xsl:apply-templates select="version|ballot|revision|date"/>		
 		<xsl:choose>
 		  <xsl:when test="copyright">
                     <p class="copyright"><xsl:apply-templates select="copyright"/></p>
@@ -693,6 +693,9 @@ This is Paul's 9/10/01 file with a LIMITED number of changes as detailed below.
 	</xsl:template>
 	<xsl:template match="revision">
 	  <p>Revision: <xsl:apply-templates select="node()"/></p>
+	</xsl:template>
+	<xsl:template match="date">
+	  <p>Date: <xsl:apply-templates select="node()"/></p>
 	</xsl:template>
 	<xsl:template name="copyright">
 		<p class="copyright">HL7 Version 3 Standard, Copyright Health Level Seven, Inc.&copy; 2002. All Rights Reserved.</p>
