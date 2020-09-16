@@ -1494,7 +1494,7 @@ base unit kelvin measures the same kind of quantity.
 
     <u:units id="si">
       <caption>SI units</caption>
-<u:unit id="600190" Code="mol" CODE="MOL" isMetric="yes"><name>mole</name><printSymbol>mol</printSymbol><property>amount of substance</property><value Unit="10*23" UNIT="10*23" value="6.0221367">6.0221367</value></u:unit>
+<u:unit id="600190" Code="mol" CODE="MOL" isMetric="yes"><name>mole</name><printSymbol>mol</printSymbol><property>amount of substance</property><value Unit="10*23" UNIT="10*23" value="6.02214076">6.02214076</value></u:unit>
 <u:unit id="100010" Code="sr" CODE="SR" isMetric="yes"><name>steradian</name><printSymbol>sr</printSymbol><property>solid angle</property><value Unit="rad2" UNIT="RAD2" value="1">1</value></u:unit>
 <u:unit id="100020" Code="Hz" CODE="HZ" isMetric="yes"><name>hertz</name><printSymbol>Hz</printSymbol><property>frequency</property><value Unit="s-1" UNIT="S-1" value="1">1</value></u:unit>
 <u:unit id="100030" Code="N" CODE="N" isMetric="yes"><name>newton</name><printSymbol>N</printSymbol><property>force</property><value Unit="kg.m/s2" UNIT="KG.M/S2" value="1">1</value></u:unit>
@@ -1561,7 +1561,7 @@ out of scope of &TUCUM;.
 <u:unit id="200162" Code="mo" CODE="MO" isMetric="no"><name>month</name><printSymbol>mo</printSymbol><property>time</property><value Unit="mo_j" UNIT="MO_J" value="1">1</value></u:unit>
 <u:unit id="200170" Code="t" CODE="TNE" isMetric="yes"><name>tonne</name><printSymbol>t</printSymbol><property>mass</property><value Unit="kg" UNIT="KG" value="1e3">1 &mult; 10<sup>3</sup></value></u:unit>
 <u:unit id="200180" Code="bar" CODE="BAR" isMetric="yes"><name>bar</name><printSymbol>bar</printSymbol><property>pressure</property><value Unit="Pa" UNIT="PAL" value="1e5">1 &mult; 10<sup>5</sup></value></u:unit>
-<u:unit id="200210" Code="u" CODE="AMU" isMetric="yes"><name>unified atomic mass unit</name><printSymbol>u</printSymbol><property>mass</property><value Unit="g" UNIT="G" value="1.6605402e-24">1.6605402 &mult; 10<sup>-24</sup></value></u:unit>
+<u:unit id="200210" Code="u" CODE="AMU" isMetric="yes"><name>unified atomic mass unit</name><printSymbol>u</printSymbol><property>mass</property><value Unit="g" UNIT="G" value="1.66053906660e-24">1.66053906660 &mult; 10<sup>-24</sup></value></u:unit>
 <u:unit id="200200" Code="eV" CODE="EV" isMetric="yes"><name>electronvolt</name><printSymbol>eV</printSymbol><property>energy</property><value Unit="[e].V" UNIT="[E].V" value="1">1</value></u:unit>
 <u:unit id="200220" Code="AU" CODE="ASU" isMetric="no"><name>astronomic unit</name><printSymbol>AU</printSymbol><property>length</property><value Unit="Mm" UNIT="MAM" value="149597.870691">149597.870691</value></u:unit>
 <u:unit id="200230" Code="pc" CODE="PRS" isMetric="yes"><name>parsec</name><printSymbol>pc</printSymbol><property>length</property><value Unit="m" UNIT="M" value="3.085678e16">3.085678 &mult; 10<sup>16</sup></value></u:unit>
@@ -1729,7 +1729,7 @@ Laboratory. <code>http://physics.nist.gov/cuu/Constants/index.html</code>
 In the base system of &TUCUM;, the general gas constant <v>R</v> is
 identical to the Boltzman constant <v>k</v>. In the SI both are related
 through <v>R</v> = <v>k</v> &mult; <v>N</v><sub>A</sub>, where
-<v>N</v><sub>A</sub> = 6.0221367 &mult; 10<sup>23</sup>&nbsp;/mol is
+<v>N</v><sub>A</sub> = 6.02214076 &mult; 10<sup>23</sup>&nbsp;/mol is
 the Avogadro constant. Because &TUCUM; defines the mole to be the
 dimensionless Avogadro number (number of particles in 1&nbsp;g of
 <sup>12</sup>C itself, there is no difference anymore if the Boltzman
@@ -3369,6 +3369,7 @@ like "/g{HGB}" instead of just "/g".)  Hence, the second column
 "alternative suggestions" lists equivalent unit terms that are either
 more straightforward or more appropriate or both.
     </p>
+		<!-- FIXME: this table could get out of date as things change, sould be generated -->
     <table>
       <caption>Example Unit Terms by Term</caption>
       <col width="1.06"/>
@@ -3997,7 +3998,7 @@ more straightforward or more appropriate or both.
           <td/>
           <td>katal per kilogram</td>
           <td/>
-          <td>6.0221367 &mult; 10<sup>20</sup></td>
+          <td>6.02214076 &mult; 10<sup>20</sup></td>
           <td>g-1.s-1</td>
           <td/>
         </tr>
@@ -4006,7 +4007,7 @@ more straightforward or more appropriate or both.
           <td/>
           <td>katal per liter</td>
           <td/>
-          <td>6.0221367 &mult; 10<sup>26</sup></td>
+          <td>6.02214076 &mult; 10<sup>26</sup></td>
           <td>m-3.s-1</td>
           <td/>
         </tr>
@@ -4122,7 +4123,7 @@ more straightforward or more appropriate or both.
           <td>kg/mol</td>
           <td/>
           <td>kilogram per mole</td>
-          <td/>
+          <td/><!-- FIXME: there is something wrong with this as the number doesn't match what we had for the AMU -->
           <td>1.66054018667494 &mult; 10<sup>-21</sup></td>
           <td>g</td>
           <td/>
@@ -4312,7 +4313,7 @@ more straightforward or more appropriate or both.
           <td/>
           <td>milliequivalent</td>
           <td/>
-          <td>6.0221367 &mult; 10<sup>20</sup></td>
+          <td>6.02214076 &mult; 10<sup>20</sup></td>
           <td>1</td>
           <td/>
         </tr>
@@ -4384,7 +4385,7 @@ more straightforward or more appropriate or both.
           <td/>
           <td>milliequivalent per kilogram</td>
           <td>dose per patient body mass</td>
-          <td>6.0221367 &mult; 10<sup>17</sup></td>
+          <td>6.02214076 &mult; 10<sup>17</sup></td>
           <td>g-1</td>
           <td/>
         </tr>
@@ -4393,7 +4394,7 @@ more straightforward or more appropriate or both.
           <td/>
           <td>milliequivalent per liter</td>
           <td/>
-          <td>6.0221367 &mult; 10<sup>23</sup></td>
+          <td>6.02214076 &mult; 10<sup>23</sup></td>
           <td>m-3</td>
           <td/>
         </tr>
@@ -4402,7 +4403,7 @@ more straightforward or more appropriate or both.
           <td/>
           <td>milliequivalent per square meter</td>
           <td>dose per patient body surface area</td>
-          <td>6.0221367 &mult; 10<sup>20</sup></td>
+          <td>6.02214076 &mult; 10<sup>20</sup></td>
           <td>m-2</td>
           <td/>
         </tr>
@@ -4780,7 +4781,7 @@ more straightforward or more appropriate or both.
           <td/>
           <td>millimole per kilogram</td>
           <td>molar dose per patient body mass</td>
-          <td>6.0221367 &mult; 10<sup>17</sup></td>
+          <td>6.02214076 &mult; 10<sup>17</sup></td>
           <td>g-1</td>
           <td/>
         </tr>
@@ -4789,7 +4790,7 @@ more straightforward or more appropriate or both.
           <td/>
           <td>millimole per liter</td>
           <td/>
-          <td>6.0221367 &mult; 10<sup>23</sup></td>
+          <td>6.02214076 &mult; 10<sup>23</sup></td>
           <td>m-3</td>
           <td/>
         </tr>
@@ -4798,7 +4799,7 @@ more straightforward or more appropriate or both.
           <td/>
           <td>millimole per square meter</td>
           <td>molar dose per patient body surface area</td>
-          <td>6.0221367 &mult; 10<sup>20</sup></td>
+          <td>6.02214076 &mult; 10<sup>20</sup></td>
           <td>m-2</td>
           <td/>
         </tr>
@@ -4816,7 +4817,7 @@ more straightforward or more appropriate or both.
           <td>mol/kg/s</td>
           <td>mole per kilogram and second</td>
           <td/>
-          <td>6.0221367 &mult; 10<sup>20</sup></td>
+          <td>6.02214076 &mult; 10<sup>20</sup></td>
           <td>g-1.s-1</td>
           <td/>
         </tr>
@@ -4825,7 +4826,7 @@ more straightforward or more appropriate or both.
           <td/>
           <td>mole per Kilogram</td>
           <td/>
-          <td>6.0221367 &mult; 10<sup>20</sup></td>
+          <td>6.02214076 &mult; 10<sup>20</sup></td>
           <td>g-1</td>
           <td/>
         </tr>
@@ -4834,7 +4835,7 @@ more straightforward or more appropriate or both.
           <td/>
           <td>mole per liter</td>
           <td/>
-          <td>6.0221367 &mult; 10<sup>26</sup></td>
+          <td>6.02214076 &mult; 10<sup>26</sup></td>
           <td>m-3</td>
           <td/>
         </tr>
@@ -4843,7 +4844,7 @@ more straightforward or more appropriate or both.
           <td/>
           <td>mole per cubic meter</td>
           <td/>
-          <td>6.0221367 &mult; 10<sup>23</sup></td>
+          <td>6.02214076 &mult; 10<sup>23</sup></td>
           <td>m-3</td>
           <td/>
         </tr>
@@ -4852,7 +4853,7 @@ more straightforward or more appropriate or both.
           <td/>
           <td>mole per second</td>
           <td/>
-          <td>6.0221367 &mult; 10<sup>23</sup></td>
+          <td>6.02214076 &mult; 10<sup>23</sup></td>
           <td>s-1</td>
           <td/>
         </tr>
@@ -4861,7 +4862,7 @@ more straightforward or more appropriate or both.
           <td/>
           <td>milliosmole per liter</td>
           <td/>
-          <td>6.0221367 &mult; 10<sup>23</sup></td>
+          <td>6.02214076 &mult; 10<sup>23</sup></td>
           <td>m-3</td>
           <td/>
         </tr>
@@ -5077,7 +5078,7 @@ more straightforward or more appropriate or both.
           <td/>
           <td>osmole per kilogram</td>
           <td/>
-          <td>6.0221367 &mult; 10<sup>20</sup></td>
+          <td>6.02214076 &mult; 10<sup>20</sup></td>
           <td>g-1</td>
           <td/>
         </tr>
@@ -5086,7 +5087,7 @@ more straightforward or more appropriate or both.
           <td/>
           <td>osmole per liter</td>
           <td/>
-          <td>6.0221367 &mult; 10<sup>26</sup></td>
+          <td>6.02214076 &mult; 10<sup>26</sup></td>
           <td>m-3</td>
           <td/>
         </tr>
@@ -5185,7 +5186,7 @@ more straightforward or more appropriate or both.
           <td/>
           <td>microequivalents</td>
           <td/>
-          <td>6.0221367 &mult; 10<sup>17</sup></td>
+          <td>6.02214076 &mult; 10<sup>17</sup></td>
           <td>1</td>
           <td/>
         </tr>
@@ -5320,7 +5321,7 @@ more straightforward or more appropriate or both.
           <td/>
           <td>microkatal</td>
           <td/>
-          <td>6.0221367 &mult; 10<sup>17</sup></td>
+          <td>6.02214076 &mult; 10<sup>17</sup></td>
           <td>s-1</td>
           <td/>
         </tr>
@@ -5338,7 +5339,7 @@ more straightforward or more appropriate or both.
           <td/>
           <td>micromole</td>
           <td/>
-          <td>6.0221367 &mult; 10<sup>17</sup></td>
+          <td>6.02214076 &mult; 10<sup>17</sup></td>
           <td>1</td>
           <td/>
         </tr>
@@ -5356,7 +5357,7 @@ more straightforward or more appropriate or both.
           <td/>
           <td>micromole per liter</td>
           <td/>
-          <td>6.0221367 &mult; 10<sup>20</sup></td>
+          <td>6.02214076 &mult; 10<sup>20</sup></td>
           <td>m-3</td>
           <td/>
         </tr>
