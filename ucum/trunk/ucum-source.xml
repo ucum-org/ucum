@@ -3369,7 +3369,7 @@ like "/g{HGB}" instead of just "/g".)  Hence, the second column
 "alternative suggestions" lists equivalent unit terms that are either
 more straightforward or more appropriate or both.
     </p>
-		<!-- FIXME: this table could get out of date as things change, sould be generated -->
+		<!-- FIXME: this table could get out of date as things change, should be generated -->
     <table>
       <caption>Example Unit Terms by Term</caption>
       <col width="1.06"/>
