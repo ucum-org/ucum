@@ -73,7 +73,7 @@
       <email href="cmcdonald@regenstrief.org"/>
     </author>
   </authlist>
-  <copyright>1998-2014, Regenstrief Institute, Inc. and the UCUM Organization. All rigthts reserved.</copyright>
+  <copyright>1998-2014, Regenstrief Institute, Inc. and the UCUM Organization. All rights reserved.</copyright>
 </header>
 
 <body>
@@ -99,7 +99,7 @@ provided by ISO&nbsp;1000-1981, while ANSI X3.50 extends ISO&nbsp;2955 to
 include U.S. customary units. Because these standards carry the
 restriction of &ldquo;limited character sets&rdquo; in their names
 they seem to be of less value today, when graphical user interfaces and
-laser printers are in wide-spread use. For this reason, the european
+laser printers are in wide-spread use. For this reason, the European
 standard ENV&nbsp;12435 in its clause 7.3 declares ISO&nbsp;2955 obsolete.
     </p>
     <p>
@@ -198,7 +198,7 @@ codes they define.
 &TUCUM; provides a single coding system for units that is complete,
 free of all ambiguities, and that assigns to each defined unit a
 concise semantics. In communication it is not only important that all
-communicating parties have the same repertoir of symbols, but also that
+communicating parties have the same repertoire of symbols, but also that
 all attach the same meaning to the symbols they exchange. The common
 meaning must be computationally verifiable. &TUCUM; assumes a
 semantics for units based on dimensional analysis.<footnote>
@@ -280,7 +280,7 @@ literally and thus may not detect equivalence of unit expressions.
 
     <comment>
       <p>
-The option for &ldquo;limited conformace&rdquo; allows &TUCUM; to be adopted
+The option for &ldquo;limited conformance&rdquo; allows &TUCUM; to be adopted
 even by less powerful systems that can not or do not want to deal with
 the full semantics of units. Those systems typically have a table of
 fixed unit expression literals that may be related to other literals
@@ -326,7 +326,7 @@ because it ends with a non-digit allowed to be part of a symbol.
 defined, to be used when there is a risk of upper and lower case to be
 confused. Although upper and lower case can be mixed in case
 insensitive symbols there is no meaning to the case. Case insensitive
-symbols are incompatible to the case senitive symbols.
+symbols are incompatible to the case sensitive symbols.
 </verse>
     </p>
 
@@ -334,7 +334,7 @@ symbols are incompatible to the case senitive symbols.
       <p>
 The 7-bit US-ASCII character code is the greatest common denominator
 that can be expected to be available in any communication environment.
-Only very few units normally require symbols from the greek alphabet
+Only very few units normally require symbols from the Greek alphabet
 and thus the cost of requiring Unicode does not outweigh the benefit.
 As explained above, the real issue about writing unit terms naturally
 is not the character set but the ability to write subscripts and
@@ -469,7 +469,7 @@ called <emph>annotation</emph>.
 <verse> 
 Annotations do not contribute to the semantics of the unit but are
 meaningless by definition. Therefore, any fully conformant parser must
-discard all annotations. Parsers of limited conformace <emph>should</emph>
+discard all annotations. Parsers of limited conformance <emph>should</emph>
 not value annotations in comparison of units.
 </verse>
 
@@ -494,7 +494,7 @@ biomedical sciences, there are traditional habits to write annotations
 at units or instead of units, such as &ldquo;%vol.&rdquo;,
 &ldquo;RBC&rdquo;, &ldquo;CFU&rdquo;, &ldquo;kg(wet tis.)&rdquo;, or
 &ldquo;mL(total)&rdquo;. These habits are hard to overcome. Any
-attempt of a coding scheme to restrict this percieved expressiveness
+attempt of a coding scheme to restrict this perceived expressiveness
 will ultimately result in the coding scheme not being adopted, or just
 &ldquo;half-way&rdquo; adopted (which is as bad as not adopted).
       </p>
@@ -722,7 +722,7 @@ parsing of simple units into prefix and atom.
 To determine whether a given unit atom is metric or not is not
 trivial. It is a cultural phenomenon, subject to change, just like
 language, the meaning of words and how words can be used. At one time
-we can clearly tell right or wrong useage of words, but these
+we can clearly tell right or wrong usage of words, but these
 decisions may need to be revised with the passage of time.
      </p>
      <p>
@@ -730,7 +730,7 @@ Generally, metric units are those defined &ldquo;in the spirit&rdquo;
 of the metric system, that emerged in France of the 18th century and
 was rapidly adopted by scientists. Metric units are usually based on
 reproducible natural phenomena and are usually not part of a system of
-compareable units with different magintudes, especially not if the
+comparable units with different magintudes, especially not if the
 ratios of these units are not powers of 10. Instead, metric units use
 multiplier prefixes that magnify or diminish the value of the unit
 by powers of ten.
@@ -764,7 +764,7 @@ units scales the measurement value. One dekameter is 10 times of a
 meter, but there is no meaning to 10 times of 1&nbsp;&deg;C in the
 same way as 30&nbsp;&deg;C are not 3 times as much as
 10&nbsp;&deg;C. See <pref from="para-special"/> on how &TUCUM; finds a
-way to accomodate this different use of prefixes at units such as the
+way to accommodate this different use of prefixes at units such as the
 degree Celsius, bel or neper.
      </p>
    </comment>
@@ -826,7 +826,7 @@ the thermochemical calorie, we would use 1&nbsp;cal<sub>IT</sub> or
 &ldquo;<code>cal_th</code>&rdquo; with the underscore signifying that
 &ldquo;IT&rdquo; and &ldquo;th&rdquo; are subscripts. Other examples
 are the distinctions between the Julian and Gregorian calendar year
-from the tropical year or the british imperial gallon from the U.S.
+from the tropical year or the British imperial gallon from the U.S.
 gallon (see <pref ref="para-other"/> and <pref from="para-us-volumes"/>).
       </p>
     </comment>
@@ -859,8 +859,8 @@ H<sub>2</sub>O changes the meaning of the unit atom for meter (length)
 to a unit of pressure.
       </p>
       <p>
-Customary units are defined in &TUCUM; in order to accomodate
-practical needs. However metric units are still prefered and the
+Customary units are defined in &TUCUM; in order to accommodate
+practical needs. However metric units are still preferred and the
 customary symbols should not interfere with metric symbols in any
 way. Thus, customary units are &ldquo;stigmatized&rdquo; by enclosing
 them into square brackets.
@@ -1120,7 +1120,7 @@ an unfortunate decision because difference-scale units like the degree
 Celsius have no multiplication operation, so that the prefix value
 could be multiplied with the unit. Instead the prefix at non-ratio
 units scales the measurement value. One wonders why the CGPM keeps the
-celsius temperature in the SI as it is superfluous and in a unique way
+Celsius temperature in the SI as it is superfluous and in a unique way
 incoherent with the SI.
         </p>
         <p>
@@ -1401,7 +1401,7 @@ normative. Full name and print symbol are out of scope of &TUCUM;.
 
 <verse>
 The units named &ldquo;parts per <v>N</v>&rdquo; are provided to be used
-where absolutely nessecary but are not endorsed. Especially
+where absolutely necessary but are not endorsed. Especially
 &ldquo;ppb&rdquo; and &ldquo;pptr&rdquo; are deprecated since
 &ldquo;billion&rdquo; and &ldquo;trillion&rdquo; are ambiguous names
 internationally. The explicit powers of ten should be given instead.
@@ -1414,7 +1414,7 @@ because the names &ldquo;billion&rdquo; and &ldquo;trillion&rdquo; are
 ambiguous.  The expression &ldquo;<code>10*-9</code>&rdquo; or
 &ldquo;<code>10*-12</code>&rdquo; should be used instead. When the
 units percent or &ldquo;parts per <v>N</v>&rdquo; are used for
-concentrations specific units are prefered, e.g.,
+concentrations specific units are preferred, e.g.,
 &ldquo;<code>ug/l</code>&rdquo; for mass concentration. The expression
 &ldquo;<code>ug/kg</code>&rdquo; for ppb is also valid.
       </caption>
@@ -1571,7 +1571,7 @@ out of scope of &TUCUM;.
 In the case sensitive variant the liter is defined both with an upper
 case &lquo;<code>L</code>&rdquo; and a lower case
 &lquo;<code>l</code>&rquo;. NIST [63 FR 40338] declares the upper case
-&lquo;L&rquo; as the prefered symbol for the U.S., while in many other
+&lquo;L&rquo; as the preferred symbol for the U.S., while in many other
 countries the lower case &lquo;l&rquo; is used. In fact the lower case
 &lquo;l&rquo; was in effect since 1879. A hundred years later in 1979
 the 16th CGPM decided to adopt the upper case &lquo;L&rquo; as a
@@ -1591,7 +1591,7 @@ and &ldquo;are&rdquo; and thus would not require a separate unit
 atom. Nevertheless, ISO&nbsp;2955 in its case insensitive variant assigns
 &ldquo;<code>ARE</code>&rdquo; to the are and
 &ldquo;<code>har</code>&rdquo; to the hectare. This is obviously an
-anomality which &TUCUM; will not follow. As a metric unit,
+anomaly which &TUCUM; will not follow. As a metric unit,
 &ldquo;<code>ar</code>&rdquo; can be prefixed with
 &ldquo;<code>h</code>&rdquo; to yield &ldquo;<code>har</code>&rdquo;
       </p>
@@ -1615,7 +1615,7 @@ variable during one day and is continually slowing down in the long
 run.  The usual subdivisions of the day in 24 hours of 60 minutes and
 60 seconds originated in Babylonia. The earth's rotation was too
 inexact to measure time, which is why the 11th CGPM (1954) defined the
-second based on a standarized historical tropical year (see below)
+second based on a standardized historical tropical year (see below)
 which was later (13th CGPM 1967-1968) replaced by frequency
 measurement. Thus the second came to be the base unit of time and the
 day is now 864000&nbsp;s exactly with the <emph>Universal Coordinated
@@ -1653,7 +1653,7 @@ actually quite plausible that the week of seven days originated in
 Babylonia and entered Jewish tradition during the Babylonian exile.)
       </p>
       <p>
-The difficultiy continues with the month. The lunar (so called
+The difficulty continues with the month. The lunar (so called
 &ldquo;synodal&rdquo; month is variable. Around 1900 it was
 29.5305886&nbsp;d currently it is 29.5305889&nbsp;d and in 2100 it
 will be 29.5305891&nbsp;d, which we fixate in the 5th decimal digit
@@ -1727,12 +1727,12 @@ Laboratory. <code>http://physics.nist.gov/cuu/Constants/index.html</code>
       </p>
       <p>
 In the base system of &TUCUM;, the general gas constant <v>R</v> is
-identical to the Boltzman constant <v>k</v>. In the SI both are related
+identical to the Boltzmann constant <v>k</v>. In the SI both are related
 through <v>R</v> = <v>k</v> &mult; <v>N</v><sub>A</sub>, where
 <v>N</v><sub>A</sub> = 6.02214076 &mult; 10<sup>23</sup>&nbsp;/mol is
 the Avogadro constant. Because &TUCUM; defines the mole to be the
 dimensionless Avogadro number (number of particles in 1&nbsp;g of
-<sup>12</sup>C itself, there is no difference anymore if the Boltzman
+<sup>12</sup>C itself, there is no difference anymore if the Boltzmann
 constant is given as <v>k</v> = 1.380658 &mult;
 10<sup>23</sup>&nbsp;J/K or <v>R</v> =
 8.314511&nbsp;J&nbsp;mol<sup>-1</sup>&nbsp;K<sup>-1</sup>.
@@ -1782,7 +1782,7 @@ normative. Full name and print symbol are out of scope of &TUCUM;.
 Although the CGPM &ldquo;accepts&rdquo; only very few CGS units &ldquo;for use with
 the SI,&rdquo; CGS units are proper metric units. CGS units are still used
 in many physiological laboratories and in clinical diagnostics (e.g.,
-cardiology). In addition CGS units ackquired a special dignity as this
+cardiology). In addition CGS units acquired a special dignity as this
 was the system of units used by the great physicists of the early 20th
 century, Albert Einstein, Max Planck, and many others who worked on
 the scientific revolution that had quite a cultural impact.
@@ -1835,10 +1835,10 @@ was the fathom (de. &ldquo;Klafter&rdquo;).
       <p>
 The square rod (de. &ldquo;Quadratrute&rdquo;  fr. &ldquo;perche-carr&eacute;e&rdquo; 
 nl. &ldquo;vierkante-roede&rdquo;  was mainly used to measure land. The acre as
-the legnedary land to sow in one morning (or day) is also widespread
+the legendary land to sow in one morning (or day) is also widespread
 (de. &ldquo;Morgen, Tagwerk, Acker&rdquo;  fr. &ldquo;arpent&rdquo;  sv. &ldquo;tunnland&rdquo; ,
 although the exact amount in square rod varies considerably from
-region ro region. Interestingly, even the special purpose measures
+region to region. Interestingly, even the special purpose measures
 such as the &ldquo;hand&rdquo; for measuring horses have international equivalents
 (de. &ldquo;faust&rdquo;).
       </p>
@@ -1984,7 +1984,7 @@ U.S. customary system as of 1893.
       <p>
 In general, we did not include special customary units of area and
 volume in <tabref ref="intcust"/>, since these are still used
-differently in the U.S. Special symbols such as suqare inch and cubic
+differently in the U.S. Special symbols such as square inch and cubic
 foot have been included according to ANSI&nbsp;X3.50. Generally the
 &ldquo;square-&rdquo; and &ldquo;cubic-&rdquo; prefixes are
 unnecessary in ISO&nbsp;2955 and ANSI&nbsp;X3.50 and are deprecated by
@@ -2025,7 +2025,7 @@ The meaning of the columns is declared in <pref ref="para-custint"/>.
 </verse>
 
 <smallref>
-[Barry N. Taylor, <emph>Guide to the Use of the International Stsyem of
+[Barry N. Taylor, <emph>Guide to the Use of the International System of
 Units (SI)</emph> [NIST Special Publication 811], National Institute for
 Standards and Technology (NIST), 1995. Available from: URL:
 <code>http://physics.nist.gov/Document/sp811.pdf</code>]
@@ -2054,12 +2054,12 @@ Standards and Technology (NIST), 1995. Available from: URL:
     </u:units>
     <comment>
 			<p>
-After the 1959 international agreement changed the definition of the yard in the US to be 0.9144 m exactly, surveyors and civil engineers complained that volumnious legacy surveys and so forth used the previous definition of (1200/3937) m and that this change would be disruptive. So, by statute, Congress created a survey foot of (1200/3937) m (the old 1893 Mendenhall Order definition). Thus, by statute, miles used in surveying are referred to as statute miles of 5280 survey feet each. The fathom, rod, and furlong are likewise based on the survey foot.
+After the 1959 international agreement changed the definition of the yard in the US to be 0.9144 m exactly, surveyors and civil engineers complained that voluminous legacy surveys and so forth used the previous definition of (1200/3937) m and that this change would be disruptive. So, by statute, Congress created a survey foot of (1200/3937) m (the old 1893 Mendenhall Order definition). Thus, by statute, miles used in surveying are referred to as statute miles of 5280 survey feet each. The fathom, rod, and furlong are likewise based on the survey foot.
 			</p>
       <p>
 According to NIST, the acre as normally used in the U.S. is defined
 in terms of U.S. survey lengths, and not in terms of the
-international custormary system.  This older U.S. customary system of
+international customary system.  This older U.S. customary system of
 survey lengths is still used for geodesic measurements.
       </p>
     </comment>
@@ -2106,7 +2106,7 @@ related to other European traditional units such as the English
 &ldquo;Landseil&rdquo; (measuring 52 ells or 104 feet) named after
 ropes or chains that could be spanned in order to measure land. The
 difference in the definitions of those units is no surprise as there
-is nothing that restricts a chain or rope to a praticular
+is nothing that restricts a chain or rope to a particular
 length. However, these units are still similar in magnitude.
       </p>
     </comment>
@@ -2169,7 +2169,7 @@ which has been mentioned as an historical curiosity.
       </p>
       <p>
 ANSI&nbsp;X3.50 defines symbols for the units cup, tablespoon and teaspoon
-which are predominantly used in cooking recipies but also in practical
+which are predominantly used in cooking recipes but also in practical
 medicine. Similar units can often be found in European cook books, but
 are usually translated into metric units outside the U.S. For
 practical medicine these are still very handy units to give
@@ -2206,7 +2206,7 @@ The meaning of the columns is declared in  <pref ref="para-custint"/>.
     <comment>
       <p>
 The British Weights and Measures Act of 1824 removed the medieval
-distiction between wine and grain measures and defined one unified
+distinction between wine and grain measures and defined one unified
 system of volumes based on a new Gallon that was defined similarly as
 the metric unit liter: &ldquo;10 imperial pounds weight of distilled
 water weighed in air against brass weights with the water and the air
@@ -2227,7 +2227,7 @@ Note that the subdivisions of the British Imperial system of volumes
 differs from the U.S. system of fluid volumes between gill and fluid
 ounce: in the British system 1&nbsp;oz&nbsp;fl equals 1/5&nbsp;gill where
 in the U.S. system 1&nbsp;oz&nbsp;fl equals 1/4&nbsp;gill. Thus, although
-the british system starts out with a 20% larger gallon, the British
+the British system starts out with a 20% larger gallon, the British
 fluid ounce, fluid dram and minim are 4% smaller than the U.S. units
 with the same name.
       </p>
@@ -2244,7 +2244,7 @@ The meaning of the columns is declared in  <pref ref="para-custint"/>.
     </p>
     <comment>
       <p>
-The avoirdupois system is used in the U.S. as well as in coutries that
+The avoirdupois system is used in the U.S. as well as in countries that
 use the British Imperial system. Avoirdupois is the default system of
 mass units used for all goods that &ldquo;have weight&rdquo;
 (fr. <emph>avoir du poids</emph>). Interestingly all three systems of
@@ -2341,7 +2341,7 @@ than the avoirdupois pound, while its subdivisions are greater than
 the respective avoirdupois subdivisions (ounce 10%, dram 119%). This
 difference in the weight systems is the most important reason why
 ANSI&nbsp;X3.50 should not be applied in medicine, where both systems are
-being used and therefore misinterpreations are inevitable.
+being used and therefore misinterpretations are inevitable.
       </p>
     </comment>
 
@@ -2466,7 +2466,7 @@ ISO&nbsp;2955 for the degree Celsius.
 Defining precise semantics for legacy units for &ldquo;quantity of
 heat&rdquo; is difficult. The many variants of these units are
 frequently confused because there is not just a calorie and not just a
-british thermal unit. The different calories usually being used vary
+British thermal unit. The different calories usually being used vary
 by 1% but the confusion can result in an error as high as 100000%!
 Thus, if exactness and non-ambiguity is important one should use the
 joule to report amounts of heat, just like for any other energy and
@@ -2496,7 +2496,7 @@ American food say &ldquo;Calories: xxx&rdquo; The <emph>International
 Union of Nutritional Sciences</emph> recommends using either the joule
 or a kilocalorie based on the thermochemical calorie. Because of a
 perceived popular demand &TUCUM; defines the nutrition Calorie as
-&ldquo;<code>Cal</code>&rdquo; with the conventional captital first
+&ldquo;<code>Cal</code>&rdquo; with the conventional capital first
 letter. For the case insensitive variant of &TUCUM;, the symbol is
 enclosed in square brackets (&ldquo;<code>[CAL]</code>&rdquo;).
       </p>
@@ -2534,16 +2534,16 @@ The meaning of the columns is declared in  <pref ref="para-custint"/>.
 <verse>
 The function pair denoted &ldquo;<code>hpX(1 l)</code>&rdquo; is
 defined as <v>f</v><sub>hp X</sub>(<v>x</v>) = - lg <v>x</v> to
-convert from a number fraction (dillution) per liter to the
+convert from a number fraction (dilution) per liter to the
 homeopathic potency value of the decimal (X) series, and <v>f</v><sub>hp
 X</sub><sup>-1</sup>(<v>x</v>) = 10<sup>-<v>x</v></sup> to convert
 from the potency value back to the number fraction. Likewise, the
 function pair denoted &ldquo;<code>hpC(1 l)</code>&rdquo; is defined
 as <v>f</v><sub>hp C</sub>(<v>x</v>) = - ln(<v>x</v>) / ln(100)
-to convert from a number fraction (dillution) per liter to the
+to convert from a number fraction (dilution) per liter to the
 homeopathic potency value of the centesimal (C) series, and <v>f</v><sub>hp
 C</sub><sup>-1</sup>(<v>x</v>) = 100<sup>-<v>x</v></sup> to convert
-from the potency value back to the number fraction. Aanalogous 
+from the potency value back to the number fraction. Analogous 
 functions are defined for the millesimal (M) series with basis 1,000 
 and the series and the quintamillesimal (Q) series with basis 50,000.
 </verse>
@@ -2663,16 +2663,16 @@ appreciated.
       </p>
       <p>
 We have always pointed out that the homeopathic teaching takes potency
-not as equivalent to dillution and the C and X series would not equate
+not as equivalent to dilution and the C and X series would not equate
 to each other in the strictly numerical manner. Homeopathic potency
 includes the &ldquo;agitation&rdquo; (a vigorous shaking) that needs
 to occur in every step of the dilluting process. Therefore as of April 2010, 
-the hoemeopathic units are declared "arbitrary units", that is, they 
+the homeopathic units are declared "arbitrary units", that is, they 
 are no longer convertible. Therefore, also, we discontinue defining them
-using the dillution functions. The dillution functions sometimes cause
+using the dilution functions. The dilution functions sometimes cause
 truly astronomical values, leading to overflow conditions, e.g. in 
 such potencies as 30 C or 100 X or 10 M, which do actually occur in
-hoemeopathics that are on the market. The previous units continue to
+homeopathics that are on the market. The previous units continue to
 exist as "retired", but their symbols now have a prime (apostrophe) in
 them.
       </p>
@@ -2709,7 +2709,7 @@ to convert from the pH value back to moles per liter.
 <u:unit id="600230" Code="U" CODE="U" isMetric="yes"><name>Unit</name><printSymbol>U</printSymbol><property>catalytic activity</property><value Unit="umol/min" UNIT="UMOL/MIN" value="1">1</value></u:unit>
 <u:unit id="600570" Code="[iU]" CODE="[IU]" isMetric="yes" isArbitrary="yes"><name>international unit</name><printSymbol>IU</printSymbol><property>arbitrary</property><value Unit="1" UNIT="1" value="1">1</value></u:unit>
 <u:unit id="600570" Code="[IU]" CODE="[IU]" isMetric="yes" isArbitrary="yes"><name>international unit</name><printSymbol>i.U.</printSymbol><property>arbitrary</property><value Unit="[iU]" UNIT="[IU]" value="1">1</value></u:unit>
-<u:unit id="600580" Code="[arb'U]" CODE="[ARB'U]" isMetric="no" isArbitrary="yes"><name>arbitary unit</name><printSymbol>arb. U</printSymbol><property>arbitrary</property><value Unit="1" UNIT="1" value="1">1</value></u:unit>
+<u:unit id="600580" Code="[arb'U]" CODE="[ARB'U]" isMetric="no" isArbitrary="yes"><name>arbitrary unit</name><printSymbol>arb. U</printSymbol><property>arbitrary</property><value Unit="1" UNIT="1" value="1">1</value></u:unit>
 <u:unit id="600590" Code="[USP'U]" CODE="[USP'U]" isMetric="no" isArbitrary="yes"><name>United States Pharmacopeia unit</name><printSymbol>U.S.P.</printSymbol><property>arbitrary</property><value Unit="1" UNIT="1" value="1">1</value></u:unit>
 <u:unit id="600600" Code="[GPL'U]" CODE="[GPL'U]" isMetric="no" isArbitrary="yes"><name>GPL unit</name><property>biologic activity of anticardiolipin IgG</property><value Unit="1" UNIT="1" value="1">1</value></u:unit>
 <u:unit id="600610" Code="[MPL'U]" CODE="[MPL'U]" isMetric="no" isArbitrary="yes"><name>MPL unit</name><property>biologic activity of anticardiolipin IgM</property><value Unit="1" UNIT="1" value="1">1</value></u:unit>
@@ -2730,8 +2730,8 @@ to convert from the pH value back to moles per liter.
 <u:unit id="600703" Code="[PFU]" CODE="[PFU]" isMetric="no" isArbitrary="yes"><name>plaque forming units</name><printSymbol>PFU</printSymbol><property>amount of an infectious agent</property><value Unit="1" UNIT="1" value="1">1</value></u:unit>
 <u:unit id="600704" Code="[FFU]" CODE="[FFU]" isMetric="no" isArbitrary="yes"><name>focus forming units</name><printSymbol>FFU</printSymbol><property>amount of an infectious agent</property><value Unit="1" UNIT="1" value="1">1</value></u:unit>
 <u:unit id="600705" Code="[CFU]" CODE="[CFU]" isMetric="no" isArbitrary="yes"><name>colony forming units</name><printSymbol>CFU</printSymbol><property>amount of a proliferating organism</property><value Unit="1" UNIT="1" value="1">1</value></u:unit>
-<u:unit id="600709" Code="[IR]" CODE="[IR]" isMetric="no" isArbitrary="yes"><name>index of reactivity</name><printSymbol>IR</printSymbol><property>amount of an allergen callibrated through in-vivo testing using the Stallergenes&reg; method.</property><value Unit="1" UNIT="1" value="1">1</value></u:unit>
-<u:unit id="600710" Code="[BAU]" CODE="[BAU]" isMetric="no" isArbitrary="yes"><name>bioequivalent allergen unit</name><printSymbol>BAU</printSymbol><property>amount of an allergen callibrated through in-vivo testing based on the ID50EAL method of (intradermal dilution for 50mm sum of erythema diameters</property><value Unit="1" UNIT="1" value="1">1</value></u:unit>
+<u:unit id="600709" Code="[IR]" CODE="[IR]" isMetric="no" isArbitrary="yes"><name>index of reactivity</name><printSymbol>IR</printSymbol><property>amount of an allergen calibrated through in-vivo testing using the Stallergenes&reg; method.</property><value Unit="1" UNIT="1" value="1">1</value></u:unit>
+<u:unit id="600710" Code="[BAU]" CODE="[BAU]" isMetric="no" isArbitrary="yes"><name>bioequivalent allergen unit</name><printSymbol>BAU</printSymbol><property>amount of an allergen calibrated through in-vivo testing based on the ID50EAL method of (intradermal dilution for 50mm sum of erythema diameters</property><value Unit="1" UNIT="1" value="1">1</value></u:unit>
 <u:unit id="600711" Code="[AU]" CODE="[AU]" isMetric="no" isArbitrary="yes"><name>allergen unit</name><printSymbol>AU</printSymbol><property>procedure defined amount of an allergen using some reference standard</property><value Unit="1" UNIT="1" value="1">1</value></u:unit>
 <u:unit id="600712" Code="[Amb'a'1'U]" CODE="[AMB'A'1'U]" isMetric="no" isArbitrary="yes"><name>allergen unit for Ambrosia artemisiifolia</name><printSymbol>Amb a 1 U</printSymbol><property>procedure defined amount of the major allergen of ragweed.</property><value Unit="1" UNIT="1" value="1">1</value></u:unit>
 <u:unit id="600715" Code="[PNU]" CODE="[PNU]" isMetric="no" isArbitrary="yes"><name>protein nitrogen unit</name><printSymbol>PNU</printSymbol><property>procedure defined amount of a protein substance</property><value Unit="1" UNIT="1" value="1">1</value></u:unit>
@@ -2756,7 +2756,7 @@ results are difficult to compare because their magnitude depends on
 the degree of ionization of the substance. That is to say, the meaning
 of equivalents depend not only on the substance, but also on the state
 that the substance is in. For example, in iron we have to distinguish
-Fe<sup>2+</sup> from Fe<sup>3+</sup>, so that noone can be sure how much 1&nbsp;eq
+Fe<sup>2+</sup> from Fe<sup>3+</sup>, so that no one can be sure how much 1&nbsp;eq
 of iron really is.
       </p>
       <p>
@@ -2779,7 +2779,7 @@ dissolved particles per liter.
       </p>
       <p>
 The gram-percent (g%) is a metric unit that has the same origin as
-%vol. Originally it was a dimensionless quanitiy expressing a ratio of
+%vol. Originally it was a dimensionless quantity expressing a ratio of
 two masses and thus equal to 1/100&nbsp;g/g. Because water is the most
 important solvent in biochemistry and 1&nbsp;g of a solution in water
 has a volume of approximately 1&nbsp;ml, the meaning of the unit
@@ -2903,7 +2903,7 @@ antibodies and results are recorded as FFU/ml.
 [Sources: <emph>WHO expert committee on biological standardization (55th Edition).</emph> WHO Technical Report #932;]
       </p>
       <p>
-The unit &ldquo;BAU&rdquo; measures amount of an allergen based on an in-vivo callibrated test using the Intradermal Dilution for 50mm sum of Erythema Diameters (ID50EAL) Method.
+The unit &ldquo;BAU&rdquo; measures amount of an allergen based on an in-vivo calibrated test using the Intradermal Dilution for 50mm sum of Erythema Diameters (ID50EAL) Method.
 
 [Source: <emph>Turkeltaub PC. Biological Standardization based on
 Quantitative Skin Testing - The 1D50 EAL Method. Arbeiten aus dem
@@ -2972,7 +2972,7 @@ EDITORIAL NOTE: The University of Texas' Structural Database of
 Allergenic Proteins (SDAP) contains close to 1000 allergens,
 isoallergens. Comparing the prospect of thousands of such special
 units for every allergen, one begins to appreciate even the
-metrologically comlex BAU unit.
+metrologically complex BAU unit.
       </p>
 
       <p>
@@ -2988,7 +2988,7 @@ protein content is impractical.
 
       <p>
 The unit &ldquo;Lf&rdquo; is called the &ldquo;Limit of
-Floculation&rdquo; or &ldquo;limes flocculationis&rdquo;. It is based
+Flocculation&rdquo; or &ldquo;limes flocculationis&rdquo;. It is based
 on an antigen-antibody precipitation reaction and used for the
 quantification of the antigenic content of tetanus and diphteria toxin
 and toxoid. The limes flocculationis is the smallest amount of antigen
@@ -3112,9 +3112,9 @@ the square root with its respective inverse function, the square.
 <u:unit id="600400" Code="b" CODE="BRN" isMetric="no"><name>barn</name><printSymbol>b</printSymbol><property>action area</property><value Unit="fm2" UNIT="FM2" value="100">100</value></u:unit>
 <u:unit id="600412" Code="att" CODE="ATT" isMetric="no"><name>technical atmosphere</name><printSymbol>at</printSymbol><property>pressure</property><value Unit="kgf/cm2" UNIT="KGF/CM2" value="1">1</value></u:unit>
 <u:unit id="600411" Code="mho" CODE="MHO" isMetric="yes"><name>mho</name><printSymbol>mho</printSymbol><property>electric conductance</property><value Unit="S" UNIT="S" value="1">1</value></u:unit>
-<u:unit id="600413" Code="[psi]" CODE="[PSI]" isMetric="no"><name>pound per sqare inch</name><printSymbol>psi</printSymbol><property>pressure</property><value Unit="[lbf_av]/[in_i]2" UNIT="[LBF_AV]/[IN_I]2" value="1">1</value></u:unit>
+<u:unit id="600413" Code="[psi]" CODE="[PSI]" isMetric="no"><name>pound per square inch</name><printSymbol>psi</printSymbol><property>pressure</property><value Unit="[lbf_av]/[in_i]2" UNIT="[LBF_AV]/[IN_I]2" value="1">1</value></u:unit>
 <u:unit id="600010" Code="circ" CODE="CIRC" isMetric="no"><name>circle</name><printSymbol>circ</printSymbol><property>plane angle</property><value Unit="[pi].rad" UNIT="[PI].RAD" value="2">2</value></u:unit>
-<u:unit id="600020" Code="sph" CODE="SPH" isMetric="no"><name>spere</name><printSymbol>sph</printSymbol><property>solid angle</property><value Unit="[pi].sr" UNIT="[PI].SR" value="4">4</value></u:unit>
+<u:unit id="600020" Code="sph" CODE="SPH" isMetric="no"><name>sphere</name><printSymbol>sph</printSymbol><property>solid angle</property><value Unit="[pi].sr" UNIT="[PI].SR" value="4">4</value></u:unit>
 <u:unit id="600520" Code="[car_m]" CODE="[CAR_M]" isMetric="no"><name>metric carat</name><printSymbol>ct<sub>m</sub></printSymbol><property>mass</property><value Unit="g" UNIT="G" value="2e-1">0.2</value></u:unit>
 <u:unit id="600521" Code="[car_Au]" CODE="[CAR_AU]" isMetric="no"><name>carat of gold alloys</name><printSymbol>ct<sub><r>Au</r></sub></printSymbol><property>mass fraction</property><value Unit="/24" UNIT="/24" value="1">1</value></u:unit>
 <u:unit id="600522" Code="[smoot]" CODE="[SMOOT]" isMetric="no"><name>Smoot</name><printSymbol></printSymbol><property>length</property><value Unit="[in_i]" UNIT="[IN_I]" value="67">67</value></u:unit>
@@ -3125,7 +3125,7 @@ the square root with its respective inverse function, the square.
       <p>
 Although called &ldquo;metric carat,&rdquo; the carat really is a
 customary unit, still used for precious gems. The word carat comes
-from greek
+from Greek
 &kappa;&epsilon;&rho;&alpha;&tau;&iotatonos;&kappa;&omikron;&nu; (small
 horn) that originally was the horn-shaped grain of a locust-tree
 species in the pea family, hence the carat grain is about three barley
@@ -3189,7 +3189,7 @@ registers would quickly overflow. Therefore we define a second symbol
 for bit, without the suffix, to be the dimensionless unit 1.
       </p>
       <p>
-The baud (Bd) is the number of distict signals transmitted per second,
+The baud (Bd) is the number of distinct signals transmitted per second,
 it is <emph>not</emph> the same as bits per second since one distinct signal
 usually carries more than one bit of information.
       </p>
