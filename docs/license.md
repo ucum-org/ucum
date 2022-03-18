@@ -1,7 +1,4 @@
----
-title: UCUM Copyright Notice and License
-post_excerpt: Short summary goes here.
----
+# UCUM Copyright Notice and License
 
 Version 1.0, March 2021
 
