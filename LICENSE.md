@@ -19,7 +19,7 @@ these terms and conditions.
 
 ### Section 1. Definitions.
 
-1.1 “\*<span id="Contribution"></span>**Contribution**\*” shall mean any
+1.1 “**Contribution**” shall mean any
 work of authorship, including the original version of the Work and any
 modifications or additions to that Work or Derivative Works thereof,
 that is intentionally submitted to Licensor for inclusion in the Work by
@@ -34,12 +34,12 @@ Work, but excluding communication that is conspicuously marked or
 otherwise designated in writing by the copyright owner as “Not a
 Contribution.”
 
-1.2 “\*<span id="Contributor"></span>**Contributor**\*” shall mean
+1.2 “**Contributor**” shall mean
 Licensor and any individual or Legal Entity on behalf of whom a
 Contribution has been received by Licensor and subsequently incorporated
 within the Work.
 
-1.3 “\*<span id="Derivative Works"></span>**Derivative Works**\*” shall
+1.3 “**Derivative Works**” shall
 mean any work, in any form, that is based on (or derived from) the Work
 and for which the editorial revisions, annotations, elaborations, or
 other modifications represent, as a whole, an original work of
@@ -47,7 +47,7 @@ authorship. For avoidance of doubt, a Software Application that merely
 communicates with and/or interoperates with an unmodified instance of
 the Work is not a Derivative Work.
 
-1.4 “\*<span id="Legal Entity"></span>**Legal Entity**\*” shall mean the
+1.4 “**Legal Entity**” shall mean the
 union of the acting entity and all other entities that control, are
 controlled by, or are under common control with that entity. For the
 purposes of this definition, “control” means (i) the power, direct or
@@ -56,32 +56,30 @@ by contract or otherwise, or (ii) ownership of fifty percent (50%) or
 more of the outstanding shares, or (iii) beneficial ownership of such
 entity.
 
-1.5 “\*<span id="Licensed Rights"></span>**Licensed Rights**\*” shall
+1.5 “**Licensed Rights**” shall
 mean the rights granted to You subject to the terms and conditions of
 this License, which are limited to all copyrights that apply to Your use
 of the Work and that the Licensor has authority to license.
 
-1.6 “\*<span id="License"></span>**License**\*” shall mean the terms and
+1.6 “**License**” shall mean the terms and
 conditions for use, reproduction, and distribution as defined by
 Sections 1 through 9 of this document.
 
-1.7 “\*<span id="Licensor"></span>**Licensor**\*” shall mean the
+1.7 “**Licensor**” shall mean the
 copyright owner or entity authorized by the copyright owner that is
 granting the License. Regenstrief Institute, Inc. is the copyright owner
 and Licensor.
 
-1.8 “\*<span id="Software Application"></span>**Software
-Application**\*” means any software applications developed by You to
+1.8 “**Software Application**” means any software applications developed by You to
 interact with the Work.
 
-1.9 “\*<span id="Work"></span>**Work**\*” shall mean the Unified Code
+1.9 “**Work**” shall mean the Unified Code
 For Units Of Measure (“UCUM”), including the UCUM Specification, in any
 form, made available under the License, as indicated by a copyright
 notice that is included in or attached to the work (an example is
 provided in the Appendix below).
 
-1.10 “\*<span id="You"></span>**You**<span id="” (or “"></span>**” (or
-“**<span id="Your"></span>**Your**\*”) shall mean an individual or
+1.10 “**You**” (or “**Your**”) shall mean an individual or
 Legal Entity exercising permissions granted by this License.
 
 ### Section 2. License Grant.
@@ -98,18 +96,20 @@ communicate with and interoperate with the Work.
 Your exercise of the License Grant is expressly made subject to the
 following conditions.
 
-a. You may not: i. use the Work for the purpose of developing or
-promulgating a different standard for identifying units of measure; ii.
-use the Work in any way which may dilute the Work’s purpose of providing
+a. You may not: 
+i. use the Work for the purpose of developing or
+promulgating a different standard for identifying units of measure; 
+ii. use the Work in any way which may dilute the Work’s purpose of providing
 a definitive standard for identifying precisely defined, unambiguous
-units of measure in electronic documents and messages; iii. use the Work
-in any way that expressly or implicitly change its meaning; iv. add,
-delete, or modify the Work’s content including field names, field
-contents, descriptions, and comments; or v. use the Work to create
-Derivative Works. b. Attribution. i. If you reproduce or distribute
+units of measure in electronic documents and messages; 
+iii. use the Work in any way that expressly or implicitly change its meaning; 
+iv. add, delete, or modify the Work’s content including field names, field
+contents, descriptions, and comments; or 
+v. use the Work to create Derivative Works. 
+b. Attribution. 
+  i. If you reproduce or distribute
 copies of the Work in its entirety, including but not limited to
-reproduction or distribution in connection with a Software Application,
-You must:
+reproduction or distribution in connection with a Software Application, You must:
 
 1.  provide the following with the Work: a. a copyright notice; b. a
     notice that refers to this License; c. a notice that refers to the
