@@ -1,4 +1,7 @@
-\= UCUM Copyright Notice and License
+---
+title: UCUM Copyright Notice and License
+post_excerpt: Short summary goes here.
+---
 
 Version 1.0, March 2021
 
@@ -6,7 +9,7 @@ The Unified Code for Units of Measure (UCUM), also known as the “UCUM
 Specification,” is copyright ©1999-2021, Regenstrief Institute, Inc. All
 rights reserved.
 
-\== UNIFIED CODE FOR UNITS OF MEASURE (UCUM) A.K.A. UCUM SPECIFICATION
+## UNIFIED CODE FOR UNITS OF MEASURE (UCUM) A.K.A. UCUM SPECIFICATION
 
 By exercising the Licensed Rights (defined below), You accept and agree
 to be bound by the terms and conditions of this Unified Code for Units
@@ -17,7 +20,7 @@ Licensor grants You such rights in consideration of benefits the
 Licensor receives from making the Licensed Material available under
 these terms and conditions.
 
-\=== Section 1. Definitions.
+### Section 1. Definitions.
 
 1.1 “\*<span id="Contribution"></span>**Contribution**\*” shall mean any
 work of authorship, including the original version of the Work and any
@@ -84,7 +87,7 @@ provided in the Appendix below).
 “**<span id="Your"></span>**Your**\*”) shall mean an individual or
 Legal Entity exercising permissions granted by this License.
 
-\=== Section 2. License Grant.
+### Section 2. License Grant.
 
 Subject to the terms and conditions of this License, each Contributor
 hereby grants to You a worldwide, non-exclusive, no-charge,
@@ -93,7 +96,7 @@ perform, and distribute the Work, and to use the Work for the purposes
 of developing and commercializing Software Applications that will
 communicate with and interoperate with the Work.
 
-\=== Section 3. License Conditions.
+### Section 3. License Conditions.
 
 Your exercise of the License Grant is expressly made subject to the
 following conditions.
@@ -121,7 +124,7 @@ You must:
     by providing a URL or hyperlink that includes the required
     information when distributing the Work by electronic download.
 
-\=== Section 4. Grant of Patent License.
+### Section 4. Grant of Patent License.
 
 Subject to the terms and conditions of this License, each Contributor
 hereby grants to You a perpetual, worldwide, non-exclusive, no-charge,
@@ -138,7 +141,7 @@ or contributory patent infringement, then any patent licenses granted to
 You under this License for that Work shall terminate as of the date such
 litigation is filed.
 
-\=== Section 5. Submission of Contributions.
+### Section 5. Submission of Contributions.
 
 Unless You explicitly state otherwise, any Contribution intentionally
 submitted for inclusion in the Work by You to the Licensor shall be
@@ -147,7 +150,7 @@ terms or conditions. Notwithstanding the above, nothing herein shall
 supersede or modify the terms of any separate license agreement you may
 have executed with Licensor regarding such Contributions.
 
-\=== Section 6. Trademarks.
+### Section 6. Trademarks.
 
 This License does not grant permission to use the trade names,
 trademarks, service marks, or product names of the Licensor, except as
@@ -155,7 +158,7 @@ required for reasonable and customary use in describing the origin of
 the Work and reproducing or redistributing the Work as required by
 Section 3.
 
-\=== Section 7. Disclaimer of Warranty.
+### Section 7. Disclaimer of Warranty.
 
 Unless required by applicable law or agreed to in writing, Licensor
 provides the Work (and each Contributor provides its Contributions) on
@@ -170,7 +173,7 @@ PURPOSE**\*. You are solely responsible for determining the
 appropriateness of using or redistributing the Work and assume any risks
 associated with Your exercise of permissions under this License.
 
-\=== Section 8. Limitation of Liability.
+### Section 8. Limitation of Liability.
 
 In no event and under no legal theory, whether in tort (including
 negligence), contract, or otherwise, unless required by applicable law
@@ -198,7 +201,7 @@ third-party agreement that would, in any manner whatsoever, constitute
 an admission of fault by Contributors or bind Contributors in any way,
 without prior written consent of all affected Contributors.
 
-\=== Section 9. Accepting Warranty or Additional Liability.
+### Section 9. Accepting Warranty or Additional Liability.
 
 While redistributing the Work, You may choose to offer acceptance of
 support, warranty, indemnity, or other liability obligations and/or
@@ -209,7 +212,7 @@ agree to indemnify, defend, and hold each Contributor harmless for any
 liability incurred by, or claims asserted against, such Contributor by
 reason of your accepting any such warranty or additional liability.
 
-\=== Section 10. Term and Termination.
+### Section 10. Term and Termination.
 
 10.1 This License applies for the term of the copyrights licensed here.
 However, if You fail to comply with this License, then Your rights under
@@ -228,7 +231,7 @@ time; however, doing so will not terminate this License.
 
 10.4 Sections 1, 7, 10, and 12 survive termination of this License.
 
-\=== Section 11. Other Terms and Conditions.
+### Section 11. Other Terms and Conditions.
 
 11.1 The Licensor shall not be bound by any additional or different
 terms or conditions communicated by You unless expressly agreed.
@@ -237,7 +240,7 @@ terms or conditions communicated by You unless expressly agreed.
 not stated herein are separate from and independent of the terms and
 conditions of this License.
 
-\=== Section 12. Interpretation.
+### Section 12. Interpretation.
 
 12.1 For the avoidance of doubt, this License does not, and shall not be
 interpreted to, reduce, limit, restrict, or impose conditions on any use
@@ -258,9 +261,9 @@ limitation upon, or waiver of, any privileges and immunities that apply
 to the Licensor or You, including from the legal processes of any
 jurisdiction or authority.
 
-\= END OF TERMS AND CONDITIONS
+## END OF TERMS AND CONDITIONS
 
-\== APPENDIX: How to apply the UCUM License to your work.
+### APPENDIX: How to apply the UCUM License to your work.
 
 To apply the UCUM License to your work, attach the following boilerplate
 notice. The text should be enclosed in the appropriate comment syntax
