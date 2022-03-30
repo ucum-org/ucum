@@ -1,5 +1,5 @@
 ---
-title: Organization and Procedures Project
+title: Organization and Procedures
 post_excerpt: Defining the governance and maintenance structure of UCUM.
 ---
 
