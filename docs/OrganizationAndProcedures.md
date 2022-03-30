@@ -1,4 +1,7 @@
-# Organization and Procedures Project
+---
+title: Organization and Procedures Project
+post_excerpt: Defining the governance and maintenance structure of UCUM.
+---
 
 The goal of this project is to define the governance and maintenance
 structure of UCUM.
