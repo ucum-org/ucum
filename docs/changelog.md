@@ -1,4 +1,9 @@
-# Change Log
+---
+title: Change Log
+post_excerpt: A summary of notable changes in versions of the UCUM specification.
+---
+
+The following has been ported from a legacy system and may not be formatted correctly.
 
 ## Version 2.1
 
