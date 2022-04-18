@@ -1,4 +1,8 @@
-# Formal Grammar for UCUM
+---
+title: Formal Grammar for UCUM
+post_excerpt: ...
+---
+
 
 This grammar was created from a parser project employing ANTLR as a
 LL(\*) parser generator. Note that this is only one of many ways to
