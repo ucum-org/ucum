@@ -1,6 +1,6 @@
 ---
 name: Request for Unit
-about: Describe this issue template's purpose here.
+about: Propose a new unit for inclusion within UCUM.
 title: 'Request for: '
 labels: ''
 assignees: ''
