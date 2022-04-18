@@ -23,4 +23,4 @@ reserved.
 
 ## Download
 
-[Via GitHub](https://github.com/ucum-org/ucum/tree/master/common-units)
+The files are available for download from [via GitHub](https://github.com/ucum-org/ucum/tree/master/common-units) and included in the full UCUM package.
