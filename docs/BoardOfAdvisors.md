@@ -1,6 +1,7 @@
-# Board of Advisors
-
-[PageOutline](PageOutline.html)
+---
+title: Board of Advisors
+post_excerpt: ...
+---
 
 The Unified Code for Units of Measure has been founded in 1999 by
 Gunther Schadow then under the Supervision of Clement J. \!McDonald. For
@@ -91,18 +92,6 @@ identification of medicinal products. Dr. Schadow is a member of the
 IUPAC division VII sub-committe on Nomenclature of Properties and Units
 (NPU).
 
-### Dr. Swapna Abhyankar (ex officio member, Regenstrief Institute liaison)
-
-Dr. Abhyankar is interim director of LOINC and Health Data Standards at
-Regenstrief Institute. Her research interests (in general) are centered
-on understanding and promoting effective organization, analysis,
-management, and use of information in healthcare. The principle focus
-areas are: (1) The use of standardized clinical vocabularies to support
-electronic health information exchange, and (2) Investigation of medical
-informatics applications to improve healthcare delivery and research.
-Dr. Abhyankar's prominent role is in the management of the LOINC
-standard of universal codes for clinical observations and in general
-health informatics standards at Regenstrief.
 
 ### NLM Liaison: Dr. Clement J. \!McDonald (founder)
 
