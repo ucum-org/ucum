@@ -20,3 +20,7 @@ reserved.
 
   - Version 1.5
   - Published 2020-06-17
+
+## Download
+
+[Via GitHub](https://github.com/ucum-org/ucum/tree/master/common-units)
