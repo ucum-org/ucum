@@ -9,7 +9,7 @@ The Unified Code for Units of Measure was founded in 1999 by Gunther Schadow the
 
 Dr. Cox trained in geology and geophysics, starting his research career studying the mechanical properties of rocks in the laboratory. He is a leader in geospatial interoperability standards, including information modeling, data exchange standards, spatial data infrastructures, vocabularies and semantic web technologies. Dr. Cox is temporarily based in the Spatial Data Infrastructures Unit at the Joint Research Centre of the European Commission in northern Italy, working on harmonisation of several international geospatial initiatives. At CSIRO he most recently was project leader for Water Data Transfer Standards, and standards manager for AuScope GRID (National Collaborative Research Infrastructure Strategy). Dr Cox was awarded the 2006 Gardels Medal by the Open Geospatial Consortium. Dr. Cox and the Open Geospatial Consortium had been very early supporters of UCUM and in fact the first formal adopters outside of the field of medicine.
 
-## Dr. Christof Gessner, PhD
+## Christof Gessner, PhD
 
 Dr. Gessner has his PhD in Physics/Chemistry and academic training in Medical Physics and Medical Informatics. For many years, Dr. Gessner held positions in hospitals and with vendors of medical devices and software. Since 2008 he is an expert consultant for medical informatics standards and terminologies, including HL7®, LOINC®. Dr. Gessner has contributed to UCUM since early 2006. He is a member of the Medical Standards Committee of DIN (the german national standardization body) and a delegate to ISO TC 215. In 2010 he has been appointed by the DIN terminology comittee as a delegate to ISO TC 12, the international authority on units of measures.
 
