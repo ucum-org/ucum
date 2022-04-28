@@ -1,5 +1,5 @@
 ---
-title: Proposing changes to documentation
+title: Proposing Changes to Documentation
 post_excerpt: UCUM's documentation exists in a wiki-like state where change proposals are encouraged.
 ---
 
