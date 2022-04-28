@@ -1,6 +1,6 @@
 --- 
 title: Functional Tests 
-post_excerpt: ... 
+post_excerpt: A short summary to follow. 
 ---
 
 This page and the XML attachment are
