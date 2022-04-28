@@ -1,6 +1,6 @@
 ---
 title: Formal Grammar for UCUM
-post_excerpt: ...
+post_excerpt: A short summary to follow.
 ---
 
 
