@@ -1,4 +1,7 @@
-# The UCUM Organization Charter and Bylaws
+--- 
+title: UCUM Charter and Bylaws 
+post_excerpt: Documenting roles within the organization. 
+---
 
 ## Mission
 
@@ -182,7 +185,5 @@ search engines.
 
 ## Specification
 
-The UCUM specification's source code is maintained in a Subversion (SVN)
-repository. Write access to the Subversion repository is granted to
-editors who can apply changes to the specification and produce a new
-release.
+The UCUM specification's source code is maintained in a public Git
+repository. Anyone may clone or fork the respository and submit pull requests.
