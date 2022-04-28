@@ -1,6 +1,6 @@
 --- 
-title: External relations 
-post_excerpt: Documenting relationships with other organizations and SDOs. 
+title: External relationships
+post_excerpt: Documenting relations with other organizations and SDOs. 
 ---
 
 ## Preamble
