@@ -1,5 +1,5 @@
 --- 
-title: UCUM Charter and Bylaws 
+title: Charter and Bylaws 
 post_excerpt: Documenting roles within the organization. 
 ---
 
