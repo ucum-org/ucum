@@ -1,7 +1,6 @@
----
-title: Change Log
-post_excerpt: A summary of notable changes in versions of the UCUM specification.
----
+# Changelog
+
+All notable changes to this project will be documented in this file.
 
 The following has been ported from a legacy system and may not be formatted correctly.
 
