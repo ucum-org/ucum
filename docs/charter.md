@@ -5,7 +5,7 @@ post_excerpt: Documenting roles within the organization.
 
 ## Mission
 
-To publish, maintain and promote the Unified Code for Units of Measure.
+To publish, maintain, and promote the Unified Code for Units of Measure.
 
 ## Stakeholder and Contributor Roles
 
@@ -156,7 +156,7 @@ The process of action on a technical ticket is as follows:
         member must approve the proposal.
 3.  Reject, in which case the Board member or secretary will give a
     rationale to the proposal to reject.
-      - The status of such tickets are "reject\_proposed".
+      - The status of such tickets are "reject_proposed".
       - At least one other board member needs to agree with the
         rejection proposal, in which case the next status will be
         "wontfix" (will not change).
@@ -167,10 +167,10 @@ The process of action on a technical ticket is as follows:
         adopt the ticket and take it to Reconsider status, but such
         board member must then accept the responsibility of seeing the
         change request through.
-          - A proposal for reconsideration must be actionable, it must
+        - A proposal for reconsideration must be actionable, it must
             explain how the issue can be resolved, how the concerns of
             the rejecting board member can be addressed, the emphasis is
-            ''how'' not just ''why''.
+            "how" not just "why".
 4.  Other statuses may exist to determine that the request is not
     actionable or doesn't identify a specific change need, is out of
     scope or suggests a problem that is not a real problem. These
