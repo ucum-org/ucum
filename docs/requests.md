@@ -1,6 +1,6 @@
 ---
 title: Requests for Units
-post_excerpt: Short summary goes here.
+post_excerpt: A short summary to follow.
 ---
 
 ## The following has been ported from a legacy system and does not represent the current process
