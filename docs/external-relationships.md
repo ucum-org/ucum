@@ -1,5 +1,5 @@
 --- 
-title: External relationships
+title: External Relationships
 post_excerpt: Documenting relations with other organizations and SDOs. 
 ---
 
@@ -51,7 +51,7 @@ Contact: Christof Gessner, Sylvia Thun, Melvin Reynolds
 
 Status: several of the groups and individuals mentioned above have worked UCUM into ISO TC215 standards drafts. We have reviewed and commented about these drafts and responded to questions and considered modifications to better accommodate the needs of this community, of which some UCUM people considers themselves a part.
 
-## LOINC Standard
+## LOINC
 
 Contacts: Marjorie Rallins, Eza Hafeza
 
