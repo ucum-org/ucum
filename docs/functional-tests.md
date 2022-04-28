@@ -1,4 +1,9 @@
-\= Ucum Functional Tests. = This page and the xml attachment are
+--- 
+title: Functional Tests 
+post_excerpt: ... 
+---
+
+This page and the XML attachment are
 maintained by Grahame Grieve (grahameg@healthintersections.com.au).
 Contributions/Corrections are welcome, and are best made through the
 trac system.
@@ -6,7 +11,7 @@ trac system.
 ## Conformance
 
 You may declare conformance to these UCUM functional tests if your
-implementation accepts the attached xml file as an input, and passes all
+implementation accepts the attached XML file as an input, and passes all
 the test cases below. You should always quote the most recent date from
 the history entries below when claiming conformance. You may qualify the
 conformance to particular kinds of cases if your functionality does not
