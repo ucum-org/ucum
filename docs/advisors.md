@@ -1,5 +1,5 @@
 ---
-title: UCUM Advisors
+title: Advisors
 post_excerpt: This small set of subject matter experts help guide UCUM's development.
 ---
 
