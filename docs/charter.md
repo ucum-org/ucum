@@ -185,5 +185,4 @@ search engines.
 
 ## Specification
 
-The UCUM specification's source code is maintained in a public Git
-repository. Anyone may clone or fork the respository and submit pull requests.
+The UCUM specification's source code is maintained in a public Git repository. Anyone may clone or fork the respository and submit pull requests for potential inclusion.
