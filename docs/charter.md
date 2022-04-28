@@ -10,7 +10,7 @@ The UCUM Organization is a volunteer organization that recognizes
 contributors based on their contribution to the mission of the
 Organization. The following roles are recognized:
 
-1.  '''The Public:''' observers, users, or anyone with interest in UCUM.
+1.  "The Public:" observers, users, or anyone with interest in UCUM.
 2.  '''Registered User of the Web Site:''' the UCUM work is centered
     around its web site unitsofmeasure.org. The published material is
     open for the public to view and download, etc. But in order to
