@@ -1,12 +1,11 @@
 ---
 title: Requests for Units
-post_excerpt: A short summary to follow.
+post_excerpt: How to request new units and report issues.
 ---
 
-## The following has been ported from a legacy system and does not represent the current process
+## How to request new units for inclusion in UCUM
 
-> "Act only according to that maxim whereby you can at the same time will that it should become a universal law." 
---Immanuel Kant
+We welcome users to submit requests for new standardized units. Each request must be accompanied by a scientific definition of the proposed unit. 
 
 This is the routine maintenance work for UCUM.
 
