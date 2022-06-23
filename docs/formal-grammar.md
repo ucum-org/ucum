@@ -1,15 +1,9 @@
 ---
 title: Formal Grammar for UCUM
-post_excerpt: ...
+post_excerpt: A short summary to follow.
 ---
 
-
-This grammar was created from a parser project employing ANTLR as a
-LL(\*) parser generator. Note that this is only one of many ways to
-express a formal Grammar for UCUM. Alternatively the grammar could be
-written for LR-parser generators (e.g. yacc). Lexer rules have been
-omitted for clarity. The objective is to create UCUM-parsers from a
-declarative definition of the grammar.
+This grammar was created from a parser project employing ANTLR as a LL(\*) parser generator. Note that this is only one of many ways to express a formal Grammar for UCUM. Alternatively the grammar could be written for LR-parser generators (e.g. yacc). Lexer rules have been omitted for clarity. The objective is to create UCUM-parsers from a declarative definition of the grammar.
 
     ucumExpr   :  DIVIDE expr
                |  expr 
@@ -36,8 +30,7 @@ declarative definition of the grammar.
                |  derivedMetricAtom // token from lexer
                ;
 
-The following is an original code snippet from a working project using
-the ANTLR parser generator:
+The following is an original code snippet from a working project using the ANTLR parser generator:
 
     //...
     startRule returns [UnitExpr u=null]
