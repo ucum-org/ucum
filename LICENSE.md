@@ -1,9 +1,9 @@
 # UCUM Copyright Notice and License
 
-Version 1.0, March 2021
+Version 1.0, March 2022
 
 The Unified Code for Units of Measure (UCUM), also known as the “UCUM
-Specification,” is copyright ©1999-2021, Regenstrief Institute, Inc. All
+Specification,” is copyright ©1999-2022, Regenstrief Institute, Inc. All
 rights reserved.
 
 ## UNIFIED CODE FOR UNITS OF MEASURE (UCUM) A.K.A. UCUM SPECIFICATION
@@ -268,7 +268,7 @@ for the file format. We also recommend that a file or class name and
 description of purpose be included on the same “printed page” as the
 copyright notice for easier identification within third-party archives.
 
-> Copyright 1999-2021 Regenstrief Institute, Inc. All rights reserved.
+> Copyright 1999-2022 Regenstrief Institute, Inc. All rights reserved.
 > Licensed under the UCUM License, Version 1.0 (the “License”); you may
 > not use this file except in compliance with the License. You may
 > obtain a copy of the License at

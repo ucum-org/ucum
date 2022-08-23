@@ -8,6 +8,11 @@ The following has been ported from a legacy system and may not be formatted corr
 
 This release contains numerous typographical corrections, updates to constants, and X new units.
 
+### New units
+
+- {OD_ value} measure of optical density	[OD]
+- {percentile} need to distinguish percentile and percentile rank 	[Percentile]
+
 ## Version 2.1
 
 This fixes 4 defects of the specification itself. No new units.
