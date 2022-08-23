@@ -6,12 +6,12 @@ The following has been ported from a legacy system and may not be formatted corr
 
 ## Version 2.2
 
-This release contains numerous typographical corrections, updates to constants, and X new units.
+This release contains numerous typographical corrections, updates to constants, and 12 new units.
 
 ### New units
 
-- {OD_ value} measure of optical density	[OD]
-- {percentile} need to distinguish percentile and percentile rank 	[Percentile]
+- To be enumerated
+
 
 ## Version 2.1
 
