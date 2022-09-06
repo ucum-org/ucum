@@ -4,6 +4,15 @@ All notable changes to this project will be documented in this file.
 
 The following has been ported from a legacy system and may not be formatted correctly.
 
+## Version 2.2
+
+This release contains numerous typographical corrections, updates to constants, and 12 new units.
+
+### New units
+
+- To be enumerated
+
+
 ## Version 2.1
 
 This fixes 4 defects of the specification itself. No new units.
@@ -11,8 +20,7 @@ This fixes 4 defects of the specification itself. No new units.
   - \#185 tan100 defined inconsistently
   - \#183 Fix typing error for weber quantity kind
   - \#184 Canonical form not described
-  - \#189 Two concerns on syntax
-tree
+  - \#189 Two concerns on syntax tree
 
 ## Version 2.0.1
 
