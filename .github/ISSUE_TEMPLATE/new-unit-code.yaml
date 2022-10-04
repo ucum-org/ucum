@@ -1,0 +1,70 @@
+---
+name: New code request form
+description: A request for a new code to be added to UCUM.
+title: '[Request for]:'
+labels: new_code_request
+assignees: ''
+body: 
+- type: markdown
+  attributes: 
+    value: '## Thanks for suggesting a new code
+    
+Please provide 
+
+1. the proposed code
+
+2. a definition and a literature reference which provides a scientific definition. 
+
+3. the definition value for the proposed unit using an existing unit for this quantity (preferably the SI unit)
+
+If the conversion factor and offset are not known, or direct conversion to an SI unit is not possible, then please provide justification for why the proposed code is a true unit of measure and which community or discipline uses it. 
+
+Note the scope of UCUM is science, healthcare, engineering, and business (not including currencies). Units outside this context are discouraged.
+
+Please include the unit code in the issue title.'
+- type: input
+  id: code
+  attributes: 
+    label: new code
+    description: label with no punctuation except `-` and `_`. May be enclosed in [brackets] if it is a 'conventional' unit. Annotation elements should be enclode in {braces}. 
+    placeholder: code
+  validations:
+    required: true
+- type: textarea
+  id: definition
+  attributes:
+    label: definition
+    description: textual definition
+    placeholder: definition
+  validations:
+    required: true
+- type: input
+  id: sourceURI
+  attributes: 
+    label: source of definition (URI)
+    description: URI for the source of the definition
+    placeholder: URI
+- type: textarea
+  id: source
+  attributes:
+    label: source of definition (citation)
+    description: citation for the source of the definition
+    placeholder: citation
+- type: input
+  id: definition-value
+  attributes: 
+    label: definition value
+    description: the size of the unit expressed using the  reference unit for this quantity kind - e.g. 1 atm = 101325 Pa
+    placeholder: definition value
+- type: textarea
+  id: scopeNote
+  attributes:
+    label: usage- or scope-note
+    description: scope note
+    placeholder: note
+- type: textarea
+  id: comment
+  attributes:
+    label: additional information
+    description: comment
+    placeholder: comment
