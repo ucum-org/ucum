@@ -1,10 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
-<!-- COPYRIGHT 1998-2022, REGENSTRIEF INSTITUTE, INC. AND THE UCUM ORGANIZATION ALL RIGHTS RESERVED.
+<!-- COPYRIGHT 1998-2014, REGENSTRIEF INSTITUTE, INC. AND THE UCUM ORGANIZATION ALL RIGHTS RESERVED.
 
   Use and redistribution of this data is permitted without charge
   as long as you make no changes to it. DO NOT CHANGE THIS FILE if 
-  you want to  redistribute it. Please contact the Regenstrief Institute, Inc.
-  for any issues that make you think you need to change this file.
+  you want to  redistribute it. Please contact Gunther Schadow at 
+  the Regenstrief Institute, Indianapolis, IN 46260 for any issues
+  that make you think you need to change this file.
 -->
 <!DOCTYPE spec [
   <!ENTITY alpha  "&#x3b1;">
@@ -57,8 +58,9 @@
 <spec xmlns:u="http://aurora.regenstrief.org/UCUM">
 <header>
   <title>The Unified Code for Units of Measure</title>
-  <version>2.2</version>
-  <date>2022-09-20</date>
+  <version>2.1</version>
+  <revision>$Revision$</revision>
+  <date>$Date$</date>
   <authlist>
     <author>
       <name>Gunther Schadow</name>
@@ -71,7 +73,7 @@
       <email href="cmcdonald@regenstrief.org"/>
     </author>
   </authlist>
-  <copyright>1998-2022, Regenstrief Institute, Inc. and the UCUM Organization. All rights reserved.</copyright>
+  <copyright>1998-2014, Regenstrief Institute, Inc. and the UCUM Organization. All rights reserved.</copyright>
 </header>
 
 <body>
@@ -5451,3 +5453,4 @@ This license shall be construed and interpreted in accordance with the laws of t
   </div1>
 </back>
 </spec>
+

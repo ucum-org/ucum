@@ -4,15 +4,6 @@ All notable changes to this project will be documented in this file.
 
 The following has been ported from a legacy system and may not be formatted correctly.
 
-## Version 2.2
-
-This release contains numerous typographical corrections, updates to constants, and 12 new units.
-
-### New units
-
-- To be enumerated
-
-
 ## Version 2.1
 
 This fixes 4 defects of the specification itself. No new units.
