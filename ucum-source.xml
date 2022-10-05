@@ -1721,7 +1721,7 @@ out of scope of &TUCUM;.
 This list is not complete. It does not list all constants but only
 those that are fundamental and from which many other constants can be
 derived. The source of this table is <emph>The NIST Reference on
-Constants, Units, and Uncertainty</emph> Version 2.1, 21 May 1998. NIST
+Values of Fundamental Physical Constants</emph> updated to the CODATA Internationally recommended 2018 values. NIST
 Physics
 Laboratory. <code>http://physics.nist.gov/cuu/Constants/index.html</code>
       </p>
@@ -1733,9 +1733,9 @@ through <v>R</v> = <v>k</v> &mult; <v>N</v><sub>A</sub>, where
 the Avogadro constant. Because &TUCUM; defines the mole to be the
 dimensionless Avogadro number (number of particles in 1&nbsp;g of
 <sup>12</sup>C itself, there is no difference anymore if the Boltzmann
-constant is given as <v>k</v> = 1.380658 &mult;
+constant is given as <v>k</v> = 1.380649 &mult;
 10<sup>23</sup>&nbsp;J/K or <v>R</v> =
-8.314511&nbsp;J&nbsp;mol<sup>-1</sup>&nbsp;K<sup>-1</sup>.
+8.314462618...&nbsp;J&nbsp;mol<sup>-1</sup>&nbsp;K<sup>-1</sup>.
       </p>
     </comment>
 
