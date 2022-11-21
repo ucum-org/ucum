@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="ascii"?>
-<root xmlns="http://unitsofmeasure.org/ucum-essence" version="2.2"
-      
-      revision-date="2022-09-20">
+<root xmlns="http://unitsofmeasure.org/ucum-essence" version="2.1"
+      revision="$Revision: 442 $"
+      revision-date="$Date: 2017-11-21 19:04:52 -0500 (Tue, 21 Nov 2017) $">
    <prefix Code="Y" CODE="YA">
       <name>yotta</name>
       <printSymbol>Y</printSymbol>

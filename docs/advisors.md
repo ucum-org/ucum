@@ -5,6 +5,11 @@ post_excerpt: This small set of subject matter experts help guide UCUM's develop
 
 The Unified Code for Units of Measure was founded in 1999 by Gunther Schadow then under the supervision of Clement J. McDonald. For this reason, Gunther Schadow and Clem McDonald are ex-officio members of the UCUM Advisors. Other members of advisors have been recruited from a very small set of individuals who have over the years expressed interest and demonstrated expertise in the subject and have supported the UCUM project with their advice, advocacy, and expertise in the semantic domain of units of measures.
 
+## Jozef Aerts, PhD (provisional advisor)
+
+Biography to follow.
+
+
 ## Simon Cox, PhD
 
 Dr Cox works on practices and standards for the publication and transfer of science data, particularly geospatial. After an early career in geophysics and mineral exploration, he moved to focus mainly on data and informatics. Through this he has engaged with many other areas of environmental science, including water resources, marine data, meteorology, soil, ecology and biodiversity. Engagement with CODATA has extended the cross-disciplinary scope still further into social science and official statistics applications. He is principal- or co-author of a number of international standards for data. His current focus is on FAIR data, linked open data, and semantic web technologies, with a particular emphasis on formalization, publication and maintenance of controlled vocabularies and related reference data. He was awarded the 2006 Gardels Medal by the Open Geospatial Consortium, and was selected to present the 2013 Leptoukh Lecture for the American Geophysical Union.
