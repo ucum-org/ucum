@@ -1,4 +1,7 @@
-# Using Issues in GitHub
+---
+title: Using Issues in GitHub
+post_excerpt: Labels are used to mark status of issues as they are reviewed.
+---
 
 ## Labels
 
