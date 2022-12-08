@@ -9,7 +9,6 @@ The Unified Code for Units of Measure was founded in 1999 by Gunther Schadow the
 
 Biography to follow.
 
-
 ## Simon Cox, PhD
 
 Dr Cox works on practices and standards for the publication and transfer of science data, particularly geospatial. After an early career in geophysics and mineral exploration, he moved to focus mainly on data and informatics. Through this he has engaged with many other areas of environmental science, including water resources, marine data, meteorology, soil, ecology and biodiversity. Engagement with CODATA has extended the cross-disciplinary scope still further into social science and official statistics applications. He is principal- or co-author of a number of international standards for data. His current focus is on FAIR data, linked open data, and semantic web technologies, with a particular emphasis on formalization, publication and maintenance of controlled vocabularies and related reference data. He was awarded the 2006 Gardels Medal by the Open Geospatial Consortium, and was selected to present the 2013 Leptoukh Lecture for the American Geophysical Union.
@@ -25,6 +24,10 @@ Dr. Hafeza is Director, Clinical Terminology Services and Operations for the LOI
 ## William A. Hess, CAPT (ret.) USPHS
 
 Captain Hess is a Pharmacist and member and subject matter expert to (1) FDA Product Risk Ranking Team, (2) FDA Data Standards Council, (3) VA National Drug File Reference Terminology Interagency Expert Panel, (4) Federal Healthcare Information Technology Standards Organization Participation Work Group, (5) HITSP Foundations Medical Terminology Work Group, (6) Technical Advisory Group for Structured Product Labeling Indexing Contract, (7) White House Consolidated Health Informatics Medication Domain Expert Work Group, Allergy Domain Expert Work Group, Chemical Domain Expert Work Group, an (8) All five HITSP ARRA Tiger Teams. He is an FDA Liaison to the FDA/NLM Interagency Agreement for the Photography and Image Processing of Prescription Solid Dosage Form Medications, and to the USP Expert Committees on (1) Pharmaceutical Dosage Forms, (2) Nomenclature, Safety, and Labeling, and (3) Therapeutic Information and Formulary Support. He provides vocabulary and database design consultation to FDA scientific reviewers and database engineers. He serves as principal FDA scientific nomenclature representative and subject matter expert to other United States government agencies, to foreign government agencies, and to private agencies. He is responsible for developing, establishing, and implementing Agency nomenclature policy and standards as well as Agency indexing policy and standards. These standards are used worldwide in electronic submissions, electronic labeling, electronic prescribing, and the electronic health record.
+
+## Stanley M. Huff, MD (provisional advisor)
+
+Biography to follow.
 
 ## Clement J. McDonald, MD
 
