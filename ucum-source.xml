@@ -1702,14 +1702,14 @@ out of scope of &TUCUM;.
     <u:units id="const">
       <caption>Natural units.</caption>
 <u:unit id="300010" Code="[c]" CODE="[C]" isMetric="yes"><name>velocity of light</name><printSymbol><i>c</i></printSymbol><property>velocity</property><value Unit="m/s" UNIT="M/S" value="299792458">299792458</value></u:unit>
-<u:unit id="300020" Code="[h]" CODE="[H]" isMetric="yes"><name>Planck constant</name><printSymbol><i>h</i></printSymbol><property>action</property><value Unit="J.s" UNIT="J.S" value="6.6260755e-34">6.6260755 &mult; 10<sup>-34</sup></value></u:unit>
-<u:unit id="300021" Code="[k]" CODE="[K]" isMetric="yes"><name>Boltzmann constant</name><printSymbol><i>k</i></printSymbol><property>(unclassified)</property><value Unit="J/K" UNIT="J/K" value="1.380658e-23">1.380658 &mult; 10<sup>-23</sup></value></u:unit>
-<u:unit id="300022" Code="[eps_0]" CODE="[EPS_0]" isMetric="yes"><name>permittivity of vacuum</name><printSymbol><i>&epsilon;<sub><r>0</r></sub></i></printSymbol><property>electric permittivity</property><value Unit="F/m" UNIT="F/M" value="8.854187817e-12">8.854187817 &mult; 10<sup>-12</sup></value></u:unit>
+<u:unit id="300020" Code="[h]" CODE="[H]" isMetric="yes"><name>Planck constant</name><printSymbol><i>h</i></printSymbol><property>action</property><value Unit="J.s" UNIT="J.S" value="6.62607015e−34">6.62607015 &mult; 10<sup>-34</sup></value></u:unit>
+<u:unit id="300021" Code="[k]" CODE="[K]" isMetric="yes"><name>Boltzmann constant</name><printSymbol><i>k</i></printSymbol><property>(unclassified)</property><value Unit="J/K" UNIT="J/K" value="1.380649e-23">1.380649 &mult; 10<sup>-23</sup></value></u:unit>
+<u:unit id="300022" Code="[eps_0]" CODE="[EPS_0]" isMetric="yes"><name>permittivity of vacuum</name><printSymbol><i>&epsilon;<sub><r>0</r></sub></i></printSymbol><property>electric permittivity</property><value Unit="F/m" UNIT="F/M" value="8.8541878128e-12">8.8541878128 &mult; 10<sup>-12</sup></value></u:unit>
 <u:unit id="300023" Code="[mu_0]" CODE="[MU_0]" isMetric="yes"><name>permeability of vacuum</name><printSymbol><i>&mu;<sub><r>0</r></sub></i></printSymbol><property>magnetic permeability</property><value Unit="4.[pi].10*-7.N/A2" UNIT="4.[PI].10*-7.N/A2" value="1">1</value></u:unit>
-<u:unit id="200190" Code="[e]" CODE="[E]" isMetric="yes"><name>elementary charge</name><printSymbol><i>e</i></printSymbol><property>electric charge</property><value Unit="C" UNIT="C" value="1.60217733e-19">1.60217733 &mult; 10<sup>-19</sup></value></u:unit>
-<u:unit id="300022" Code="[m_e]" CODE="[M_E]" isMetric="yes"><name>electron mass</name><printSymbol><i>m<sub><r>e</r></sub></i></printSymbol><property>mass</property><value Unit="g" UNIT="g" value="9.1093897e-28">9.1093897 &mult; 10<sup>-28</sup></value></u:unit>
-<u:unit id="300023" Code="[m_p]" CODE="[M_P]" isMetric="yes"><name>proton mass</name><printSymbol><i>m<sub><r>p</r></sub></i></printSymbol><property>mass</property><value Unit="g" UNIT="g" value="1.6726231e-24">1.6726231 &mult; 10<sup>-24</sup></value></u:unit>
-<u:unit id="300029" Code="[G]" CODE="[GC]" isMetric="yes"><name>Newtonian constant of gravitation</name><printSymbol><i>G</i></printSymbol><property>(unclassified)</property><value Unit="m3.kg-1.s-2" UNIT="M3.KG-1.S-2" value="6.67259e-11">6.67259 &mult; 10<sup>-11</sup></value></u:unit>
+<u:unit id="200190" Code="[e]" CODE="[E]" isMetric="yes"><name>elementary charge</name><printSymbol><i>e</i></printSymbol><property>electric charge</property><value Unit="C" UNIT="C" value="1.602176634e-19">1.602176634 &mult; 10<sup>-19</sup></value></u:unit>
+<u:unit id="300022" Code="[m_e]" CODE="[M_E]" isMetric="yes"><name>electron mass</name><printSymbol><i>m<sub><r>e</r></sub></i></printSymbol><property>mass</property><value Unit="g" UNIT="g" value="9.1093837015e-28">9.1093837015 &mult; 10<sup>-28</sup></value></u:unit>
+<u:unit id="300023" Code="[m_p]" CODE="[M_P]" isMetric="yes"><name>proton mass</name><printSymbol><i>m<sub><r>p</r></sub></i></printSymbol><property>mass</property><value Unit="g" UNIT="g" value="1.67262192369e-24">1.67262192369 &mult; 10<sup>-24</sup></value></u:unit>
+<u:unit id="300029" Code="[G]" CODE="[GC]" isMetric="yes"><name>Newtonian constant of gravitation</name><printSymbol><i>G</i></printSymbol><property>(unclassified)</property><value Unit="m3.kg-1.s-2" UNIT="M3.KG-1.S-2" value="6.67430e-11">6.67430 &mult; 10<sup>-11</sup></value></u:unit>
 <u:unit id="300030" Code="[g]" CODE="[G]" isMetric="yes"><name>standard acceleration of free fall</name><printSymbol><i>g<sub>n</sub></i></printSymbol><property>acceleration</property><value Unit="m/s2" UNIT="M/S2" value="980665e-5">9.80665</value></u:unit>
 <u:unit id="600410" Code="atm" CODE="ATM" isMetric="no"><name>standard atmosphere</name><printSymbol>atm</printSymbol><property>pressure</property><value Unit="Pa" UNIT="PAL" value="101325">101325</value></u:unit>
 <u:unit id="300040" Code="[ly]" CODE="[LY]" isMetric="yes"><name>light-year</name><printSymbol>l.y.</printSymbol><property>length</property><value Unit="[c].a_j" UNIT="[C].ANN_J" value="1">1</value></u:unit>
@@ -1721,7 +1721,7 @@ out of scope of &TUCUM;.
 This list is not complete. It does not list all constants but only
 those that are fundamental and from which many other constants can be
 derived. The source of this table is <emph>The NIST Reference on
-Constants, Units, and Uncertainty</emph> Version 2.1, 21 May 1998. NIST
+Values of Fundamental Physical Constants</emph> updated to the CODATA Internationally recommended 2018 values. NIST
 Physics
 Laboratory. <code>http://physics.nist.gov/cuu/Constants/index.html</code>
       </p>
@@ -1733,9 +1733,9 @@ through <v>R</v> = <v>k</v> &mult; <v>N</v><sub>A</sub>, where
 the Avogadro constant. Because &TUCUM; defines the mole to be the
 dimensionless Avogadro number (number of particles in 1&nbsp;g of
 <sup>12</sup>C itself, there is no difference anymore if the Boltzmann
-constant is given as <v>k</v> = 1.380658 &mult;
+constant is given as <v>k</v> = 1.380649 &mult;
 10<sup>23</sup>&nbsp;J/K or <v>R</v> =
-8.314511&nbsp;J&nbsp;mol<sup>-1</sup>&nbsp;K<sup>-1</sup>.
+8.314462618...&nbsp;J&nbsp;mol<sup>-1</sup>&nbsp;K<sup>-1</sup>.
       </p>
     </comment>
 
