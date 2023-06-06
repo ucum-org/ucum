@@ -1540,7 +1540,7 @@ out of scope of &TUCUM;.
 
     <u:units id="iso1000">
       <caption>Other units from ISO&nbsp;1000, ISO&nbsp;2955, and some from ANSI&nbsp;X3.50.</caption>
-<u:unit id="200040" Code="gon" CODE="GON" isMetric="no"><name>gon</name><name>grade</name><printSymbol>&box;<sup>g</sup></printSymbol><property>plane angle</property><value Unit="deg" UNIT="DEG" value="0.9">0.9</value></u:unit>
+<u:unit id="200040" Code="gon" CODE="GON" isMetric="no"><name>gon</name><name>grade</name><printSymbol><sup>g</sup></printSymbol><property>plane angle</property><value Unit="deg" UNIT="DEG" value="0.9">0.9</value></u:unit>
 <u:unit id="200010" Code="deg" CODE="DEG" isMetric="no"><name>degree</name><printSymbol>&deg;</printSymbol><property>plane angle</property><value Unit="[pi].rad/360" UNIT="[PI].RAD/360" value="2">2</value></u:unit>
 <u:unit id="200020" Code="'" CODE="'" isMetric="no"><name>minute</name><printSymbol>'</printSymbol><property>plane angle</property><value Unit="deg/60" UNIT="DEG/60" value="1">1</value></u:unit>
 <u:unit id="200030" Code="''" CODE="''" isMetric="no"><name>second</name><printSymbol>''</printSymbol><property>plane angle</property><value Unit="'/60" UNIT="'/60" value="1">1</value></u:unit>
