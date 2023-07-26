@@ -96,30 +96,30 @@ communicate with and interoperate with the Work.
 Your exercise of the License Grant is expressly made subject to the
 following conditions.
 
-a. You may not: 
-i. use the Work for the purpose of developing or
+* a. You may not: 
+  * i. use the Work for the purpose of developing or
 promulgating a different standard for identifying units of measure; 
-ii. use the Work in any way which may dilute the Work’s purpose of providing
+  * ii. use the Work in any way which may dilute the Work’s purpose of providing
 a definitive standard for identifying precisely defined, unambiguous
 units of measure in electronic documents and messages; 
-iii. use the Work in any way that expressly or implicitly change its meaning; 
-iv. add, delete, or modify the Work’s content including field names, field
+  * iii. use the Work in any way that expressly or implicitly change its meaning; 
+  * iv. add, delete, or modify the Work’s content including field names, field
 contents, descriptions, and comments; or 
-v. use the Work to create Derivative Works. 
-b. Attribution. 
-  i. If you reproduce or distribute
+  * v. use the Work to create Derivative Works. 
+* b. Attribution. 
+  * i. If you reproduce or distribute
 copies of the Work in its entirety, including but not limited to
-reproduction or distribution in connection with a Software Application, You must:
+reproduction or distribution in connection with a Software Application, You must provide the following with the Work: 
+    * a. a copyright notice; 
+    * b. a notice that refers to this License; 
+    * c. a notice that refers to the disclaimer of warranties; and 
+    * d. the text of or the URL or hyperlink to, this Copyright Notice and License.
 
-1.  provide the following with the Work: a. a copyright notice; b. a
-    notice that refers to this License; c. a notice that refers to the
-    disclaimer of warranties; and d. the text of or the URL or hyperlink
-    to, this Copyright Notice and License. ii. You may satisfy the
-    conditions in Section 3(b) in any reasonable manner based on the
-    medium, means, and context in which You exercise the Licensed
-    Rights. For example, it may be reasonable to satisfy the conditions
-    by providing a URL or hyperlink that includes the required
-    information when distributing the Work by electronic download.
+  * ii. You may satisfy the conditions in Section 3(b) in any reasonable manner 
+based on the medium, means, and context in which You exercise the Licensed
+Rights. For example, it may be reasonable to satisfy the conditions by providing 
+a URL or hyperlink that includes the required information when distributing the 
+Work by electronic download.
 
 ### Section 4. Grant of Patent License.
 
