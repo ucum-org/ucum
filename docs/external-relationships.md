@@ -71,7 +71,7 @@ Contacts: Werner Keil
 
 Status: UCUM was added into the UOMo UCUM implementation. This project requires moderate interaction between UCUM and Eclipse Foundation.
 
-## [Java Measures and Units Specification JScience](http://kenai.com/projects/jscience)
+## [Java Measures and Units Specification JScience](https://jscience.org)
 
 Contacts: Jean-Marie Dautelle
 
