@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="ascii"?>
 <root xmlns="http://unitsofmeasure.org/ucum-essence" version="2.1"
-      revision="$Revision: 442 $"
-      revision-date="$Date: 2017-11-21 19:04:52 -0500 (Tue, 21 Nov 2017) $">
+      revision="$Revision$"
+      revision-date="$Date$">
    <prefix Code="Y" CODE="YA">
       <name>yotta</name>
       <printSymbol>Y</printSymbol>
@@ -210,7 +210,7 @@
       <name>mole</name>
       <printSymbol>mol</printSymbol>
       <property>amount of substance</property>
-      <value Unit="10*23" UNIT="10*23" value="6.0221367">6.0221367</value>
+      <value Unit="10*23" UNIT="10*23" value="6.02214076">6.02214076</value>
    </unit>
    <unit Code="sr" CODE="SR" isMetric="yes" class="si">
       <name>steradian</name>
@@ -474,7 +474,7 @@
       <name>unified atomic mass unit</name>
       <printSymbol>u</printSymbol>
       <property>mass</property>
-      <value Unit="g" UNIT="G" value="1.6605402e-24">1.6605402 &#215; 10<sup>-24</sup>
+      <value Unit="g" UNIT="G" value="1.66053906660e-24">1.66053906660 &#215; 10<sup>-24</sup>
       </value>
    </unit>
    <unit Code="eV" CODE="EV" isMetric="yes" class="iso1000">
@@ -1660,7 +1660,7 @@
       <value Unit="[iU]" UNIT="[IU]" value="1">1</value>
    </unit>
    <unit Code="[arb'U]" CODE="[ARB'U]" isMetric="no" isArbitrary="yes" class="chemical">
-      <name>arbitary unit</name>
+      <name>arbitrary unit</name>
       <printSymbol>arb. U</printSymbol>
       <property>arbitrary</property>
       <value Unit="1" UNIT="1" value="1">1</value>
@@ -1787,13 +1787,13 @@
    <unit Code="[IR]" CODE="[IR]" isMetric="no" isArbitrary="yes" class="chemical">
       <name>index of reactivity</name>
       <printSymbol>IR</printSymbol>
-      <property>amount of an allergen callibrated through in-vivo testing using the Stallergenes&#174; method.</property>
+      <property>amount of an allergen calibrated through in-vivo testing using the Stallergenes&#174; method.</property>
       <value Unit="1" UNIT="1" value="1">1</value>
    </unit>
    <unit Code="[BAU]" CODE="[BAU]" isMetric="no" isArbitrary="yes" class="chemical">
       <name>bioequivalent allergen unit</name>
       <printSymbol>BAU</printSymbol>
-      <property>amount of an allergen callibrated through in-vivo testing based on the ID50EAL method of (intradermal dilution for 50mm sum of erythema diameters</property>
+      <property>amount of an allergen calibrated through in-vivo testing based on the ID50EAL method of (intradermal dilution for 50mm sum of erythema diameters</property>
       <value Unit="1" UNIT="1" value="1">1</value>
    </unit>
    <unit Code="[AU]" CODE="[AU]" isMetric="no" isArbitrary="yes" class="chemical">
@@ -1949,7 +1949,7 @@
       <value Unit="S" UNIT="S" value="1">1</value>
    </unit>
    <unit Code="[psi]" CODE="[PSI]" isMetric="no" class="misc">
-      <name>pound per sqare inch</name>
+      <name>pound per square inch</name>
       <printSymbol>psi</printSymbol>
       <property>pressure</property>
       <value Unit="[lbf_av]/[in_i]2" UNIT="[LBF_AV]/[IN_I]2" value="1">1</value>
@@ -1961,7 +1961,7 @@
       <value Unit="[pi].rad" UNIT="[PI].RAD" value="2">2</value>
    </unit>
    <unit Code="sph" CODE="SPH" isMetric="no" class="misc">
-      <name>spere</name>
+      <name>sphere</name>
       <printSymbol>sph</printSymbol>
       <property>solid angle</property>
       <value Unit="[pi].sr" UNIT="[PI].SR" value="4">4</value>
@@ -1996,6 +1996,12 @@
       <value Unit="sqrt(1 m2/s4/Hz)" UNIT="SQRT(1 M2/S4/HZ)">
          <function name="sqrt" value="1" Unit="m2/s4/Hz"/>
       </value>
+   </unit>
+   <unit Code="[NTU]" CODE="[NTU]" isMetric="no" class="misc">
+      <name>Nephelometric Turbidity Unit</name>
+      <printSymbol/>
+      <property>turbidity</property>
+      <value Unit="mg/L" UNIT="MG/L">1/3</value>
    </unit>
    <unit Code="bit_s" CODE="BIT_S" isMetric="no" isSpecial="yes" class="infotech">
       <name>bit</name>
