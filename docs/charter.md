@@ -1,90 +1,222 @@
 --- 
-title: Charter and Bylaws 
-post_excerpt: Documenting roles within the organization. 
+title: UCUM Committee Charter 
+post_excerpt: Documenting roles and operations within UCUM's committee. 
 ---
 
-## Mission
+## Charter Purpose
 
-To publish, maintain, and promote the Unified Code for Units of Measure.
+The UCUM Committee charter documents the roles and operations of the Committee.
 
-## Stakeholder and Contributor Roles
+## Committee Purpose
 
-The UCUM Organization is a volunteer organization that recognizes contributors based on their contribution to the mission of the Organization. The following roles are recognized:
+The purpose of the UCUM Committee is to publish, maintain, and promote the Unified Code for Units of Measure.
 
-1. "The Public:" observers, users, or anyone with interest in UCUM.
-2. "Registered User of the Web Site:" the UCUM work is centered around its web site unitsofmeasure.org. The published material is open for the public to view and download, etc. But in order to engage with proposals and discussions one must register as a user. To register, go to the web site and search the word Register on the top menu or directly go to the URL [http://unitsofmeasure.org/trac/register](http://unitsofmeasure.org/trac/register). Registered users may view and submit change requests, other suggestions or questions as tickets. The chief process of interacting with the UCUM organization is through tickets.
-3. "Verified Contributor:" someone who has contributed meaningfully with a proposal or thoughtful question (usually by submitting a relevant ticket) should be promoted to become a verified user. Promotion to verified user status ''should'' be performed manually by a user with administrator privileges.
-4. "Advisors:" the decision-making body of the UCUM Organization is the Board of Advisors (or in short "the Board"). The Board of Advisors may elect other members to the Board (or remove from the board) by a simple majority. The duties of a member of the Board of Advisors are to engage in the decision making process of the UCUM Organization. Decisions may be technical or organizational in nature. To be eligible to become a member of the Board of Advisor, an individual must:
-   - have expertise in a relevant subject matter of units of measures
-   - must understand the technical subject matter to be able to
-     - adjudicate changes and
-     - explain the technical reasoning behind changes.
-   - must have been and continue to be supportive of UCUM, and
-     - must promote and not undermine UCUM when being involved of competing activity A member of the Board of Advisors should be actively contributing commensurable to the actual activity of the UCUM Organization.
-5. "Administrator:" a user may have administrator privileges which allow them to manage the web site content or assign privileges to other members.
-6. "Chairman of the Board:" the Board of Advisors elects a Chairman of the Board.
-7. "Ex Officio and Honorary Board Member:" the Board has
-   - one ex-officio member who is a member of the Regenstrief Institute, Inc., which is the Copyright holder of UCUM along with the UCUM Organization.
-   - the Founders, Gunther Schadow and Clem McDonald, are honorary members of the Board until their resignation.
-8. "Secretary:" volunteers or employees of organizational volunteers who offer clerical and organizational management services to the UCUM organization are recognized as secretaries. A secretary may be given administrator privileges on the web site. Secretary is a title recognized and granted by the Board of Advisors, who may elect and remove secretaries. A secretary is not automatically an ex-officio member of the Board of Advisors and the role of Secretary confers no voting privileges.
-9.  "Editor:" are registered users with write access to the UCUM specification repository and the ability to apply changes to the UCUM specification and the publishing of updated versions. Editors are added or removed by the Board of Advisors and must be board members or secretaries.
+## Committee Scope
 
-## Decision Making
+UCUM is a code system intended to include all units of measures being contemporarily used in healthcare, science, engineering, and business expressing units of measure in digital artifacts. The UCUM Committee governs the specification for the UCUM code system.
 
-It is in the nature of the field of Units of Measure that it is very stable and maintenance activity may be very low. For this reason, the UCUM Organization is constituted as a light-weight organization. The central interaction device for all decision making is an active management web site, [http://unitsofmeasure.org](http://unitsofmeasure.org). Face to face or telephone meetings are held minimally. There are no standing meetings.
+## Committee Functions
 
-All decisions are made by the Board of Advisors by simple majority.
+The Committee will:
 
-### Organizational Decisions
+-   Receive and review requests for new and updated UCUM codes.
 
-Organizational Decisions are decisions which alter the structure or bylaws of the organization or grant roles such as secretaries and editors, must be made with at least the chairman of the Board, one ex-officio member present and two other board members voting (not abstaining) in a real time discussion via telephone or per discussion convened electronically on the web site. All members of the Board of Advisors must be notified with motions to change bylaws or organization submitted in writing on the web site at least 30 days prior to the voting.
+-   Ensure that the UCUM specification remains complete and accurate.
 
-The process for decisions of the Board is as follows:
+-   Collaborate with LOINC committees to:
 
-1. A Board member moves by submitting a ticket of type "board motion"
-   - selecting the component "organization" for the ticket if it is an organizational motion.
-   - If it is a technical motion, see below for "Technical Decisions".
-   - Only Board members can submit board motions.
-   - The chairman may move.
-2. Once placed the motion is open for discussion by Board Members submitting ticket comments.
-   - Any Board member who accepts or starts commenting other than rejecting the motion outright does the equivalent of "seconding the motion"
-   - There is no need of uttering the word "second".
-   - The chairman may second, no need to wait for someone else to second.
-3. When discussion reaches its end the chairman calls the question
-   - "call the question\!" is not a means of ending a protracted discussion.
-4. To vote, board members comment "yay" or "nay" or "abstain"
-   - The default voting period is one week.
-   - Voting may be expedited to end one day after 2/3 of board members have voted.
-   - All Board members are expected to vote of Board motions.
-   - The chairman may vote.
-5. The chairman counts the votes and declares the motion for passed or failed.
-   - To pass, the number of "yay"s must be greater than the number of "nay"s.
+    -   Identify issues requiring input from LOINC committees and coordinate discussion and resolution of these issues.
 
-### Technical Decisions
+    -   Respond to coordination requests from LOINC committees.
 
-Technical Decisions are made on tickets by at least two (2) board members documenting assent to the proposal. When only one board member engages in the adjudication and no other board member weighs in in opposition, the decision of the single board member may be implemented. However, decisions by a single board member cannot bind the UCUM Organization to implement this decision if the single board member so deciding does not himself implement the decision.
+    -   Participate in routine and ad hoc cross-committee meetings.
 
-All technical decisions are made on a ticket which may be submitted by any user of the UCUM web site (even non-verified new users). A ticket must be accepted by a board member to be turned into action. Any verified user can comment on tickets by commenting on the ticket. Board members can decide on the ticket status.
+-   Support activities to ensure representative and sufficient committee membership:
 
-The process of action on a technical ticket is as follows:
+    -   Assess membership needs, e.g., stakeholder representation, expertise.
 
-1. A board member or secretary reviews the request and triages it.
-   - Possibly revising the category.
-   - Drafting a quick excerpt of the essence of the request and proposes one of the determinations:
-2. Accept, in which case the Board member or secretary will be the owner and make a concrete change proposal to the specification.
-   - A ticket cannot be accepted without a concrete change proposal to the specification.
-   - Other board members ''should'' review and opine to the change.
-   - If the proposal was accepted by a secretary, at least one board member must approve the proposal.
-3. Reject, in which case the Board member or secretary will give a rationale to the proposal to reject.
-   - The status of such tickets are "reject_proposed".
-   - At least one other board member needs to agree with the rejection proposal, in which case the next status will be "wontfix" (will not change).
-   - The registered user who submitted the ticket may provide further comment and justification, thus disputing the rejection decision.
-   - If the rejection decision is disputed, another board member may adopt the ticket and take it to Reconsider status, but such board member must then accept the responsibility of seeing the change request through.
-   - A proposal for reconsideration must be actionable, it must explain how the issue can be resolved, how the concerns of the rejecting board member can be addressed, the emphasis is "how" not just "why".
-4. Other statuses may exist to determine that the request is not actionable or doesn't identify a specific change need, is out of scope or suggests a problem that is not a real problem. These determinations can be made by one board member or secretary.
+    -   Recruit new members.
 
-The web site can be used to create ticket reports. The "timeline" function of the web site, and most ticket information can only be seen by registered users; this is necessary and highly effective to prevent ticket spam, i.e., by removing the pay-off for a spammer to place spam tickets: links they place in their spam tickets will not end up on search engines.
+    -   Assess member participation and determine if current members should be retired.
 
-## Specification
+    -   Communicate membership decisions.
 
-The UCUM specification's source code is maintained in a public Git repository. Anyone may clone or fork the respository and submit pull requests for potential inclusion.
+Regenstrief Health Data Standards (HDS) staff will support the Committee in carrying out these functions.
+
+## Committee Membership
+
+This charter describes the criteria and processes for Committee membership. All Committee members must be LOINC members or be affiliated with an organization that is a LOINC member. Information on LOINC membership can be found on the LOINC website.
+
+### Committee Membership Criteria 
+
+The Committee will establish criteria for Committee membership. Membership criteria will include:
+
+-   Expertise in a relevant subject matter of units of measures
+
+-   An understanding of the technical subject matter to be able to
+
+    -   adjudicate changes and
+
+    -   explain the technical reasoning behind changes.
+
+-   Willingness to participate and learn.
+
+-   Have been and continue to be supportive of UCUM
+
+-   Willingness to promote and not undermine UCUM when being involved in a competing activity.
+
+-   Be a registered user of the UCUM website.
+
+-   Other criteria as determined by the Committee.
+
+### Member Recruitment Process 
+
+The Committee will conduct an annual review of Committee membership to identify gaps in areas of expertise that should be represented on the Committee. The UCUM Committee will identify candidates to join the Committee. This may be done based on Committee member recommendations or through an announcement and application process coordinated by Regenstrief HDS staff.
+
+The Committee Chair, Committee members, or HDS staff will reach out to member candidates to determine their interest in participating on the UCUM Committee.
+
+### Member Selection
+
+The Committee will use the following process to select members:
+
+-   Membership candidates will be reviewed by the Chair(s).
+
+-   Candidates will be asked to participate in up to 3 Committee meetings as a pre-requisite for considering their application.
+
+-   Chair(s) will make a recommendation to the Committee on the candidate(s).
+
+-   Final approval of new members will be by a simple majority vote of the Committee.
+
+### Member Termination
+
+The Committee will use the following process to terminate members:
+
+-   The term length for Members is three years, which automatically renews as long as the conditions for Membership continue to be met. The UCUM Committee benefits from the wisdom and experience of long-term participants, and thus we want to encourage sustained contributions.
+
+-   Members may terminate their membership in the UCUM Committee at any time by notifying the HDS staff of their intent to do so.
+
+-   Members may be terminated for failure to attend Committee meetings, failure to engage in respectful and constructive discussions, consistently poor preparation for meeting discussions.
+
+-   The Committee will conduct an annual membership review to determine if any membership terminations should be considered.
+
+-   Committee members may bring to the Chair/Co-Chairs requests to terminate members.
+
+-   Before terminating a member, the Committee Chair/Co-Chairs will reach out to the member to determine their continued interest in participating in the Committee, ability to meet member obligations, and willingness to address any issues with their Committee participation.
+
+-   The Regenstrief Institute may terminate the membership of any member upon determining that the member has acted in violation of the mission of the UCUM Committee, Rules of Behavior, or the UCUM License.
+
+### Committee Chair(s) Selection
+
+Appointment of the Chair(s) is made by the designated authority at the Regenstrief Institute.
+
+The HDS Staff will announce a call for nominations for the Committee Chair(s). Nominees shall be drawn from active Committee members at the time of the announcement. If appropriate candidates are not available within the active membership, the pool of candidate nominees may be expanded.
+
+## Committee Roles and Responsibilities
+
+### Committee Chairs/Co-Chairs
+
+The term length for Committee Chairs is three years, which automatically renews.
+
+Committee Chairs/Co-Chairs have the following responsibilities:
+
+-   Provide leadership in Committee meetings.
+
+-   Ensure that meetings are productive, and discussions are respectful.
+
+-   Collaborate with HDS staff in planning meetings.
+
+-   Coordinate with Chairs/Co-Chairs of LOINC Committees on common issues requiring coordination across committees.
+
+-   Act as ambassadors to other groups they participate in by:
+
+    -   Educating these groups on UCUM and LOINC work and processes.
+
+    -   Identifying and encouraging opportunities for collaboration between UCUM and/or LOINC and these groups.
+
+    -   Sharing relevant information about the work of these groups with the Committee and HDS staff.
+
+### Committee Members
+
+The duties of a member of the UCUM Committee are to engage in the decision-making processes for governance of the UCUM specification. Committee members should:
+
+-   Demonstrate a commitment to the Committee by attending committee meetings, contributing to Committee discussions, reviewing and commenting on Committee materials.
+
+-   Maintain a respectful and constructive approach to Committee discussions.
+
+-   Ensure that their membership information on file with the HDS Staff is accurate.
+
+### Ex-Officio and Honorary Committee Members
+
+The Committee has:
+
+-   One ex-officio member who is a member of the Regenstrief Institute, Inc., which is the Copyright holder of UCUM.
+
+-   The Founders, Gunther Schadow and Clem McDonald, are honorary members of the Committee until their resignation and have the same voting privileges as other voting members.
+
+### Committee Guests
+
+The Committee may invite individuals with specific expertise to join one or more committee meetings to participate in discussions of topics related to their expertise. If the Committee requires the guest's expertise on an ongoing basis the guest should be invited to become a Committee member, or another expert should be recruited to the Committee.
+
+### HDS Staff
+
+HDS staff have the following responsibilities in support of the Committee:
+
+-   Coordinate with Chair/Co-Chairs to plan meetings, identify priorities, and follow-up on action items.
+
+-   Prepare analyses to support Committee discussion and decision-making.
+
+-   Prepare and distribute communications to Committee members.
+
+-   Prepare and maintain documentation of Committee meetings and analyses.
+
+## Committee Meetings
+
+### Committee Meeting Schedules
+
+It is in the nature of the field of Units of Measure that it is very stable and maintenance activity may be very low. The schedule of Committee meetings will be determined by the volume of requests for new or updated UCUM codes.
+
+### Committee Agendas
+
+Committee agenda development and distribution will use the following processes:
+
+-   The Committee Chair/Co-Chair will collaborate with HDS staff to prepare agendas prior to Committee meetings.
+
+-   Agendas and supporting materials will be distributed to Committee members at least 1 week prior to Committee meetings.
+
+-   Committee agendas and supporting materials will be posted to a repository accessible to all Committee members.
+
+### Meeting Minutes
+
+Committee minutes development and distribution will use the following processes:
+
+-   HDS staff will prepare meeting minutes and distribute them one week after each meeting.
+
+-   Minutes of the prior meeting will be approved by the Committee at each meeting.
+
+-   Minutes will be posted to a repository accessible to all Committee members.
+
+## Committee Decision Making Processes
+
+The Committee will drive to a consensus decision whenever possible. Consensus is not unanimity, but rather means that:
+
+-   All Committee voting members have had the opportunity to express themselves and lay out their positions in a collegial and collaborative environment.
+
+-   All Committee voting members can support the decision, even if they prefer an alternative.
+
+-   A quorum of 50% of Committee members is present at the meeting.
+
+The Committee will adopt the following procedures when a consensus decision cannot be reached, or a quorum is not present at the meeting:
+
+-   A fifty percent majority of the voting members of the Committee will be required for decisions not arrived at by consensus. If all voting members are not in attendance at the meeting, absent members will be asked to register their vote by email.
+
+For decisions on action items and significant Committee decisions, e.g., decisions that have major impacts on organization, processes, content domains, or significant changes to modeling approaches, the Committee should follow [Roberts Rules of Order](https://robertsrules.com/) to guide discussion and voting.
+
+### Voting
+
+-   When formal votes are taken the outcome of the vote will be recorded. Documentation of formal votes will be maintained and posted to a repository accessible to all Committee members.
+
+-   Proxy voting will not be permitted.
+
+## Committee Annual Evaluation
+
+Once each year the Committee will conduct an evaluation of its work. The results of the evaluation will be shared with LOINC committee Co-Chairs to support discussions of overall improvements to committee functions and processes.
