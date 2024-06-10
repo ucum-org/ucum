@@ -2550,7 +2550,7 @@ and the series and the quintamillesimal (Q) series with basis 50,000.
 
 <verse>
 The function pair denoted &ldquo;<code>100tan(1 rad)</code>&rdquo; is
-defined as <v>f</v><sub>PD</sub>(<v>&alpha;</v>) = tan(<v>&alpha;</v>) * 100 to
+defined as <v>f</v><sub>PD</sub>(<v>&alpha;</v>) = tan(<v>&alpha;</v>) &mult; 100 to
 convert from a plane angle <v>&alpha;</v> to a prism diopter value (or a
 slope percent value) and
 <v>f</v><sub>PD</sub><sup>-1</sup>(<v>x</v>) = arctan(<v>x / 100</v>) to
