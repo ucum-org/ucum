@@ -1384,7 +1384,7 @@ Dimensionless unit atoms are defined in <tabref ref="dimless"/>.
 &ldquo;print,&rdquo; &ldquo;c/s,&rdquo; &ldquo;c/i,&rdquo;
 &ldquo;M,&rdquo; &ldquo;value,&rdquo; and &ldquo;definition.&rdquo;
 The name is the full (official) name of the unit. The symbol
-recommended for use in print this is listed in the column
+recommended for use in print is listed in the column
 &ldquo;print.&rdquo; &ldquo;C/s,&rdquo; and &ldquo;c/i&rdquo; list the
 symbol in the case sensitive and the case insensitive variants
 respectively. 
@@ -1453,7 +1453,7 @@ for those units are given in <tabref ref="si"/>.
 &ldquo;print,&rdquo; &ldquo;c/s,&rdquo; &ldquo;c/i,&rdquo;
 &ldquo;M,&rdquo; &ldquo;value,&rdquo; and &ldquo;definition.&rdquo;
 The name is the full (official) name of the unit. The symbol
-recommended for use in print this is listed in the column
+recommended for use in print is listed in the column
 &ldquo;print.&rdquo; &ldquo;C/s,&rdquo; and &ldquo;c/i&rdquo; list the
 symbol in the case sensitive and the case insensitive variants
 respectively. 
