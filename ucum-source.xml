@@ -1,11 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
-<!-- COPYRIGHT 1998-2014, REGENSTRIEF INSTITUTE, INC. AND THE UCUM ORGANIZATION ALL RIGHTS RESERVED.
+<!-- COPYRIGHT 1998-2024, REGENSTRIEF INSTITUTE, INC. AND THE UCUM ORGANIZATION ALL RIGHTS RESERVED.
 
   Use and redistribution of this data is permitted without charge
   as long as you make no changes to it. DO NOT CHANGE THIS FILE if 
-  you want to  redistribute it. Please contact Gunther Schadow at 
-  the Regenstrief Institute, Indianapolis, IN 46260 for any issues
-  that make you think you need to change this file.
+  you want to redistribute it. For any issues that you think you 
+  need to change this file, please create a new issue on the
+  GitHub repository at <https://github.com/ucum-org/ucum>, or 
+  contact Regenstrief Institute using the ucum@ucum.org address.
 -->
 <!DOCTYPE spec [
   <!ENTITY alpha  "&#x3b1;">
