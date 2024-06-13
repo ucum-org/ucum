@@ -1,11 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
-<!-- COPYRIGHT 1998-2014, REGENSTRIEF INSTITUTE, INC. AND THE UCUM ORGANIZATION ALL RIGHTS RESERVED.
+<!-- COPYRIGHT 1998-2024, REGENSTRIEF INSTITUTE, INC. AND THE UCUM ORGANIZATION ALL RIGHTS RESERVED.
 
   Use and redistribution of this data is permitted without charge
   as long as you make no changes to it. DO NOT CHANGE THIS FILE if 
-  you want to  redistribute it. Please contact Gunther Schadow at 
-  the Regenstrief Institute, Indianapolis, IN 46260 for any issues
-  that make you think you need to change this file.
+  you want to redistribute it. For any issues that you think you 
+  need to change this file, please create a new issue on the
+  GitHub repository at <https://github.com/ucum-org/ucum>, or 
+  contact Regenstrief Institute using the ucum@ucum.org address.
 -->
 <!DOCTYPE spec [
   <!ENTITY alpha  "&#x3b1;">
@@ -689,7 +690,7 @@ The complete syntax in the Backus-Naur Form.
   </caption>
 </exhibit>
       <figure id="ucum-state-automaton">
-        <pixmap source="ucum-state-automaton.gif"/>
+        <pixmap source="https://github.com/ucum-org/ucum/blob/main/assets/images/ucum-state-automaton.gif"/>
         <caption>Pushdown-state automaton describing the syntax.</caption>
       </figure>
     </div2>
@@ -1383,7 +1384,7 @@ Dimensionless unit atoms are defined in <tabref ref="dimless"/>.
 &ldquo;print,&rdquo; &ldquo;c/s,&rdquo; &ldquo;c/i,&rdquo;
 &ldquo;M,&rdquo; &ldquo;value,&rdquo; and &ldquo;definition.&rdquo;
 The name is the full (official) name of the unit. The symbol
-recommended for use in print this is listed in the column
+recommended for use in print is listed in the column
 &ldquo;print.&rdquo; &ldquo;C/s,&rdquo; and &ldquo;c/i&rdquo; list the
 symbol in the case sensitive and the case insensitive variants
 respectively. 
@@ -1452,7 +1453,7 @@ for those units are given in <tabref ref="si"/>.
 &ldquo;print,&rdquo; &ldquo;c/s,&rdquo; &ldquo;c/i,&rdquo;
 &ldquo;M,&rdquo; &ldquo;value,&rdquo; and &ldquo;definition.&rdquo;
 The name is the full (official) name of the unit. The symbol
-recommended for use in print this is listed in the column
+recommended for use in print is listed in the column
 &ldquo;print.&rdquo; &ldquo;C/s,&rdquo; and &ldquo;c/i&rdquo; list the
 symbol in the case sensitive and the case insensitive variants
 respectively. 
@@ -1545,7 +1546,7 @@ out of scope of &TUCUM;.
 <u:unit id="200020" Code="'" CODE="'" isMetric="no"><name>minute</name><printSymbol>'</printSymbol><property>plane angle</property><value Unit="deg/60" UNIT="DEG/60" value="1">1</value></u:unit>
 <u:unit id="200030" Code="''" CODE="''" isMetric="no"><name>second</name><printSymbol>''</printSymbol><property>plane angle</property><value Unit="'/60" UNIT="'/60" value="1">1</value></u:unit>
 <u:unit id="200050" Code="l" CODE="L" isMetric="yes"><name>liter</name><printSymbol>l</printSymbol><property>volume</property><value Unit="dm3" UNIT="DM3" value="1">1</value></u:unit>
-<u:unit id="200060" Code="L" isMetric="yes"><name>liter</name><printSymbol>L</printSymbol><property>volume</property><value Unit="l"  value="1">1</value></u:unit>
+<u:unit id="200060" Code="L" CODE="L" isMetric="yes"><name>liter</name><printSymbol>L</printSymbol><property>volume</property><value Unit="l" UNIT="L" value="1">1</value></u:unit>
 <u:unit id="200070" Code="ar" CODE="AR" isMetric="yes"><name>are</name><printSymbol>a</printSymbol><property>area</property><value Unit="m2" UNIT="M2" value="100">100</value></u:unit>
 <u:unit id="200090" Code="min" CODE="MIN" isMetric="no"><name>minute</name><printSymbol>min</printSymbol><property>time</property><value Unit="s" UNIT="S" value="60">60</value></u:unit>
 <u:unit id="200100" Code="h" CODE="HR" isMetric="no"><name>hour</name><printSymbol>h</printSymbol><property>time</property><value Unit="min" UNIT="MIN" value="60">60</value></u:unit>
@@ -1702,14 +1703,14 @@ out of scope of &TUCUM;.
     <u:units id="const">
       <caption>Natural units.</caption>
 <u:unit id="300010" Code="[c]" CODE="[C]" isMetric="yes"><name>velocity of light</name><printSymbol><i>c</i></printSymbol><property>velocity</property><value Unit="m/s" UNIT="M/S" value="299792458">299792458</value></u:unit>
-<u:unit id="300020" Code="[h]" CODE="[H]" isMetric="yes"><name>Planck constant</name><printSymbol><i>h</i></printSymbol><property>action</property><value Unit="J.s" UNIT="J.S" value="6.6260755e-34">6.6260755 &mult; 10<sup>-34</sup></value></u:unit>
+<u:unit id="300020" Code="[h]" CODE="[H]" isMetric="yes"><name>Planck constant</name><printSymbol><i>h</i></printSymbol><property>action</property><value Unit="J.s" UNIT="J.S" value="6.62607015e-34">6.62607015 &mult; 10<sup>-34</sup></value></u:unit>
 <u:unit id="300021" Code="[k]" CODE="[K]" isMetric="yes"><name>Boltzmann constant</name><printSymbol><i>k</i></printSymbol><property>(unclassified)</property><value Unit="J/K" UNIT="J/K" value="1.380658e-23">1.380658 &mult; 10<sup>-23</sup></value></u:unit>
-<u:unit id="300022" Code="[eps_0]" CODE="[EPS_0]" isMetric="yes"><name>permittivity of vacuum</name><printSymbol><i>&epsilon;<sub><r>0</r></sub></i></printSymbol><property>electric permittivity</property><value Unit="F/m" UNIT="F/M" value="8.854187817e-12">8.854187817 &mult; 10<sup>-12</sup></value></u:unit>
+<u:unit id="300022" Code="[eps_0]" CODE="[EPS_0]" isMetric="yes"><name>permittivity of vacuum</name><printSymbol><i>&epsilon;<sub><r>0</r></sub></i></printSymbol><property>electric permittivity</property><value Unit="F/m" UNIT="F/M" value="8.8541878128e-12">8.8541878128 &mult; 10<sup>-12</sup></value></u:unit>
 <u:unit id="300023" Code="[mu_0]" CODE="[MU_0]" isMetric="yes"><name>permeability of vacuum</name><printSymbol><i>&mu;<sub><r>0</r></sub></i></printSymbol><property>magnetic permeability</property><value Unit="4.[pi].10*-7.N/A2" UNIT="4.[PI].10*-7.N/A2" value="1">1</value></u:unit>
-<u:unit id="200190" Code="[e]" CODE="[E]" isMetric="yes"><name>elementary charge</name><printSymbol><i>e</i></printSymbol><property>electric charge</property><value Unit="C" UNIT="C" value="1.60217733e-19">1.60217733 &mult; 10<sup>-19</sup></value></u:unit>
+<u:unit id="200190" Code="[e]" CODE="[E]" isMetric="yes"><name>elementary charge</name><printSymbol><i>e</i></printSymbol><property>electric charge</property><value Unit="C" UNIT="C" value="1.602176634e-19">1.602176634 &mult; 10<sup>-19</sup></value></u:unit>
 <u:unit id="300022" Code="[m_e]" CODE="[M_E]" isMetric="yes"><name>electron mass</name><printSymbol><i>m<sub><r>e</r></sub></i></printSymbol><property>mass</property><value Unit="g" UNIT="g" value="9.1093897e-28">9.1093897 &mult; 10<sup>-28</sup></value></u:unit>
 <u:unit id="300023" Code="[m_p]" CODE="[M_P]" isMetric="yes"><name>proton mass</name><printSymbol><i>m<sub><r>p</r></sub></i></printSymbol><property>mass</property><value Unit="g" UNIT="g" value="1.6726231e-24">1.6726231 &mult; 10<sup>-24</sup></value></u:unit>
-<u:unit id="300029" Code="[G]" CODE="[GC]" isMetric="yes"><name>Newtonian constant of gravitation</name><printSymbol><i>G</i></printSymbol><property>(unclassified)</property><value Unit="m3.kg-1.s-2" UNIT="M3.KG-1.S-2" value="6.67259e-11">6.67259 &mult; 10<sup>-11</sup></value></u:unit>
+<u:unit id="300029" Code="[G]" CODE="[GC]" isMetric="yes"><name>Newtonian constant of gravitation</name><printSymbol><i>G</i></printSymbol><property>(unclassified)</property><value Unit="m3.kg-1.s-2" UNIT="M3.KG-1.S-2" value="6.67430e-11">6.67430 &mult; 10<sup>-11</sup></value></u:unit>
 <u:unit id="300030" Code="[g]" CODE="[G]" isMetric="yes"><name>standard acceleration of free fall</name><printSymbol><i>g<sub>n</sub></i></printSymbol><property>acceleration</property><value Unit="m/s2" UNIT="M/S2" value="980665e-5">9.80665</value></u:unit>
 <u:unit id="600410" Code="atm" CODE="ATM" isMetric="no"><name>standard atmosphere</name><printSymbol>atm</printSymbol><property>pressure</property><value Unit="Pa" UNIT="PAL" value="101325">101325</value></u:unit>
 <u:unit id="300040" Code="[ly]" CODE="[LY]" isMetric="yes"><name>light-year</name><printSymbol>l.y.</printSymbol><property>length</property><value Unit="[c].a_j" UNIT="[C].ANN_J" value="1">1</value></u:unit>
@@ -2260,7 +2261,7 @@ weight are based on the same grain of barley, standardized to
 <u:unit id="500750" Code="[oz_av]" CODE="[OZ_AV]" isMetric="no"><name>ounce</name><printSymbol>oz</printSymbol><property>mass</property><value Unit="[lb_av]/16" UNIT="[LB_AV]/16" value="1">1</value></u:unit>
 <u:unit id="500760" Code="[dr_av]" CODE="[DR_AV]" isMetric="no"><name>dram</name><property>mass</property><value Unit="[oz_av]/16" UNIT="[OZ_AV]/16" value="1">1</value></u:unit>
 <u:unit id="500770" Code="[scwt_av]" CODE="[SCWT_AV]" isMetric="no"><name>short hundredweight</name><name>U.S. hundredweight</name><property>mass</property><value Unit="[lb_av]" UNIT="[LB_AV]" value="100">100</value></u:unit>
-<u:unit id="500780" Code="[lcwt_av]" CODE="[LCWT_AV]" isMetric="no"><name>long hunderdweight</name><name>British hundredweight</name><property>mass</property><value Unit="[lb_av]" UNIT="[LB_AV]" value="112">112</value></u:unit>
+<u:unit id="500780" Code="[lcwt_av]" CODE="[LCWT_AV]" isMetric="no"><name>long hundredweight</name><name>British hundredweight</name><property>mass</property><value Unit="[lb_av]" UNIT="[LB_AV]" value="112">112</value></u:unit>
 <u:unit id="500790" Code="[ston_av]" CODE="[STON_AV]" isMetric="no"><name>short ton</name><name>U.S. ton</name><property>mass</property><value Unit="[scwt_av]" UNIT="[SCWT_AV]" value="20">20</value></u:unit>
 <u:unit id="500800" Code="[lton_av]" CODE="[LTON_AV]" isMetric="no"><name>long ton</name><name>British ton</name><property>mass</property><value Unit="[lcwt_av]" UNIT="[LCWT_AV]" value="20">20</value></u:unit>
 <u:unit id="500810" Code="[stone_av]" CODE="[STONE_AV]" isMetric="no"><name>stone</name><name>British stone</name><property>mass</property><value Unit="[lb_av]" UNIT="[LB_AV]" value="14">14</value></u:unit>
@@ -2408,7 +2409,7 @@ The meaning of the columns is declared in  <pref ref="para-si" verse="2"/>.
 Only the columns titled &ldquo;c/s,&rdquo; &ldquo;c/i,&rdquo;
 &ldquo;M,&rdquo; &ldquo;value,&rdquo; and &ldquo;definition&rdquo; are
 normative. Full name and print symbol are either not standardized or
-standarized by other bodies and are out of scope of &TUCUM;.
+standardized by other bodies and are out of scope of &TUCUM;.
 </verse>
 
 <verse>
@@ -2550,7 +2551,7 @@ and the series and the quintamillesimal (Q) series with basis 50,000.
 
 <verse>
 The function pair denoted &ldquo;<code>100tan(1 rad)</code>&rdquo; is
-defined as <v>f</v><sub>PD</sub>(<v>&alpha;</v>) = tan(<v>&alpha;</v>) * 100 to
+defined as <v>f</v><sub>PD</sub>(<v>&alpha;</v>) = tan(<v>&alpha;</v>) &mult; 100 to
 convert from a plane angle <v>&alpha;</v> to a prism diopter value (or a
 slope percent value) and
 <v>f</v><sub>PD</sub><sup>-1</sup>(<v>x</v>) = arctan(<v>x / 100</v>) to
@@ -2730,10 +2731,10 @@ to convert from the pH value back to moles per liter.
 <u:unit id="600703" Code="[PFU]" CODE="[PFU]" isMetric="no" isArbitrary="yes"><name>plaque forming units</name><printSymbol>PFU</printSymbol><property>amount of an infectious agent</property><value Unit="1" UNIT="1" value="1">1</value></u:unit>
 <u:unit id="600704" Code="[FFU]" CODE="[FFU]" isMetric="no" isArbitrary="yes"><name>focus forming units</name><printSymbol>FFU</printSymbol><property>amount of an infectious agent</property><value Unit="1" UNIT="1" value="1">1</value></u:unit>
 <u:unit id="600705" Code="[CFU]" CODE="[CFU]" isMetric="no" isArbitrary="yes"><name>colony forming units</name><printSymbol>CFU</printSymbol><property>amount of a proliferating organism</property><value Unit="1" UNIT="1" value="1">1</value></u:unit>
-<u:unit id="600709" Code="[IR]" CODE="[IR]" isMetric="no" isArbitrary="yes"><name>index of reactivity</name><printSymbol>IR</printSymbol><property>amount of an allergen calibrated through in-vivo testing using the Stallergenes&reg; method.</property><value Unit="1" UNIT="1" value="1">1</value></u:unit>
+<u:unit id="600709" Code="[IR]" CODE="[IR]" isMetric="no" isArbitrary="yes"><name>index of reactivity</name><printSymbol>IR</printSymbol><property>amount of an allergen calibrated through in-vivo testing using the Stallergenes&reg; method</property><value Unit="1" UNIT="1" value="1">1</value></u:unit>
 <u:unit id="600710" Code="[BAU]" CODE="[BAU]" isMetric="no" isArbitrary="yes"><name>bioequivalent allergen unit</name><printSymbol>BAU</printSymbol><property>amount of an allergen calibrated through in-vivo testing based on the ID50EAL method of (intradermal dilution for 50mm sum of erythema diameters</property><value Unit="1" UNIT="1" value="1">1</value></u:unit>
 <u:unit id="600711" Code="[AU]" CODE="[AU]" isMetric="no" isArbitrary="yes"><name>allergen unit</name><printSymbol>AU</printSymbol><property>procedure defined amount of an allergen using some reference standard</property><value Unit="1" UNIT="1" value="1">1</value></u:unit>
-<u:unit id="600712" Code="[Amb'a'1'U]" CODE="[AMB'A'1'U]" isMetric="no" isArbitrary="yes"><name>allergen unit for Ambrosia artemisiifolia</name><printSymbol>Amb a 1 U</printSymbol><property>procedure defined amount of the major allergen of ragweed.</property><value Unit="1" UNIT="1" value="1">1</value></u:unit>
+<u:unit id="600712" Code="[Amb'a'1'U]" CODE="[AMB'A'1'U]" isMetric="no" isArbitrary="yes"><name>allergen unit for Ambrosia artemisiifolia</name><printSymbol>Amb a 1 U</printSymbol><property>procedure defined amount of the major allergen of ragweed</property><value Unit="1" UNIT="1" value="1">1</value></u:unit>
 <u:unit id="600715" Code="[PNU]" CODE="[PNU]" isMetric="no" isArbitrary="yes"><name>protein nitrogen unit</name><printSymbol>PNU</printSymbol><property>procedure defined amount of a protein substance</property><value Unit="1" UNIT="1" value="1">1</value></u:unit>
 <u:unit id="600716" Code="[Lf]" CODE="[LF]" isMetric="no" isArbitrary="yes"><name>Limit of flocculation</name><printSymbol>Lf</printSymbol><property>procedure defined amount of an antigen substance</property><value Unit="1" UNIT="1" value="1">1</value></u:unit>
 <u:unit id="600717" Code="[D'ag'U]" CODE="[D'AG'U]" isMetric="no" isArbitrary="yes"><name>D-antigen unit</name><printSymbol/><property>procedure defined amount of a poliomyelitis d-antigen substance</property><value Unit="1" UNIT="1" value="1">1</value></u:unit>
@@ -3097,7 +3098,7 @@ The meaning of the columns is declared in  <pref ref="para-si" verse="2"/>.
 Only the columns titled &ldquo;c/s,&rdquo; &ldquo;c/i,&rdquo;
 &ldquo;M,&rdquo; &ldquo;value,&rdquo; and &ldquo;definition&rdquo; are
 normative. Full name and print symbol are either not standardized or
-standarized by other bodies and are out of scope of &TUCUM;.
+standardized by other bodies and are out of scope of &TUCUM;.
 </verse>
 
 <verse>
@@ -3501,12 +3502,12 @@ more straightforward or more appropriate or both.
           <td></td>
         </tr>
         <tr>
-          <td>/m3</td>
+          <td>/m2</td>
           <td></td>
           <td>per square meter</td>
           <td></td>
           <td>1</td>
-          <td>m-3</td>
+          <td>m-2</td>
           <td></td>
         </tr>
         <tr>
