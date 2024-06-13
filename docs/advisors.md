@@ -9,10 +9,6 @@ The Unified Code for Units of Measure was founded in 1999 by Gunther Schadow the
 
 Dr. Aerts has over 35 years of experience in development of technical and scientific software, especially in the area of organic and physical chemistry, and in healthcare and clinical research. He is the founder of XML4Pharma and Computer Chemistry Consultancy.
 
-## Simon Cox, PhD
-
-Dr. Cox works on practices and standards for the publication and transfer of science data, particularly geospatial. After an early career in geophysics and mineral exploration, he moved to focus mainly on data and informatics. Through this he has engaged with many other areas of environmental science, including water resources, marine data, meteorology, soil, ecology and biodiversity. Engagement with CODATA has extended the cross-disciplinary scope still further into social science and official statistics applications. He is principal- or co-author of a number of international standards for data. His current focus is on FAIR data, linked open data, and semantic web technologies, with a particular emphasis on formalization, publication and maintenance of controlled vocabularies and related reference data. He was awarded the 2006 Gardels Medal by the Open Geospatial Consortium, and was selected to present the 2013 Leptoukh Lecture for the American Geophysical Union.
-
 ## Christof Gessner, PhD
 
 Dr. Gessner has his PhD in Physics/Chemistry and academic training in Medical Physics and Medical Informatics. For many years, Dr. Gessner held positions in hospitals and with vendors of medical devices and software. Since 2008 he is an expert consultant for medical informatics standards and terminologies, including HL7®, LOINC®. Dr. Gessner has contributed to UCUM since early 2006. He is a member of the Medical Standards Committee of DIN (the german national standardization body) and a delegate to ISO TC 215. In 2010 he has been appointed by the DIN terminology comittee as a delegate to ISO TC 12, the international authority on units of measures.
@@ -28,6 +24,10 @@ Captain Hess is a Pharmacist and member and subject matter expert to (1) FDA Pro
 ## Stanley M. Huff, MD
 
 Dr. Huff is the Chief Medical Informatics Officer at Graphite Health and a Professor (Clinical) of Biomedical Informatics at the University of Utah. He is board certified in Clinical Pathology. He has worked in the area of medical vocabularies and medical database architecture for the past 30+ years. He is currently a fellow of the American College of Medical Informatics, a co-chair of the LOINC Committee, and a co-chair of the HL7 Clinical Information Modeling Initiative (CIMI). He is also the Chair of Logica (formerly the Healthcare Services Platform Consortium (HSPC)) and the Chair of the FHIR Foundation. He is the former CMIO at Intermountain Healthcare, a former member of the ONC HIT Standards Committee, and a former member of NCVHS. He is also a previous Chair (twice) of Health Level Seven (HL7). He teaches a course in medical vocabulary and data exchange standards in the Department of Biomedical Informatics at the University of Utah.
+
+## Jeremy Lieth
+
+The Federal Institute for Drugs and Medical Devices (BfArM) \[Germany\]
 
 ## Rob McClure, MD
 
