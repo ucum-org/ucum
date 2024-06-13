@@ -2,7 +2,7 @@
 
 All notable changes to this project will be documented in this file.
 
-The following has been ported from a legacy system and may not be formatted correctly.
+Updates prior to v2.2 were ported from a legacy system and may not be formatted correctly.
 
 ## Version 2.2 (June 2024)
 
