@@ -56,10 +56,10 @@
   <!ENTITY UCUM  "<i>Unified Code for Units of Measure</i>"> 
   <!ENTITY TUCUM  "<i>The Unified Code for Units of Measure</i>"> 
 ]>
-<spec xmlns:u="http://aurora.regenstrief.org/UCUM">
+<spec xmlns:u="https://ucum.org">
 <header>
   <title>The Unified Code for Units of Measure</title>
-  <version>2.1</version>
+  <version>2.2</version>
   <revision>$Revision$</revision>
   <date>$Date$</date>
   <authlist>
@@ -74,7 +74,7 @@
       <email href="cmcdonald@regenstrief.org"/>
     </author>
   </authlist>
-  <copyright>1998-2014, Regenstrief Institute, Inc. and the UCUM Organization. All rights reserved.</copyright>
+  <copyright>1998-2024, Regenstrief Institute, Inc. and the UCUM Organization. All rights reserved.</copyright>
 </header>
 
 <body>
