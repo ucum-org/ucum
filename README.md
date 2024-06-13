@@ -28,3 +28,7 @@ A number of constants represented in the specification have been updated per [NI
 Additionally, this release corrects a number of misspellings and typographic errors.
 
 This is the first release of UCUM since May 2017 and the first using GitHub. We will continue to address outstanding issues and entertain requests for new units. We welcome your requests and feedback in the form of [New Issues](https://ucum.org/docs/advisors) or [New Discussions](https://github.com/orgs/ucum-org/discussions). While an official cadence has yet to be established, our intent is to provide the next release of UCUM later in 2024.
+
+### Don't miss anything
+
+Receive notification of new UCUM releases and other important happenings by joining [our mailing list](https://ucum.org/list).
