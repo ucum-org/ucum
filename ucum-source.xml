@@ -2261,7 +2261,7 @@ weight are based on the same grain of barley, standardized to
 <u:unit id="500750" Code="[oz_av]" CODE="[OZ_AV]" isMetric="no"><name>ounce</name><printSymbol>oz</printSymbol><property>mass</property><value Unit="[lb_av]/16" UNIT="[LB_AV]/16" value="1">1</value></u:unit>
 <u:unit id="500760" Code="[dr_av]" CODE="[DR_AV]" isMetric="no"><name>dram</name><property>mass</property><value Unit="[oz_av]/16" UNIT="[OZ_AV]/16" value="1">1</value></u:unit>
 <u:unit id="500770" Code="[scwt_av]" CODE="[SCWT_AV]" isMetric="no"><name>short hundredweight</name><name>U.S. hundredweight</name><property>mass</property><value Unit="[lb_av]" UNIT="[LB_AV]" value="100">100</value></u:unit>
-<u:unit id="500780" Code="[lcwt_av]" CODE="[LCWT_AV]" isMetric="no"><name>long hunderdweight</name><name>British hundredweight</name><property>mass</property><value Unit="[lb_av]" UNIT="[LB_AV]" value="112">112</value></u:unit>
+<u:unit id="500780" Code="[lcwt_av]" CODE="[LCWT_AV]" isMetric="no"><name>long hundredweight</name><name>British hundredweight</name><property>mass</property><value Unit="[lb_av]" UNIT="[LB_AV]" value="112">112</value></u:unit>
 <u:unit id="500790" Code="[ston_av]" CODE="[STON_AV]" isMetric="no"><name>short ton</name><name>U.S. ton</name><property>mass</property><value Unit="[scwt_av]" UNIT="[SCWT_AV]" value="20">20</value></u:unit>
 <u:unit id="500800" Code="[lton_av]" CODE="[LTON_AV]" isMetric="no"><name>long ton</name><name>British ton</name><property>mass</property><value Unit="[lcwt_av]" UNIT="[LCWT_AV]" value="20">20</value></u:unit>
 <u:unit id="500810" Code="[stone_av]" CODE="[STONE_AV]" isMetric="no"><name>stone</name><name>British stone</name><property>mass</property><value Unit="[lb_av]" UNIT="[LB_AV]" value="14">14</value></u:unit>
