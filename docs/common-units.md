@@ -20,6 +20,7 @@ reserved.
 
   - Version 1.5
   - Published 2020-06-17
+  - Revised 2024-06-12 only to correct misspellings of 'square'
 
 ## Download
 
