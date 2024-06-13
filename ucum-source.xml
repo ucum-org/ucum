@@ -690,7 +690,7 @@ The complete syntax in the Backus-Naur Form.
   </caption>
 </exhibit>
       <figure id="ucum-state-automaton">
-        <pixmap source="ucum-state-automaton.gif"/>
+        <pixmap source="https://github.com/ucum-org/ucum/blob/main/assets/images/ucum-state-automaton.gif"/>
         <caption>Pushdown-state automaton describing the syntax.</caption>
       </figure>
     </div2>
