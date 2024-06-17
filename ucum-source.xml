@@ -3120,6 +3120,7 @@
           <u:unit id="600521" Code="[car_Au]" CODE="[CAR_AU]" isMetric="no"><name>carat of gold alloys</name><printSymbol>ct<sub><r>Au</r></sub></printSymbol><property>mass fraction</property><value Unit="/24" UNIT="/24" value="1">1</value></u:unit>
           <u:unit id="600522" Code="[smoot]" CODE="[SMOOT]" isMetric="no"><name>Smoot</name><printSymbol></printSymbol><property>length</property><value Unit="[in_i]" UNIT="[IN_I]" value="67">67</value></u:unit>
           <u:unit id="600523" Code="[m/s2/Hz^(1/2)]" CODE="[M/S2/HZ^(1/2)]" isMetric="no"><name>meter per square seconds per square root of hertz</name><printSymbol></printSymbol><property>amplitude spectral density</property><value Unit="sqrt(1 m2/s4/Hz)" UNIT="SQRT(1 M2/S4/HZ)"><function name="sqrt" value="1" Unit="m2/s4/Hz"/></value></u:unit>
+          <u:unit id="600524" Code="[NTU]" CODE="[NTU]" isMetric="no"><name>Nephelometric Turbidity Unit</name><printSymbol></printSymbol><property>turbidity</property><value Unit="1" UNIT="1" value="1">1</value></u:unit>
           <u:unit id="600525" Code="[FNU]" CODE="[FNU]" isMetric="no"><name>Formazin Nephelometric Unit</name><printSymbol></printSymbol><property>turbidity</property><value Unit="1" UNIT="1" value="1">1</value></u:unit>
         </u:units>
         
