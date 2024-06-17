@@ -56,12 +56,12 @@
 <!ENTITY UCUM  "<i>Unified Code for Units of Measure</i>"> 
 <!ENTITY TUCUM  "<i>The Unified Code for Units of Measure</i>"> 
 ]>
-<spec xmlns:u="http://aurora.regenstrief.org/UCUM">
+<spec xmlns:u="https://ucum.org">
   <header>
     <title>The Unified Code for Units of Measure</title>
     <version>2.2</version>
-    <revision>N/A</revision>
-    <date>2024-06-14 16:03:00 -0400</date>
+    <revision>$Revision$</revision>
+    <date>$Date$</date>
     <authlist>
       <author>
         <name>Gunther Schadow</name>
@@ -3821,7 +3821,7 @@
             <td/>
             <td>femtomole</td>
             <td/>
-            <td>602213670</td>
+            <td>602214076</td>
             <td>1</td>
             <td/>
           </tr>
@@ -5035,7 +5035,7 @@
             <td/>
             <td>nanokatal</td>
             <td/>
-            <td>602213670000000</td>
+            <td>602214076000000</td>
             <td>s-1</td>
             <td/>
           </tr>
@@ -5053,7 +5053,7 @@
             <td/>
             <td>nanomole per second</td>
             <td/>
-            <td>602213670000000</td>
+            <td>602214076000000</td>
             <td>s-1</td>
             <td/>
           </tr>
@@ -5134,7 +5134,7 @@
             <td/>
             <td>picokatal</td>
             <td/>
-            <td>602213670000</td>
+            <td>602214076000</td>
             <td>s-1</td>
             <td/>
           </tr>
@@ -5152,7 +5152,7 @@
             <td/>
             <td>picomole</td>
             <td/>
-            <td>602213670000</td>
+            <td>602214076000</td>
             <td>1</td>
             <td/>
           </tr>
