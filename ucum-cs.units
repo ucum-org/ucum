@@ -1,5 +1,5 @@
 #
-# Copyright (c) 1998-2002 Regenstrief Institute.  All rights reserved.
+# Copyright (c) 1998-2024 Regenstrief Institute.  All rights reserved.
 #
 # This program is free software; you can redistribute it and/or modify
 # it under the terms of the GNU General Public License as published by
@@ -22,7 +22,7 @@
 # This file is generated automatically. Please refer to the original
 # UCUM specification at
 #
-#               http://aurora.rg.iupui.edu/UCUM
+#               https://ucum.org
 #
 case sensitive
 prefix Y 1e24
