@@ -56,7 +56,7 @@
 <!ENTITY UCUM  "<i>Unified Code for Units of Measure</i>"> 
 <!ENTITY TUCUM  "<i>The Unified Code for Units of Measure</i>"> 
 ]>
-<spec xmlns:u="https://ucum.org">
+<spec xmlns:u="http://aurora.regenstrief.org/UCUM">
   <header>
     <title>The Unified Code for Units of Measure</title>
     <version>2.2</version>
