@@ -1,5 +1,5 @@
 #
-# Copyright (c) 1998-2002 Regenstrief Institute.  All rights reserved.
+# Copyright (c) 1998-2024 Regenstrief Institute.  All rights reserved.
 #
 # This program is free software; you can redistribute it and/or modify
 # it under the terms of the GNU General Public License as published by
@@ -22,7 +22,7 @@
 # This file is generated automatically. Please refer to the original
 # UCUM specification at
 #
-#               http://aurora.rg.iupui.edu/UCUM
+#               https://ucum.org
 #
 case insensitive
 prefix YA 1e24
@@ -65,7 +65,7 @@ base CD
 [PPM] = 1 10*-6 nonmetric  # parts per million
 [PPB] = 1 10*-9 nonmetric  # parts per billion
 [PPTR] = 1 10*-12 nonmetric  # parts per trillion
-MOL = 6.0221367 10*23 metric  # mole
+MOL = 6.02214076 10*23 metric  # mole
 SR = 1 rad2 metric  # steradian
 HZ = 1 s-1 metric  # hertz
 N = 1 kg.m/s2 metric  # newton
@@ -91,7 +91,7 @@ DEG = 2 [pi].rad/360 nonmetric  # degree
 ' = 1 deg/60 nonmetric  # minute
 '' = 1 '/60 nonmetric  # second
 L = 1 dm3 metric  # liter
- = 1 l metric  # liter
+L = 1 l metric  # liter
 AR = 100 m2 metric  # are
 MIN = 60 s nonmetric  # minute
 HR = 60 min nonmetric  # hour
@@ -107,19 +107,19 @@ MO_G = 1 a_g/12 nonmetric  # mean Gregorian month
 MO = 1 mo_j nonmetric  # month
 TNE = 1e3 kg metric  # tonne
 BAR = 1e5 Pa metric  # bar
-AMU = 1.6605402e-24 g metric  # unified atomic mass unit
+AMU = 1.66053906660e-24 g metric  # unified atomic mass unit
 EV = 1 [e].V metric  # electronvolt
 ASU = 149597.870691 Mm nonmetric  # astronomic unit
 PRS = 3.085678e16 m metric  # parsec
 [C] = 299792458 m/s metric  # velocity of light
-[H] = 6.6260755e-34 J.s metric  # Planck constant
-[K] = 1.380658e-23 J/K metric  # Boltzmann constant
+[H] = 6.62607015e-34 J.s metric  # Planck constant
+[K] = 1.380649e-23 J/K metric  # Boltzmann constant
 [EPS_0] = 8.854187817e-12 F/m metric  # permittivity of vacuum
 [MU_0] = 1 4.[pi].10*-7.N/A2 metric  # permeability of vacuum
-[E] = 1.60217733e-19 C metric  # elementary charge
-[M_E] = 9.1093897e-28 g metric  # electron mass
-[M_P] = 1.6726231e-24 g metric  # proton mass
-[GC] = 6.67259e-11 m3.kg-1.s-2 metric  # Newtonian constant of gravitation
+[E] = 1.602176634e-19 C metric  # elementary charge
+[M_E] = 9.1093837139e-31 g metric  # electron mass
+[M_P] = 1.67262192595e-27 kg metric  # proton mass
+[GC] = 6.67430e-11 m3.kg-1.s-2 metric  # Newtonian constant of gravitation
 [G] = 980665e-5 m/s2 metric  # standard acceleration of free fall
 ATM = 101325 Pa nonmetric  # standard atmosphere
 [LY] = 1 [c].a_j metric  # light-year
@@ -190,7 +190,7 @@ ROE = 2.58e-4 C/kg metric  # Roentgen
 [NMI_BR] = 6080 [ft_br] nonmetric  # nautical mile
 [KN_BR] = 1 [nmi_br]/h nonmetric  # knot
 [ACR_BR] = 4840 [yd_br]2 nonmetric  # acre
-[GAL_US] = 231 [in_i]3 nonmetric  # Queen Anne's wine gallon
+[GAL_US] = 231 [in_i]3 nonmetric  # Queen Anne's wine gallon
 [BBL_US] = 42 [gal_us] nonmetric  # barrel
 [QT_US] = 1 [gal_us]/4 nonmetric  # quart
 [PT_US] = 1 [qt_us]/2 nonmetric  # pint
@@ -225,7 +225,7 @@ ROE = 2.58e-4 C/kg metric  # Roentgen
 [OZ_AV] = 1 [lb_av]/16 nonmetric  # ounce
 [DR_AV] = 1 [oz_av]/16 nonmetric  # dram
 [SCWT_AV] = 100 [lb_av] nonmetric  # short hundredweight
-[LCWT_AV] = 112 [lb_av] nonmetric  # long hunderdweight
+[LCWT_AV] = 112 [lb_av] nonmetric  # long hundredweight
 [STON_AV] = 20 [scwt_av] nonmetric  # short ton
 [LTON_AV] = 20 [lcwt_av] nonmetric  # long ton
 [STONE_AV] = 14 [lb_av] nonmetric  # stone
@@ -250,16 +250,16 @@ ROE = 2.58e-4 C/kg metric  # Roentgen
 [DEGF] =  degf(5 K/9) nonmetric  # degree Fahrenheit
 [degR] = 5 K/9 nonmetric  # degree Rankine
 [degRe] =  degre(5 K/4) nonmetric  # degree Réaumur
-CAL_[15] = 4.18580 J metric  # calorie at 15 °C
-CAL_[20] = 4.18190 J metric  # calorie at 20 °C
+CAL_[15] = 4.18580 J metric  # calorie at 15 °C
+CAL_[20] = 4.18190 J metric  # calorie at 20 °C
 CAL_M = 4.19002 J metric  # mean calorie
 CAL_IT = 4.1868 J metric  # international table calorie
 CAL_TH = 4.184 J metric  # thermochemical calorie
 CAL = 1 cal_th metric  # calorie
 [CAL] = 1 kcal_th nonmetric  # nutrition label Calories
-[BTU_39] = 1.05967 kJ nonmetric  # British thermal unit at 39 °F
-[BTU_59] = 1.05480 kJ nonmetric  # British thermal unit at 59 °F
-[BTU_60] = 1.05468 kJ nonmetric  # British thermal unit at 60 °F
+[BTU_39] = 1.05967 kJ nonmetric  # British thermal unit at 39 °F
+[BTU_59] = 1.05480 kJ nonmetric  # British thermal unit at 59 °F
+[BTU_60] = 1.05468 kJ nonmetric  # British thermal unit at 60 °F
 [BTU_M] = 1.05587 kJ nonmetric  # mean British thermal unit
 [BTU_IT] = 1.05505585262 kJ nonmetric  # international table British thermal unit
 [BTU_TH] = 1.054350 kJ nonmetric  # thermochemical British thermal unit
@@ -304,7 +304,7 @@ KAT = 1 mol/s metric  # katal
 U = 1 umol/min metric  # Unit
 [IU] = 1 1 metric  #  arbitrary international unit
 [IU] = 1 [iU] metric  #  arbitrary international unit
-[ARB'U] = 1 1 nonmetric  #  arbitrary arbitary unit
+[ARB'U] = 1 1 nonmetric  #  arbitrary arbitrary unit
 [USP'U] = 1 1 nonmetric  #  arbitrary United States Pharmacopeia unit
 [GPL'U] = 1 1 nonmetric  #  arbitrary GPL unit
 [MPL'U] = 1 1 nonmetric  #  arbitrary MPL unit
@@ -349,13 +349,14 @@ AO = 0.1 nm nonmetric  # Ångström
 BRN = 100 fm2 nonmetric  # barn
 ATT = 1 kgf/cm2 nonmetric  # technical atmosphere
 MHO = 1 S metric  # mho
-[PSI] = 1 [lbf_av]/[in_i]2 nonmetric  # pound per sqare inch
+[PSI] = 1 [lbf_av]/[in_i]2 nonmetric  # pound per square inch
 CIRC = 2 [pi].rad nonmetric  # circle
-SPH = 4 [pi].sr nonmetric  # spere
+SPH = 4 [pi].sr nonmetric  # sphere
 [CAR_M] = 2e-1 g nonmetric  # metric carat
 [CAR_AU] = 1 /24 nonmetric  # carat of gold alloys
 [SMOOT] = 67 [in_i] nonmetric  # Smoot
 [M/S2/HZ^(1/2)] =  sqrt(1 m2/s4/Hz) nonmetric  # meter per square seconds per square root of hertz
+[FNU] = 1 1 nonmetric  # Formazin Nephelometric Unit
 BIT_S =  ld(1 1) nonmetric  # bit
 BIT = 1 1 metric  # bit
 BY = 8 bit metric  # byte
