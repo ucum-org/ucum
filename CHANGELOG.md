@@ -2,7 +2,21 @@
 
 All notable changes to this project will be documented in this file.
 
-The following has been ported from a legacy system and may not be formatted correctly.
+Updates prior to v2.2 were ported from a legacy system and may not be formatted correctly.
+
+## Version 2.2 (June 2024)
+
+This new version addresses a number of typographical errors, updates to constants, and adds two new units. Below is a summary of significant changes.
+
+- Added [NTU] for Nephelometric Turbidity Unit
+- Added [FNU] for Formazin Turbidity Unit
+- Updated Newtonian constant of gravitation
+- Updated proton mass
+- Updated electron mass
+- Updated Boltzmann constant
+- Updated elementary charge
+- Updated Avogadro's constant and associated values including atomic mass constant
+- Updated vacuum electric permittivity
 
 ## Version 2.1
 
