@@ -1997,6 +1997,12 @@
          <function name="sqrt" value="1" Unit="m2/s4/Hz"/>
       </value>
    </unit>
+   <unit Code="[NTU]" CODE="[NTU]" isMetric="no" class="misc">
+      <name>Nephelometric Turbidity Unit</name>
+      <printSymbol/>
+      <property>turbidity</property>
+      <value Unit="1" UNIT="1" value="1">1</value>
+   </unit>
    <unit Code="[FNU]" CODE="[FNU]" isMetric="no" class="misc">
       <name>Formazin Nephelometric Unit</name>
       <printSymbol/>

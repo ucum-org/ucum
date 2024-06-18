@@ -356,6 +356,7 @@ sph = 4 [pi].sr nonmetric  # sphere
 [car_Au] = 1 /24 nonmetric  # carat of gold alloys
 [smoot] = 67 [in_i] nonmetric  # Smoot
 [m/s2/Hz^(1/2)] =  sqrt(1 m2/s4/Hz) nonmetric  # meter per square seconds per square root of hertz
+[NTU] = 1 1 nonmetric  # Nephelometric Turbidity Unit
 [FNU] = 1 1 nonmetric  # Formazin Nephelometric Unit
 bit_s =  ld(1 1) nonmetric  # bit
 bit = 1 1 metric  # bit
