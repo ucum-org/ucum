@@ -563,7 +563,7 @@
          </i>
       </printSymbol>
       <property>mass</property>
-      <value Unit="g" UNIT="g" value="9.1093837139e-31">9.1093837139 &#215; 10<sup>-31</sup>
+      <value Unit="kg" UNIT="kg" value="9.1093837139e-31">9.1093837139 &#215; 10<sup>-31</sup>
       </value>
    </unit>
    <unit Code="[m_p]" CODE="[M_P]" isMetric="yes" class="const">
