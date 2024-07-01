@@ -563,7 +563,7 @@
          </i>
       </printSymbol>
       <property>mass</property>
-      <value Unit="g" UNIT="g" value="9.1093837139e-31">9.1093837139 &#215; 10<sup>-31</sup>
+      <value Unit="kg" UNIT="kg" value="9.1093837139e-31">9.1093837139 &#215; 10<sup>-31</sup>
       </value>
    </unit>
    <unit Code="[m_p]" CODE="[M_P]" isMetric="yes" class="const">
@@ -1996,6 +1996,12 @@
       <value Unit="sqrt(1 m2/s4/Hz)" UNIT="SQRT(1 M2/S4/HZ)">
          <function name="sqrt" value="1" Unit="m2/s4/Hz"/>
       </value>
+   </unit>
+   <unit Code="[NTU]" CODE="[NTU]" isMetric="no" class="misc">
+      <name>Nephelometric Turbidity Unit</name>
+      <printSymbol/>
+      <property>turbidity</property>
+      <value Unit="1" UNIT="1" value="1">1</value>
    </unit>
    <unit Code="[FNU]" CODE="[FNU]" isMetric="no" class="misc">
       <name>Formazin Nephelometric Unit</name>
