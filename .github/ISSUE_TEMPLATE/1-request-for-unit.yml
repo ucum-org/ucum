@@ -4,28 +4,28 @@ labels: ["new unit"]
 body:
   - type: input
     id: display-name
-    attributions:
+    attributes:
       label: Name of unit
       description: Enter the full name of the unit, e.g., meter, quart, British thermal unit, degree Celsius.
     validations:
       required: true
   - type: input
     id: kind-of-quantity
-    attributions:
+    attributes:
       label: Kind of quantity
       description: Enter the property the unit is measuring, e.g., length, fluid volume, energy, temperature.
     validations:
       required: true
   - type: textarea
     id: description
-    attributions:
+    attributes:
       label: Description
       description: Describe the use of this unit. Is it specific to a particular industry or jurisdiction? We encourage you to include URLs to references.
     validations:
       required: true
   - type: dropdown
     id: metric
-    attributiosn:
+    attributes:
       label: Metric
       description: Indicate if this unit is metric, i.e., it may be prefixed with the standard metric prefixes (e.g., milli-, centi-, deci-) in Section 4.1 of the specification.
       options:
@@ -35,35 +35,35 @@ body:
       required: true
   - type: input
     id: cs-unit
-    attributions:
+    attributes:
       label: Unit (case sensitive)
       description: Following Section 2 [Grammar of Units and Unit Terms](https://ucum.org/ucum#section-Grammar-of-Units-and-Unit-Terms) in the specification, how should this unit be referenced in case-sensitive ASCII characters?
     validations:
       required: true
   - type: input
     id: ci-unit
-    attributions:
+    attributes:
       label: Unit (case insensitive)
       description: In the context of the above, how should this unit be referenced in case-insensitive ASCII characters, i.e. ALL CAPS?
     validations:
       required: true
   - type: input
     id: print
-    attributions:
+    attributes:
       label: Print display of unit
       description: The accepted display of the unit in most contexts, e.g, m, btu, °C.
     validations:
       required: false
   - type: input
     id: def-unit
-    attributions:
+    attributes:
       label: Definition unit
       description: This unit is used in conjunction with the following value. Indicate which other UCUM unit shall be used to define this new unit, e.g., an inch is defined in terms of cm, a foot is defined in terms of [in_i].
     validations:
       required: true
   - type: input
     id: def-value
-    attributions:
+    attributes:
       label: Definition value
       description: This value is used in conjunction with the previous unit. Indicate the value used to define the new unit, e.g., an inch is equal to 2.54 (cm), a foot is 12 (inches) [in_i].
     validations:
