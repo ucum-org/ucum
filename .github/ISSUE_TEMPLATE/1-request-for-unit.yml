@@ -29,8 +29,8 @@ body:
       label: Metric
       description: Indicate if this unit is metric, i.e., it may be prefixed with the standard metric prefixes (e.g., milli-, centi-, deci-) in Section 4.1 of the specification.
       options:
-        - Yes
-        - No
+        - "Yes"
+        - "No"
     validations:
       required: true
   - type: input
