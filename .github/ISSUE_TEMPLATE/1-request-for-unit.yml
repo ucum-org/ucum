@@ -1,6 +1,7 @@
 name: Request for a new unit
 description: Use this form to suggest a new unit be added to UCUM. We may follow up with a request for more information. Please use English (US) as the language for all descriptive text.
-labels: ["new unit"]
+labels: ["⏱️evaluating"]
+type: "unit"
 body:
   - type: input
     id: display-name
