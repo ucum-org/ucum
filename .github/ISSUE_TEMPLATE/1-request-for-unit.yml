@@ -68,3 +68,10 @@ body:
       description: This value is used in conjunction with the previous unit. Indicate the value used to define the new unit, e.g., an inch is equal to 2.54 (cm), a foot is 12 (inches) [in_i].
     validations:
       required: true
+  - type: input
+    id: notes
+    attributes:
+      label: Comments
+      description: Include any notes that have not been captured in previous items.
+    validations:
+      required: false
