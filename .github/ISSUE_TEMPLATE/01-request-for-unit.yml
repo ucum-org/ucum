@@ -1,5 +1,6 @@
 name: Request for a new unit
-description: Use this form to suggest a new unit be added to UCUM. We may follow up with a request for more information. Please use English (US) as the language for all descriptive text.
+title: "New unit request: "
+description: Use this form to suggest a new base unit be added to UCUM. Please use English (US) as the language for all descriptive text. Append the Issue Title placeholder text with the name of your unit.
 labels: ["⏱️evaluating"]
 type: "unit"
 body:
