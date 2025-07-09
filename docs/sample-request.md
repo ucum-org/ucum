@@ -31,6 +31,9 @@ A phot (ph) is a photometric unit of illuminance, or luminous flux through an ar
 
 Phot (ph) is a unit in the category of Illuminance. It is also known as phots. This unit is commonly used in the cgs unit system. [efunda](https://www.efunda.com/glossary/units/units--illuminance--phot.cfm)
 
+Among the nonmetric units still in use are the following:
+Illuminance, the amount of light falling (incident) on a surface, is occasionally measured in footcandles, where 1 footcandle (fc) = 1 lm/ft2 and 10.76 fc = 1 lx. Also, 1 phot = 1 lm/cm2; and 105 phot = 1 lx. The Troland is a unit for the illuminance on the retina from a source with 1 cd/m2 luminance, viewed through an artificial pupil of 1 cm2. [Science Direct](https://www.sciencedirect.com/topics/engineering/phot)
+
 ## Metric
 
 Yes
