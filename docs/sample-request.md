@@ -7,7 +7,7 @@ A request for a new base unit to be added to the UCUM specification should be se
 
 The resulting form will ask for information necessary to represent the unit within the specification. We recommend you also include a justification for inclusion. Once the request is received, it will be evaluated by Regenstrief Institute. Barring any issues such as duplication or missing information, the request will then be entertained by the UCUM Committee at an upcoming meeting of the group.
 
-The following is a sample request using Phot (Lmb), a unit of illuminance already included in the specification. It may help illustrate use of the request form.
+The following is a sample request using Phot (ph), a unit of illuminance already included in the specification. It may help illustrate use of the request form.
 
 ## Title
 
