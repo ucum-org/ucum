@@ -1,1 +1,1 @@
-See documentation at [/docs/common-units.md](../docs/common-units.md)
+See [related documentation](https://ucum.org/docs/common-units).
