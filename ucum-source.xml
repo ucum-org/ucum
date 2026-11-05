@@ -1704,6 +1704,13 @@
             normative. Full name and print symbol are defined by ISO&nbsp;1000 and are
             out of scope of &TUCUM;.
           </verse>
+
+          <verse>
+            Numerical values assigned to constants are informative, provided for convenience and 
+            utility in conversions, and reflect values accurate to current knowledge and 
+            authoritative resources at the time of publication.
+          </verse>
+
         </p>
         
         <u:units id="const">
