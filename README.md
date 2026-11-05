@@ -1,8 +1,8 @@
 # Unified Code for Units of Measure (UCUM)
 
-The Unified Code for Units of Measure (UCUM) is a code system intended to include all units of measures being contemporarily used in international science, engineering, and business. The purpose is to facilitate unambiguous electronic communication of quantities together with their units. The focus is on electronic communication, as opposed to communication between humans. A typical application of The Unified Code for Units of Measure are electronic data interchange (EDI) protocols, but there is nothing that prevents it from being used in other types of machine communication. 
+The Unified Code for Units of Measure (UCUM) is a code system intended to include all units of measures being contemporarily used in international science, engineering, and business. The purpose is to facilitate unambiguous electronic communication of quantities together with their units. The focus is on electronic communication, as opposed to communication between humans. A typical application of The Unified Code for Units of Measure are electronic data interchange (EDI) protocols, but there is nothing that prevents it from being used in other types of machine communication.
 
-The UCUM website is [https://ucum.org](https://ucum.org).
+The UCUM website is [https://ucum.org](https://ucum.org). Artifacts within this repository are detailed at [https://ucum.org/docs/artifacts](https://ucum.org/docs/artifacts).
 
 ## New version 2.3
 
