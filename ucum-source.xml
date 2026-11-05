@@ -1564,7 +1564,7 @@
           <u:unit id="200180" Code="bar" CODE="BAR" isMetric="yes"><name>bar</name><printSymbol>bar</printSymbol><property>pressure</property><value Unit="Pa" UNIT="PAL" value="1e5">1 &mult; 10<sup>5</sup></value></u:unit>
           <u:unit id="200210" Code="u" CODE="AMU" isMetric="yes"><name>unified atomic mass unit</name><printSymbol>u</printSymbol><property>mass</property><value Unit="g" UNIT="G" value="1.66053906660e-24">1.66053906660 &mult; 10<sup>-24</sup></value></u:unit>
           <u:unit id="200200" Code="eV" CODE="EV" isMetric="yes"><name>electronvolt</name><printSymbol>eV</printSymbol><property>energy</property><value Unit="[e].V" UNIT="[E].V" value="1">1</value></u:unit>
-          <u:unit id="200220" Code="AU" CODE="ASU" isMetric="no"><name>astronomic unit</name><printSymbol>AU</printSymbol><property>length</property><value Unit="Mm" UNIT="MAM" value="149597.870691">149597.870691</value></u:unit>
+          <u:unit id="200220" Code="AU" CODE="ASU" isMetric="no"><name>astronomic unit</name><printSymbol>AU</printSymbol><property>length</property><value Unit="m" UNIT="M" value="149597870700">149597870700</value></u:unit>
           <u:unit id="200230" Code="pc" CODE="PRS" isMetric="yes"><name>parsec</name><printSymbol>pc</printSymbol><property>length</property><value Unit="m" UNIT="M" value="3.085678e16">3.085678 &mult; 10<sup>16</sup></value></u:unit>
         </u:units>
         <comment>
