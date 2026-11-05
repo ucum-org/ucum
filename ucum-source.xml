@@ -2754,6 +2754,7 @@
           <u:unit id="600718" Code="[FEU]" CODE="[FEU]" isMetric="no" isArbitrary="yes"><name>fibrinogen equivalent unit</name><printSymbol/><property>amount of fibrinogen broken down into the measured d-dimers</property><value Unit="1" UNIT="1" value="1">1</value></u:unit>
           <u:unit id="600720" Code="[ELU]" CODE="[ELU]" isMetric="no" isArbitrary="yes"><name>ELISA unit</name><printSymbol/><property>arbitrary ELISA unit</property><value Unit="1" UNIT="1" value="1">1</value></u:unit>
           <u:unit id="600721" Code="[EU]" CODE="[EU]" isMetric="no" isArbitrary="yes"><name>Ehrlich unit</name><printSymbol/><property>Ehrlich unit</property><value Unit="1" UNIT="1" value="1">1</value></u:unit>
+          <u:unit id="600722" Code="D" CODE="DEB" isMetric="yes"><name>debye</name><printSymbol>D</printSymbol><property>electric dipole moment</property><value Unit="C.m" UNIT="C.M" value="3.33564e-30">3.33564 &mult; 10<sup>-30</sup></value></u:unit>
         </u:units>
         
         <comment>
