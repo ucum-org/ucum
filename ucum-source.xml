@@ -3140,6 +3140,12 @@
             <property>hardness</property>
             <value Unit="1" UNIT="1" value="1">1</value>
           </u:unit>
+          <u:unit id="600733" Code="[Torr]" CODE="[TORR]" isMetric="yes">
+            <name>Torr</name>
+            <printSymbol>Torr</printSymbol>
+            <property>pressure</property>
+            <value Unit="atm/760" UNIT="ATM/760" value="1">1</value>
+          </u:unit>
         </u:units>
         
         <comment>
