@@ -2600,6 +2600,7 @@
           <u:unit id="600547" Code="[kp_C]" CODE="[KP_C]" isMetric="no" isArbitrary="yes"><name>homeopathic potency of centesimal korsakovian series</name><printSymbol>C</printSymbol><property>homeopathic potency (Korsakov)</property><value Unit="1" UNIT="1" value="1">1</value></u:unit>
           <u:unit id="600548" Code="[kp_M]" CODE="[KP_M]" isMetric="no" isArbitrary="yes"><name>homeopathic potency of millesimal korsakovian series</name><printSymbol>M</printSymbol><property>homeopathic potency (Korsakov)</property><value Unit="1" UNIT="1" value="1">1</value></u:unit>
           <u:unit id="600549" Code="[kp_Q]" CODE="[KP_Q]" isMetric="no" isArbitrary="yes"><name>homeopathic potency of quintamillesimal korsakovian series</name><printSymbol>Q</printSymbol><property>homeopathic potency (Korsakov)</property><value Unit="1" UNIT="1" value="1">1</value></u:unit>
+          <u:unit id="600550" Code="[UA]" CODE="[UA]" isMetric="yes" isArbitrary="yes"><name>allergen unit</name><printSymbol>UA</printSymbol><property>arbitrary</property><value Unit="1" UNIT="1" value="1">1</value></u:unit>
         </u:units>
         
         <comment>
