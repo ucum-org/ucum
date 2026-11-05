@@ -1229,6 +1229,12 @@
             &ldquo;value,&rdquo; are normative. Full name and print symbol are
             defined by the CGPM and are out of scope of &TUCUM;.
           </verse>
+
+          <verse>
+            The order in which unit definitions appear within the tables or 
+            artifact files is not normative and carries no semantic or 
+            definitional precedence.
+          </verse>
         </p>
         <comment>
           <p>
