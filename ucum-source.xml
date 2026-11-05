@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<!-- COPYRIGHT 1998-2024, REGENSTRIEF INSTITUTE, INC. AND THE UCUM ORGANIZATION ALL RIGHTS RESERVED.
+<!-- COPYRIGHT REGENSTRIEF INSTITUTE, INC. AND THE UCUM ORGANIZATION ALL RIGHTS RESERVED.
      
      Use and redistribution of this data is permitted without charge
      as long as you make no changes to it. DO NOT CHANGE THIS FILE if 
@@ -1382,7 +1382,7 @@
           
           <verse> There are seven columns titled &ldquo;name,&rdquo;
             &ldquo;print,&rdquo; &ldquo;c/s,&rdquo; &ldquo;c/i,&rdquo;
-            &ldquo;M,&rdquo; &ldquo;value,&rdquo; and &ldquo;definition.&rdquo;
+            &ldquo;M,&rdquo; &ldquo;definition value,&rdquo; and &ldquo;definition unit.&rdquo;
             The name is the full (official) name of the unit. The symbol
             recommended for use in print is listed in the column
             &ldquo;print.&rdquo; &ldquo;C/s,&rdquo; and &ldquo;c/i&rdquo; list the
@@ -1396,7 +1396,7 @@
           
           <verse>
             Only the columns titled &ldquo;c/s,&rdquo; &ldquo;c/i,&rdquo;
-            &ldquo;M,&rdquo; &ldquo;value,&rdquo; and &ldquo;definition&rdquo; are
+            &ldquo;M,&rdquo; &ldquo;definition value,&rdquo; and &ldquo;definition unit&rdquo; are
             normative. Full name and print symbol are out of scope of &TUCUM;.
           </verse>
           
@@ -1451,7 +1451,7 @@
           
           <verse> There are seven columns titled &ldquo;name,&rdquo;
             &ldquo;print,&rdquo; &ldquo;c/s,&rdquo; &ldquo;c/i,&rdquo;
-            &ldquo;M,&rdquo; &ldquo;value,&rdquo; and &ldquo;definition.&rdquo;
+            &ldquo;M,&rdquo; &ldquo;definition value,&rdquo; and &ldquo;definition unit.&rdquo;
             The name is the full (official) name of the unit. The symbol
             recommended for use in print is listed in the column
             &ldquo;print.&rdquo; &ldquo;C/s,&rdquo; and &ldquo;c/i&rdquo; list the
@@ -1466,7 +1466,7 @@
           
           <verse>
             Only the columns titled &ldquo;c/s,&rdquo; &ldquo;c/i,&rdquo;
-            &ldquo;M,&rdquo; &ldquo;value,&rdquo; and &ldquo;definition&rdquo; are
+            &ldquo;M,&rdquo; &ldquo;definition value,&rdquo; and &ldquo;definition unit&rdquo; are
             normative. Full name and print symbol are defined by the CGPM and are
             out of scope of &TUCUM;.
           </verse>
@@ -1532,7 +1532,7 @@
           
           <verse>
             Only the columns titled &ldquo;c/s,&rdquo; &ldquo;c/i,&rdquo;
-            &ldquo;M,&rdquo; &ldquo;value,&rdquo; and &ldquo;definition&rdquo; are
+            &ldquo;M,&rdquo; &ldquo;definition value,&rdquo; and &ldquo;definition unit&rdquo; are
             normative. Full name and print symbol are defined by ISO&nbsp;1000 and are
             out of scope of &TUCUM;.
           </verse>
@@ -1694,7 +1694,7 @@
           
           <verse>
             Only the columns titled &ldquo;c/s,&rdquo; &ldquo;c/i,&rdquo;
-            &ldquo;M,&rdquo; &ldquo;value,&rdquo; and &ldquo;definition&rdquo; are
+            &ldquo;M,&rdquo; &ldquo;definition value,&rdquo; and &ldquo;definition unit&rdquo; are
             normative. Full name and print symbol are defined by ISO&nbsp;1000 and are
             out of scope of &TUCUM;.
           </verse>
@@ -1752,7 +1752,7 @@
           
           <verse>
             Only the columns titled &ldquo;c/s,&rdquo; &ldquo;c/i,&rdquo;
-            &ldquo;M,&rdquo; &ldquo;value,&rdquo; and &ldquo;definition&rdquo; are
+            &ldquo;M,&rdquo; &ldquo;definition value,&rdquo; and &ldquo;definition unit&rdquo; are
             normative. Full name and print symbol are out of scope of &TUCUM;.
           </verse>
         </p>
@@ -1930,7 +1930,7 @@
           
           <verse>
             Only the columns titled &ldquo;c/s,&rdquo; &ldquo;c/i,&rdquo;
-            &ldquo;M,&rdquo; &ldquo;value,&rdquo; and &ldquo;definition&rdquo; are
+            &ldquo;M,&rdquo; &ldquo;definition value,&rdquo; and &ldquo;definition unit&rdquo; are
             normative. The full name is out of scope of &TUCUM;.
           </verse>
           
@@ -2022,7 +2022,7 @@
           </verse>
           
           <verse>
-            The meaning of the columns is declared in <pref ref="para-custint"/>.
+            The meaning of the columns is declared in <pref ref="para-si" verse="2"/>.
           </verse>
           
           <smallref>
@@ -2072,7 +2072,7 @@
           </verse>
           
           <verse>
-            The meaning of the columns is declared in  <pref ref="para-custint"/>.
+            The meaning of the columns is declared in  <pref ref="para-si" verse="2"/>.
           </verse>
         </p>
         
@@ -2120,7 +2120,7 @@
           </verse>
           
           <verse>
-            The meaning of the columns is declared in <pref ref="para-custint"/>.
+            The meaning of the columns is declared in <pref ref="para-si" verse="2"/>.
           </verse>
         </p>
         <u:units id="us-volumes" omit="printSymbol">
@@ -2187,7 +2187,7 @@
           </verse>
           
           <verse>
-            The meaning of the columns is declared in  <pref ref="para-custint"/>.
+            The meaning of the columns is declared in  <pref ref="para-si" verse="2"/>.
           </verse>
         </p>
         
@@ -2240,7 +2240,7 @@
           </verse>
           
           <verse>
-            The meaning of the columns is declared in  <pref ref="para-custint"/>.
+            The meaning of the columns is declared in  <pref ref="para-si" verse="2"/>.
           </verse>
         </p>
         <comment>
@@ -2273,7 +2273,7 @@
           </verse>
           
           <verse>
-            The meaning of the columns is declared in  <pref ref="para-custint"/>.
+            The meaning of the columns is declared in  <pref ref="para-si" verse="2"/>.
           </verse>
         </p>
         <comment>
@@ -2315,7 +2315,7 @@
           </verse>
           
           <verse>
-            The meaning of the columns is declared in  <pref ref="para-custint"/>.
+            The meaning of the columns is declared in  <pref ref="para-si" verse="2"/>.
           </verse>
         </p>
         <u:units id="apoth" omit="printSymbol">
@@ -2353,7 +2353,7 @@
           </verse>
           
           <verse>
-            The meaning of the columns is declared in <pref ref="para-custint"/>.
+            The meaning of the columns is declared in <pref ref="para-si" verse="2"/>.
           </verse>
         </p>
         
@@ -2407,7 +2407,7 @@
           
           <verse>
             Only the columns titled &ldquo;c/s,&rdquo; &ldquo;c/i,&rdquo;
-            &ldquo;M,&rdquo; &ldquo;value,&rdquo; and &ldquo;definition&rdquo; are
+            &ldquo;M,&rdquo; &ldquo;definition value,&rdquo; and &ldquo;definition unit&rdquo; are
             normative. Full name and print symbol are either not standardized or
             standardized by other bodies and are out of scope of &TUCUM;.
           </verse>
@@ -2529,7 +2529,7 @@
           </verse>
           
           <verse>
-            The meaning of the columns is declared in  <pref ref="para-custint"/>.
+            The meaning of the columns is declared in <pref ref="para-si" verse="2"/>.
           </verse>
           
           <verse>
@@ -3096,7 +3096,7 @@
           
           <verse>
             Only the columns titled &ldquo;c/s,&rdquo; &ldquo;c/i,&rdquo;
-            &ldquo;M,&rdquo; &ldquo;value,&rdquo; and &ldquo;definition&rdquo; are
+            &ldquo;M,&rdquo; &ldquo;definition value,&rdquo; and &ldquo;definition unit&rdquo; are
             normative. Full name and print symbol are either not standardized or
             standardized by other bodies and are out of scope of &TUCUM;.
           </verse>
@@ -3213,9 +3213,15 @@
           </verse>
           
           <verse> 
-            The meaning of the columns is declared in <pref ref="para-pfx" verse="2"/>.
+            There are five columns titled &ldquo;name,&rdquo; &ldquo;print,&rdquo; 
+            &ldquo;c/s,&rdquo; &ldquo;c/i,&rdquo; and &ldquo;value.&rdquo; The name 
+            is the full (official) name of the prefix. The symbol recommended for 
+            use in print is listed in the column &ldquo;print.&rdquo; Columns 
+            &ldquo;c/s,&rdquo; and &ldquo;c/i&rdquo; list the symbol in the case 
+            sensitive and the case insensitive variants respectively. The value 
+            is the value by which the prefix-less unit atom would be multiplied to 
+            arrive at the value of the prefixed unit.
           </verse>
-          
           <verse>
             Only the columns titled &ldquo;c/s,&rdquo; &ldquo;c/i,&rdquo; and
             &ldquo;value,&rdquo; are normative. Full name and print symbol are out
