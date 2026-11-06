@@ -1974,7 +1974,7 @@
           <u:unit id="500060" Code="[mil_i]" CODE="[MIL_I]" isMetric="no"><name>mil</name><printSymbol>mil</printSymbol><property>length</property><value Unit="[in_i]" UNIT="[IN_I]" value="1e-3">1 &mult; 10<sup>-3</sup></value></u:unit>
           <u:unit id="500160" Code="[cml_i]" CODE="[CML_I]" isMetric="no"><name>circular mil</name><printSymbol>circ.mil</printSymbol><property>area</property><value Unit="[pi]/4.[mil_i]2" UNIT="[PI]/4.[MIL_I]2" value="1">1</value></u:unit>
           <u:unit id="500020" Code="[hd_i]" CODE="[HD_I]" isMetric="no"><name>hand</name><printSymbol>hd</printSymbol><property>height of horses</property><value Unit="[in_i]" UNIT="[IN_I]" value="4">4</value></u:unit>
-          <u:unit id="500712" Code="[acr_ft]" CODE="[ACR_FT]" isMetric="no"><name>acre-foot</name><printSymbol>ac&nbsp;ft</printSymbol><property>volume</property><value Unit="[acr_us].[ft_us]" UNIT="[ACR_US].[FT_US]" value="1">1</value></u:unit>        
+          <u:unit id="500712" Code="[acr_ft]" CODE="[ACR_FT]" isMetric="no"><name>acre-foot</name><printSymbol>ac&nbsp;ft</printSymbol><property>fluid volume</property><value Unit="[acr_us].[ft_us]" UNIT="[ACR_US].[FT_US]" value="1">1</value></u:unit>        
         </u:units>
         <comment>
           <p>
