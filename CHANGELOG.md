@@ -25,8 +25,8 @@ Updates prior to v2.2 were ported from a legacy system and may not be formatted 
 
 This new version addresses a number of typographical errors, updates to constants, and adds two new units. Below is a summary of significant changes.
 
-- Added [NTU] for Nephelometric Turbidity Unit
-- Added [FNU] for Formazin Turbidity Unit
+- Added `[NTU]` for Nephelometric Turbidity Unit
+- Added `[FNU]` for Formazin Turbidity Unit
 - Updated Newtonian constant of gravitation
 - Updated proton mass
 - Updated electron mass
