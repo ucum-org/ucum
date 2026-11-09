@@ -4,6 +4,10 @@ All notable changes to this project will be documented in this file.
 
 Updates prior to v2.2 were ported from a legacy system and may not be formatted correctly.
 
+## Version 2.3 (November 2026)
+
+ENUMERATE CHANGES HERE
+
 ## Version 2.2 (June 2024)
 
 This new version addresses a number of typographical errors, updates to constants, and adds two new units. Below is a summary of significant changes.
