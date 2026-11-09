@@ -1454,7 +1454,7 @@
             for those units are given in <tabref ref="si"/>.
           </verse>
           
-          <verse> There are seven columns titled &ldquo;name,&rdquo;
+          <verse> There are eight columns titled &ldquo;name,&rdquo;
             &ldquo;print,&rdquo; &ldquo;c/s,&rdquo; &ldquo;c/i,&rdquo;
             &ldquo;M,&rdquo; &ldquo;definition value,&rdquo; and &ldquo;definition unit.&rdquo;
             The name is the full (official) name of the unit. The symbol
