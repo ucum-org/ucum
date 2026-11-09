@@ -6,7 +6,20 @@ Updates prior to v2.2 were ported from a legacy system and may not be formatted 
 
 ## Version 2.3 (November 2026)
 
-ENUMERATE CHANGES HERE
+- Added Shore hardness scales #164
+- Added debye unit #396
+- Added `[UA]` to accommodate `k[UA]/L` #180
+- Added `[acr_ft]` for fluid volume #389
+- Added `[acr_i]` #390
+- Updated value for Astronomical Unit #400
+- Added back previously approved `[Torr]` #289
+- Move /docs directory to separate repository for ease in maintenance
+- Removed year range from copyright text
+- Addressed table heading discrepancies as reported in #267
+- Added explict note about definitional order #293
+- Added disclaimer regarding the value of constants
+- Updated GitHub issue templates #200
+- Miscellaneous text formatting changes
 
 ## Version 2.2 (June 2024)
 
