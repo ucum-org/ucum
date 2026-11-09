@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="ascii"?>
-<root xmlns="http://unitsofmeasure.org/ucum-essence" version="2.2" revision="N/A"
-      revision-date="2024-06-17">
+<root xmlns="http://unitsofmeasure.org/ucum-essence" version="2.3" revision="N/A"
+      revision-date="2026-11-12">
    <prefix Code="Y" CODE="YA">
       <name>yotta</name>
       <printSymbol>Y</printSymbol>
@@ -487,7 +487,7 @@
       <name>astronomic unit</name>
       <printSymbol>AU</printSymbol>
       <property>length</property>
-      <value Unit="Mm" UNIT="MAM" value="149597.870691">149597.870691</value>
+      <value Unit="m" UNIT="M" value="149597870700">149597870700</value>
    </unit>
    <unit Code="pc" CODE="PRS" isMetric="yes" class="iso1000">
       <name>parsec</name>
@@ -834,6 +834,17 @@
       <printSymbol>hd</printSymbol>
       <property>height of horses</property>
       <value Unit="[in_i]" UNIT="[IN_I]" value="4">4</value>
+   </unit>
+   <unit Code="[acr_ft]" CODE="[ACR_FT]" isMetric="no" class="intcust">
+      <name>acre-foot</name>
+      <printSymbol>ac&#160;ft</printSymbol>
+      <property>fluid volume</property>
+      <value Unit="[acr_us].[ft_us]" UNIT="[ACR_US].[FT_US]" value="1">1</value>
+   </unit>
+   <unit Code="[acr_i]" CODE="[ACR_I]" isMetric="no" class="intcust">
+      <name>acre</name>
+      <property>area</property>
+      <value Unit="[ft_i]2" UNIT="[FT_I]2" value="43560">43560</value>
    </unit>
    <unit Code="[ft_us]" CODE="[FT_US]" isMetric="no" class="us-lengths">
       <name>foot</name>
@@ -1591,6 +1602,12 @@
       <property>homeopathic potency (Korsakov)</property>
       <value Unit="1" UNIT="1" value="1">1</value>
    </unit>
+   <unit Code="[UA]" CODE="[UA]" isMetric="yes" isArbitrary="yes" class="clinical">
+      <name>allergen unit</name>
+      <printSymbol>UA</printSymbol>
+      <property>arbitrary</property>
+      <value Unit="1" UNIT="1" value="1">1</value>
+   </unit>
    <unit Code="eq" CODE="EQ" isMetric="yes" class="chemical">
       <name>equivalents</name>
       <printSymbol>eq</printSymbol>
@@ -1846,6 +1863,13 @@
       <property>Ehrlich unit</property>
       <value Unit="1" UNIT="1" value="1">1</value>
    </unit>
+   <unit Code="D" CODE="DEB" isMetric="yes" class="chemical">
+      <name>debye</name>
+      <printSymbol>D</printSymbol>
+      <property>electric dipole moment</property>
+      <value Unit="C.m" UNIT="C.M" value="3.33564e-30">3.33564 &#215; 10<sup>-30</sup>
+      </value>
+   </unit>
    <unit Code="Np" CODE="NEP" isMetric="yes" isSpecial="yes" class="levels">
       <name>neper</name>
       <printSymbol>Np</printSymbol>
@@ -2008,6 +2032,33 @@
       <printSymbol/>
       <property>turbidity</property>
       <value Unit="1" UNIT="1" value="1">1</value>
+   </unit>
+   <unit Code="[Shore_A_scale]" CODE="[SHORE_A_SCALE]" isMetric="no" isArbitrary="yes"
+         class="misc">
+      <name>Shore A hardness scale</name>
+      <printSymbol>Shore A</printSymbol>
+      <property>hardness</property>
+      <value Unit="1" UNIT="1" value="1">1</value>
+   </unit>
+   <unit Code="[Shore_D_scale]" CODE="[SHORE_D_SCALE]" isMetric="no" isArbitrary="yes"
+         class="misc">
+      <name>Shore D hardness scale</name>
+      <printSymbol>Shore D</printSymbol>
+      <property>hardness</property>
+      <value Unit="1" UNIT="1" value="1">1</value>
+   </unit>
+   <unit Code="[Shore_OO_scale]" CODE="[SHORE_OO_SCALE]" isMetric="no" isArbitrary="yes"
+         class="misc">
+      <name>Shore OO hardness scale</name>
+      <printSymbol>Shore OO</printSymbol>
+      <property>hardness</property>
+      <value Unit="1" UNIT="1" value="1">1</value>
+   </unit>
+   <unit Code="[Torr]" CODE="[TORR]" isMetric="yes" class="misc">
+      <name>Torr</name>
+      <printSymbol>Torr</printSymbol>
+      <property>pressure</property>
+      <value Unit="atm/760" UNIT="ATM/760" value="1">1</value>
    </unit>
    <unit Code="bit_s" CODE="BIT_S" isMetric="no" isSpecial="yes" class="infotech">
       <name>bit</name>

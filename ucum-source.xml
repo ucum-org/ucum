@@ -51,6 +51,7 @@
 <!ENTITY element "&#x2208;">
 <!ENTITY cap    "&#x2229;">
 <!ENTITY cup    "&#x222A;">
+<!ENTITY copy   "&#xA9;">
 <!ENTITY emptyset "{}"> <!-- &#x2205; -->
 
 <!ENTITY UCUM  "<i>Unified Code for Units of Measure</i>"> 
