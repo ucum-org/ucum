@@ -16,10 +16,10 @@ The UCUM website is [https://ucum.org](https://ucum.org). Artifacts within this 
 * Added `[acr_i]` #390
 * Updated value for Astronomical Unit #400
 * Added back previously approved `[Torr]` #289
-* Move /docs directory to separate repository for ease in maintenance
+* Moved /docs directory to separate repository for ease in maintenance
 * Removed year range from copyright text
 * Addressed table heading discrepancies as reported in #267
-* Added explict note about definitional order #293
+* Added explicit note about definitional order #293
 * Added disclaimer regarding the value of constants
 * Updated GitHub issue templates #200
 * Miscellaneous text formatting changes
