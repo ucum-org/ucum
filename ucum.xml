@@ -938,7 +938,7 @@
             SI units are defined by the international <emph>Conférence
               Générale des Poids et Mesures</emph> (CGPM).  <emph>The Unified Code for Units of Measure</emph> definitions
             for those units are given in <tabref ref="si"/>.
-           <emph role="strong"><emph role="sup"> ■2</emph></emph> There are seven columns titled “name,”
+           <emph role="strong"><emph role="sup"> ■2</emph></emph> There are eight columns titled “name,”
             “print,” “c/s,” “c/i,”
             “M,” “definition value,” and “definition unit.”
             The name is the full (official) name of the unit. The symbol
