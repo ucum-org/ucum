@@ -8,9 +8,7 @@ The UCUM website is [https://ucum.org](https://ucum.org). Artifacts within this 
 
 [Regenstrief Institute](https://www.regenstrief.org) and the [UCUM Committee](https://ucum.org/docs/advisors) are excited to announce the release of UCUM version 2.3, now available from the [UCUM website](https://ucum.org) and UCUM's [GitHub repository](https://github.com/ucum-org/ucum).
 
-ENUMERATE CHANGES HERE
-
-
+ENUMERATE MAJOR CHANGES HERE
 
 We will continue to address outstanding issues and entertain requests for new units. We welcome your requests and feedback in the form of [New Issues](https://github.com/ucum-org/ucum/issues) or using the [Contact Form](https://ucum.org/contact) on our website.
 
