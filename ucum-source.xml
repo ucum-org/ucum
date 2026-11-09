@@ -688,7 +688,7 @@
           </caption>
         </exhibit>
         <figure id="ucum-state-automaton">
-          <pixmap source="https://raw.githubusercontent.com/ucum-org/ucum/main/assets/images/ucum-state-automaton.gif"/>
+          <pixmap source="assets/images/ucum-state-automaton.gif"/>
           <caption>Pushdown-state automaton describing the syntax.</caption>
         </figure>
       </div2>
@@ -1227,6 +1227,12 @@
             &ldquo;value,&rdquo; are normative. Full name and print symbol are
             defined by the CGPM and are out of scope of &TUCUM;.
           </verse>
+
+          <verse>
+            The order in which unit definitions appear within the tables or 
+            artifact files is not normative and carries no semantic or 
+            definitional precedence.
+          </verse>
         </p>
         <comment>
           <p>
@@ -1380,7 +1386,7 @@
           
           <verse> There are seven columns titled &ldquo;name,&rdquo;
             &ldquo;print,&rdquo; &ldquo;c/s,&rdquo; &ldquo;c/i,&rdquo;
-            &ldquo;M,&rdquo; &ldquo;value,&rdquo; and &ldquo;definition.&rdquo;
+            &ldquo;M,&rdquo; &ldquo;definition value,&rdquo; and &ldquo;definition unit.&rdquo;
             The name is the full (official) name of the unit. The symbol
             recommended for use in print is listed in the column
             &ldquo;print.&rdquo; &ldquo;C/s,&rdquo; and &ldquo;c/i&rdquo; list the
@@ -1394,7 +1400,7 @@
           
           <verse>
             Only the columns titled &ldquo;c/s,&rdquo; &ldquo;c/i,&rdquo;
-            &ldquo;M,&rdquo; &ldquo;value,&rdquo; and &ldquo;definition&rdquo; are
+            &ldquo;M,&rdquo; &ldquo;definition value,&rdquo; and &ldquo;definition unit&rdquo; are
             normative. Full name and print symbol are out of scope of &TUCUM;.
           </verse>
           
@@ -1449,7 +1455,7 @@
           
           <verse> There are seven columns titled &ldquo;name,&rdquo;
             &ldquo;print,&rdquo; &ldquo;c/s,&rdquo; &ldquo;c/i,&rdquo;
-            &ldquo;M,&rdquo; &ldquo;value,&rdquo; and &ldquo;definition.&rdquo;
+            &ldquo;M,&rdquo; &ldquo;definition value,&rdquo; and &ldquo;definition unit.&rdquo;
             The name is the full (official) name of the unit. The symbol
             recommended for use in print is listed in the column
             &ldquo;print.&rdquo; &ldquo;C/s,&rdquo; and &ldquo;c/i&rdquo; list the
@@ -1464,7 +1470,7 @@
           
           <verse>
             Only the columns titled &ldquo;c/s,&rdquo; &ldquo;c/i,&rdquo;
-            &ldquo;M,&rdquo; &ldquo;value,&rdquo; and &ldquo;definition&rdquo; are
+            &ldquo;M,&rdquo; &ldquo;definition value,&rdquo; and &ldquo;definition unit&rdquo; are
             normative. Full name and print symbol are defined by the CGPM and are
             out of scope of &TUCUM;.
           </verse>
@@ -1530,7 +1536,7 @@
           
           <verse>
             Only the columns titled &ldquo;c/s,&rdquo; &ldquo;c/i,&rdquo;
-            &ldquo;M,&rdquo; &ldquo;value,&rdquo; and &ldquo;definition&rdquo; are
+            &ldquo;M,&rdquo; &ldquo;definition value,&rdquo; and &ldquo;definition unit&rdquo; are
             normative. Full name and print symbol are defined by ISO&nbsp;1000 and are
             out of scope of &TUCUM;.
           </verse>
@@ -1562,7 +1568,7 @@
           <u:unit id="200180" Code="bar" CODE="BAR" isMetric="yes"><name>bar</name><printSymbol>bar</printSymbol><property>pressure</property><value Unit="Pa" UNIT="PAL" value="1e5">1 &mult; 10<sup>5</sup></value></u:unit>
           <u:unit id="200210" Code="u" CODE="AMU" isMetric="yes"><name>unified atomic mass unit</name><printSymbol>u</printSymbol><property>mass</property><value Unit="g" UNIT="G" value="1.66053906660e-24">1.66053906660 &mult; 10<sup>-24</sup></value></u:unit>
           <u:unit id="200200" Code="eV" CODE="EV" isMetric="yes"><name>electronvolt</name><printSymbol>eV</printSymbol><property>energy</property><value Unit="[e].V" UNIT="[E].V" value="1">1</value></u:unit>
-          <u:unit id="200220" Code="AU" CODE="ASU" isMetric="no"><name>astronomic unit</name><printSymbol>AU</printSymbol><property>length</property><value Unit="Mm" UNIT="MAM" value="149597.870691">149597.870691</value></u:unit>
+          <u:unit id="200220" Code="AU" CODE="ASU" isMetric="no"><name>astronomic unit</name><printSymbol>AU</printSymbol><property>length</property><value Unit="m" UNIT="M" value="149597870700">149597870700</value></u:unit>
           <u:unit id="200230" Code="pc" CODE="PRS" isMetric="yes"><name>parsec</name><printSymbol>pc</printSymbol><property>length</property><value Unit="m" UNIT="M" value="3.085678e16">3.085678 &mult; 10<sup>16</sup></value></u:unit>
         </u:units>
         <comment>
@@ -1692,10 +1698,17 @@
           
           <verse>
             Only the columns titled &ldquo;c/s,&rdquo; &ldquo;c/i,&rdquo;
-            &ldquo;M,&rdquo; &ldquo;value,&rdquo; and &ldquo;definition&rdquo; are
+            &ldquo;M,&rdquo; &ldquo;definition value,&rdquo; and &ldquo;definition unit&rdquo; are
             normative. Full name and print symbol are defined by ISO&nbsp;1000 and are
             out of scope of &TUCUM;.
           </verse>
+
+          <verse>
+            Numerical values assigned to constants are informative, provided for convenience and 
+            utility in conversions, and reflect values accurate to current knowledge and 
+            authoritative resources at the time of publication.
+          </verse>
+
         </p>
         
         <u:units id="const">
@@ -1750,7 +1763,7 @@
           
           <verse>
             Only the columns titled &ldquo;c/s,&rdquo; &ldquo;c/i,&rdquo;
-            &ldquo;M,&rdquo; &ldquo;value,&rdquo; and &ldquo;definition&rdquo; are
+            &ldquo;M,&rdquo; &ldquo;definition value,&rdquo; and &ldquo;definition unit&rdquo; are
             normative. Full name and print symbol are out of scope of &TUCUM;.
           </verse>
         </p>
@@ -1928,7 +1941,7 @@
           
           <verse>
             Only the columns titled &ldquo;c/s,&rdquo; &ldquo;c/i,&rdquo;
-            &ldquo;M,&rdquo; &ldquo;value,&rdquo; and &ldquo;definition&rdquo; are
+            &ldquo;M,&rdquo; &ldquo;definition value,&rdquo; and &ldquo;definition unit&rdquo; are
             normative. The full name is out of scope of &TUCUM;.
           </verse>
           
@@ -1959,6 +1972,8 @@
           <u:unit id="500060" Code="[mil_i]" CODE="[MIL_I]" isMetric="no"><name>mil</name><printSymbol>mil</printSymbol><property>length</property><value Unit="[in_i]" UNIT="[IN_I]" value="1e-3">1 &mult; 10<sup>-3</sup></value></u:unit>
           <u:unit id="500160" Code="[cml_i]" CODE="[CML_I]" isMetric="no"><name>circular mil</name><printSymbol>circ.mil</printSymbol><property>area</property><value Unit="[pi]/4.[mil_i]2" UNIT="[PI]/4.[MIL_I]2" value="1">1</value></u:unit>
           <u:unit id="500020" Code="[hd_i]" CODE="[HD_I]" isMetric="no"><name>hand</name><printSymbol>hd</printSymbol><property>height of horses</property><value Unit="[in_i]" UNIT="[IN_I]" value="4">4</value></u:unit>
+          <u:unit id="500712" Code="[acr_ft]" CODE="[ACR_FT]" isMetric="no"><name>acre-foot</name><printSymbol>ac&nbsp;ft</printSymbol><property>fluid volume</property><value Unit="[acr_us].[ft_us]" UNIT="[ACR_US].[FT_US]" value="1">1</value></u:unit>        
+          <u:unit id="500121" Code="[acr_i]" CODE="[ACR_I]" isMetric="no"><name>acre</name><property>area</property><value Unit="[ft_i]2" UNIT="[FT_I]2" value="43560">43560</value></u:unit>
         </u:units>
         <comment>
           <p>
@@ -2020,7 +2035,7 @@
           </verse>
           
           <verse>
-            The meaning of the columns is declared in <pref ref="para-custint"/>.
+            The meaning of the columns is declared in <pref ref="para-si" verse="2"/>.
           </verse>
           
           <smallref>
@@ -2070,7 +2085,7 @@
           </verse>
           
           <verse>
-            The meaning of the columns is declared in  <pref ref="para-custint"/>.
+            The meaning of the columns is declared in  <pref ref="para-si" verse="2"/>.
           </verse>
         </p>
         
@@ -2118,7 +2133,7 @@
           </verse>
           
           <verse>
-            The meaning of the columns is declared in <pref ref="para-custint"/>.
+            The meaning of the columns is declared in <pref ref="para-si" verse="2"/>.
           </verse>
         </p>
         <u:units id="us-volumes" omit="printSymbol">
@@ -2185,7 +2200,7 @@
           </verse>
           
           <verse>
-            The meaning of the columns is declared in  <pref ref="para-custint"/>.
+            The meaning of the columns is declared in  <pref ref="para-si" verse="2"/>.
           </verse>
         </p>
         
@@ -2238,7 +2253,7 @@
           </verse>
           
           <verse>
-            The meaning of the columns is declared in  <pref ref="para-custint"/>.
+            The meaning of the columns is declared in  <pref ref="para-si" verse="2"/>.
           </verse>
         </p>
         <comment>
@@ -2271,7 +2286,7 @@
           </verse>
           
           <verse>
-            The meaning of the columns is declared in  <pref ref="para-custint"/>.
+            The meaning of the columns is declared in  <pref ref="para-si" verse="2"/>.
           </verse>
         </p>
         <comment>
@@ -2313,7 +2328,7 @@
           </verse>
           
           <verse>
-            The meaning of the columns is declared in  <pref ref="para-custint"/>.
+            The meaning of the columns is declared in  <pref ref="para-si" verse="2"/>.
           </verse>
         </p>
         <u:units id="apoth" omit="printSymbol">
@@ -2351,7 +2366,7 @@
           </verse>
           
           <verse>
-            The meaning of the columns is declared in <pref ref="para-custint"/>.
+            The meaning of the columns is declared in <pref ref="para-si" verse="2"/>.
           </verse>
         </p>
         
@@ -2405,7 +2420,7 @@
           
           <verse>
             Only the columns titled &ldquo;c/s,&rdquo; &ldquo;c/i,&rdquo;
-            &ldquo;M,&rdquo; &ldquo;value,&rdquo; and &ldquo;definition&rdquo; are
+            &ldquo;M,&rdquo; &ldquo;definition value,&rdquo; and &ldquo;definition unit&rdquo; are
             normative. Full name and print symbol are either not standardized or
             standardized by other bodies and are out of scope of &TUCUM;.
           </verse>
@@ -2527,7 +2542,7 @@
           </verse>
           
           <verse>
-            The meaning of the columns is declared in  <pref ref="para-custint"/>.
+            The meaning of the columns is declared in <pref ref="para-si" verse="2"/>.
           </verse>
           
           <verse>
@@ -2585,6 +2600,7 @@
           <u:unit id="600547" Code="[kp_C]" CODE="[KP_C]" isMetric="no" isArbitrary="yes"><name>homeopathic potency of centesimal korsakovian series</name><printSymbol>C</printSymbol><property>homeopathic potency (Korsakov)</property><value Unit="1" UNIT="1" value="1">1</value></u:unit>
           <u:unit id="600548" Code="[kp_M]" CODE="[KP_M]" isMetric="no" isArbitrary="yes"><name>homeopathic potency of millesimal korsakovian series</name><printSymbol>M</printSymbol><property>homeopathic potency (Korsakov)</property><value Unit="1" UNIT="1" value="1">1</value></u:unit>
           <u:unit id="600549" Code="[kp_Q]" CODE="[KP_Q]" isMetric="no" isArbitrary="yes"><name>homeopathic potency of quintamillesimal korsakovian series</name><printSymbol>Q</printSymbol><property>homeopathic potency (Korsakov)</property><value Unit="1" UNIT="1" value="1">1</value></u:unit>
+          <u:unit id="600550" Code="[UA]" CODE="[UA]" isMetric="yes" isArbitrary="yes"><name>allergen unit</name><printSymbol>UA</printSymbol><property>arbitrary</property><value Unit="1" UNIT="1" value="1">1</value></u:unit>
         </u:units>
         
         <comment>
@@ -2739,6 +2755,7 @@
           <u:unit id="600718" Code="[FEU]" CODE="[FEU]" isMetric="no" isArbitrary="yes"><name>fibrinogen equivalent unit</name><printSymbol/><property>amount of fibrinogen broken down into the measured d-dimers</property><value Unit="1" UNIT="1" value="1">1</value></u:unit>
           <u:unit id="600720" Code="[ELU]" CODE="[ELU]" isMetric="no" isArbitrary="yes"><name>ELISA unit</name><printSymbol/><property>arbitrary ELISA unit</property><value Unit="1" UNIT="1" value="1">1</value></u:unit>
           <u:unit id="600721" Code="[EU]" CODE="[EU]" isMetric="no" isArbitrary="yes"><name>Ehrlich unit</name><printSymbol/><property>Ehrlich unit</property><value Unit="1" UNIT="1" value="1">1</value></u:unit>
+          <u:unit id="600722" Code="D" CODE="DEB" isMetric="yes"><name>debye</name><printSymbol>D</printSymbol><property>electric dipole moment</property><value Unit="C.m" UNIT="C.M" value="3.33564e-30">3.33564 &mult; 10<sup>-30</sup></value></u:unit>
         </u:units>
         
         <comment>
@@ -3094,7 +3111,7 @@
           
           <verse>
             Only the columns titled &ldquo;c/s,&rdquo; &ldquo;c/i,&rdquo;
-            &ldquo;M,&rdquo; &ldquo;value,&rdquo; and &ldquo;definition&rdquo; are
+            &ldquo;M,&rdquo; &ldquo;definition value,&rdquo; and &ldquo;definition unit&rdquo; are
             normative. Full name and print symbol are either not standardized or
             standardized by other bodies and are out of scope of &TUCUM;.
           </verse>
@@ -3120,6 +3137,10 @@
           <u:unit id="600523" Code="[m/s2/Hz^(1/2)]" CODE="[M/S2/HZ^(1/2)]" isMetric="no"><name>meter per square seconds per square root of hertz</name><printSymbol></printSymbol><property>amplitude spectral density</property><value Unit="sqrt(1 m2/s4/Hz)" UNIT="SQRT(1 M2/S4/HZ)"><function name="sqrt" value="1" Unit="m2/s4/Hz"/></value></u:unit>
           <u:unit id="600524" Code="[NTU]" CODE="[NTU]" isMetric="no"><name>Nephelometric Turbidity Unit</name><printSymbol></printSymbol><property>turbidity</property><value Unit="1" UNIT="1" value="1">1</value></u:unit>
           <u:unit id="600525" Code="[FNU]" CODE="[FNU]" isMetric="no"><name>Formazin Nephelometric Unit</name><printSymbol></printSymbol><property>turbidity</property><value Unit="1" UNIT="1" value="1">1</value></u:unit>
+          <u:unit id="600730" Code="[Shore_A_scale]" CODE="[SHORE_A_SCALE]" isMetric="no" isArbitrary="yes"><name>Shore A hardness scale</name><printSymbol>Shore A</printSymbol><property>hardness</property><value Unit="1" UNIT="1" value="1">1</value></u:unit>
+          <u:unit id="600731" Code="[Shore_D_scale]" CODE="[SHORE_D_SCALE]" isMetric="no" isArbitrary="yes"><name>Shore D hardness scale</name><printSymbol>Shore D</printSymbol><property>hardness</property><value Unit="1" UNIT="1" value="1">1</value></u:unit>
+          <u:unit id="600732" Code="[Shore_OO_scale]" CODE="[SHORE_OO_SCALE]" isMetric="no" isArbitrary="yes"><name>Shore OO hardness scale</name><printSymbol>Shore OO</printSymbol><property>hardness</property><value Unit="1" UNIT="1" value="1">1</value></u:unit>
+          <u:unit id="600733" Code="[Torr]" CODE="[TORR]" isMetric="yes"><name>Torr</name><printSymbol>Torr</printSymbol><property>pressure</property><value Unit="atm/760" UNIT="ATM/760" value="1">1</value></u:unit>
         </u:units>
         
         <comment>
@@ -3211,9 +3232,15 @@
           </verse>
           
           <verse> 
-            The meaning of the columns is declared in <pref ref="para-pfx" verse="2"/>.
+            There are five columns titled &ldquo;name,&rdquo; &ldquo;print,&rdquo; 
+            &ldquo;c/s,&rdquo; &ldquo;c/i,&rdquo; and &ldquo;value.&rdquo; The name 
+            is the full (official) name of the prefix. The symbol recommended for 
+            use in print is listed in the column &ldquo;print.&rdquo; Columns 
+            &ldquo;c/s,&rdquo; and &ldquo;c/i&rdquo; list the symbol in the case 
+            sensitive and the case insensitive variants respectively. The value 
+            is the value by which the prefix-less unit atom would be multiplied to 
+            arrive at the value of the prefixed unit.
           </verse>
-          
           <verse>
             Only the columns titled &ldquo;c/s,&rdquo; &ldquo;c/i,&rdquo; and
             &ldquo;value,&rdquo; are normative. Full name and print symbol are out

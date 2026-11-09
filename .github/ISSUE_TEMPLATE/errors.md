@@ -1,8 +1,9 @@
 ---
 name: Errors
 about: Report typographical errors or other issues of an administrative nature within UCUM specification, documentation, or website.
-title: 
-labels: ''
+title: "[Error]: "
+labels: 'evaluating'
+type: bug
 assignees: ''
 
 ---
